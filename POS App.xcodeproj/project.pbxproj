@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */; };
+		0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */; };
+		0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */; };
+		0BD5BAC929F8A419009F2A66 /* LoginOwnerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAC729F8A419009F2A66 /* LoginOwnerVC.xib */; };
+		0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BACA29F8A439009F2A66 /* LoginEmployeeVC.swift */; };
+		0BD5BACD29F8A439009F2A66 /* LoginEmployeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BACB29F8A439009F2A66 /* LoginEmployeeVC.xib */; };
+		0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BACE29F8A45B009F2A66 /* SignUpVC.swift */; };
+		0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */; };
+		0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAD329F8A611009F2A66 /* SlideMenuVC.swift */; };
+		0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAD429F8A611009F2A66 /* SlideMenuVC.xib */; };
+		0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAD929F8A659009F2A66 /* OrderDetailVC.swift */; };
+		0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BADA29F8A659009F2A66 /* OrderDetailVC.xib */; };
+		0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BADE29F8A6B6009F2A66 /* HistoryTransactionVC.swift */; };
+		0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */; };
+		0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */; };
+		0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */; };
+		0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE729F8A708009F2A66 /* ReportMainVC.swift */; };
+		0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE829F8A708009F2A66 /* ReportMainVC.xib */; };
+		0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */; };
+		0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */; };
+		0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */; };
+		0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */; };
 		0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E029F81F6D002CB20F /* AppDelegate.swift */; };
 		0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E229F81F6D002CB20F /* SceneDelegate.swift */; };
 		0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E429F81F6D002CB20F /* ViewController.swift */; };
@@ -41,6 +63,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
+		0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloVC.xib; sourceTree = "<group>"; };
+		0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOwnerVC.swift; sourceTree = "<group>"; };
+		0BD5BAC729F8A419009F2A66 /* LoginOwnerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginOwnerVC.xib; sourceTree = "<group>"; };
+		0BD5BACA29F8A439009F2A66 /* LoginEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmployeeVC.swift; sourceTree = "<group>"; };
+		0BD5BACB29F8A439009F2A66 /* LoginEmployeeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginEmployeeVC.xib; sourceTree = "<group>"; };
+		0BD5BACE29F8A45B009F2A66 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		0BD5BAD329F8A611009F2A66 /* SlideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
+		0BD5BAD429F8A611009F2A66 /* SlideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideMenuVC.xib; sourceTree = "<group>"; };
+		0BD5BAD929F8A659009F2A66 /* OrderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailVC.swift; sourceTree = "<group>"; };
+		0BD5BADA29F8A659009F2A66 /* OrderDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailVC.xib; sourceTree = "<group>"; };
+		0BD5BADE29F8A6B6009F2A66 /* HistoryTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionVC.swift; sourceTree = "<group>"; };
+		0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTransactionVC.xib; sourceTree = "<group>"; };
+		0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterVC.swift; sourceTree = "<group>"; };
+		0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionFilterVC.xib; sourceTree = "<group>"; };
+		0BD5BAE729F8A708009F2A66 /* ReportMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMainVC.swift; sourceTree = "<group>"; };
+		0BD5BAE829F8A708009F2A66 /* ReportMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMainVC.xib; sourceTree = "<group>"; };
+		0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFilterVC.swift; sourceTree = "<group>"; };
+		0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportFilterVC.xib; sourceTree = "<group>"; };
+		0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreVC.swift; sourceTree = "<group>"; };
+		0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageStoreVC.xib; sourceTree = "<group>"; };
 		0BE038DD29F81F6D002CB20F /* POS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE038E029F81F6D002CB20F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE038E229F81F6D002CB20F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +134,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD5BAC129F8A3E9009F2A66 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */,
+				0BD5BAC729F8A419009F2A66 /* LoginOwnerVC.xib */,
+				0BD5BACA29F8A439009F2A66 /* LoginEmployeeVC.swift */,
+				0BD5BACB29F8A439009F2A66 /* LoginEmployeeVC.xib */,
+				0BD5BACE29F8A45B009F2A66 /* SignUpVC.swift */,
+				0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0BD5BAD229F8A465009F2A66 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5BAD329F8A611009F2A66 /* SlideMenuVC.swift */,
+				0BD5BAD429F8A611009F2A66 /* SlideMenuVC.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0BD5BAD729F8A63B009F2A66 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5BAD929F8A659009F2A66 /* OrderDetailVC.swift */,
+				0BD5BADA29F8A659009F2A66 /* OrderDetailVC.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		0BD5BADD29F8A68F009F2A66 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5BADE29F8A6B6009F2A66 /* HistoryTransactionVC.swift */,
+				0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */,
+				0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */,
+				0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		0BD5BAE629F8A6ED009F2A66 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5BAE729F8A708009F2A66 /* ReportMainVC.swift */,
+				0BD5BAE829F8A708009F2A66 /* ReportMainVC.xib */,
+				0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */,
+				0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		0BD5BAEF29F8A777009F2A66 /* ManageStore */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */,
+				0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */,
+			);
+			path = ManageStore;
+			sourceTree = "<group>";
+		};
 		0BE038D429F81F6D002CB20F = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +276,16 @@
 		0BE0390229F82038002CB20F /* 1.Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BD5BAEF29F8A777009F2A66 /* ManageStore */,
+				0BD5BAE629F8A6ED009F2A66 /* Report */,
+				0BD5BADD29F8A68F009F2A66 /* Transaction */,
+				0BD5BAD729F8A63B009F2A66 /* Order */,
+				0BD5BAD229F8A465009F2A66 /* Home */,
+				0BD5BAC129F8A3E9009F2A66 /* Auth */,
 				0BE0390329F82038002CB20F /* MainVC.xib */,
 				0BE0390429F82038002CB20F /* MainVC.swift */,
+				0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */,
+				0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */,
 			);
 			path = 1.Controllers;
 			sourceTree = "<group>";
@@ -327,10 +441,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
+				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
+				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
+				0BD5BACD29F8A439009F2A66 /* LoginEmployeeVC.xib in Resources */,
+				0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */,
 				0BE0392229F82039002CB20F /* MainVC.xib in Resources */,
+				0BD5BAC929F8A419009F2A66 /* LoginOwnerVC.xib in Resources */,
+				0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */,
+				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
+				0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
+				0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */,
+				0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,22 +510,32 @@
 			files = (
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0BE0392329F82039002CB20F /* MainVC.swift in Sources */,
+				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
+				0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */,
+				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
+				0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
+				0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */,
 				0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */,
 				0BE0391F29F82039002CB20F /* Reachability.swift in Sources */,
 				0BE0392B29F82039002CB20F /* ExString.swift in Sources */,
+				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
+				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
+				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
+				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
+				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
 				0BE0392529F82039002CB20F /* Logger.swift in Sources */,
@@ -408,6 +543,7 @@
 				0BE0392629F82039002CB20F /* Common.swift in Sources */,
 				0BE0392929F82039002CB20F /* CommonExtension.swift in Sources */,
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
+				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
