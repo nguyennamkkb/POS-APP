@@ -33,8 +33,12 @@ class BaseVC: UIViewController {
         #if DEBUG
         print("ScreenName: \(String(describing: type(of: self)))")
         #endif
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     deinit {
         NotificationCenter.default.removeObserver(self)

@@ -12,16 +12,16 @@ let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 
 struct myColor {
-    let blue = UIColor(hex: "#1A72DD")
-    let navy = UIColor(hex: "#2A3256")
-    let grey = UIColor(hex: "#D1D1D1")
-    let greyDrak = UIColor(hex: "#BDBDBD")
-    let red = UIColor(hex: "#F4261A")
+    static let blue = UIColor(hex: "#1A72DD")
+    static let navy = UIColor(hex: "#2A3256")
+    static let grey = UIColor(hex: "#D1D1D1")
+    static let greyDrak = UIColor(hex: "#BDBDBD")
+    static let red = UIColor(hex: "#F4261A")
 }
 struct myCornerRadius {
-    let corner5 = 5.0
-    let corner10 = 10.0
-    let corner14 = 14.0
-    let corner16 = 16.0
-    let corner20 = 20.0
+    static let corner5 = 5.0
+    static let corner10 = 10.0
+    static let corner14 = 14.0
+    static let corner16 = 16.0
+    static let corner20 = 20.0
 }
