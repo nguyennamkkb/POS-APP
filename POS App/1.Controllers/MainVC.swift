@@ -7,11 +7,10 @@
 
 import UIKit
 
-class MainVC: BaseVC {
+class MainVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
 
 

@@ -60,6 +60,8 @@
 		0BE0393029F82039002CB20F /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391929F82039002CB20F /* BaseVC.swift */; };
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
 		BA1644BF7B780990762E4ADF /* Pods_POS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */; };
+		D97165B029FA303D00D08327 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97165AE29FA303D00D08327 /* LoginVC.swift */; };
+		D97165B129FA303D00D08327 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97165AF29FA303D00D08327 /* LoginVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +122,22 @@
 		284A6890BF03F09ADA14102B /* Pods-POS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.release.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.release.xcconfig"; sourceTree = "<group>"; };
 		4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.debug.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.debug.xcconfig"; sourceTree = "<group>"; };
+		D97165A029FA240C00D08327 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		D97165A129FA240C00D08327 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		D97165A229FA240C00D08327 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		D97165A329FA240C00D08327 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D97165A429FA240C00D08327 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D97165A529FA240D00D08327 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D97165A629FA240D00D08327 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		D97165A729FA240D00D08327 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		D97165A829FA240D00D08327 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		D97165A929FA240D00D08327 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		D97165AA29FA240D00D08327 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		D97165AB29FA240D00D08327 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D97165AC29FA240E00D08327 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		D97165AD29FA240E00D08327 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		D97165AE29FA303D00D08327 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D97165AF29FA303D00D08327 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +161,8 @@
 				0BD5BACB29F8A439009F2A66 /* LoginEmployeeVC.xib */,
 				0BD5BACE29F8A45B009F2A66 /* SignUpVC.swift */,
 				0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */,
+				D97165AE29FA303D00D08327 /* LoginVC.swift */,
+				D97165AF29FA303D00D08327 /* LoginVC.xib */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -224,6 +244,7 @@
 				0BE0390529F82038002CB20F /* 6.Resources */,
 				0BE038F729F82038002CB20F /* 7.Networking */,
 				0BE0391829F82039002CB20F /* 8.Base */,
+				D971658D29FA23CA00D08327 /* fonts */,
 				0BE038E029F81F6D002CB20F /* AppDelegate.swift */,
 				0BE038E229F81F6D002CB20F /* SceneDelegate.swift */,
 				0BE038E429F81F6D002CB20F /* ViewController.swift */,
@@ -373,6 +394,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D971658D29FA23CA00D08327 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D97165A729FA240D00D08327 /* Rubik-Black.ttf */,
+				D97165A329FA240C00D08327 /* Rubik-BlackItalic.ttf */,
+				D97165A229FA240C00D08327 /* Rubik-Bold.ttf */,
+				D97165AB29FA240D00D08327 /* Rubik-BoldItalic.ttf */,
+				D97165A429FA240C00D08327 /* Rubik-ExtraBold.ttf */,
+				D97165AD29FA240E00D08327 /* Rubik-ExtraBoldItalic.ttf */,
+				D97165AA29FA240D00D08327 /* Rubik-Italic.ttf */,
+				D97165A029FA240C00D08327 /* Rubik-Light.ttf */,
+				D97165A829FA240D00D08327 /* Rubik-LightItalic.ttf */,
+				D97165AC29FA240E00D08327 /* Rubik-Medium.ttf */,
+				D97165A529FA240D00D08327 /* Rubik-MediumItalic.ttf */,
+				D97165A629FA240D00D08327 /* Rubik-Regular.ttf */,
+				D97165A929FA240D00D08327 /* Rubik-SemiBold.ttf */,
+				D97165A129FA240C00D08327 /* Rubik-SemiBoldItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		F2357538D706085EBC2C7B18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +497,7 @@
 				0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
 				0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */,
+				D97165B129FA303D00D08327 /* LoginVC.xib in Resources */,
 				0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +573,7 @@
 				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
+				D97165B029FA303D00D08327 /* LoginVC.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
@@ -620,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -674,7 +718,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -700,6 +744,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +752,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vimass.qrvn.POS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -729,6 +777,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,6 +785,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vimass.qrvn.POS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

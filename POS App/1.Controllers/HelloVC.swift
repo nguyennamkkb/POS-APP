@@ -9,21 +9,28 @@ import UIKit
 
 class HelloVC: UIViewController {
 
+    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var btnCreateAccount: UIButton!
+    @IBOutlet var mockPOSLbl: UILabel!
+    @IBOutlet var iconPOS: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+        
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI(){
+        mockPOSLbl.layer.shadowColor = UIColor.black.cgColor
+        mockPOSLbl.layer.shadowOpacity = 0.3
+        view.layer.shadowOffset = CGSize(width: 0, height: 3)
+        mockPOSLbl.layer.shadowRadius = 2
+        iconPOS.layer.cornerRadius = myCornerRadius.corner5
+        btnLogin.layer.cornerRadius = myCornerRadius.corner10
+        btnLogin.layer.borderWidth = 1
+        btnLogin.layer.borderColor = myColor.blue?.cgColor
+        btnCreateAccount.layer.cornerRadius = myCornerRadius.corner10
     }
-    */
-
+    @IBAction func btnLoginPressed(_ sender: UIButton) {
+        self.navigationController?.pushViewController(LoginVC(), animated: true)
+    }
 }
