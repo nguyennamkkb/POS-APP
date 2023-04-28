@@ -1,16 +1,19 @@
 //
-//  MainVC.swift
-//  BaseApp
+//  PayVC.swift
+//  POS App
 //
-//  Created by namnl on 25/04/2023.
+//  Created by namnl on 27/04/2023.
 //
 
 import UIKit
 
-class MainVC: UITabBarController {
+
+class PayVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
 

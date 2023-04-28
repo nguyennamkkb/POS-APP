@@ -31,6 +31,6 @@ class HelloVC: UIViewController {
         btnCreateAccount.layer.cornerRadius = myCornerRadius.corner10
     }
     @IBAction func btnLoginPressed(_ sender: UIButton) {
-        self.navigationController?.pushViewController(LoginVC(), animated: true)
+        self.navigationController?.pushViewController(LoginOwnerVC(), animated: true)
     }
 }

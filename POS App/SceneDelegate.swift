@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScense = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScense)
-        let navi  =  UINavigationController(rootViewController: HelloVC())
-        setRootViewController(navi)
+
+        setRootViewController(TabBarVC())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

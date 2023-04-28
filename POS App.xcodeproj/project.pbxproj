@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */; };
+		0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE329FAC56900F1DE85 /* MainVC.swift */; };
+		0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EE429FAC56900F1DE85 /* MainVC.xib */; };
+		0BB43EE929FAC58300F1DE85 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE729FAC58300F1DE85 /* FavoriteVC.swift */; };
+		0BB43EEA29FAC58300F1DE85 /* FavoriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EE829FAC58300F1DE85 /* FavoriteVC.xib */; };
+		0BB43EED29FAC59100F1DE85 /* PayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EEB29FAC59100F1DE85 /* PayVC.swift */; };
+		0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EEC29FAC59100F1DE85 /* PayVC.xib */; };
+		0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF029FAD82E00F1DE85 /* Rubik-ExtraBoldItalic.ttf */; };
+		0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF129FAD82E00F1DE85 /* Rubik-BoldItalic.ttf */; };
+		0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF229FAD82E00F1DE85 /* Rubik-SemiBoldItalic.ttf */; };
+		0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF329FAD82E00F1DE85 /* Rubik-Light.ttf */; };
+		0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF429FAD82E00F1DE85 /* Rubik-Italic.ttf */; };
+		0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF529FAD82E00F1DE85 /* Rubik-SemiBold.ttf */; };
+		0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF629FAD82E00F1DE85 /* Rubik-Regular.ttf */; };
+		0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF729FAD82E00F1DE85 /* Rubik-Bold.ttf */; };
+		0BB43F0629FAD82F00F1DE85 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF829FAD82F00F1DE85 /* Rubik-BlackItalic.ttf */; };
+		0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EF929FAD82F00F1DE85 /* Rubik-LightItalic.ttf */; };
+		0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFA29FAD82F00F1DE85 /* Rubik-ExtraBold.ttf */; };
+		0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */; };
+		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
+		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
 		0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */; };
 		0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */; };
 		0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */; };
@@ -43,8 +64,6 @@
 		0BE0391F29F82039002CB20F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038FD29F82038002CB20F /* Reachability.swift */; };
 		0BE0392029F82039002CB20F /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038FE29F82038002CB20F /* ServiceManager.swift */; };
 		0BE0392129F82039002CB20F /* CommonServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0390029F82038002CB20F /* CommonServices.swift */; };
-		0BE0392229F82039002CB20F /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE0390329F82038002CB20F /* MainVC.xib */; };
-		0BE0392329F82039002CB20F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0390429F82038002CB20F /* MainVC.swift */; };
 		0BE0392429F82039002CB20F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0390B29F82039002CB20F /* Constants.swift */; };
 		0BE0392529F82039002CB20F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0390C29F82039002CB20F /* Logger.swift */; };
 		0BE0392629F82039002CB20F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0390D29F82039002CB20F /* Common.swift */; };
@@ -65,6 +84,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		0BB43EE329FAC56900F1DE85 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		0BB43EE429FAC56900F1DE85 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		0BB43EE729FAC58300F1DE85 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		0BB43EE829FAC58300F1DE85 /* FavoriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteVC.xib; sourceTree = "<group>"; };
+		0BB43EEB29FAC59100F1DE85 /* PayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayVC.swift; sourceTree = "<group>"; };
+		0BB43EEC29FAC59100F1DE85 /* PayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayVC.xib; sourceTree = "<group>"; };
+		0BB43EF029FAD82E00F1DE85 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		0BB43EF129FAD82E00F1DE85 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0BB43EF229FAD82E00F1DE85 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		0BB43EF329FAD82E00F1DE85 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		0BB43EF429FAD82E00F1DE85 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		0BB43EF529FAD82E00F1DE85 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		0BB43EF629FAD82E00F1DE85 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		0BB43EF729FAD82E00F1DE85 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		0BB43EF829FAD82F00F1DE85 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		0BB43EF929FAD82F00F1DE85 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		0BB43EFA29FAD82F00F1DE85 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
 		0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloVC.xib; sourceTree = "<group>"; };
 		0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOwnerVC.swift; sourceTree = "<group>"; };
@@ -103,8 +143,6 @@
 		0BE038FD29F82038002CB20F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0BE038FE29F82038002CB20F /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		0BE0390029F82038002CB20F /* CommonServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonServices.swift; sourceTree = "<group>"; };
-		0BE0390329F82038002CB20F /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
-		0BE0390429F82038002CB20F /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0BE0390B29F82039002CB20F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0BE0390C29F82039002CB20F /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0BE0390D29F82039002CB20F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -152,6 +190,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BB43EE029FAC4CD00F1DE85 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */,
+				0BB43EE329FAC56900F1DE85 /* MainVC.swift */,
+				0BB43EE429FAC56900F1DE85 /* MainVC.xib */,
+				0BB43EE729FAC58300F1DE85 /* FavoriteVC.swift */,
+				0BB43EE829FAC58300F1DE85 /* FavoriteVC.xib */,
+				0BB43EEB29FAC59100F1DE85 /* PayVC.swift */,
+				0BB43EEC29FAC59100F1DE85 /* PayVC.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0BB43EEF29FAD82300F1DE85 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */,
+				0BB43EF829FAD82F00F1DE85 /* Rubik-BlackItalic.ttf */,
+				0BB43EF729FAD82E00F1DE85 /* Rubik-Bold.ttf */,
+				0BB43EF129FAD82E00F1DE85 /* Rubik-BoldItalic.ttf */,
+				0BB43EFA29FAD82F00F1DE85 /* Rubik-ExtraBold.ttf */,
+				0BB43EF029FAD82E00F1DE85 /* Rubik-ExtraBoldItalic.ttf */,
+				0BB43EF429FAD82E00F1DE85 /* Rubik-Italic.ttf */,
+				0BB43EF329FAD82E00F1DE85 /* Rubik-Light.ttf */,
+				0BB43EF929FAD82F00F1DE85 /* Rubik-LightItalic.ttf */,
+				0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */,
+				0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */,
+				0BB43EF629FAD82E00F1DE85 /* Rubik-Regular.ttf */,
+				0BB43EF529FAD82E00F1DE85 /* Rubik-SemiBold.ttf */,
+				0BB43EF229FAD82E00F1DE85 /* Rubik-SemiBoldItalic.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		0BD5BAC129F8A3E9009F2A66 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +310,7 @@
 		0BE038DF29F81F6D002CB20F /* POS App */ = {
 			isa = PBXGroup;
 			children = (
+				0BB43EEF29FAD82300F1DE85 /* font */,
 				0BE0390229F82038002CB20F /* 1.Controllers */,
 				0BE0390929F82038002CB20F /* 2.Models */,
 				0BE0390129F82038002CB20F /* 3.Views */,
@@ -297,14 +371,13 @@
 		0BE0390229F82038002CB20F /* 1.Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BB43EE029FAC4CD00F1DE85 /* Main */,
 				0BD5BAEF29F8A777009F2A66 /* ManageStore */,
 				0BD5BAE629F8A6ED009F2A66 /* Report */,
 				0BD5BADD29F8A68F009F2A66 /* Transaction */,
 				0BD5BAD729F8A63B009F2A66 /* Order */,
 				0BD5BAD229F8A465009F2A66 /* Home */,
 				0BD5BAC129F8A3E9009F2A66 /* Auth */,
-				0BE0390329F82038002CB20F /* MainVC.xib */,
-				0BE0390429F82038002CB20F /* MainVC.swift */,
 				0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */,
 				0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */,
 			);
@@ -483,21 +556,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
+				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
+				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
 				0BD5BACD29F8A439009F2A66 /* LoginEmployeeVC.xib in Resources */,
+				0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */,
 				0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */,
-				0BE0392229F82039002CB20F /* MainVC.xib in Resources */,
+				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
 				0BD5BAC929F8A419009F2A66 /* LoginOwnerVC.xib in Resources */,
+				0BB43EEA29FAC58300F1DE85 /* FavoriteVC.xib in Resources */,
 				0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
+				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */,
+				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
+				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
+				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
+				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
+				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
+				0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */,
 				0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */,
-				D97165B129FA303D00D08327 /* LoginVC.xib in Resources */,
+				0BB43F0629FAD82F00F1DE85 /* Rubik-BlackItalic.ttf in Resources */,
+				0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */,
+				0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */,
+				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
 				0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,9 +640,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
-				0BE0392329F82039002CB20F /* MainVC.swift in Sources */,
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
+				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */,
@@ -573,7 +661,7 @@
 				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
-				D97165B029FA303D00D08327 /* LoginVC.swift in Sources */,
+				0BB43EE929FAC58300F1DE85 /* FavoriteVC.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
@@ -583,6 +671,8 @@
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
 				0BE0392529F82039002CB20F /* Logger.swift in Sources */,
+				0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */,
+				0BB43EED29FAC59100F1DE85 /* PayVC.swift in Sources */,
 				0BE0392029F82039002CB20F /* ServiceManager.swift in Sources */,
 				0BE0392629F82039002CB20F /* Common.swift in Sources */,
 				0BE0392929F82039002CB20F /* CommonExtension.swift in Sources */,
