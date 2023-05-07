@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HelloVC: UIViewController {
+class HelloVC: BaseVC {
 
     @IBOutlet var btnLogin: UIButton!
     @IBOutlet var btnCreateAccount: UIButton!
@@ -30,7 +30,14 @@ class HelloVC: UIViewController {
         btnLogin.layer.borderColor = myColor.blue?.cgColor
         btnCreateAccount.layer.cornerRadius = myCornerRadius.corner10
     }
-    @IBAction func btnLoginPressed(_ sender: UIButton) {
-        self.navigationController?.pushViewController(LoginOwnerVC(), animated: true)
+
+    @IBAction func createAccontPressed(_ sender: UIButton) {
+        print("vcreateAccontPresse")
+        self.pushVC(controller: SignUpVC())
+    }
+    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        print("loginPressed")
+        self.pushVC(controller: LoginVC())
     }
 }

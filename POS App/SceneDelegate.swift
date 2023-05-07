@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScense = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScense)
-
-        setRootViewController(TabBarVC())
+//        helo = UINavigationController(rootViewController: HelloVC())
+        setRootViewController(UINavigationController(rootViewController: HelloVC()))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -57,6 +57,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         window.rootViewController = vc
         window.makeKeyAndVisible()
+        
     }
 
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
@@ -57,27 +61,6 @@
                                 <imageReference key="image" image="sidebar.left" catalog="system" symbolScale="large"/>
                             </state>
                         </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4T-1F-rZ3" userLabel="count cart">
-                            <rect key="frame" x="353" y="0.0" width="20" height="20"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-u1-GVQ" userLabel="count cart">
-                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="vsj-u1-GVQ" secondAttribute="bottom" id="Fcn-0e-1ZB"/>
-                                <constraint firstAttribute="height" constant="20" id="Oce-U0-QCt"/>
-                                <constraint firstItem="vsj-u1-GVQ" firstAttribute="leading" secondItem="s4T-1F-rZ3" secondAttribute="leading" id="WlL-LG-xFP"/>
-                                <constraint firstItem="vsj-u1-GVQ" firstAttribute="top" secondItem="s4T-1F-rZ3" secondAttribute="top" id="Y9n-zU-HYe"/>
-                                <constraint firstAttribute="trailing" secondItem="vsj-u1-GVQ" secondAttribute="trailing" id="dEV-WO-smo"/>
-                                <constraint firstAttribute="width" constant="20" id="uSt-dQ-ALN"/>
-                            </constraints>
-                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcC-6W-dl0" userLabel="btnCart">
                             <rect key="frame" x="329" y="2" width="40" height="40"/>
                             <constraints>
@@ -89,6 +72,27 @@
                                 <imageReference key="image" image="cart" catalog="system" symbolScale="large"/>
                             </state>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4T-1F-rZ3" userLabel="count cart">
+                            <rect key="frame" x="352" y="3" width="21" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-u1-GVQ" userLabel="count cart">
+                                    <rect key="frame" x="0.0" y="0.0" width="21" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="15"/>
+                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="vsj-u1-GVQ" secondAttribute="bottom" id="Fcn-0e-1ZB"/>
+                                <constraint firstAttribute="height" constant="20" id="Oce-U0-QCt"/>
+                                <constraint firstItem="vsj-u1-GVQ" firstAttribute="leading" secondItem="s4T-1F-rZ3" secondAttribute="leading" id="WlL-LG-xFP"/>
+                                <constraint firstItem="vsj-u1-GVQ" firstAttribute="top" secondItem="s4T-1F-rZ3" secondAttribute="top" id="Y9n-zU-HYe"/>
+                                <constraint firstAttribute="trailing" secondItem="vsj-u1-GVQ" secondAttribute="trailing" id="dEV-WO-smo"/>
+                                <constraint firstAttribute="width" constant="21" id="uSt-dQ-ALN"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -102,7 +106,7 @@
                         <constraint firstItem="LQf-lw-MVx" firstAttribute="leading" secondItem="qNb-4y-KKC" secondAttribute="leading" constant="24" id="hWq-41-Kx0"/>
                         <constraint firstItem="87c-dw-4qX" firstAttribute="leading" secondItem="qNb-4y-KKC" secondAttribute="leading" id="j9s-Jx-dWd"/>
                         <constraint firstItem="87c-dw-4qX" firstAttribute="top" secondItem="qNb-4y-KKC" secondAttribute="top" id="ujl-iY-Wm6"/>
-                        <constraint firstItem="s4T-1F-rZ3" firstAttribute="top" secondItem="qNb-4y-KKC" secondAttribute="top" id="zot-Pg-psX"/>
+                        <constraint firstItem="s4T-1F-rZ3" firstAttribute="top" secondItem="qNb-4y-KKC" secondAttribute="top" constant="3" id="zot-Pg-psX"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-FZ-x5E" userLabel="menu">
@@ -212,8 +216,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

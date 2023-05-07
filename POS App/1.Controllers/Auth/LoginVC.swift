@@ -2,7 +2,7 @@
 //  LoginVC.swift
 //  POS App
 //
-//  Created by namnl on 26/04/2023.
+//  Created by namnl on 07/05/2023.
 //
 
 import UIKit
@@ -11,12 +11,19 @@ class LoginVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Log in"
-        
+
+        // Do any additional setup after loading the view.
     }
 
-    @IBAction func btnBackPressed(_ sender: UIButton) {
-        self.onBackNav()
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
+    */
+
 }

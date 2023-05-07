@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
+		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */; };
 		0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE329FAC56900F1DE85 /* MainVC.swift */; };
 		0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EE429FAC56900F1DE85 /* MainVC.xib */; };
@@ -79,11 +81,11 @@
 		0BE0393029F82039002CB20F /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391929F82039002CB20F /* BaseVC.swift */; };
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
 		BA1644BF7B780990762E4ADF /* Pods_POS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */; };
-		D97165B029FA303D00D08327 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97165AE29FA303D00D08327 /* LoginVC.swift */; };
-		D97165B129FA303D00D08327 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97165AF29FA303D00D08327 /* LoginVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		0BB43EE329FAC56900F1DE85 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0BB43EE429FAC56900F1DE85 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
@@ -174,8 +176,7 @@
 		D97165AB29FA240D00D08327 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D97165AC29FA240E00D08327 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		D97165AD29FA240E00D08327 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		D97165AE29FA303D00D08327 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		D97165AF29FA303D00D08327 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		D97165AF29FA303D00D08327 /* LoginVCcccc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVCcccc.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +235,9 @@
 				0BD5BACB29F8A439009F2A66 /* LoginEmployeeVC.xib */,
 				0BD5BACE29F8A45B009F2A66 /* SignUpVC.swift */,
 				0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */,
-				D97165AE29FA303D00D08327 /* LoginVC.swift */,
-				D97165AF29FA303D00D08327 /* LoginVC.xib */,
+				D97165AF29FA303D00D08327 /* LoginVCcccc.xib */,
+				0B7B90E22A07A3E600D99642 /* LoginVC.swift */,
+				0B7B90E32A07A3E600D99642 /* LoginVC.xib */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -570,6 +572,7 @@
 				0BD5BAC929F8A419009F2A66 /* LoginOwnerVC.xib in Resources */,
 				0BB43EEA29FAC58300F1DE85 /* FavoriteVC.xib in Resources */,
 				0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */,
+				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
@@ -661,6 +664,7 @@
 				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
+				0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */,
 				0BB43EE929FAC58300F1DE85 /* FavoriteVC.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,

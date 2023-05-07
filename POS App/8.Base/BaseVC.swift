@@ -30,6 +30,7 @@ class BaseVC: UIViewController {
         return statusBarType
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         #if DEBUG
         print("ScreenName: \(String(describing: type(of: self)))")
         #endif
@@ -74,6 +75,10 @@ class BaseVC: UIViewController {
         if vc == nil{
             dismiss(animated: animation, completion: nil)
         }
+    }
+    func wrapRoot(vc: UIViewController){
+        guard let window = self.view.window else {return}
+        window.switchRootViewController(vc)
     }
 }
 extension BaseVC: UIGestureRecognizerDelegate {
