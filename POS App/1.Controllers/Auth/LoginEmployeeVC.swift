@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginEmployeeVC: UIViewController {
+class LoginEmployeeVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,13 @@ class LoginEmployeeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func loginPressed(_ sender: UIButton) {
+        self.wrapRoot(vc: TabBarVC())
+    }
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.onBackNav()
+    }
     /*
     // MARK: - Navigation
 

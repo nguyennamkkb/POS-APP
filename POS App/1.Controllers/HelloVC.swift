@@ -32,12 +32,10 @@ class HelloVC: BaseVC {
     }
 
     @IBAction func createAccontPressed(_ sender: UIButton) {
-        print("vcreateAccontPresse")
         self.pushVC(controller: SignUpVC())
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        print("loginPressed")
         self.pushVC(controller: LoginVC())
     }
 }

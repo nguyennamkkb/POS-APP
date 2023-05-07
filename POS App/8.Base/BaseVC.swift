@@ -31,16 +31,18 @@ class BaseVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         #if DEBUG
         print("ScreenName: \(String(describing: type(of: self)))")
         #endif
 
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -51,6 +53,8 @@ class BaseVC: UIViewController {
 //        addBackButton()
         statusBarType = .lightContent
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
     }
     func dismissVC(animated: Bool = true) {
         let vc = self.navigationController?.popViewController(animated: animated)

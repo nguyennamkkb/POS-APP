@@ -9,21 +9,28 @@ import UIKit
 
 class LoginVC: BaseVC {
 
+    @IBOutlet weak var loginEmployeeView: UIView!
+    @IBOutlet weak var loginOwnerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
         // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.onBackNav()
     }
-    */
+    func setupUI(){
+        loginEmployeeView.layer.cornerRadius = myCornerRadius.corner10
+        loginOwnerView.layer.cornerRadius = myCornerRadius.corner10
+    }
+    @IBAction func loginOwnerPressed(_ sender: UIButton) {
+        self.pushVC(controller: LoginOwnerVC())
+    }
+    
+    @IBAction func loginEmployeePressed(_ sender: UIButton) {
+        self.pushVC(controller: LoginEmployeeVC())
+    }
+    
 
 }
