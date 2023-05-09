@@ -7,23 +7,22 @@
 
 import UIKit
 
-class SignUpVC: UIViewController {
+class SignUpVC: BaseVC {
 
+    @IBOutlet var xacNhanBtn: UIButton!
+    @IBOutlet var noteView: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    func setupUI(){
+        noteView.layer.cornerRadius = myCornerRadius.corner10
+        xacNhanBtn.layer.cornerRadius = myCornerRadius.corner10
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func xacNhanPressed(_ sender: UIButton) {
+        self.pushVC(controller: TabBarVC())
     }
-    */
-
+    
 }

@@ -10,7 +10,6 @@ import UIKit
 class HelloVC: BaseVC {
 
     @IBOutlet var btnLogin: UIButton!
-    @IBOutlet var btnCreateAccount: UIButton!
     @IBOutlet var mockPOSLbl: UILabel!
     @IBOutlet var iconPOS: UIImageView!
     override func viewDidLoad() {
@@ -28,7 +27,6 @@ class HelloVC: BaseVC {
         btnLogin.layer.cornerRadius = myCornerRadius.corner10
         btnLogin.layer.borderWidth = 1
         btnLogin.layer.borderColor = myColor.blue?.cgColor
-        btnCreateAccount.layer.cornerRadius = myCornerRadius.corner10
     }
 
     @IBAction func createAccontPressed(_ sender: UIButton) {

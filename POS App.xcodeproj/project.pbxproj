@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18502A0A968C004E47FD /* CacheManager.swift */; };
+		0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18522A0A97D0004E47FD /* KeyCommon.swift */; };
+		0B5D18582A0A9DCE004E47FD /* HandleEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18572A0A9DCE004E47FD /* HandleEmployee.swift */; };
+		0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D185B2A0A9EB6004E47FD /* MainUser.swift */; };
+		0B5D185E2A0A9F69004E47FD /* PStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D185D2A0A9F69004E47FD /* PStore.swift */; };
+		0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D185F2A0AA132004E47FD /* PCustomer.swift */; };
+		0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18612A0AA2DC004E47FD /* PEmployee.swift */; };
+		0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18632A0AA355004E47FD /* PBookCalender.swift */; };
+		0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18652A0AA54F004E47FD /* PProduct.swift */; };
+		0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18672A0AA5F3004E47FD /* PServices.swift */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */; };
@@ -84,6 +94,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5D18502A0A968C004E47FD /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		0B5D18522A0A97D0004E47FD /* KeyCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCommon.swift; sourceTree = "<group>"; };
+		0B5D18572A0A9DCE004E47FD /* HandleEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleEmployee.swift; sourceTree = "<group>"; };
+		0B5D185B2A0A9EB6004E47FD /* MainUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUser.swift; sourceTree = "<group>"; };
+		0B5D185D2A0A9F69004E47FD /* PStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PStore.swift; sourceTree = "<group>"; };
+		0B5D185F2A0AA132004E47FD /* PCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCustomer.swift; sourceTree = "<group>"; };
+		0B5D18612A0AA2DC004E47FD /* PEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEmployee.swift; sourceTree = "<group>"; };
+		0B5D18632A0AA355004E47FD /* PBookCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBookCalender.swift; sourceTree = "<group>"; };
+		0B5D18652A0AA54F004E47FD /* PProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PProduct.swift; sourceTree = "<group>"; };
+		0B5D18672A0AA5F3004E47FD /* PServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PServices.swift; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -190,6 +210,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B5D18562A0A9DAC004E47FD /* DataHandle */ = {
+			isa = PBXGroup;
+			children = (
+				0B5D18572A0A9DCE004E47FD /* HandleEmployee.swift */,
+			);
+			path = DataHandle;
+			sourceTree = "<group>";
+		};
 		0BB43EE029FAC4CD00F1DE85 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +446,13 @@
 		0BE0390929F82038002CB20F /* 2.Models */ = {
 			isa = PBXGroup;
 			children = (
+				0B5D185B2A0A9EB6004E47FD /* MainUser.swift */,
+				0B5D185D2A0A9F69004E47FD /* PStore.swift */,
+				0B5D185F2A0AA132004E47FD /* PCustomer.swift */,
+				0B5D18612A0AA2DC004E47FD /* PEmployee.swift */,
+				0B5D18632A0AA355004E47FD /* PBookCalender.swift */,
+				0B5D18652A0AA54F004E47FD /* PProduct.swift */,
+				0B5D18672A0AA5F3004E47FD /* PServices.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -425,6 +460,7 @@
 		0BE0390A29F82039002CB20F /* 4.Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0B5D18562A0A9DAC004E47FD /* DataHandle */,
 				0BE0390B29F82039002CB20F /* Constants.swift */,
 				0BE0390C29F82039002CB20F /* Logger.swift */,
 				0BE0390D29F82039002CB20F /* Common.swift */,
@@ -432,6 +468,8 @@
 				0BE0391529F82039002CB20F /* ImageHelper.swift */,
 				0BE0391629F82039002CB20F /* Utility.swift */,
 				0BE0391729F82039002CB20F /* DateHelper.swift */,
+				0B5D18502A0A968C004E47FD /* CacheManager.swift */,
+				0B5D18522A0A97D0004E47FD /* KeyCommon.swift */,
 			);
 			path = 4.Helpers;
 			sourceTree = "<group>";
@@ -640,6 +678,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5D185E2A0A9F69004E47FD /* PStore.swift in Sources */,
+				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
+				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
@@ -648,10 +689,12 @@
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */,
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
+				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
+				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
@@ -664,16 +707,21 @@
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
 				0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */,
 				0BB43EE929FAC58300F1DE85 /* FavoriteVC.swift in Sources */,
+				0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */,
+				0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
+				0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
 				0BE0392529F82039002CB20F /* Logger.swift in Sources */,
 				0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */,
+				0B5D18582A0A9DCE004E47FD /* HandleEmployee.swift in Sources */,
+				0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */,
 				0BB43EED29FAC59100F1DE85 /* PayVC.swift in Sources */,
 				0BE0392029F82039002CB20F /* ServiceManager.swift in Sources */,
 				0BE0392629F82039002CB20F /* Common.swift in Sources */,

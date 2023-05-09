@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,7 +17,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelloVC" customModule="POS_App" customModuleProvider="target">
             <connections>
-                <outlet property="btnCreateAccount" destination="aZM-Ny-Hrn" id="84w-V5-eA1"/>
                 <outlet property="btnLogin" destination="SZF-7G-94c" id="dto-hp-asD"/>
                 <outlet property="iconPOS" destination="3WO-je-Jlu" id="RmS-YU-qsd"/>
                 <outlet property="mockPOSLbl" destination="hGa-au-sy6" id="Pfy-GH-bVJ"/>
@@ -86,21 +85,6 @@
                         <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="WWT-NL-Q3N"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-Ny-Hrn">
-                    <rect key="frame" x="24" y="694" width="366" height="57"/>
-                    <color key="backgroundColor" name="AccentColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="57" id="Fid-zX-MIc"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Create new account">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="createAccontPressed:" destination="-1" eventType="touchUpInside" id="TtP-gC-P9w"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,10 +99,7 @@
                 <constraint firstItem="MUr-fe-lVl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="d1Y-4h-wtr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SZF-7G-94c" secondAttribute="trailing" constant="24" id="ds9-3K-fe8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AQc-5v-bnZ" secondAttribute="trailing" id="k6r-RA-0JI"/>
-                <constraint firstItem="SZF-7G-94c" firstAttribute="top" secondItem="aZM-Ny-Hrn" secondAttribute="bottom" constant="24" id="lbw-jr-erM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aZM-Ny-Hrn" secondAttribute="trailing" constant="24" id="pbw-ni-cuh"/>
                 <constraint firstItem="AQc-5v-bnZ" firstAttribute="top" secondItem="4Me-w5-DEU" secondAttribute="bottom" constant="40" id="tVP-8w-lMt"/>
-                <constraint firstItem="aZM-Ny-Hrn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="xeI-Jy-bLU"/>
             </constraints>
             <point key="canvasLocation" x="-60.305343511450381" y="-11.267605633802818"/>
         </view>

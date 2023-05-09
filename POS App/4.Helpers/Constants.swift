@@ -25,3 +25,4 @@ struct myCornerRadius {
     static let corner16 = 16.0
     static let corner20 = 20.0
 }
+
