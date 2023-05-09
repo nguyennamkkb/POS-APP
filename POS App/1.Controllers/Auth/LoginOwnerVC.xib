@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,7 +20,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginOwnerVC" customModule="POS_App" customModuleProvider="target">
             <connections>
+                <outlet property="btnLogin" destination="aPH-hV-j1J" id="nDy-Xs-GdV"/>
+                <outlet property="emailView" destination="SNf-GW-ugg" id="v1n-Pj-2N8"/>
+                <outlet property="missedCallView" destination="4U3-54-TkN" id="iRy-bE-Fq6"/>
+                <outlet property="passwordTF" destination="kWp-F5-OEs" id="N9A-p9-eNK"/>
+                <outlet property="smsView" destination="cBo-la-nGN" id="eMq-BC-d8h"/>
+                <outlet property="userTF" destination="dug-QM-uIL" id="mF6-su-MMG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whatappView" destination="x6H-5e-ic2" id="1s7-ow-g32"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -228,7 +235,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-vw-JBe">
                                     <rect key="frame" x="0.0" y="52.666666666666686" width="345" height="47.333333333333343"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-la-nGN" userLabel="email">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-la-nGN" userLabel="sms">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="47.333333333333336"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sms" translatesAutoresizingMaskIntoConstraints="NO" id="JUQ-xk-pb3">
@@ -266,7 +273,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="hMe-AU-cB5" secondAttribute="bottom" id="zNm-CX-mLd"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4U3-54-TkN" userLabel="WhatsApp">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4U3-54-TkN" userLabel="missed call">
                                             <rect key="frame" x="175" y="0.0" width="170" height="47.333333333333336"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_phone" translatesAutoresizingMaskIntoConstraints="NO" id="lMP-4v-xo4">

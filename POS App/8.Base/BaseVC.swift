@@ -32,17 +32,17 @@ class BaseVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        #if DEBUG
+#if DEBUG
         print("ScreenName: \(String(describing: type(of: self)))")
-        #endif
-
+#endif
+        
         
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -50,15 +50,19 @@ class BaseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        addBackButton()
+        //        addBackButton()
         statusBarType = .lightContent
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.navigationItem.setHidesBackButton(true, animated: true)
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     func dismissVC(animated: Bool = true) {
         let vc = self.navigationController?.popViewController(animated: animated)
-
+        
         if vc == nil {
             dismiss(animated: animated, completion: nil)
         }
@@ -67,12 +71,12 @@ class BaseVC: UIViewController {
         vc.hidesBottomBarWhenPushed = hidesBottomBar
         self.navigationController?.pushViewController(vc, animated: anima)
     }
-//    func addBackButton() {
-//        let barItem = UIBarButtonItem.init(image: UIImage.init(named: "ic_back"), style: .plain, target: self, action: #selector(onBackNav))
-//        self.navigationItem.leftBarButtonItem.bac
-//        self.navigationItem.leftBarButtonItem = barItem
-//    }
-
+    //    func addBackButton() {
+    //        let barItem = UIBarButtonItem.init(image: UIImage.init(named: "ic_back"), style: .plain, target: self, action: #selector(onBackNav))
+    //        self.navigationItem.leftBarButtonItem.bac
+    //        self.navigationItem.leftBarButtonItem = barItem
+    //    }
+    
     
     func onBackNav() {
         let vc = self.navigationController?.popViewController(animated: animation)

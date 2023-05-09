@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B71C614CBF9B1B690FE941C4DF44D040"
-               BuildableName = "FittedSheets.framework"
-               BlueprintName = "FittedSheets"
+               BlueprintIdentifier = "C4A0A7D8591B67FB75E2E8D215E3735B"
+               BuildableName = "SideMenu.framework"
+               BlueprintName = "SideMenu"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -6,11 +6,9 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainVC: BaseVC {
-
-    
-    
     
     
     @IBOutlet var contCartView: UIView!
@@ -24,27 +22,26 @@ class MainVC: BaseVC {
     }
     func setupUI(){
         menuView.layer.borderWidth = 0.5
-//        btnBarcode.layer.borderWidth = 0.5
+        //        btnBarcode.layer.borderWidth = 0.5
         btnSearch.layer.borderWidth = 0.5
         btnListOrGrid.layer.borderWidth = 0.5
         
         
         menuView.layer.borderColor = myColor.greyDrak?.cgColor
-//        btnBarcode.layer.borderColor = myColor.greyDrak?.cgColor
+        //        btnBarcode.layer.borderColor = myColor.greyDrak?.cgColor
         btnSearch.layer.borderColor = myColor.greyDrak?.cgColor
         btnListOrGrid.layer.borderColor = myColor.greyDrak?.cgColor
         
         contCartView.layer.cornerRadius = 6
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func sideLeftPressed(_ sender: UIButton) {
+        let menu = SideMenuNavigationController(rootViewController: SlideMenuVC())
+            SideMenuManager.default.leftMenuNavigationController = menu
+            SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
+            SideMenuManager.default.menuPresentMode = .menuSlideIn
+            present(menu, animated: true, completion: nil)
     }
-    */
-
+    
+    
 }

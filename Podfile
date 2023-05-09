@@ -12,4 +12,5 @@ pod 'IQKeyboardManagerSwift'
 pod 'Kingfisher', '~>5.15.7'
 pod 'DropDown'
 pod 'FittedSheets'
+pod 'SideMenu', '~> 6.0'
 end

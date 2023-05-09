@@ -9,12 +9,22 @@ import UIKit
 
 class LoginEmployeeVC: BaseVC {
 
+    
+    @IBOutlet var noteView: UIView!
+    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var passwordTF: UITextField!
+    @IBOutlet var cashierCodeTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
         // Do any additional setup after loading the view.
     }
-
+    func setupUI(){
+        passwordTF.layer.cornerRadius = myCornerRadius.corner10
+        cashierCodeTF.layer.cornerRadius = myCornerRadius.corner10
+        btnLogin.layer.cornerRadius = myCornerRadius.corner10
+        noteView.layer.cornerRadius = myCornerRadius.corner10
+    }
     @IBAction func loginPressed(_ sender: UIButton) {
         self.wrapRoot(vc: TabBarVC())
     }
