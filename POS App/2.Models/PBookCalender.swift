@@ -17,7 +17,6 @@ class PBookCalender: Mappable {
     var timeExecution: String?
     var timeCreate: String?
     var status: Int?
-    var timeCreate: Int64?
     
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
