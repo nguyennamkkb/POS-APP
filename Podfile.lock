@@ -7,6 +7,11 @@ PODS:
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - ObjectMapper (4.2.0)
+  - Realm (10.39.1):
+    - Realm/Headers (= 10.39.1)
+  - Realm/Headers (10.39.1)
+  - RealmSwift (10.39.1):
+    - Realm (= 10.39.1)
   - SideMenu (6.5.0)
 
 DEPENDENCIES:
@@ -16,6 +21,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher (~> 5.15.7)
   - ObjectMapper
+  - RealmSwift (~> 10)
   - SideMenu (~> 6.0)
 
 SPEC REPOS:
@@ -26,6 +32,8 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - ObjectMapper
+    - Realm
+    - RealmSwift
     - SideMenu
 
 SPEC CHECKSUMS:
@@ -35,8 +43,10 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Realm: 1f3157edf145f4d9036765ab550c8cb18f62b700
+  RealmSwift: 8a69a1cb788cd5865966f49667b130567e07bceb
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 748e5d0dc2b6f44fecb8c920cdbc92120acc86b5
+PODFILE CHECKSUM: d8944d248e42b24fa5b09eb51e585dbd11d09fcf
 
 COCOAPODS: 1.12.0
