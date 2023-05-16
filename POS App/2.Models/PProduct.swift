@@ -17,8 +17,9 @@ class PProduct: Mappable {
     var image: String?
     var note: String?
     var code: String?
+    var createAt: Int64?
+    var updateAt: Int64?
     var status: Int?
-    var timeCreate: Int64?
     
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
@@ -33,7 +34,8 @@ class PProduct: Mappable {
         image <- map["image"]
         note <- map["note"]
         code <- map["code"]
-        timeCreate <- map["timeCreate"]
+        createAt <- map["createAt"]
+        updateAt <- map["updateAt"]
         status <- map["status"]
     }
 }

@@ -21,8 +21,9 @@ class PEmployee: Mappable {
     var type: Int64?
     var bankCode: String?
     var accountNumber: String?
+    var createAt: Int64?
+    var updateAt: Int64?
     var status: Int?
-    var timeCreate: Int64?
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -38,10 +39,11 @@ class PEmployee: Mappable {
         email <- map["email"]
         loyalty <- map["loyalty"]
         type <- map["type"]
-        status <- map["status"]
-        timeCreate <- map["timeCreate"]
         bankCode <- map["bankCode"]
         accountNumber <- map["accountNumber"]
+        createAt <- map["createAt"]
+        updateAt <- map["updateAt"]
+        status <- map["status"]
         
     }
 }

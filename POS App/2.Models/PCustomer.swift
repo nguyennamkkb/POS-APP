@@ -19,8 +19,9 @@ class PCustomer: Mappable {
     var email: String?
     var loyalty: Int64?
     var type: Int64?
+    var createAt: Int64?
+    var updateAt: Int64?
     var status: Int?
-    var timeCreate: Int64?
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -36,8 +37,9 @@ class PCustomer: Mappable {
         email <- map["email"]
         loyalty <- map["loyalty"]
         type <- map["type"]
+        createAt <- map["createAt"]
+        updateAt <- map["updateAt"]
         status <- map["status"]
-        timeCreate <- map["timeCreate"]
         
     }
 }

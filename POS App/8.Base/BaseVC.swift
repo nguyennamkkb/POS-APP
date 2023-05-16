@@ -14,20 +14,15 @@ class BaseVC: UIViewController {
     var isLarge: Bool = false
     var isShadow: Bool = true
     var animation: Bool = true
-    var statusBarType: UIStatusBarStyle = UIStatusBarStyle.lightContent{
+    var statusBarType: UIStatusBarStyle = UIStatusBarStyle.default{
         didSet{
             setNeedsStatusBarAppearanceUpdate()
-            
-            if statusBarType == .lightContent {
-                self.navigationController?.navigationBar.barStyle = .black
-            } else {
-                self.navigationController?.navigationBar.barStyle = .default
-            }
+            self.navigationController?.navigationBar.barStyle = .default
         }
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return statusBarType
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

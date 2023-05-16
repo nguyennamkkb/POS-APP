@@ -16,9 +16,9 @@ class PServices: Mappable {
     var note: String?
     var point: Int64?
     var image: String?
+    var createAt: Int64?
+    var updateAt: Int64?
     var status: Int?
-    var timeCreate: Int64?
-    
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -31,7 +31,8 @@ class PServices: Mappable {
         note <- map["note"]
         point <- map["point"]
         image <- map["image"]
-        timeCreate <- map["timeCreate"]
+        createAt <- map["createAt"]
+        updateAt <- map["updateAt"]
         status <- map["status"]
     }
 }

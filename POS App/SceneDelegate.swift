@@ -7,16 +7,24 @@
 
 import UIKit
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+
         guard let windowScense = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScense)
-//        helo = UINavigationController(rootViewController: HelloVC())
-        setRootViewController(UINavigationController(rootViewController: HelloVC()))
+        print(CacheManager.share.isRegister())
+//        if CacheManager.share.isRegister(){
+            setRootViewController(UINavigationController(rootViewController: SignUpVC()))
+//        }else {
+//            setRootViewController(UINavigationController(rootViewController: LoginVC()))
+//        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

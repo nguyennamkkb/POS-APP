@@ -9,7 +9,7 @@ import Foundation
 
 
 class CacheManager {
-    public let share = CacheManager()
+    public static let share = CacheManager()
     let defaults = UserDefaults.standard
     func isRegister() -> Bool {
         return defaults.bool(forKey: KeyCommon.shared.isRegister)

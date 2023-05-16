@@ -10,7 +10,7 @@ import UIKit
 class SignUpVC: BaseVC {
 
     @IBOutlet var xacNhanBtn: UIButton!
-    @IBOutlet var noteView: UILabel!
+    @IBOutlet var noteView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +22,7 @@ class SignUpVC: BaseVC {
     }
 
     @IBAction func xacNhanPressed(_ sender: UIButton) {
-        self.pushVC(controller: TabBarVC())
+        self.pushVC(controller: CreateInfoVC())
     }
     
 }

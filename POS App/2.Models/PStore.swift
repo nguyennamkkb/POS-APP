@@ -17,8 +17,10 @@ class PStore: Mappable {
     var bankCode: String?
     var accountNumber: String?
     var email: String?
+    var password: String?
+    var createAt: Int64?
+    var updateAt: Int64?
     var status: Int?
-    var timeCreate: Int64?
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -31,8 +33,10 @@ class PStore: Mappable {
         bankCode <- map["bankCode"]
         accountNumber <- map["accountNumber"]
         email <- map["email"]
+        password <- map["password"]
+        createAt <- map["createAt"]
+        updateAt <- map["updateAt"]
         status <- map["status"]
-        timeCreate <- map["timeCreate"]
     }
     
 }

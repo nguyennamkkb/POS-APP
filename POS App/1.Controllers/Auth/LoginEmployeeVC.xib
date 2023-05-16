@@ -128,7 +128,6 @@
                         <constraint firstAttribute="trailing" secondItem="UkL-Nz-aSb" secondAttribute="trailing" id="3sZ-Rd-yhK"/>
                         <constraint firstAttribute="trailing" secondItem="Yjc-es-ssW" secondAttribute="trailing" id="Bys-DL-W4n"/>
                         <constraint firstItem="Yjc-es-ssW" firstAttribute="top" secondItem="UkL-Nz-aSb" secondAttribute="bottom" constant="10" id="Dsi-ys-SYD"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="Fpz-GL-gzW"/>
                         <constraint firstItem="UkL-Nz-aSb" firstAttribute="leading" secondItem="kTU-wt-PRl" secondAttribute="leading" id="JqF-WP-QGa"/>
                         <constraint firstItem="Yjc-es-ssW" firstAttribute="leading" secondItem="kTU-wt-PRl" secondAttribute="leading" id="Zm9-4K-VFn"/>
                         <constraint firstItem="UkL-Nz-aSb" firstAttribute="top" secondItem="kTU-wt-PRl" secondAttribute="top" id="ePh-Ha-lpD"/>
