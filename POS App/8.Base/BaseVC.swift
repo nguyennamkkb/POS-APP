@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 class BaseVC: UIViewController {
     
-    
+    let activityScreen = LoadingVC()
     var isHiddenNav: Bool = false
     var isLarge: Bool = false
     var isShadow: Bool = true
@@ -51,6 +51,8 @@ class BaseVC: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+        activityScreen.modalPresentationStyle = .overCurrentContext
+        activityScreen.modalTransitionStyle = .crossDissolve
     }
     @objc func dismissKeyboard() {
         view.endEditing(true)
@@ -82,6 +84,12 @@ class BaseVC: UIViewController {
     func wrapRoot(vc: UIViewController){
         guard let window = self.view.window else {return}
         window.switchRootViewController(vc)
+    }
+    func showLoading(){
+        present(activityScreen, animated: false, completion: nil)
+    }
+    func hideLoading(){
+        activityScreen.closeActivity()
     }
 }
 extension BaseVC: UIGestureRecognizerDelegate {

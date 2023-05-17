@@ -10,6 +10,7 @@ import ObjectMapper
 
 class PCustomer: Mappable {
     var id: String?
+    var store_id: Int?
     var fullName: String?
     var phone: String?
     var address: String?
@@ -28,6 +29,7 @@ class PCustomer: Mappable {
     
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
+        store_id <- map["store_id"]
         fullName <- map["fullName"]
         phone <- map["phone"]
         address <- map["address"]

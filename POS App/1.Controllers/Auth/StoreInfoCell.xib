@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="30" width="481" height="56"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,7 +74,7 @@
                                 <rect key="frame" x="0.0" y="30" width="481" height="56"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="street-address"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -101,23 +101,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chọn ngân hàng" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bx2-eb-GOl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vj-W2-3D2">
                                 <rect key="frame" x="0.0" y="30" width="481" height="56"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" red="0.94904881720000001" green="0.94898742439999995" blue="0.96708649400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Chọn">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBankPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dTC-BM-cV5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="86" id="Ca6-5V-gd8"/>
-                            <constraint firstAttribute="bottom" secondItem="Bx2-eb-GOl" secondAttribute="bottom" id="Nhx-C1-n1W"/>
+                            <constraint firstItem="6vj-W2-3D2" firstAttribute="top" secondItem="j9b-Mv-1eg" secondAttribute="bottom" constant="10" id="S3a-72-3cd"/>
                             <constraint firstAttribute="trailing" secondItem="j9b-Mv-1eg" secondAttribute="trailing" id="TEm-bz-5YN"/>
-                            <constraint firstAttribute="trailing" secondItem="Bx2-eb-GOl" secondAttribute="trailing" id="cjD-t8-rRm"/>
+                            <constraint firstItem="6vj-W2-3D2" firstAttribute="leading" secondItem="hmh-hr-SoA" secondAttribute="leading" id="YO2-57-kju"/>
                             <constraint firstItem="j9b-Mv-1eg" firstAttribute="leading" secondItem="hmh-hr-SoA" secondAttribute="leading" id="ed6-d4-Qrt"/>
-                            <constraint firstItem="Bx2-eb-GOl" firstAttribute="leading" secondItem="hmh-hr-SoA" secondAttribute="leading" id="hJb-G3-G0d"/>
+                            <constraint firstAttribute="bottom" secondItem="6vj-W2-3D2" secondAttribute="bottom" id="rJA-zd-mVH"/>
                             <constraint firstItem="j9b-Mv-1eg" firstAttribute="top" secondItem="hmh-hr-SoA" secondAttribute="top" id="tbN-zb-go6"/>
-                            <constraint firstItem="Bx2-eb-GOl" firstAttribute="top" secondItem="j9b-Mv-1eg" secondAttribute="bottom" constant="10" id="xNj-h3-M5e"/>
+                            <constraint firstAttribute="trailing" secondItem="6vj-W2-3D2" secondAttribute="trailing" id="yZW-ra-TTw"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHG-e7-bQK" userLabel="sotk">
@@ -136,7 +141,7 @@
                                 <rect key="frame" x="0.0" y="30" width="481" height="56"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,7 +172,7 @@
                                 <rect key="frame" x="0.0" y="30" width="481" height="56"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -222,6 +227,7 @@
             <connections>
                 <outlet property="accoutNumberTF" destination="y2C-uo-eCn" id="8sg-uw-Aty"/>
                 <outlet property="addressTF" destination="K0N-T5-Wce" id="cho-De-lJl"/>
+                <outlet property="bankCodeDRop" destination="6vj-W2-3D2" id="gAo-04-cIB"/>
                 <outlet property="emailTF" destination="ixo-LE-Ixe" id="dFg-4d-dbW"/>
                 <outlet property="storeNameTF" destination="qpw-2O-IpR" id="Xjh-AM-c7I"/>
                 <outlet property="xacNhanBtn" destination="lDi-0L-cab" id="fpF-Pe-kbJ"/>

@@ -127,6 +127,17 @@ public class Utility {
         return Double(money.replacingOccurrences(of: ".", with: "", options: .literal, range: nil)) as! Double
     }
     
-    
+    static func Logger (_ str: String){
+        print("Nam: \(str)")
+    }
+    static func getParamFromDirectory(item: [String:Any]) -> String {
+        var param: String = "?"
+        for (key, value) in item {
+            if value != nil {
+                param.append("\(key)=\(value)&")
+            }
+        }
+        return param
+    }
 }
 

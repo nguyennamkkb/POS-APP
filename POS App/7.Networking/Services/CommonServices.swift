@@ -13,26 +13,25 @@ import Alamofire
 fileprivate class ListCommonService {
     
     // account
-    static let login = ServiceManager.ROOT + "vmbank/services/account/requestComand"
+    static let storemains = ServiceManager.ROOT + "storemains"
     
 }
 
 fileprivate enum ECommonURLs {
-    case login
+    case storemains
     
     
     func getPath() -> String {
         switch self {
-        case .login:
-            return ListCommonService.login
+        case .storemains:
+            return ListCommonService.storemains
             
         }
-        
-        
         func getMethod() -> HTTPMethod {
             switch self {
+        
             default:
-                return.post
+                return.get
             }
         }
     }
@@ -43,16 +42,35 @@ fileprivate enum ECommonURLs {
 class CommonServices {
     
     
-    func getLoginInfoV(param: LoginParam?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
-        let router = ECommonURLs.login
+    func getStoreMain(param: String?, completion: @escaping (_ reponse: PStore?) -> Void) {
+        let router = ECommonURLs.storemains.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
         
-        BaseNetWorking.shared.requestData(fromURl: router.getPath(), method: .get, parameter: param?.toJSON()) { (success, result, error) in
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
-                if result != nil {
-                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                if let result: String = result as? String {
+                    if let baseResponse = Mapper<PStore>().mapArray(JSONString: result) {
+                        completion(baseResponse.itemAtIndex(index: 0))
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func createStoreMain(param: PStore, completion: @escaping (_ reponse: PStore?) -> Void) {
+        let router = ECommonURLs.storemains.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
                         completion(baseResponse)
                     }
                 }else{

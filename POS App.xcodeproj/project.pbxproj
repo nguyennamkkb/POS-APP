@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */; };
+		0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */; };
 		0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B21415F2A13BCC100CCAAB4 /* CreateInfoVC.swift */; };
 		0B2141622A13BCC100CCAAB4 /* CreateInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2141602A13BCC100CCAAB4 /* CreateInfoVC.xib */; };
 		0B2141652A13BE5D00CCAAB4 /* StoreInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2141632A13BE5D00CCAAB4 /* StoreInfoCell.swift */; };
@@ -101,6 +103,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 		0B21415F2A13BCC100CCAAB4 /* CreateInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInfoVC.swift; sourceTree = "<group>"; };
 		0B2141602A13BCC100CCAAB4 /* CreateInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateInfoVC.xib; sourceTree = "<group>"; };
 		0B2141632A13BE5D00CCAAB4 /* StoreInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoCell.swift; sourceTree = "<group>"; };
@@ -430,6 +434,8 @@
 				0BD5BAC129F8A3E9009F2A66 /* Auth */,
 				0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */,
 				0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */,
+				0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */,
+				0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */,
 			);
 			path = 1.Controllers;
 			sourceTree = "<group>";
@@ -642,6 +648,7 @@
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
+				0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */,
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
 				0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */,
@@ -757,6 +764,7 @@
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
+				0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

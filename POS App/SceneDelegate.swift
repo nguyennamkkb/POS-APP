@@ -19,11 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScense = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScense)
         print(CacheManager.share.isRegister())
-//        if CacheManager.share.isRegister(){
+        if CacheManager.share.isRegister(){
+            setRootViewController(UINavigationController(rootViewController: LoginVC()))
+        }else {
             setRootViewController(UINavigationController(rootViewController: SignUpVC()))
-//        }else {
-//            setRootViewController(UINavigationController(rootViewController: LoginVC()))
-//        }
+        }
         
     }
 

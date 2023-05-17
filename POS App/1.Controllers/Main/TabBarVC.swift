@@ -19,7 +19,7 @@ class TabBarVC: UITabBarController {
         
         let favoriteVC = FavoriteVC()
         let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
-        favoriteNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_star"), tag: 2)
+        favoriteNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_qr"), tag: 2)
         
         
         let payVC = PayVC()
@@ -31,10 +31,6 @@ class TabBarVC: UITabBarController {
     }
     func setLayout(){
         tabBar.tintColor = UIColor(hex: "#1A72DD")
-//        tabBar.tintColor = UIColor.red
         tabBar.backgroundColor = UIColor.white
-        
     }
-    
-    
 }

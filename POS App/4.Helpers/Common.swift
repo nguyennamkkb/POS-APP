@@ -10,4 +10,5 @@ import Foundation
 class Common {
     public static var isInternet = false//false bat tinh năng ckeck ẩn menu để false
     public static var isRunningUpOffW = false
+    
 }

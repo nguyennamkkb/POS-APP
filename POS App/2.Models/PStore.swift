@@ -21,6 +21,7 @@ class PStore: Mappable {
     var createAt: Int64?
     var updateAt: Int64?
     var status: Int?
+    init (){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
