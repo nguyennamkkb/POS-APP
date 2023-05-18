@@ -20,7 +20,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
-        
+        print(CacheManager.share.getUserMaster())
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10

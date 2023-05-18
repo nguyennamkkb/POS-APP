@@ -54,7 +54,6 @@ class SignUpVC: BaseVC {
     @IBAction func hideOrShowPassword(_ sender: UIButton) {
         isShowPassword = !isShowPassword
         if isShowPassword {
-            
             btnShowPassword.setImage(UIImage(systemName: "eye"), for: .normal)
             //code show
         }else{
@@ -63,6 +62,11 @@ class SignUpVC: BaseVC {
             //code hide
         }
     }
+    
+    @IBAction func dangNhapPressed(_ sender: Any) {
+        self.pushVC(controller: LoginVC())
+    }
+    
     func checkData(){
 //        let store = PStore()
 //        store.phone = "0358737373"

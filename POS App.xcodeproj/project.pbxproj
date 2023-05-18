@@ -915,6 +915,8 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -948,6 +950,8 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

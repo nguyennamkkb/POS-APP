@@ -185,6 +185,9 @@
                     <rect key="frame" x="24" y="442" width="366" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Đăng nhập"/>
+                    <connections>
+                        <action selector="dangNhapPressed:" destination="-1" eventType="touchUpInside" id="qCh-vG-gjJ"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

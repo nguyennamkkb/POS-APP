@@ -22,6 +22,10 @@ class PStore: Mappable {
     var updateAt: Int64?
     var status: Int?
     init (){}
+    init (phone: String, password: String){
+        self.phone = phone
+        self.password = password
+    }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

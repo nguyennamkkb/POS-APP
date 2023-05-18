@@ -18,4 +18,5 @@ class KeyCommon {
     let dataBooks: String  = "tableBooks"
     let dataProducts: String  = "tableProducts"
     let dataServicess: String  = "tableServices"
+    let biometricType: String = "biometricType"
 }

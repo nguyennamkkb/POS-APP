@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import ObjectMapper
 import Kingfisher
-
+import LocalAuthentication
 public class Utility {
 
     public static func cropImg(image: UIImage, width: Double, height: Double) -> UIImage {
@@ -141,3 +141,48 @@ public class Utility {
     }
 }
 
+
+
+enum BiometricType {
+    case none
+    case touch
+    case face
+}
+
+class BiometricManager {
+
+    static func getbiometricType() -> BiometricType {
+        let authContext = LAContext()
+        if #available(iOS 11, *) {
+            let _ = authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+            switch(authContext.biometryType) {
+            case .touchID:
+                return .touch
+            case .faceID:
+                return .face
+            default:
+                return .none
+            }
+        } else {
+            return authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touch : .none
+        }
+    }
+
+    static func getImagetBiometric() -> String {
+        //        if CacheManager.shared.isKeyPresentInUserDefaults(key: Common.BIOMETRIC_TYPE) == true {
+        //            return CacheManager.shared.getBiometricType()
+        //        } else {
+        switch getbiometricType() {
+        case .face:
+            CacheManager.share.setBiometricType(biometricType: "ic_faceId")
+            return "ic_faceId"
+        case .touch:
+            CacheManager.share.setBiometricType(biometricType: "ic_fingerId")
+            return "ic_fingerId"
+        case .none:
+            return CacheManager.share.getBiometricType()//return ""
+        //            }
+        }
+    }
+
+}

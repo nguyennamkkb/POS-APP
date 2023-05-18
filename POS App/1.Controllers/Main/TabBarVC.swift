@@ -11,7 +11,6 @@ class TabBarVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let mainVC = MainVC()
         let mainNavi = UINavigationController(rootViewController: mainVC)
         mainNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_main"), tag: 1)

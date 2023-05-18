@@ -72,5 +72,12 @@ class CacheManager {
     func setDataServicess(value: String?) {
         return defaults.setValue(value ?? "", forKey: KeyCommon.shared.dataServicess)
     }
+    func setBiometricType (biometricType: String){
+        defaults.setValue(biometricType, forKey: KeyCommon.shared.biometricType)
+    }
+    
+    func getBiometricType () -> String {
+        return defaults.value(forKey: KeyCommon.shared.biometricType) as! String
+    }
     
 }
