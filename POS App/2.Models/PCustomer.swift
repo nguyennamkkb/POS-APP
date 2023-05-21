@@ -14,8 +14,8 @@ class PCustomer: Mappable {
     var fullName: String?
     var phone: String?
     var address: String?
-    var birthday: Int64?
-    var gender: Int?
+    var birthday: String?
+    var gender: String?
     var image: String?
     var email: String?
     var loyalty: Int64?
@@ -23,6 +23,8 @@ class PCustomer: Mappable {
     var createAt: Int64?
     var updateAt: Int64?
     var status: Int?
+    
+    init(){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

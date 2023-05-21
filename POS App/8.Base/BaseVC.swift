@@ -7,8 +7,10 @@
 
 import Foundation
 import UIKit
-class BaseVC: UIViewController {
-    
+import FittedSheets
+class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    let alertView = UIView()
+    var messageLabel = UILabel()
     let activityScreen = LoadingVC()
     var isHiddenNav: Bool = false
     var isLarge: Bool = false
@@ -20,7 +22,28 @@ class BaseVC: UIViewController {
             self.navigationController?.navigationBar.barStyle = .default
         }
     }
-    
+
+    var getBase64Image: ClosureCustom<String>?
+    func setLayoutAlert(){
+        alertView.layer.zPosition = 999
+        view.addSubview(alertView)
+        alertView.backgroundColor = UIColor(hex: "#0A0A0A")
+        alertView.frame = CGRect(x: 40, y: -50, width: self.view.frame.width - 80, height: 44)
+        alertView.layer.cornerRadius = 15
+        messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 80, height: 44))
+        messageLabel.text = ""
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.textColor = .white
+        alertView.addSubview(messageLabel)
+        alertView.layer.shadowColor = UIColor.gray.cgColor
+        alertView.layer.shadowOpacity = 0.2
+        alertView.layer.shadowOffset = .zero
+        alertView.layer.shadowRadius = 10
+        alertView.layer.borderColor = UIColor.gray.cgColor
+        alertView.layer.borderWidth = 1
+        
+    }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
@@ -53,6 +76,24 @@ class BaseVC: UIViewController {
         view.addGestureRecognizer(tap)
         activityScreen.modalPresentationStyle = .overCurrentContext
         activityScreen.modalTransitionStyle = .crossDissolve
+        setLayoutAlert()
+    }
+    func showAlert(message: String?){
+        self.messageLabel.text  = message ?? ""
+        UIView.animate(withDuration: 0.3) {
+            self.alertView.frame = CGRect(x: 40, y: 50, width: self.view.frame.width - 80, height: 44)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            self.hideAlert()
+        }
+    }
+    func hideAlert(){
+        UIView.animate(withDuration: 0.3) {
+            self.alertView.frame = CGRect(x: 40, y: -50, width: self.view.frame.width - 80, height: 44)
+        }
+    }
+    func showMessageDeveloping(){
+        showAlert(message: "Chức năng đang phát triển")
     }
     @objc func dismissKeyboard() {
         view.endEditing(true)
@@ -91,6 +132,8 @@ class BaseVC: UIViewController {
     func hideLoading(){
         activityScreen.closeActivity()
     }
+  
+    
 }
 extension BaseVC: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -101,3 +144,19 @@ extension BaseVC: UIGestureRecognizerDelegate {
     }
 }
 
+extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var base64String : String = ""
+        if let image = info[.originalImage] as? UIImage {
+            base64String = image.jpegData(compressionQuality: 0.8)?.base64EncodedString() ?? ""
+            // Use the base64String as needed
+            Common.anhChupAvatar = base64String
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}

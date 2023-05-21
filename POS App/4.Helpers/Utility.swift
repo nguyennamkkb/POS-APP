@@ -11,6 +11,19 @@ import ObjectMapper
 import Kingfisher
 import LocalAuthentication
 public class Utility {
+    func imageFromBase64String(base64String: String) -> UIImage? {
+        // Convert the base64 string to Data
+        guard let imageData = Data(base64Encoded: base64String) else {
+            return nil
+        }
+        
+        // Create an image from the data
+        guard let image = UIImage(data: imageData) else {
+            return nil
+        }
+        
+        return image
+    }
 
     public static func cropImg(image: UIImage, width: Double, height: Double) -> UIImage {
         
@@ -184,5 +197,7 @@ class BiometricManager {
         //            }
         }
     }
+    
+   
 
 }

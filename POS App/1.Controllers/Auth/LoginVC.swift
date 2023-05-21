@@ -97,6 +97,7 @@ class LoginVC: BaseVC {
                             if response != nil {
                                 CacheManager.share.setRegister(true)
                                 CacheManager.share.setUserMaster(value: pStore.toJSONString())
+                                Common.userMaster = pStore
                                 self.wrapRoot(vc: TabBarVC())
                             } else {
                                 self.messageLbl.text = "Thông báo: số điện thoại hoặc mật khẩu không đúng!"

@@ -28,6 +28,8 @@
 		0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18672A0AA5F3004E47FD /* PServices.swift */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
+		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
+		0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */; };
 		0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */; };
 		0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE329FAC56900F1DE85 /* MainVC.swift */; };
 		0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EE429FAC56900F1DE85 /* MainVC.xib */; };
@@ -49,6 +51,12 @@
 		0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */; };
 		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
+		0BB7FDD72A19CAA7005EF9B9 /* CreateCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD52A19CAA7005EF9B9 /* CreateCustomerVC.swift */; };
+		0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */; };
+		0BB7FDDB2A19CAC0005EF9B9 /* SelectCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD92A19CAC0005EF9B9 /* SelectCustomerVC.swift */; };
+		0BB7FDDC2A19CAC0005EF9B9 /* SelectCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDA2A19CAC0005EF9B9 /* SelectCustomerVC.xib */; };
+		0BB7FDDF2A19D6A8005EF9B9 /* CreateCustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */; };
+		0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */; };
 		0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */; };
 		0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */; };
 		0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */; };
@@ -124,6 +132,8 @@
 		0B5D18672A0AA5F3004E47FD /* PServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PServices.swift; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
+		0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakePhotoVC.xib; sourceTree = "<group>"; };
 		0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		0BB43EE329FAC56900F1DE85 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0BB43EE429FAC56900F1DE85 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
@@ -145,6 +155,12 @@
 		0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		0BB7FDD52A19CAA7005EF9B9 /* CreateCustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerVC.swift; sourceTree = "<group>"; };
+		0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCustomerVC.xib; sourceTree = "<group>"; };
+		0BB7FDD92A19CAC0005EF9B9 /* SelectCustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCustomerVC.swift; sourceTree = "<group>"; };
+		0BB7FDDA2A19CAC0005EF9B9 /* SelectCustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCustomerVC.xib; sourceTree = "<group>"; };
+		0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerCell.swift; sourceTree = "<group>"; };
+		0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCustomerCell.xib; sourceTree = "<group>"; };
 		0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
 		0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloVC.xib; sourceTree = "<group>"; };
 		0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOwnerVC.swift; sourceTree = "<group>"; };
@@ -241,6 +257,15 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		0B9BAFAA2A1A22C9008679DE /* Orther */ = {
+			isa = PBXGroup;
+			children = (
+				0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */,
+				0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */,
+			);
+			path = Orther;
+			sourceTree = "<group>";
+		};
 		0BB43EE029FAC4CD00F1DE85 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +298,26 @@
 				0BB43EF229FAD82E00F1DE85 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		0BB7FDD32A19CA87005EF9B9 /* Emoloyee */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Emoloyee;
+			sourceTree = "<group>";
+		};
+		0BB7FDD42A19CA8F005EF9B9 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				0BB7FDD52A19CAA7005EF9B9 /* CreateCustomerVC.swift */,
+				0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */,
+				0BB7FDD92A19CAC0005EF9B9 /* SelectCustomerVC.swift */,
+				0BB7FDDA2A19CAC0005EF9B9 /* SelectCustomerVC.xib */,
+				0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */,
+				0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */,
+			);
+			path = Customer;
 			sourceTree = "<group>";
 		};
 		0BD5BAC129F8A3E9009F2A66 /* Auth */ = {
@@ -337,6 +382,8 @@
 		0BD5BAEF29F8A777009F2A66 /* ManageStore */ = {
 			isa = PBXGroup;
 			children = (
+				0BB7FDD42A19CA8F005EF9B9 /* Customer */,
+				0BB7FDD32A19CA87005EF9B9 /* Emoloyee */,
 				0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */,
 				0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */,
 			);
@@ -425,6 +472,7 @@
 		0BE0390229F82038002CB20F /* 1.Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B9BAFAA2A1A22C9008679DE /* Orther */,
 				0BB43EE029FAC4CD00F1DE85 /* Main */,
 				0BD5BAEF29F8A777009F2A66 /* ManageStore */,
 				0BD5BAE629F8A6ED009F2A66 /* Report */,
@@ -622,11 +670,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
+				0BB7FDDC2A19CAC0005EF9B9 /* SelectCustomerVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0B2141662A13BE5D00CCAAB4 /* StoreInfoCell.xib in Resources */,
+				0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */,
 				0B2141622A13BCC100CCAAB4 /* CreateInfoVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
@@ -637,9 +687,11 @@
 				0BD5BAC929F8A419009F2A66 /* LoginOwnerVC.xib in Resources */,
 				0BB43EEA29FAC58300F1DE85 /* FavoriteVC.xib in Resources */,
 				0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */,
+				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
+				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */,
 				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
@@ -714,6 +766,7 @@
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
+				0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */,
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
@@ -734,6 +787,7 @@
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
 				0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */,
 				0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */,
+				0BB7FDD72A19CAA7005EF9B9 /* CreateCustomerVC.swift in Sources */,
 				0BE0391F29F82039002CB20F /* Reachability.swift in Sources */,
 				0BE0392B29F82039002CB20F /* ExString.swift in Sources */,
 				0B21416E2A13E8CE00CCAAB4 /* CreateCalenderVC.swift in Sources */,
@@ -746,6 +800,7 @@
 				0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
+				0BB7FDDF2A19D6A8005EF9B9 /* CreateCustomerCell.swift in Sources */,
 				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
 				0B2141652A13BE5D00CCAAB4 /* StoreInfoCell.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
@@ -764,6 +819,7 @@
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
+				0BB7FDDB2A19CAC0005EF9B9 /* SelectCustomerVC.swift in Sources */,
 				0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,6 +971,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -950,6 +1007,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

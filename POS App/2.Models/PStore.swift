@@ -10,7 +10,7 @@ import ObjectMapper
 
 class PStore: Mappable {
     
-    var id: String?
+    var id: Int?
     var storeName: String?
     var phone: String?
     var address: String?
