@@ -9,7 +9,7 @@ import UIKit
 import MobileCoreServices
 class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
-    
+    let imagePicker = UIImagePickerController()
     var customer: PCustomer = PCustomer()
     let baseVC = BaseVC()
     @IBOutlet var tableView: UITableView!
@@ -26,20 +26,14 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateCustomerCell", for: indexPath) as? CreateCustomerCell else {return UITableViewCell()}
-        let vc = TakePhotoVC()
+        
         cell.actionChupAnh = {
-            [weak self] item in
-            guard let self = self else {return}
-            self.customer = item
-            self.present(vc, animated: false)
-        }
-        vc.getBase64Image = {
-            [weak self] base64 in
+            [weak self] in
             guard let self = self else {return}
             
         }
         return cell
     }
-    
+
     
 }

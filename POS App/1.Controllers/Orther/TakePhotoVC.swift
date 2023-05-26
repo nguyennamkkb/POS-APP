@@ -6,37 +6,57 @@
 //
 
 import UIKit
-
-class TakePhotoVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+import AVFoundation
+class TakePhotoVC: UIViewController {
     var getBase64Image: ClosureCustom<String>?
+    
+    var captureSession: AVCaptureSession?
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var photoOutput: AVCapturePhotoOutput?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
-    func takePhoto() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    // Delegate method to handle when the image is captured
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage {
-            convertImageToBase64(image: image, compressionQuality: 0.3) { base64String in
-                guard let base64String = base64String else {return}
-                Common.anhChupAvatar = base64String
-                self.getBase64Image?(base64String)
-            }
+    func setupCamera() {
+        captureSession = AVCaptureSession()
+        guard let backCamera = AVCaptureDevice.default(for: .video) else {
+            // Handle case where back camera is not available
+            return
         }
-        picker.dismiss(animated: true, completion: nil)
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: backCamera)
+            
+            captureSession?.addInput(input)
+            
+            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            videoPreviewLayer?.frame = view.layer.bounds
+            view.layer.addSublayer(videoPreviewLayer!)
+            
+            captureSession?.startRunning()
+            
+            photoOutput = AVCapturePhotoOutput()
+            photoOutput?.isHighResolutionCaptureEnabled = true
+            
+            if let photoOutput = photoOutput, captureSession?.canAddOutput(photoOutput) == true {
+                captureSession?.addOutput(photoOutput)
+            }
+        } catch {
+            // Handle error
+        }
     }
-    
-    // Delegate method to handle when the image capture is canceled
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
+    func capturePhoto() {
+        guard let photoOutput = photoOutput else {
+            // Handle case where photo output is not available
+            return
+        }
+        
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.isHighResolutionPhotoEnabled = true
+        
+        photoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
+
     
     // Function to convert the image to base64
     func convertImageToBase64(image: UIImage, compressionQuality: CGFloat, completion: @escaping (String?) -> Void) {
@@ -51,4 +71,14 @@ class TakePhotoVC: UIViewController, UIImagePickerControllerDelegate & UINavigat
     }
     
     
+}
+extension TakePhotoVC: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            let image = UIImage(data: imageData)
+            let base64String = imageData.base64EncodedString()
+            captureSession?.stopRunning()
+
+        }
+    }
 }

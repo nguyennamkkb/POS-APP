@@ -13,7 +13,8 @@ import MobileCoreServices
 class CreateCustomerCell: UITableViewCell {
     
     
-    var actionChupAnh: ClosureCustom<PCustomer>?
+    var actionChupAnh: ClosureAction?
+    var actionOK: ClosureCustom<PCustomer>?
     let dropDown = DropDown()
     @IBOutlet var gender: UIButton!
     @IBOutlet var emailTF: UITextField!
@@ -42,10 +43,10 @@ class CreateCustomerCell: UITableViewCell {
     
     @IBAction func btnXacNhanPressed(_ sender: UIButton) {
         getDataForm()
-
+        actionOK?(customer)
     }
-    func showAvatar(){
-        print("ádas")
+    func showAvatar(base64: String){
+        print(base64)
 //        print(Common.anhChupAvatar)
 //       avatarCustomer = UIImageView(image: Utility().imageFromBase64String(base64String: imageBase64 ?? ""))
     
@@ -67,7 +68,7 @@ class CreateCustomerCell: UITableViewCell {
     }
     
     @IBAction func bntChupAnhPressed(_ sender: UIButton) {
-        actionChupAnh?(customer)
+        actionChupAnh?()
     }
     
     @IBAction func selectGenderPressed(_ sender: UIButton) {
