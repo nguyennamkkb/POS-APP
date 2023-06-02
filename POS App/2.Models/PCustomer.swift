@@ -17,11 +17,11 @@ class PCustomer: Mappable {
     var birthday: String?
     var gender: String?
     var image: String?
+    var keySearch: String?
     var email: String?
     var loyalty: Int64?
-    var type: Int64?
-    var createAt: Int64?
-    var updateAt: Int64?
+    var createAt: String?
+    var updateAt: String?
     var status: Int?
     
     init(){}
@@ -37,10 +37,10 @@ class PCustomer: Mappable {
         address <- map["address"]
         birthday <- map["birthday"]
         gender <- map["gender"]
+        keySearch <- map["keySearch"]
         image <- map["image"]
         email <- map["email"]
         loyalty <- map["loyalty"]
-        type <- map["type"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

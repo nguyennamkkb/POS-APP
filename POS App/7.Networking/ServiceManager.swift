@@ -12,7 +12,7 @@ import SystemConfiguration
 
 class ServiceManager {
     static let shared: ServiceManager = ServiceManager()
-    static let ROOT = "https://posapi.herokuapp.com/api/"
+    static let ROOT = "http://14.225.254.151:3456/pos-api/"
     public static let common = CommonServices()
     
     public static func isConnectedToInternet() ->Bool {

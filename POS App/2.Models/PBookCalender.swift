@@ -9,14 +9,15 @@ import Foundation
 import ObjectMapper
 
 class PBookCalender: Mappable {
-    var id: String?
-    var timeStart: String?
-    var idEmployee: String?
-    var idCustomer: String?
+    var id: Int?
+    var store_id: Int?
+    var start: String?
+    var idEmployee: Int?
+    var idCustomer: Int?
     var listService: String?
-    var timeExecution: String?
-    var createAt: Int64?
-    var updateAt: Int64?
+    var amount: Int?
+    var createAt: String?
+    var updateAt: String?
     var status: Int?
     
     required init?(map: ObjectMapper.Map) {
@@ -25,11 +26,12 @@ class PBookCalender: Mappable {
     
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
-        timeStart <- map["timeStart"]
+        store_id <- map["timeStart"]
+        start <- map["timeExecution"]
         idEmployee <- map["idEmployee"]
         idCustomer <- map["idCustomer"]
         listService <- map["listService"]
-        timeExecution <- map["timeExecution"]
+        amount <- map["amount"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

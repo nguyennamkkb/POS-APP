@@ -9,7 +9,7 @@ import UIKit
 import SideMenu
 
 class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var taoLichBtn: UIButton!
     @IBOutlet var btnSearch: UIButton!
@@ -20,7 +20,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
-//        print(CacheManager.share.getUserMaster())
+        //        print(CacheManager.share.getUserMaster())
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -41,14 +41,21 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func sideLeftPressed(_ sender: UIButton) {
 //        let menu = SideMenuNavigationController(rootViewController: SlideMenuVC())
-//            SideMenuManager.default.leftMenuNavigationController = menu
-////            SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
-//            SideMenuManager.default.menuPresentMode = .menuSlideIn
-//            present(menu, animated: true, completion: nil)
+        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: SlideMenuVC())
+
+        SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
+        SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        leftMenuNavigationController.menuWidth = 300
+        present(leftMenuNavigationController, animated: true, completion: nil)
     }
     
     @IBAction func BtnCreateCalenderPressed(_ sender: Any) {
         self.pushVC(controller: CreateCalenderVC())
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }

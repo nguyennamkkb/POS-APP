@@ -10,15 +10,14 @@ import ObjectMapper
 
 class PProduct: Mappable {
     var id: String?
+    var store_id: Int?
     var name: String?
-    var sku: Int64?
-    var priceExport: Double?
-    var priceImport: Double?
+    var price: Int?
     var image: String?
     var note: String?
-    var code: String?
-    var createAt: Int64?
-    var updateAt: Int64?
+    var point: Int?
+    var createAt: String?
+    var updateAt: String?
     var status: Int?
     
     required init?(map: ObjectMapper.Map) {
@@ -27,13 +26,12 @@ class PProduct: Mappable {
     
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
+        store_id <- map["store_id"]
         name <- map["name"]
-        sku <- map["sku"]
-        priceExport <- map["priceExport"]
-        priceImport <- map["priceImport"]
+        price <- map["price"]
         image <- map["image"]
         note <- map["note"]
-        code <- map["code"]
+        point <- map["point"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

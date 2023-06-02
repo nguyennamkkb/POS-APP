@@ -16,8 +16,8 @@ class PServices: Mappable {
     var note: String?
     var point: Int64?
     var image: String?
-    var createAt: Int64?
-    var updateAt: Int64?
+    var createAt: String?
+    var updateAt: String?
     var status: Int?
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)

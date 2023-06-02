@@ -45,18 +45,18 @@ class LoginVC: BaseVC {
         view.endEditing(true)
         guard let phone = phoneTF.text else {return}
         guard let password = passwordTF.text else {return}
-        let pStore = PStore(phone: phone, password: password)
         self.showLoading()
-        let paramRequest = Utility.getParamFromDirectory(item: pStore.toJSON())
-        ServiceManager.common.getStoreMain(param: paramRequest){
+        let paramRequest = LoginParam(phone: phone, password: password)
+        ServiceManager.common.login(param: paramRequest){
             (response) in
             self.hideLoading()
-            if response != nil {
-                CacheManager.share.setRegister(true)
-                CacheManager.share.setUserMaster(value: pStore.toJSONString())
+            if response != nil, response?.statusCode == 200 {
+                print(response!.toJSONString(prettyPrint: true)!)
+//                CacheManager.share.setRegister(true)
+//                CacheManager.share.setUserMaster(value: pStore.toJSONString())
                 self.wrapRoot(vc: TabBarVC())
-            } else {
-                self.messageLbl.text = "Thông báo: số điện thoại hoặc mật khẩu không đúng!"
+            } else if response?.statusCode == 0 {
+                self.messageLbl.text = "Thông báo: \(response?.message ?? "" )"
             }
         }
         //        self.pushVC(controller: TabBarVC())

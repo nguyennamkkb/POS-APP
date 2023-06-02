@@ -7,14 +7,22 @@
 
 import UIKit
 
-class SlideMenuVC: UIViewController {
+class SlideMenuVC: BaseVC {
 
+    @IBOutlet var storeNameLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-
-  
+    @IBAction func bntBaoCaoPressed(_ sender: UIButton) {
+    }
+    @IBAction func bntQuanLyPressed(_ sender: UIButton) {
+        self.pushVC(controller: ManageStoreVC())
+    }
+    @IBAction func bntCuaHangPressed(_ sender: UIButton) {
+    }
+    @IBAction func btnHoTroPressed(_ sender: Any) {
+    }
 }

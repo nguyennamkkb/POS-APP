@@ -13,14 +13,15 @@ import Alamofire
 fileprivate class ListCommonService {
     
     // account
-    static let storemains = ServiceManager.ROOT + "storemains"
-    static let customers = ServiceManager.ROOT + "customers"
-    
+    static let storemains = ServiceManager.ROOT + "main-store"
+    static let customers = ServiceManager.ROOT + "customer"
+    static let auth = ServiceManager.ROOT + "auth"
 }
 
 fileprivate enum ECommonURLs {
     case storemains
     case customers
+    case auth
     
     
     func getPath() -> String {
@@ -29,6 +30,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.storemains
         case .customers:
             return ListCommonService.customers
+        case .auth:
+            return ListCommonService.auth
             
         }
         func getMethod() -> HTTPMethod {
@@ -46,17 +49,35 @@ fileprivate enum ECommonURLs {
 class CommonServices {
     
     
-    func getStoreMain(param: String?, completion: @escaping (_ reponse: PStore?) -> Void) {
+    func login(param: LoginParam?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.auth.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param?.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getStoreMain(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.storemains.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
-        
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
-                if let result: String = result as? String {
-                    if let baseResponse = Mapper<PStore>().mapArray(JSONString: result) {
-                        completion(baseResponse.itemAtIndex(index: 0))
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
                     }
                 }else{
                     completion(nil)

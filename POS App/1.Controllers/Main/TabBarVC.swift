@@ -32,4 +32,13 @@ class TabBarVC: UITabBarController {
         tabBar.tintColor = UIColor(hex: "#1A72DD")
         tabBar.backgroundColor = UIColor.white
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }

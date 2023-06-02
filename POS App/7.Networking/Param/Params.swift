@@ -11,14 +11,19 @@ import ObjectMapper
 
 
 class LoginParam: Mappable {
-    var id: Int?
+    var phone: String?
+    var password: String?
+    
+    init(phone: String, password: String){
+        self.phone  = phone
+        self.password = password
+    }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
 
     func mapping(map: ObjectMapper.Map) {
-        id <- map["id"]
+        phone <- map["phone"]
+        password <- map["password"]
     }
-
-    
 }

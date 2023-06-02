@@ -18,8 +18,8 @@ class PStore: Mappable {
     var accountNumber: String?
     var email: String?
     var password: String?
-    var createAt: Int64?
-    var updateAt: Int64?
+    var createAt: String?
+    var updateAt: String?
     var status: Int?
     init (){}
     init (phone: String, password: String){

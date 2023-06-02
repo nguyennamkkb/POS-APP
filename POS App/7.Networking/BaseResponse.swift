@@ -10,30 +10,47 @@ import Foundation
 import ObjectMapper
 
 class BaseResponse: Mappable {
-    var msgCode: Int?
-    var msgContent: String?
-    var msgContent_en: String?
-    var result: Any?
-    var totalMoney: Double?
+    var statusCode: Int?
+    var message: String?
+    var data: Any?
+    var meta: Meta?
     
     init() {
         
     }
 
     required init?(map: Map) {
+        mapping(map: map)
     }
 
     func mapping(map: Map) {
-        msgCode <- map["msgCode"]
-        msgContent <- map["msgContent"]
-        msgContent_en <- map["msgContent_en"]
-        result <- map["result"]
-        totalMoney <- map["totalMoney"]
+        statusCode <- map["statusCode"]
+        message <- map["message"]
+        data <- map["data"]
+        meta <- map["meta"]
+
     }
 
-    func isSuccessCode() -> Bool {
-        return msgCode == 1
-    }
 }
 
-
+class Meta: Mappable {
+    var totalCount: Int?
+    var currentPage: Int?
+    var totalPages: Int?
+    
+    init() {
+        
+    }
+    
+    required init?(map: Map) {
+        mapping(map: map)
+    }
+    
+    func mapping(map: Map) {
+        totalCount <- map["totalCount"]
+        currentPage <- map["currentPage"]
+        totalPages <- map["totalPages"]
+        
+    }
+    
+}

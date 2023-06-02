@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideMenuVC" customModule="POS_App" customModuleProvider="target">
             <connections>
+                <outlet property="storeNameLbl" destination="QHN-2e-PzP" id="FJE-fT-JWb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,8 +25,8 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4z-L8-R0A">
-                    <rect key="frame" x="24" y="63" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Lương Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4z-L8-R0A">
+                    <rect key="frame" x="24" y="63" width="151" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -39,14 +40,87 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXQ-ic-zqL">
+                    <rect key="frame" x="20" y="141" width="388" height="0.66666666666665719"/>
+                    <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Vtk-u1-94c"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDf-QV-VA5">
+                    <rect key="frame" x="24" y="161.66666666666666" width="384" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="TAg-S7-xr3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Báo cáo">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="bntBaoCaoPressed:" destination="-1" eventType="touchUpInside" id="mVY-Pv-FTs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-2t-CUY">
+                    <rect key="frame" x="24" y="225.66666666666666" width="384" height="43.999999999999972"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Caw-XJ-5Ac"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Quản lý"/>
+                    <connections>
+                        <action selector="bntQuanLyPressed:" destination="-1" eventType="touchUpInside" id="0e4-wR-8Av"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bB-ce-jOp">
+                    <rect key="frame" x="24" y="289.66666666666669" width="384" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="wCA-zG-kWq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="cửa hàng "/>
+                    <connections>
+                        <action selector="bntCuaHangPressed:" destination="-1" eventType="touchUpInside" id="LSB-kI-ErH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bS-ww-9Ex">
+                    <rect key="frame" x="24" y="353.66666666666669" width="384" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6sS-UA-qqf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Hỗ trợ "/>
+                    <connections>
+                        <action selector="btnHoTroPressed:" destination="-1" eventType="touchUpInside" id="reV-fU-zgw"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="AccentColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EDf-QV-VA5" secondAttribute="trailing" constant="20" id="8Dh-Ck-0em"/>
+                <constraint firstItem="6bS-ww-9Ex" firstAttribute="top" secondItem="1bB-ce-jOp" secondAttribute="bottom" constant="20" id="9Dh-1C-SZ4"/>
+                <constraint firstItem="uXQ-ic-zqL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ELi-Gf-LtS"/>
+                <constraint firstItem="m2O-2t-CUY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="IfQ-2m-2xe"/>
+                <constraint firstItem="EDf-QV-VA5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="JZn-Nd-GYS"/>
+                <constraint firstItem="uXQ-ic-zqL" firstAttribute="top" secondItem="QHN-2e-PzP" secondAttribute="bottom" constant="10" id="KzM-Aq-1RU"/>
+                <constraint firstItem="m2O-2t-CUY" firstAttribute="top" secondItem="EDf-QV-VA5" secondAttribute="bottom" constant="20" id="L6W-ve-wpY"/>
                 <constraint firstItem="x4z-L8-R0A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="RZr-PU-zNY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uXQ-ic-zqL" secondAttribute="trailing" constant="20" id="YpQ-Wc-Oky"/>
+                <constraint firstItem="6bS-ww-9Ex" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="a0k-8l-qmL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1bB-ce-jOp" secondAttribute="trailing" constant="20" id="aUJ-XY-wJ7"/>
                 <constraint firstItem="QHN-2e-PzP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="58" id="bcw-Rc-XPm"/>
                 <constraint firstItem="x4z-L8-R0A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="cgr-11-IPE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6bS-ww-9Ex" secondAttribute="trailing" constant="20" id="eFa-Wv-uRw"/>
+                <constraint firstItem="1bB-ce-jOp" firstAttribute="top" secondItem="m2O-2t-CUY" secondAttribute="bottom" constant="20" id="icT-2q-yok"/>
                 <constraint firstItem="QHN-2e-PzP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="kCr-5z-Gd3"/>
+                <constraint firstItem="EDf-QV-VA5" firstAttribute="top" secondItem="uXQ-ic-zqL" secondAttribute="bottom" constant="20" id="kdA-zz-Wm8"/>
+                <constraint firstItem="1bB-ce-jOp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="u8X-aT-NYF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m2O-2t-CUY" secondAttribute="trailing" constant="20" id="xbc-mW-r8k"/>
             </constraints>
             <point key="canvasLocation" x="12" y="-11"/>
         </view>

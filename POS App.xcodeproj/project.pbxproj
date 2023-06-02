@@ -30,6 +30,10 @@
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
 		0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */; };
+		0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB420622A2A5ED10008B7D7 /* EmployeeVC.swift */; };
+		0BB420652A2A5ED10008B7D7 /* EmployeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB420632A2A5ED10008B7D7 /* EmployeeVC.xib */; };
+		0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB420662A2A63450008B7D7 /* EmployeeItemCell.swift */; };
+		0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB420672A2A63450008B7D7 /* EmployeeItemCell.xib */; };
 		0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */; };
 		0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB43EE329FAC56900F1DE85 /* MainVC.swift */; };
 		0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EE429FAC56900F1DE85 /* MainVC.xib */; };
@@ -134,6 +138,10 @@
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
 		0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakePhotoVC.xib; sourceTree = "<group>"; };
+		0BB420622A2A5ED10008B7D7 /* EmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVC.swift; sourceTree = "<group>"; };
+		0BB420632A2A5ED10008B7D7 /* EmployeeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeVC.xib; sourceTree = "<group>"; };
+		0BB420662A2A63450008B7D7 /* EmployeeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeItemCell.swift; sourceTree = "<group>"; };
+		0BB420672A2A63450008B7D7 /* EmployeeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeItemCell.xib; sourceTree = "<group>"; };
 		0BB43EE129FAC54700F1DE85 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		0BB43EE329FAC56900F1DE85 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0BB43EE429FAC56900F1DE85 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
@@ -303,6 +311,10 @@
 		0BB7FDD32A19CA87005EF9B9 /* Emoloyee */ = {
 			isa = PBXGroup;
 			children = (
+				0BB420622A2A5ED10008B7D7 /* EmployeeVC.swift */,
+				0BB420632A2A5ED10008B7D7 /* EmployeeVC.xib */,
+				0BB420662A2A63450008B7D7 /* EmployeeItemCell.swift */,
+				0BB420672A2A63450008B7D7 /* EmployeeItemCell.xib */,
 			);
 			path = Emoloyee;
 			sourceTree = "<group>";
@@ -679,6 +691,7 @@
 				0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */,
 				0B2141622A13BCC100CCAAB4 /* CreateInfoVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
+				0BB420652A2A5ED10008B7D7 /* EmployeeVC.xib in Resources */,
 				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
 				0BD5BACD29F8A439009F2A66 /* LoginEmployeeVC.xib in Resources */,
 				0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */,
@@ -699,6 +712,7 @@
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
+				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
 				0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */,
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
@@ -767,6 +781,7 @@
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */,
+				0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */,
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
@@ -806,6 +821,7 @@
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
+				0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */,
 				0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
