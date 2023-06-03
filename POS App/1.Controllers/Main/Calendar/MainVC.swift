@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import ObjectMapper
 
 class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
@@ -21,7 +22,11 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
         //        print(CacheManager.share.getUserMaster())
+        
+
     }
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -40,9 +45,9 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func sideLeftPressed(_ sender: UIButton) {
-//        let menu = SideMenuNavigationController(rootViewController: SlideMenuVC())
+        //        let menu = SideMenuNavigationController(rootViewController: SlideMenuVC())
         let leftMenuNavigationController = SideMenuNavigationController(rootViewController: SlideMenuVC())
-
+        
         SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
         SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
@@ -55,7 +60,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 }

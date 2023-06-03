@@ -40,26 +40,17 @@ class LoginVC: BaseVC {
             backBtn.isHidden = true
         }
         authBtn.setImage(UIImage(named: BiometricManager.getImagetBiometric()), for: .normal)
+        
+        
+        phoneTF.text = "0358737373"
+        passwordTF.text = "123456"
     }
     @IBAction func loginOwnerPressed(_ sender: UIButton) {
         view.endEditing(true)
         guard let phone = phoneTF.text else {return}
         guard let password = passwordTF.text else {return}
         self.showLoading()
-        let paramRequest = LoginParam(phone: phone, password: password)
-        ServiceManager.common.login(param: paramRequest){
-            (response) in
-            self.hideLoading()
-            if response != nil, response?.statusCode == 200 {
-                print(response!.toJSONString(prettyPrint: true)!)
-//                CacheManager.share.setRegister(true)
-//                CacheManager.share.setUserMaster(value: pStore.toJSONString())
-                self.wrapRoot(vc: TabBarVC())
-            } else if response?.statusCode == 0 {
-                self.messageLbl.text = "Thông báo: \(response?.message ?? "" )"
-            }
-        }
-        //        self.pushVC(controller: TabBarVC())
+        login(phone: phone, password: password)
     }
     @IBAction func hideOrShowPassword(_ sender: UIButton) {
         isShowPassword = !isShowPassword
@@ -89,20 +80,7 @@ class LoginVC: BaseVC {
                         guard let pStore = Mapper<PStore>().map(JSONString: CacheManager.share.getUserMaster()) else {return}
                         self.phoneTF.text = pStore.phone
                         self.passwordTF.text = pStore.password
-                        
-                        let paramRequest = Utility.getParamFromDirectory(item: pStore.toJSON())
-                        ServiceManager.common.getStoreMain(param: paramRequest){
-                            (response) in
-                            self.hideLoading()
-                            if response != nil {
-                                CacheManager.share.setRegister(true)
-                                CacheManager.share.setUserMaster(value: pStore.toJSONString())
-                                Common.userMaster = pStore
-                                self.wrapRoot(vc: TabBarVC())
-                            } else {
-                                self.messageLbl.text = "Thông báo: số điện thoại hoặc mật khẩu không đúng!"
-                            }
-                        }
+                        self.login(phone: pStore.phone ?? "", password: pStore.password ?? "")
                         print("thanh cong")
                     } else {
                         print("That bai")
@@ -113,5 +91,20 @@ class LoginVC: BaseVC {
             // Biometric authentication not supported
         }
     }
-    
+    func login(phone: String, password: String){
+        let paramRequest = LoginParam(phone: phone, password: password)
+        ServiceManager.common.login(param: paramRequest){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                CacheManager.share.setRegister(true)
+                let data = Mapper<PStore>().map(JSONObject: response?.data)
+                CacheManager.share.setUserMaster(value: data?.toJSONString())
+                Common.userMaster = data ?? PStore()
+                self.wrapRoot(vc: TabBarVC())
+            } else if response?.statusCode == 0 {
+                self.messageLbl.text = "Thông báo: \(response?.message ?? "" )"
+            }
+        }
+    }
 }

@@ -23,7 +23,7 @@ class EmployeeItemCell: UITableViewCell {
     
     @IBAction func btnViewInfo(_ sender: UIButton) {
     }
-    func binđata(){
-        
+    func binđata(name: String){
+        nameLbl.text = name
     }
 }

@@ -14,7 +14,7 @@ class PEmployee: Mappable {
     var fullName: String?
     var phone: String?
     var address: String?
-    var birthday: Int64?
+    var birthday: String?
     var gender: Int?
     var image: String?
     var type: Int64?
@@ -24,6 +24,16 @@ class PEmployee: Mappable {
     var createAt: String?
     var updateAt: String?
     var status: Int?
+    
+    init (){}
+    init (store_id: Int, fullName: String,  phone: String, address: String, birthday: String, gender: Int ){
+        self.store_id = store_id
+        self.fullName = fullName
+        self.phone = phone
+        self.address = address
+        self.birthday = birthday
+        self.gender = gender
+    }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

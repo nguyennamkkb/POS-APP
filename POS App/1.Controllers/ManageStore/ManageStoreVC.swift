@@ -15,12 +15,9 @@ class ManageStoreVC: BaseVC {
         // Do any additional setup after loading the view.
     }
     @IBAction func btnBackPressed(_ sender: UIButton) {
-        self.onBackNav()
-    }
-    
-    @IBAction func btnGoHomePressed(_ sender: UIButton) {
         self.wrapRoot(vc: TabBarVC())
     }
+    
     
     @IBAction func btnEmployeePressed(_ sender: UIButton) {
         self.pushVC(controller: EmployeeVC())

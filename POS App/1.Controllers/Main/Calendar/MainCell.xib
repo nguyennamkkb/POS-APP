@@ -14,7 +14,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="MainCell" customModule="POS_App" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="448" height="133"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="448" height="133"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -183,7 +183,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Rdo-lw-0dB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="CQT-U0-a3g"/>
-                    <constraint firstAttribute="bottom" secondItem="Rdo-lw-0dB" secondAttribute="bottom" constant="10" id="KU7-pC-tb4"/>
+                    <constraint firstAttribute="bottom" secondItem="Rdo-lw-0dB" secondAttribute="bottom" priority="999" constant="10" id="KU7-pC-tb4"/>
                     <constraint firstAttribute="trailing" secondItem="Rdo-lw-0dB" secondAttribute="trailing" constant="5" id="WoT-Yd-Uu5"/>
                     <constraint firstItem="Rdo-lw-0dB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nQf-uC-gAa"/>
                 </constraints>

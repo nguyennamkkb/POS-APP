@@ -52,28 +52,14 @@
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvC-5w-fGh" userLabel="home">
-                            <rect key="frame" x="355" y="9.5" width="35" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="DIJ-lo-mrZ"/>
-                                <constraint firstAttribute="width" constant="35" id="eOG-ZZ-TzR"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="homekit" catalog="system"/>
-                            <connections>
-                                <action selector="btnGoHomePressed:" destination="-1" eventType="touchUpInside" id="nhs-Yf-GSR"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="CUn-XN-jXL" secondAttribute="bottom" id="07g-Ud-YPE"/>
-                        <constraint firstAttribute="trailing" secondItem="YvC-5w-fGh" secondAttribute="trailing" constant="24" id="2gu-6a-bga"/>
                         <constraint firstItem="ymD-OE-bIU" firstAttribute="leading" secondItem="rd8-cO-p7u" secondAttribute="leading" constant="24" id="34C-1w-Scl"/>
                         <constraint firstItem="CUn-XN-jXL" firstAttribute="leading" secondItem="rd8-cO-p7u" secondAttribute="leading" id="8hE-Id-DyM"/>
                         <constraint firstAttribute="trailing" secondItem="CUn-XN-jXL" secondAttribute="trailing" id="9BK-dv-Fah"/>
                         <constraint firstItem="CUn-XN-jXL" firstAttribute="centerY" secondItem="rd8-cO-p7u" secondAttribute="centerY" id="9Ye-Dr-mKi"/>
-                        <constraint firstItem="YvC-5w-fGh" firstAttribute="centerY" secondItem="rd8-cO-p7u" secondAttribute="centerY" id="Hwp-M1-RCs"/>
                         <constraint firstAttribute="height" constant="44" id="Lwt-H0-iqA"/>
                         <constraint firstItem="ymD-OE-bIU" firstAttribute="centerY" secondItem="rd8-cO-p7u" secondAttribute="centerY" id="cSo-A5-g6d"/>
                         <constraint firstItem="CUn-XN-jXL" firstAttribute="top" secondItem="rd8-cO-p7u" secondAttribute="top" id="y6C-fZ-Pkk"/>
@@ -192,7 +178,6 @@
         </view>
     </objects>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="ic_back" width="34" height="34"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

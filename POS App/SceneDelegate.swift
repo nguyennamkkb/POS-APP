@@ -20,12 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScense)
         print(CacheManager.share.isRegister())
     
-//        if CacheManager.share.isRegister(){
-//            setRootViewController(UINavigationController(rootViewController: LoginVC()))
-//        }else {
-//            setRootViewController(UINavigationController(rootViewController: SignUpVC()))
-//        }
-        setRootViewController(UINavigationController(rootViewController: TabBarVC()))
+        if CacheManager.share.isRegister(){
+            setRootViewController(UINavigationController(rootViewController: LoginVC()))
+        }else {
+            setRootViewController(UINavigationController(rootViewController: SignUpVC()))
+        }
+//        setRootViewController(UINavigationController(rootViewController: TabBarVC()))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

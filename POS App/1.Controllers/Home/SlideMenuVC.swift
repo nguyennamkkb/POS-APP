@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class SlideMenuVC: BaseVC {
 
@@ -13,13 +14,18 @@ class SlideMenuVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    func setupUI(){
+        storeNameLbl.text = Common.userMaster.storeName ?? "MyNameStore"
     }
 
     @IBAction func bntBaoCaoPressed(_ sender: UIButton) {
     }
     @IBAction func bntQuanLyPressed(_ sender: UIButton) {
-        self.pushVC(controller: ManageStoreVC())
+        let navi = UINavigationController(rootViewController: ManageStoreVC())
+        self.wrapRoot(vc: navi)
+//        self.pushVC(controller: ManageStoreVC(),animation: true)
     }
     @IBAction func bntCuaHangPressed(_ sender: UIButton) {
     }

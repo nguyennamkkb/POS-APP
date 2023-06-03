@@ -32,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyNameStore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHN-2e-PzP">
-                    <rect key="frame" x="24" y="105" width="150" height="26"/>
+                    <rect key="frame" x="24" y="105" width="149.66666666666666" height="26"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="26" id="92E-C6-Tw1"/>
                     </constraints>

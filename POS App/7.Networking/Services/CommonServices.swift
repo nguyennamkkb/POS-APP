@@ -14,7 +14,8 @@ fileprivate class ListCommonService {
     
     // account
     static let storemains = ServiceManager.ROOT + "main-store"
-    static let customers = ServiceManager.ROOT + "customer"
+    static let customer = ServiceManager.ROOT + "customer"
+    static let employee = ServiceManager.ROOT + "employee"
     static let auth = ServiceManager.ROOT + "auth"
 }
 
@@ -22,6 +23,7 @@ fileprivate enum ECommonURLs {
     case storemains
     case customers
     case auth
+    case employee
     
     
     func getPath() -> String {
@@ -29,9 +31,11 @@ fileprivate enum ECommonURLs {
         case .storemains:
             return ListCommonService.storemains
         case .customers:
-            return ListCommonService.customers
+            return ListCommonService.customer
         case .auth:
             return ListCommonService.auth
+        case .employee:
+            return ListCommonService.employee
             
         }
         func getMethod() -> HTTPMethod {
@@ -146,5 +150,46 @@ class CommonServices {
             }
         }
     }
+    //employee
+    func createEmployee(param: PEmployee, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.employee.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getAllEmployees(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.employee.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
 }
 
