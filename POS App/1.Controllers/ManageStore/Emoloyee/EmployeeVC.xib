@@ -84,7 +84,7 @@
                         <constraint firstItem="RpY-yF-aXu" firstAttribute="leading" secondItem="uIs-dd-fb2" secondAttribute="leading" id="ht0-ot-Hwu"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RB-h6-X7B">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RB-h6-X7B" userLabel="line">
                     <rect key="frame" x="24" y="102" width="366" height="1"/>
                     <color key="backgroundColor" red="0.51563671381786613" green="0.51563671381786613" blue="0.51563671381786613" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -112,6 +112,9 @@
                                 <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="medium"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
                             </state>
+                            <connections>
+                                <action selector="btnSearchPressed:" destination="-1" eventType="touchUpInside" id="67O-ej-l3K"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.51709924563012943" green="0.51709924563012943" blue="0.51709924563012943" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>

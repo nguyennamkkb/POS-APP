@@ -34,6 +34,10 @@
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
 		0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */; };
+		0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA332A72A2C87F2007ACB14 /* CustomerVC.swift */; };
+		0BA332AA2A2C87F2007ACB14 /* CustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA332A82A2C87F2007ACB14 /* CustomerVC.xib */; };
+		0BA332AD2A2C8A33007ACB14 /* CustomerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA332AB2A2C8A33007ACB14 /* CustomerItemCell.swift */; };
+		0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA332AC2A2C8A33007ACB14 /* CustomerItemCell.xib */; };
 		0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB420622A2A5ED10008B7D7 /* EmployeeVC.swift */; };
 		0BB420652A2A5ED10008B7D7 /* EmployeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB420632A2A5ED10008B7D7 /* EmployeeVC.xib */; };
 		0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB420662A2A63450008B7D7 /* EmployeeItemCell.swift */; };
@@ -61,8 +65,6 @@
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
 		0BB7FDD72A19CAA7005EF9B9 /* CreateCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD52A19CAA7005EF9B9 /* CreateCustomerVC.swift */; };
 		0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */; };
-		0BB7FDDB2A19CAC0005EF9B9 /* SelectCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD92A19CAC0005EF9B9 /* SelectCustomerVC.swift */; };
-		0BB7FDDC2A19CAC0005EF9B9 /* SelectCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDA2A19CAC0005EF9B9 /* SelectCustomerVC.xib */; };
 		0BB7FDDF2A19D6A8005EF9B9 /* CreateCustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */; };
 		0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */; };
 		0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */; };
@@ -146,6 +148,10 @@
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
 		0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakePhotoVC.xib; sourceTree = "<group>"; };
+		0BA332A72A2C87F2007ACB14 /* CustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerVC.swift; sourceTree = "<group>"; };
+		0BA332A82A2C87F2007ACB14 /* CustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerVC.xib; sourceTree = "<group>"; };
+		0BA332AB2A2C8A33007ACB14 /* CustomerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerItemCell.swift; sourceTree = "<group>"; };
+		0BA332AC2A2C8A33007ACB14 /* CustomerItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerItemCell.xib; sourceTree = "<group>"; };
 		0BB420622A2A5ED10008B7D7 /* EmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVC.swift; sourceTree = "<group>"; };
 		0BB420632A2A5ED10008B7D7 /* EmployeeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeVC.xib; sourceTree = "<group>"; };
 		0BB420662A2A63450008B7D7 /* EmployeeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeItemCell.swift; sourceTree = "<group>"; };
@@ -173,8 +179,6 @@
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0BB7FDD52A19CAA7005EF9B9 /* CreateCustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerVC.swift; sourceTree = "<group>"; };
 		0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCustomerVC.xib; sourceTree = "<group>"; };
-		0BB7FDD92A19CAC0005EF9B9 /* SelectCustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCustomerVC.swift; sourceTree = "<group>"; };
-		0BB7FDDA2A19CAC0005EF9B9 /* SelectCustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCustomerVC.xib; sourceTree = "<group>"; };
 		0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerCell.swift; sourceTree = "<group>"; };
 		0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCustomerCell.xib; sourceTree = "<group>"; };
 		0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
@@ -336,10 +340,12 @@
 			children = (
 				0BB7FDD52A19CAA7005EF9B9 /* CreateCustomerVC.swift */,
 				0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */,
-				0BB7FDD92A19CAC0005EF9B9 /* SelectCustomerVC.swift */,
-				0BB7FDDA2A19CAC0005EF9B9 /* SelectCustomerVC.xib */,
 				0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */,
 				0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */,
+				0BA332A72A2C87F2007ACB14 /* CustomerVC.swift */,
+				0BA332A82A2C87F2007ACB14 /* CustomerVC.xib */,
+				0BA332AB2A2C8A33007ACB14 /* CustomerItemCell.swift */,
+				0BA332AC2A2C8A33007ACB14 /* CustomerItemCell.xib */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -695,11 +701,11 @@
 			files = (
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
-				0BB7FDDC2A19CAC0005EF9B9 /* SelectCustomerVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
+				0BA332AA2A2C87F2007ACB14 /* CustomerVC.xib in Resources */,
 				0B2141662A13BE5D00CCAAB4 /* StoreInfoCell.xib in Resources */,
 				0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */,
 				0B2141622A13BCC100CCAAB4 /* CreateInfoVC.xib in Resources */,
@@ -717,6 +723,7 @@
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
+				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */,
@@ -792,6 +799,7 @@
 			files = (
 				0B5D185E2A0A9F69004E47FD /* PStore.swift in Sources */,
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
+				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */,
@@ -807,6 +815,7 @@
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
+				0BA332AD2A2C8A33007ACB14 /* CustomerItemCell.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
@@ -851,7 +860,6 @@
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
-				0BB7FDDB2A19CAC0005EF9B9 /* SelectCustomerVC.swift in Sources */,
 				0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

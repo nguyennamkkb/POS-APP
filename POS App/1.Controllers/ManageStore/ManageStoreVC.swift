@@ -22,6 +22,9 @@ class ManageStoreVC: BaseVC {
     @IBAction func btnEmployeePressed(_ sender: UIButton) {
         self.pushVC(controller: EmployeeVC())
     }
+    @IBAction func btnCustomerPressed(_ sender: UIButton) {
+        self.pushVC(controller: CustomerVC())
+    }
     /*
     // MARK: - Navigation
 

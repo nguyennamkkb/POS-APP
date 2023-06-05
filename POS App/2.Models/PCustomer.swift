@@ -9,13 +9,13 @@ import Foundation
 import ObjectMapper
 
 class PCustomer: Mappable {
-    var id: String?
+    var id: Int?
     var store_id: Int?
     var fullName: String?
     var phone: String?
     var address: String?
     var birthday: String?
-    var gender: String?
+    var gender: Int?
     var image: String?
     var keySearch: String?
     var email: String?
@@ -25,6 +25,14 @@ class PCustomer: Mappable {
     var status: Int?
     
     init(){}
+    init (store_id: Int, fullName: String,  phone: String, address: String, birthday: String, gender: Int ){
+        self.store_id = store_id
+        self.fullName = fullName
+        self.phone = phone
+        self.address = address
+        self.birthday = birthday
+        self.gender = gender
+    }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

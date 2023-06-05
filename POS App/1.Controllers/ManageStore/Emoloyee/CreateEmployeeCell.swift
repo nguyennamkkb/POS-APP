@@ -42,6 +42,7 @@ class CreateEmployeeCell: UITableViewCell {
         guard let address = addressTF.text else {return}
         guard let gender = genderLb.text else {return}
         let employee = PEmployee(store_id: Common.userMaster.id ?? -1, fullName: fullName, phone: phone, address: address, birthday: String(birthdayTime.date.millisecondsSince1970), gender: gender == "nam" ? 1 : 0)
-        returnEmployee?(employee)
+//        returnEmployee?(employee)
+        print(employee.toJSON())
     }
 }

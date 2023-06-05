@@ -179,8 +179,8 @@
                                     <color key="titleColor" red="0.78170305490000003" green="0.78165185449999997" blue="0.79673427340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-sc-JLK">
-                                <rect key="frame" x="10" y="43" width="35.666666666666664" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-sc-JLK">
+                                <rect key="frame" x="9.9999999999999982" y="43" width="22.333333333333329" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="QaF-Ye-jbf"/>
                                 </constraints>

@@ -111,7 +111,7 @@ class CommonServices {
         }
     }
     
-    func createCustomer(param: PStore, completion: @escaping (_ reponse: PCustomer?) -> Void) {
+    func createCustomer(param: PCustomer, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.customers.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
@@ -119,7 +119,7 @@ class CommonServices {
         BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
             if success {
                 if result != nil{
-                    if let baseResponse = Mapper<PCustomer>().map(JSONObject: result) {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
                         completion(baseResponse)
                     }
                 }else{
@@ -130,17 +130,17 @@ class CommonServices {
             }
         }
     }
-    func getAllCustomers(param: String?, completion: @escaping (_ reponse: [PCustomer]?) -> Void) {
-        let router = ECommonURLs.storemains.getPath() + (param ?? "")
+    func getAllCustomers(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.customers.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
-        
+        print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
-                if let result: String = result as? String {
-                    if let res = Mapper<PCustomer>().mapArray(JSONString: result) {
-                        completion(res)
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
                     }
                 }else{
                     completion(nil)

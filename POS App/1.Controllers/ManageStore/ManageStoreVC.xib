@@ -69,7 +69,7 @@
                     <rect key="frame" x="24" y="123" width="366" height="57"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhân viên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAX-OD-LAP">
-                            <rect key="frame" x="20" y="17.5" width="86" height="22"/>
+                            <rect key="frame" x="20" y="18" width="86" height="21"/>
                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
                     <rect key="frame" x="24" y="200" width="366" height="57"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wac-8v-Tzk">
-                            <rect key="frame" x="20" y="17.5" width="103" height="22"/>
+                            <rect key="frame" x="20" y="18" width="103" height="21"/>
                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -105,6 +105,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-3t-WRI">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="57"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnCustomerPressed:" destination="-1" eventType="touchUpInside" id="CcZ-kr-vQO"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,7 +125,7 @@
                     <rect key="frame" x="24" y="277" width="366" height="57"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dịch vụ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoU-kx-v5h">
-                            <rect key="frame" x="20" y="17.5" width="62.5" height="22"/>
+                            <rect key="frame" x="20" y="18" width="62.5" height="21"/>
                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

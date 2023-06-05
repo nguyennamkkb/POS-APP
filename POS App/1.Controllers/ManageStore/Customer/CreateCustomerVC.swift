@@ -20,6 +20,11 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         self.tableView.registerCell(nibName: "CreateCustomerCell")
         // Do any additional setup after loading the view.
     }
+    @IBAction func back(_ sender: UIButton) {
+        self.onBackNav()
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -27,13 +32,29 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateCustomerCell", for: indexPath) as? CreateCustomerCell else {return UITableViewCell()}
         
-        cell.actionChupAnh = {
-            [weak self] in
+        cell.actionOK = {
+            [weak self] item in
             guard let self = self else {return}
+            self.customer = item
             
+            self.createCustomer()
+
         }
         return cell
     }
 
-    
+    func createCustomer(){
+        self.showLoading()
+        ServiceManager.common.createCustomer(param: customer){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công!")
+                self.onBackNav()
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
+        
+    }
 }
