@@ -38,28 +38,22 @@ class CreateCustomerCell: UITableViewCell {
         gender.layer.cornerRadius  = myCornerRadius.corner5
         btnXacNhan.layer.cornerRadius = myCornerRadius.corner5
         gender.layer.cornerRadius = myCornerRadius.corner5
-        
+        genderLb.text = "Nữ"
     }
     
     
     @IBAction func btnXacNhanPressed(_ sender: UIButton) {
-        print("btnXacNhanPressed")
-//        getDataForm()
-    }
-    func showAvatar(base64: String){
-        print(base64)
-        //        print(Common.anhChupAvatar)
-        //       avatarCustomer = UIImageView(image: Utility().imageFromBase64String(base64String: imageBase64 ?? ""))
-        
+        getDataForm()
     }
     func getDataForm(){
-        guard let name = nameTF.text else {return}
-        guard let phone = phoneTF.text else {return}
-        guard let address = addressFT.text else {return}
-        guard let gender = gender.titleLabel?.text else {return}
+        guard let name = nameTF.text, name != "" else {return}
+        guard let phone = phoneTF.text, phone != "" else {return}
+        guard let address = addressFT.text, address != "" else {return}
+        guard let gender = genderLb.text, gender != "" else {return}
         
         let customer = PCustomer(store_id: Common.userMaster.id ?? -1, fullName: name, phone: phone, address: address, birthday: String(timeSelect.date.timeIntervalSince1970), gender: gender == "Nam" ? 1: 0)
         actionOK?(customer)
+        print("getDataForm ok")
     }
     
     
@@ -70,7 +64,7 @@ class CreateCustomerCell: UITableViewCell {
         dropDown.show() //7
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in //8
             guard let _ = self else { return }
-            sender.setTitle(item, for: .normal) //9
+//            sender.setTitle(item, for: .normal) //9
             self?.genderLb.text = item
         }
     }

@@ -24,7 +24,7 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "EmployeeItemCell")
         // Do any additional setup after loading the view.
-//        getAllEployees()
+        getAllEployees()
     }
     
     func setupUI(){
@@ -34,7 +34,7 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         btnSearch.layer.cornerRadius = myCornerRadius.corner10
     }
     override func viewDidAppear(_ animated: Bool) {
-        getAllEployees()
+//        getAllEployees()
     }
     @IBAction func btnGoHomepressed(_ sender: UIButton) {
         self.wrapRoot(vc: TabBarVC())
@@ -55,14 +55,22 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func addNewEmployeePressed(_ sender: UIButton) {
+        let vc  = CreateEmployeeVC()
+        vc.actionOK = {
+            [weak self] in
+            guard let self = self else {return}
+            self.getAllEployees()
+        }
         self.pushVC(controller: CreateEmployeeVC())
+        
     }
     
     func getAllEployees(){
         guard let keySearch = keySearch.text else {return}
-        
-        let param = "?keySearch=\(keySearch)"
-        ServiceManager.common.getAllEmployees(param: param){
+        guard let id = Common.userMaster.id else {return}
+
+        let param: String = "store_id=\(id)&keySearch=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        ServiceManager.common.getAllEmployees(param: "?\(param)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()

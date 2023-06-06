@@ -15,6 +15,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var taoLichBtn: UIButton!
     @IBOutlet var btnSearch: UIButton!
     @IBOutlet var menuView: UIView!
+    var tableData = [PBookCalender]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -22,7 +23,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
         //        print(CacheManager.share.getUserMaster())
-        
+        getBooks()
 
     }
    
@@ -62,5 +63,22 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         super.viewWillDisappear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    func getBooks(){
+        guard let id = Common.userMaster.id else {return}
+        let param: String = "store_id=\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        
+        ServiceManager.common.getAllBooks(param: "?\(param)"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.tableData = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
     }
 }

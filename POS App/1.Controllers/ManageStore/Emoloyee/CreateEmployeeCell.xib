@@ -178,6 +178,9 @@
                                 <state key="normal">
                                     <color key="titleColor" red="0.78170305490000003" green="0.78165185449999997" blue="0.79673427340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectGenderPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ab5-4f-miF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-sc-JLK">
                                 <rect key="frame" x="9.9999999999999982" y="43" width="22.333333333333329" height="25"/>

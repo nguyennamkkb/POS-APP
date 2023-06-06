@@ -10,7 +10,7 @@ import ObjectMapper
 
 class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
 
-    
+    var actionOK: ClosureAction?
     var employee: PEmployee = PEmployee()
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -45,6 +45,7 @@ class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Thành công!")
+                self.actionOK?()
                 self.onBackNav()
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")

@@ -17,6 +17,7 @@ fileprivate class ListCommonService {
     static let customer = ServiceManager.ROOT + "customer"
     static let employee = ServiceManager.ROOT + "employee"
     static let auth = ServiceManager.ROOT + "auth"
+    static let book = ServiceManager.ROOT + "books"
 }
 
 fileprivate enum ECommonURLs {
@@ -24,6 +25,7 @@ fileprivate enum ECommonURLs {
     case customers
     case auth
     case employee
+    case book
     
     
     func getPath() -> String {
@@ -36,6 +38,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.auth
         case .employee:
             return ListCommonService.employee
+        case .book:
+            return ListCommonService.book
             
         }
         func getMethod() -> HTTPMethod {
@@ -191,5 +195,45 @@ class CommonServices {
         }
     }
     
+    //book
+    func createBook(param: PEmployee, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.book.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getAllBooks(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.book.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }
 

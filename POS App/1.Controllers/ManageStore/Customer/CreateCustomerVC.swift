@@ -9,6 +9,7 @@ import UIKit
 import MobileCoreServices
 class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
+    var actionOk: ClosureAction?
     let imagePicker = UIImagePickerController()
     var customer: PCustomer = PCustomer()
     let baseVC = BaseVC()
@@ -31,13 +32,15 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateCustomerCell", for: indexPath) as? CreateCustomerCell else {return UITableViewCell()}
-        
+
         cell.actionOK = {
             [weak self] item in
             guard let self = self else {return}
             self.customer = item
-            
+            print("actionOK")
             self.createCustomer()
+            print("ket thuc")
+            
 
         }
         return cell
@@ -50,6 +53,7 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Thành công!")
+                self.actionOk?()
                 self.onBackNav()
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
