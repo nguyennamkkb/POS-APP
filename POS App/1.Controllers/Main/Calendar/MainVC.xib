@@ -76,7 +76,7 @@
                     <rect key="frame" x="0.0" y="108" width="393" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách làm việc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o54-xH-fLQ">
-                            <rect key="frame" x="20" y="0.0" width="144" height="56"/>
+                            <rect key="frame" x="20" y="0.0" width="143.66666666666666" height="56"/>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

@@ -21,8 +21,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateCalenderVC" customModule="POS_App" customModuleProvider="target">
             <connections>
-                <outlet property="chonNVView" destination="Gdn-bG-9bs" id="CdH-xo-jYx"/>
+                <outlet property="btnChonDichVu" destination="4Ce-CT-Dhj" id="X3R-N4-4df"/>
+                <outlet property="chonKHView" destination="Gdn-bG-9bs" id="qLe-dV-Ro5"/>
+                <outlet property="chonNVView" destination="fMh-Kt-9QI" id="3hd-jh-5WX"/>
+                <outlet property="dateTimePicker" destination="73i-G2-ZI5" id="U9p-kO-gTz"/>
+                <outlet property="khachHangLb" destination="m5Q-Al-zDh" id="uEP-yq-vJ1"/>
                 <outlet property="nhanVienLB" destination="CWH-P8-6pd" id="9NS-0v-tza"/>
+                <outlet property="nhanVienLb" destination="CWH-P8-6pd" id="45x-mf-m6Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -149,8 +154,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="45"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
-                                        <action selector="btnSelectKHPressed:" destination="-1" eventType="touchUpInside" id="1gZ-jT-A6q"/>
-                                        <action selector="btnSelectNVPressed:" destination="-1" eventType="touchUpInside" id="IVg-0B-XSC"/>
+                                        <action selector="btnSelectKHPressed:" destination="-1" eventType="touchUpInside" id="VsC-Qs-slA"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -219,19 +223,36 @@
                         <constraint firstItem="73i-G2-ZI5" firstAttribute="leading" secondItem="aJ6-ZY-2Yt" secondAttribute="leading" id="zW5-fj-3tr"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ce-CT-Dhj">
+                    <rect key="frame" x="24" y="408" width="345" height="55"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="GQL-ZK-bN9"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Chọn dịch vụ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnChonDichVuPressed:" destination="-1" eventType="touchUpInside" id="lqN-Hy-9Wp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Ce-CT-Dhj" secondAttribute="trailing" constant="24" id="29Y-nR-ERu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qzw-4k-9GC" secondAttribute="trailing" constant="24" id="5KO-wL-qAg"/>
                 <constraint firstItem="Qzw-4k-9GC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="7CW-6Q-gpj"/>
                 <constraint firstItem="aJ6-ZY-2Yt" firstAttribute="top" secondItem="DFd-ML-ZvV" secondAttribute="bottom" constant="20" id="80n-Sb-drJ"/>
                 <constraint firstItem="DFd-ML-ZvV" firstAttribute="top" secondItem="Qzw-4k-9GC" secondAttribute="bottom" constant="20" id="8Kv-gg-9v0"/>
                 <constraint firstItem="Opj-iJ-LO5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BdG-T4-zcx"/>
                 <constraint firstItem="Opj-iJ-LO5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LZC-Jj-hU4"/>
+                <constraint firstItem="4Ce-CT-Dhj" firstAttribute="top" secondItem="aJ6-ZY-2Yt" secondAttribute="bottom" constant="20" id="N3J-o3-rha"/>
                 <constraint firstItem="PTH-ZY-PYN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Q3p-2F-hBF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PTH-ZY-PYN" secondAttribute="trailing" id="Tdf-uI-iqL"/>
                 <constraint firstItem="DFd-ML-ZvV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="U5X-ot-Ot6"/>
+                <constraint firstItem="4Ce-CT-Dhj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="U6z-EM-tbS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DFd-ML-ZvV" secondAttribute="trailing" constant="24" id="UZg-65-NRA"/>
                 <constraint firstItem="aJ6-ZY-2Yt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="UaF-T5-x6I"/>
                 <constraint firstItem="PTH-ZY-PYN" firstAttribute="bottom" secondItem="Opj-iJ-LO5" secondAttribute="bottom" id="dwX-35-Wht"/>

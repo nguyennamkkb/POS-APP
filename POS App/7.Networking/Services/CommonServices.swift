@@ -18,6 +18,7 @@ fileprivate class ListCommonService {
     static let employee = ServiceManager.ROOT + "employee"
     static let auth = ServiceManager.ROOT + "auth"
     static let book = ServiceManager.ROOT + "books"
+    static let service = ServiceManager.ROOT + "products"
 }
 
 fileprivate enum ECommonURLs {
@@ -26,6 +27,7 @@ fileprivate enum ECommonURLs {
     case auth
     case employee
     case book
+    case service
     
     
     func getPath() -> String {
@@ -40,6 +42,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.employee
         case .book:
             return ListCommonService.book
+        case .service:
+            return ListCommonService.service
             
         }
         func getMethod() -> HTTPMethod {
@@ -217,6 +221,48 @@ class CommonServices {
     }
     func getAllBooks(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.book.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    //services
+    
+    func createService(param: PServices, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.service.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getAllServices(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.service.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }

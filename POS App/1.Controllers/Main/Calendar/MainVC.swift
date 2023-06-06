@@ -29,11 +29,12 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
+        cell.bindData(item: tableData[indexPath.row])
         return cell
     }
     

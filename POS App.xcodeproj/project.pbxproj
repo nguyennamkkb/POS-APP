@@ -17,6 +17,10 @@
 		0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2141682A13DAB900CCAAB4 /* MainCell.xib */; };
 		0B21416E2A13E8CE00CCAAB4 /* CreateCalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B21416C2A13E8CE00CCAAB4 /* CreateCalenderVC.swift */; };
 		0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B21416D2A13E8CE00CCAAB4 /* CreateCalenderVC.xib */; };
+		0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D44F12A2F70F200A6186C /* ChonDichVuVC.swift */; };
+		0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */; };
+		0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */; };
+		0B3D44F82A2F79B200A6186C /* ChonDichVuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */; };
 		0B5B0EB42A2B564600E4B48A /* CreateEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5B0EB22A2B564600E4B48A /* CreateEmployeeVC.swift */; };
 		0B5B0EB52A2B564600E4B48A /* CreateEmployeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5B0EB32A2B564600E4B48A /* CreateEmployeeVC.xib */; };
 		0B5B0EB82A2B9EA300E4B48A /* CreateEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5B0EB62A2B9EA300E4B48A /* CreateEmployeeCell.swift */; };
@@ -131,6 +135,10 @@
 		0B2141682A13DAB900CCAAB4 /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		0B21416C2A13E8CE00CCAAB4 /* CreateCalenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCalenderVC.swift; sourceTree = "<group>"; };
 		0B21416D2A13E8CE00CCAAB4 /* CreateCalenderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCalenderVC.xib; sourceTree = "<group>"; };
+		0B3D44F12A2F70F200A6186C /* ChonDichVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVuVC.swift; sourceTree = "<group>"; };
+		0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuVC.xib; sourceTree = "<group>"; };
+		0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVuCell.swift; sourceTree = "<group>"; };
+		0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuCell.xib; sourceTree = "<group>"; };
 		0B5B0EB22A2B564600E4B48A /* CreateEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVC.swift; sourceTree = "<group>"; };
 		0B5B0EB32A2B564600E4B48A /* CreateEmployeeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEmployeeVC.xib; sourceTree = "<group>"; };
 		0B5B0EB62A2B9EA300E4B48A /* CreateEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeCell.swift; sourceTree = "<group>"; };
@@ -273,6 +281,10 @@
 				0B2141682A13DAB900CCAAB4 /* MainCell.xib */,
 				0B21416C2A13E8CE00CCAAB4 /* CreateCalenderVC.swift */,
 				0B21416D2A13E8CE00CCAAB4 /* CreateCalenderVC.xib */,
+				0B3D44F12A2F70F200A6186C /* ChonDichVuVC.swift */,
+				0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */,
+				0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */,
+				0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -730,6 +742,7 @@
 				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */,
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
+				0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */,
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
@@ -744,6 +757,7 @@
 				0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */,
 				0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */,
 				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
+				0B3D44F82A2F79B200A6186C /* ChonDichVuCell.xib in Resources */,
 				0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,6 +841,7 @@
 				0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */,
 				0BB7FDD72A19CAA7005EF9B9 /* CreateCustomerVC.swift in Sources */,
 				0BE0391F29F82039002CB20F /* Reachability.swift in Sources */,
+				0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */,
 				0B5B0EB42A2B564600E4B48A /* CreateEmployeeVC.swift in Sources */,
 				0BE0392B29F82039002CB20F /* ExString.swift in Sources */,
 				0B21416E2A13E8CE00CCAAB4 /* CreateCalenderVC.swift in Sources */,
@@ -842,6 +857,7 @@
 				0BB7FDDF2A19D6A8005EF9B9 /* CreateCustomerCell.swift in Sources */,
 				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
 				0B2141652A13BE5D00CCAAB4 /* StoreInfoCell.swift in Sources */,
+				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,

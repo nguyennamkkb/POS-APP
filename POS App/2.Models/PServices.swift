@@ -9,7 +9,7 @@ import Foundation
 import ObjectMapper
 
 class PServices: Mappable {
-    var id: String?
+    var id: Int?
     var name: String?
     var price: Double?
     var discount: Double?

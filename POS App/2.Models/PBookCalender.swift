@@ -19,6 +19,8 @@ class PBookCalender: Mappable {
     var createAt: String?
     var updateAt: String?
     var status: Int?
+    var employee: PEmployee?
+    var customer: PCustomer?
     
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
@@ -27,7 +29,7 @@ class PBookCalender: Mappable {
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
         store_id <- map["timeStart"]
-        start <- map["timeExecution"]
+        start <- map["start "]
         idEmployee <- map["idEmployee"]
         idCustomer <- map["idCustomer"]
         listService <- map["listService"]
@@ -35,5 +37,7 @@ class PBookCalender: Mappable {
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]
+        customer <- map["customer"]
+        employee <- map["employee"]
     }
 }
