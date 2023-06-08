@@ -10,9 +10,11 @@ import ObjectMapper
 
 class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
 
-
+    @IBOutlet var amountLbl: UILabel!
+    var returnDataSelected: ClosureCustom<[PServices]>?
     @IBOutlet var tableView: UITableView!
     var tableData = [PServices]()
+    var listSelected = [PServices]()
 //    var listSelected = [PServices]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,6 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         getAllServices()
         
     }
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
@@ -37,6 +37,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
             guard let self =  self else  {return}
             self.tableData[index].status = status
             print("index \(index), status \(status)")
+            self.updateAmount()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -44,7 +45,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    func getAllServices(){
+    func getAllServices() {
         guard let id = Common.userMaster.id else {return}
         
         let param: String = "store_id=\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
@@ -53,6 +54,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PServices>().mapArray(JSONObject: response!.data ) ?? [PServices]()
                 self.changeStatus()
+                self.updateAmount()
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -68,10 +70,42 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         print("asdasdas \(tableData.toJSON())")
         for i in 0...tableData.count-1 {
             tableData[i].status = 0
+            if listSelected.count > 0 {
+                for j in 0...listSelected.count-1 {
+                    if tableData[i].id == listSelected[j].id {
+                        tableData[i].status = 1
+                    }
+                }
+            }
         }
     }
     
-    @IBAction func btnOkPressed(_ sender: UIButton) {
+    @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
+    }
+    @IBAction func btnOkPressed(_ sender: UIButton) {
+//        self.onBackNav()
+        getDataSelected()
+        
+    }
+    func getDataSelected(){
+        let filtered = tableData.filter { $0.status == 1 }
+        print(filtered.toJSON())
+        returnDataSelected?(filtered)
+        self.onBackNav()
+
+    }
+    func updateAmount(){
+        let filtered = tableData.filter { $0.status == 1 }
+        var amount: Int = 0
+        for item in filtered {
+            if item.status == 1{
+                amount += item.price ?? 0
+            }
+        }
+        amountLbl.text = String(amount).currencyFormatting()
+    }
+    func bindData(listItem: [PServices]){
+        listSelected = listItem
     }
 }

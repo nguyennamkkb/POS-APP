@@ -200,7 +200,7 @@ class CommonServices {
     }
     
     //book
-    func createBook(param: PEmployee, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    func createBook(param: PBookCalender, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.book.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)

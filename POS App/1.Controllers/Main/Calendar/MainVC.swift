@@ -58,7 +58,13 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func BtnCreateCalenderPressed(_ sender: Any) {
-        self.pushVC(controller: CreateCalenderVC())
+        let vc = CreateCalenderVC()
+        vc.actionOK = {
+            [weak self] in
+            guard let self = self else {return}
+            self.getBooks()
+        }
+        self.pushVC(controller: vc)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

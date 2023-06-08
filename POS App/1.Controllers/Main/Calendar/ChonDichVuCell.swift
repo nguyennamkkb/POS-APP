@@ -9,6 +9,7 @@ import UIKit
 
 class ChonDichVuCell: UITableViewCell {
     
+    @IBOutlet var priceLbl: UILabel!
     var Checked: ((_ item: Int,_ item: Int ) -> Void)?
     @IBOutlet var checkImage: UIImageView! //circle.dotted dot.circle.fill
     @IBOutlet var dichVuLbl: UILabel!
@@ -23,13 +24,14 @@ class ChonDichVuCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     func bindData(item: PServices, index: Int){
         
+        let price: String = String(item.price ?? 0)
         dichVuLbl.text = item.name ?? ""
         self.index = index
         self.itemState = item
+        priceLbl.text = "Giá: \(price.currencyFormatting())"
         setChecked(status: (item.status == 1))
     }
     @IBAction func SelectPressed(_ sender: UIButton) {

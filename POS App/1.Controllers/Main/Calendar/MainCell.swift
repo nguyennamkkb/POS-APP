@@ -42,7 +42,7 @@ class MainCell: UITableViewCell {
         trangThaiLb.text = "\((item.status == 0 ) ? "Đang thực hiện" : "Hoàn thành")"
         khachHangLb.text = "\(item.customer?.fullName ?? "")"
         nhanVienLb.text = "\(item.employee?.fullName ?? "")"
-        let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(Int(item.start ?? "") ?? 1000)/1000)
+        let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(Int(item.start ?? 1000))/1000)
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         timeLb.text = dateFormatter.string(from: dateVar)
     }

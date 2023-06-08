@@ -11,8 +11,8 @@ import ObjectMapper
 class PServices: Mappable {
     var id: Int?
     var name: String?
-    var price: Double?
-    var discount: Double?
+    var price: Int?
+    var discount: Int?
     var note: String?
     var point: Int64?
     var image: String?

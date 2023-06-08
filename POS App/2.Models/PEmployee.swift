@@ -9,7 +9,7 @@ import Foundation
 import ObjectMapper
 
 class PEmployee: Mappable {
-    var id: String?
+    var id: Int?
     var store_id: Int?
     var fullName: String?
     var phone: String?

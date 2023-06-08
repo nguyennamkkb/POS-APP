@@ -112,6 +112,19 @@ extension String {
     func split(_ charactor: String) -> [String] {
         return self.split(whereSeparator: {String($0) == charactor}).map(String.init)
     }
+    func currencyFormatting() -> String {
+        if let value = Double(self) {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            formatter.currencySymbol = ""
+            formatter.maximumFractionDigits = 0
+            formatter.minimumFractionDigits = 0
+            if let str = formatter.string(for: value) {
+                return str
+            }
+        }
+        return ""
+    }
 }
 
 
