@@ -19,6 +19,8 @@ class PServices: Mappable {
     var createAt: String?
     var updateAt: String?
     var status: Int?
+    
+    init (){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

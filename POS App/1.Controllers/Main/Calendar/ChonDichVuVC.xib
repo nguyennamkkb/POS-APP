@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChonDichVuVC" customModule="POS_App" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="JpX-Ig-FHj" id="5R9-1a-wkz"/>
+                <outlet property="tableView" destination="cgd-aV-r5W" id="4Jo-Ci-zq6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,23 +20,52 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JpX-Ig-FHj">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-vl-L95">
+                    <rect key="frame" x="24" y="59" width="299" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="kkO-Xy-gJq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Xem đã chọn"/>
+                    <connections>
+                        <action selector="XemDaChonPressed:" destination="-1" eventType="touchUpInside" id="uXt-UD-UoI"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cgd-aV-r5W">
+                    <rect key="frame" x="0.0" y="104" width="393" height="714"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlJ-WR-F2s" userLabel="ok">
+                    <rect key="frame" x="334" y="59" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="MFd-dz-qkC"/>
+                        <constraint firstAttribute="height" constant="35" id="fGb-dq-sUP"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="person.fill.checkmark" catalog="system"/>
+                    <connections>
+                        <action selector="btnOkPressed:" destination="-1" eventType="touchUpInside" id="oWv-cS-w3u"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="JpX-Ig-FHj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GK5-cA-yGg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JpX-Ig-FHj" secondAttribute="trailing" id="Rvr-Is-0o7"/>
-                <constraint firstItem="JpX-Ig-FHj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fG3-Jm-9pp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JpX-Ig-FHj" secondAttribute="bottom" id="xsQ-7r-bsR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FlJ-WR-F2s" secondAttribute="trailing" constant="24" id="139-ee-BTn"/>
+                <constraint firstItem="FlJ-WR-F2s" firstAttribute="centerY" secondItem="vEd-vl-L95" secondAttribute="centerY" id="BFS-a3-HKO"/>
+                <constraint firstItem="vEd-vl-L95" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hgd-BA-PDI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cgd-aV-r5W" secondAttribute="bottom" id="PGN-cp-E0T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vEd-vl-L95" secondAttribute="trailing" constant="70" id="REr-5g-0A1"/>
+                <constraint firstItem="cgd-aV-r5W" firstAttribute="top" secondItem="vEd-vl-L95" secondAttribute="bottom" constant="10" id="S2Z-M4-8s2"/>
+                <constraint firstItem="vEd-vl-L95" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="T7Y-dm-KRb"/>
+                <constraint firstItem="cgd-aV-r5W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kPi-z7-t6U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cgd-aV-r5W" secondAttribute="trailing" id="uZC-HC-vUB"/>
             </constraints>
-            <point key="canvasLocation" x="111" y="21"/>
+            <point key="canvasLocation" x="110.68702290076335" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="person.fill.checkmark" catalog="system" width="128" height="89"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
