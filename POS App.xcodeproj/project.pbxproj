@@ -34,6 +34,8 @@
 		0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18632A0AA355004E47FD /* PBookCalender.swift */; };
 		0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18652A0AA54F004E47FD /* PProduct.swift */; };
 		0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18672A0AA5F3004E47FD /* PServices.swift */; };
+		0B74DFB32A33F1BA005FDA97 /* DeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFB12A33F1BA005FDA97 /* DeleteVC.swift */; };
+		0B74DFB42A33F1BA005FDA97 /* DeleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFB22A33F1BA005FDA97 /* DeleteVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
@@ -154,6 +156,8 @@
 		0B5D18632A0AA355004E47FD /* PBookCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBookCalender.swift; sourceTree = "<group>"; };
 		0B5D18652A0AA54F004E47FD /* PProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PProduct.swift; sourceTree = "<group>"; };
 		0B5D18672A0AA5F3004E47FD /* PServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PServices.swift; sourceTree = "<group>"; };
+		0B74DFB12A33F1BA005FDA97 /* DeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVC.swift; sourceTree = "<group>"; };
+		0B74DFB22A33F1BA005FDA97 /* DeleteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 		0B21416B2A13E86C00CCAAB4 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				0B74DFA02A336D19005FDA97 /* MainAction */,
 				0BB43EE329FAC56900F1DE85 /* MainVC.swift */,
 				0BB43EE429FAC56900F1DE85 /* MainVC.xib */,
 				0B2141672A13DAB900CCAAB4 /* MainCell.swift */,
@@ -293,6 +298,15 @@
 				0BB1D21F2A32421400516F25 /* DichVuCell.xib */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		0B74DFA02A336D19005FDA97 /* MainAction */ = {
+			isa = PBXGroup;
+			children = (
+				0B74DFB12A33F1BA005FDA97 /* DeleteVC.swift */,
+				0B74DFB22A33F1BA005FDA97 /* DeleteVC.xib */,
+			);
+			path = MainAction;
 			sourceTree = "<group>";
 		};
 		0B9BAFAA2A1A22C9008679DE /* Orther */ = {
@@ -740,6 +754,7 @@
 				0BB1D2212A32421400516F25 /* DichVuCell.xib in Resources */,
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
+				0B74DFB42A33F1BA005FDA97 /* DeleteVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
@@ -867,6 +882,7 @@
 				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
+				0B74DFB32A33F1BA005FDA97 /* DeleteVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
 				0BB1D2202A32421400516F25 /* DichVuCell.swift in Sources */,
 				0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */,

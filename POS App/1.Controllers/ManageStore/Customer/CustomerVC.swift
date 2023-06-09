@@ -25,8 +25,6 @@ class CustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         self.tableView.registerCell(nibName: "CustomerItemCell")
         // Do any additional setup after loading the view.
         setupUI()
-    }
-    override func viewDidAppear(_ animated: Bool) {
         getAllCustomers()
     }
     func setupUI(){

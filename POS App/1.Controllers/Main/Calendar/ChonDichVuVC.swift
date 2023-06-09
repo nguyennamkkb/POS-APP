@@ -22,7 +22,6 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "ChonDichVuCell")
         getAllServices()
-        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count

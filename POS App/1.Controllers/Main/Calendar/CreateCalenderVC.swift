@@ -12,6 +12,7 @@ import ObjectMapper
 class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
 
     
+    @IBOutlet var btnChot: UIButton!
     var actionOK: ClosureAction?
     @IBOutlet var khachHangLb: UILabel!
     @IBOutlet var nhanVienLb: UILabel!
@@ -42,12 +43,13 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         setupUI()
         getAllEployees()
         getAllCustomers()
-        
+        print("viewdidload")
     }
     func setupUI() {
         chonNVView.layer.cornerRadius = myCornerRadius.corner10
         chonKHView.layer.cornerRadius = myCornerRadius.corner10
         btnChonDichVu.layer.cornerRadius = myCornerRadius.corner10
+        btnChot.layer.cornerRadius = myCornerRadius.corner10
         tableHeader.isHidden = true
     }
     
@@ -78,7 +80,7 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             guard let self = self else { return }
             self.nhanVienLb.text = item
             self.employeeSelected = self.listEmployee.itemAtIndex(index: index) ?? PEmployee()
-            print(self.listEmployee.itemAtIndex(index: index)?.toJSON() ?? "")
+//            print(self.listEmployee.itemAtIndex(index: index)?.toJSON() ?? "")
         }
     }
     @IBAction func btnSelectKHPressed(_ sender: UIButton) {
@@ -95,12 +97,12 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             guard let self = self else { return }
             self.khachHangLb.text = item
             self.customerSelected = self.listCustomer.itemAtIndex(index: index) ?? PCustomer()
-            print(self.listCustomer.itemAtIndex(index: index)?.toJSON() ?? "")
+//            print(self.listCustomer.itemAtIndex(index: index)?.toJSON() ?? "")
         }
     }
     
     @IBAction func BtnSelectDateTime(_ sender: UIButton) {
-        print("BtnSelectDateTime")
+//        print("BtnSelectDateTime")
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .dateAndTime
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
@@ -182,11 +184,11 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         book.idEmployee = employeeSelected.id
         book.idCustomer = customerSelected.id
 
-        print(book.toJSON())
+//        print(book.toJSON())
         createBook(item: book)
     }
     func createBook(item: PBookCalender){
-        print("PBookCalender \(item.toJSON())")
+//        print("PBookCalender \(item.toJSON())")
         ServiceManager.common.createBook(param: item){
             (response) in
             self.hideLoading()

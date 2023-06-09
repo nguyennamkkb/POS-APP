@@ -27,12 +27,6 @@ class CreateEmployeeCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     @IBAction func selectGenderPressed(_ sender: UIButton) {
         dropDown.dataSource = ["Nam", "Nũ"]//4
         dropDown.anchorView = sender //5

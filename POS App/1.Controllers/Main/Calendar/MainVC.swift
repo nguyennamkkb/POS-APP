@@ -8,6 +8,7 @@
 import UIKit
 import SideMenu
 import ObjectMapper
+import FittedSheets
 
 class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
@@ -22,10 +23,14 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
-        //        print(CacheManager.share.getUserMaster())
         getBooks()
 
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,6 +40,12 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
         cell.bindData(item: tableData[indexPath.row])
+        
+        cell.actionDelete = {
+            [weak self] book in
+            guard let self = self else {return}
+            
+        }
         return cell
     }
     
@@ -65,11 +76,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             self.getBooks()
         }
         self.pushVC(controller: vc)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+
     }
     
     func getBooks(){
@@ -87,5 +94,12 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 self.showAlert(message: "Không thể thêm mới")
             }
         }
+    }
+   
+    @IBAction func btnSearchPressed(_ sender: UIButton) {
+        let vc =  DeleteVC()
+        self.pushVC(controller: vc)
+        vc.bindData(name: "Nam")
+        
     }
 }

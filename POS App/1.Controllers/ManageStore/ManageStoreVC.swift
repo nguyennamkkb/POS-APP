@@ -9,10 +9,19 @@ import UIKit
 
 class ManageStoreVC: BaseVC {
 
+    @IBOutlet var btnDichVuView: UIView!
+    @IBOutlet var btnKhachHangView: UIView!
+    @IBOutlet var btnNhanVienView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    func setupUI(){
+        btnKhachHangView.layer.cornerRadius = myCornerRadius.corner5
+        btnKhachHangView.layer.cornerRadius = myCornerRadius.corner5
+        btnNhanVienView.layer.cornerRadius = myCornerRadius.corner5
     }
     @IBAction func btnBackPressed(_ sender: UIButton) {
         self.wrapRoot(vc: TabBarVC())

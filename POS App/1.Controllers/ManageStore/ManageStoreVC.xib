@@ -17,6 +17,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageStoreVC" customModule="POS_App" customModuleProvider="target">
             <connections>
+                <outlet property="btnDichVuView" destination="rDe-c0-s8b" id="pOP-cD-G96"/>
+                <outlet property="btnKhachHangView" destination="js3-Yb-h6G" id="3Cz-Fx-oaY"/>
+                <outlet property="btnNhanVienView" destination="dC8-tT-i6y" id="xa8-mZ-0ll"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

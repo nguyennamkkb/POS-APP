@@ -23,6 +23,7 @@
             <connections>
                 <outlet property="HeadTableView" destination="GHh-74-2Gq" id="yqd-Jg-EG4"/>
                 <outlet property="btnChonDichVu" destination="4Ce-CT-Dhj" id="X3R-N4-4df"/>
+                <outlet property="btnChot" destination="wGB-jn-VCl" id="5uw-KG-SVm"/>
                 <outlet property="chonKHView" destination="Gdn-bG-9bs" id="qLe-dV-Ro5"/>
                 <outlet property="chonNVView" destination="fMh-Kt-9QI" id="3hd-jh-5WX"/>
                 <outlet property="dateTimePicker" destination="73i-G2-ZI5" id="U9p-kO-gTz"/>
@@ -68,6 +69,8 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGB-jn-VCl">
                             <rect key="frame" x="298.5" y="5" width="91.5" height="34.5"/>
+                            <color key="backgroundColor" red="0.8034845988" green="0.64136353899999998" blue="0.0060076631040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="checkmark.seal.fill" catalog="system" title="Chốt"/>
                             <connections>

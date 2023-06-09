@@ -9,9 +9,10 @@ import UIKit
 
 class MainCell: UITableViewCell {
     
-    var actionDelete: ClosureAction?
-    var actionEdit: ClosureAction?
-    var actionSuccess: ClosureAction?
+    var actionDelete: ClosureCustom<PBookCalender>?
+    var actionEdit: ClosureCustom<PBookCalender>?
+    var actionSuccess: ClosureCustom<PBookCalender>?
+
     var actionPay: ClosureAction?
     
     
@@ -25,7 +26,9 @@ class MainCell: UITableViewCell {
     @IBOutlet var khachHangLb: UILabel!
     @IBOutlet var nhanVienLb: UILabel!
     var dateFormatter = DateFormatter()
-
+    var book = PBookCalender()
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -39,6 +42,7 @@ class MainCell: UITableViewCell {
     }
     
     func bindData(item: PBookCalender){
+        book = item
         trangThaiLb.text = "\((item.status == 0 ) ? "Đang thực hiện" : "Hoàn thành")"
         khachHangLb.text = "\(item.customer?.fullName ?? "")"
         nhanVienLb.text = "\(item.employee?.fullName ?? "")"
@@ -48,18 +52,17 @@ class MainCell: UITableViewCell {
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     @IBAction func deletePressed(_ sender: Any) {
-        actionDelete?()
+        actionDelete?(book)
     }
     @IBAction func editPressed(_ sender: Any) {
-        actionEdit?()
+        actionEdit?(book)
     }
     
     @IBAction func successPressed(_ sender: Any) {
-        actionSuccess?()
+        actionSuccess?(book)
     }
     
     @IBAction func payPressed(_ sender: Any) {

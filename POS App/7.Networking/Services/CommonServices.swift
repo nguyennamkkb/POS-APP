@@ -80,6 +80,7 @@ class CommonServices {
             }
         }
     }
+
     func getStoreMain(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.storemains.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
@@ -119,6 +120,7 @@ class CommonServices {
         }
     }
     
+    // customer
     func createCustomer(param: PCustomer, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.customers.getPath()
         if !ServiceManager.isConnectedToInternet() {
@@ -240,6 +242,26 @@ class CommonServices {
         }
     }
     
+    func deleteBook(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.book.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     //services
     
     func createService(param: PServices, completion: @escaping (_ reponse: BaseResponse?) -> Void) {

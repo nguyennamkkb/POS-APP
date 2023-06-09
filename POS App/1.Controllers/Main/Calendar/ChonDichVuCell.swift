@@ -26,7 +26,6 @@ class ChonDichVuCell: UITableViewCell {
         
     }
     func bindData(item: PServices, index: Int){
-        
         let price: String = String(item.price ?? 0)
         dichVuLbl.text = item.name ?? ""
         self.index = index

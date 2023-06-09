@@ -141,9 +141,6 @@
                                     <!--2023-05-20 17:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="vi_VN"/>
-                                <connections>
-                                    <action selector="birthdayPicked:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Cve-fV-Cg3"/>
-                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
