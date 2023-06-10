@@ -176,7 +176,7 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     @IBAction func btnAcceptPresses(_ sender: UIButton) {
         let book = PBookCalender()
-        book.start = Int(NSDate().timeIntervalSince1970)
+        book.start = String(dateTimePicker.date.timeIntervalSince1970)
         book.store_id = Common.userMaster.id
         book.listService = listServices.toJSONString()
         book.amount = getTotalAmount()
@@ -184,11 +184,11 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         book.idEmployee = employeeSelected.id
         book.idCustomer = customerSelected.id
 
-//        print(book.toJSON())
         createBook(item: book)
     }
     func createBook(item: PBookCalender){
 //        print("PBookCalender \(item.toJSON())")
+        self.showLoading()
         ServiceManager.common.createBook(param: item){
             (response) in
             self.hideLoading()

@@ -11,7 +11,7 @@ import ObjectMapper
 class PBookCalender: Mappable {
     var id: Int?
     var store_id: Int?
-    var start: Int?
+    var start: String?
     var idEmployee: Int?
     var idCustomer: Int?
     var listService: String?

@@ -44,7 +44,44 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         cell.actionDelete = {
             [weak self] book in
             guard let self = self else {return}
+            let vc = MActDeleteVC()
+            vc.bindData(item: book)
+            let sheet = SheetViewController(controller: vc, sizes: [.fixed(400)])
+            self.present(sheet, animated: true)
+            vc.actionOK = {
+                [weak self] in
+                guard let self = self else {return}
+                self.getBooks()
+            }
             
+        }
+        cell.actionSuccess = {
+            [weak self] book in
+            guard let self = self else {return}
+            let vc = MActSuccessVC()
+            vc.bindData(item: book)
+            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+            self.present(sheet, animated: true)
+            vc.actionOK = {
+                [weak self] in
+                guard let self = self else {return}
+                self.getBooks()
+            }
+        }
+        
+        cell.actionRun = {
+            [weak self] book in
+            guard let self = self else {return}
+            let vc = MainActionVC()
+            vc.bindData(title: "Thông báo!", content: "Bắt đầu làm dịch vụ")
+            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+            self.present(sheet, animated: true)
+            vc.actionOK = {
+                [weak self] in
+                guard let self = self else {return}
+                book.status  = 3
+                self.editBook(item: book)
+            }
         }
         return cell
     }
@@ -91,15 +128,22 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                     self.tableView.reloadData()
                 }
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.showAlert(message: "Không thể lấy dữ liệu")
+            }
+        }
+    }
+    func editBook(item: PBookCalender){
+        ServiceManager.common.editBook(param: item){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.getBooks()
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể sửa")
             }
         }
     }
    
     @IBAction func btnSearchPressed(_ sender: UIButton) {
-        let vc =  DeleteVC()
-        self.pushVC(controller: vc)
-        vc.bindData(name: "Nam")
         
     }
 }

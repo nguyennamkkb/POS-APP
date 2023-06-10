@@ -226,7 +226,6 @@ class CommonServices {
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
-        print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
@@ -249,6 +248,25 @@ class CommonServices {
         }
         print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func editBook(param: PBookCalender, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.book.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
             if success {
                 if result != nil{
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {

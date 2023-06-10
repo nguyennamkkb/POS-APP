@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */; };
 		0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */; };
+		0B1FAE612A344E6F00A81565 /* MainActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FAE5F2A344E6F00A81565 /* MainActionVC.swift */; };
+		0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1FAE602A344E6F00A81565 /* MainActionVC.xib */; };
 		0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B21415F2A13BCC100CCAAB4 /* CreateInfoVC.swift */; };
 		0B2141622A13BCC100CCAAB4 /* CreateInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B2141602A13BCC100CCAAB4 /* CreateInfoVC.xib */; };
 		0B2141652A13BE5D00CCAAB4 /* StoreInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2141632A13BE5D00CCAAB4 /* StoreInfoCell.swift */; };
@@ -34,8 +36,10 @@
 		0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18632A0AA355004E47FD /* PBookCalender.swift */; };
 		0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18652A0AA54F004E47FD /* PProduct.swift */; };
 		0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18672A0AA5F3004E47FD /* PServices.swift */; };
-		0B74DFB32A33F1BA005FDA97 /* DeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFB12A33F1BA005FDA97 /* DeleteVC.swift */; };
-		0B74DFB42A33F1BA005FDA97 /* DeleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFB22A33F1BA005FDA97 /* DeleteVC.xib */; };
+		0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFB52A33F39F005FDA97 /* MActDeleteVC.swift */; };
+		0B74DFB82A33F39F005FDA97 /* MActDeleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFB62A33F39F005FDA97 /* MActDeleteVC.xib */; };
+		0B74DFBB2A3409FC005FDA97 /* MActSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */; };
+		0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
@@ -131,6 +135,8 @@
 /* Begin PBXFileReference section */
 		0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
+		0B1FAE5F2A344E6F00A81565 /* MainActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionVC.swift; sourceTree = "<group>"; };
+		0B1FAE602A344E6F00A81565 /* MainActionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainActionVC.xib; sourceTree = "<group>"; };
 		0B21415F2A13BCC100CCAAB4 /* CreateInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInfoVC.swift; sourceTree = "<group>"; };
 		0B2141602A13BCC100CCAAB4 /* CreateInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateInfoVC.xib; sourceTree = "<group>"; };
 		0B2141632A13BE5D00CCAAB4 /* StoreInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfoCell.swift; sourceTree = "<group>"; };
@@ -156,8 +162,10 @@
 		0B5D18632A0AA355004E47FD /* PBookCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBookCalender.swift; sourceTree = "<group>"; };
 		0B5D18652A0AA54F004E47FD /* PProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PProduct.swift; sourceTree = "<group>"; };
 		0B5D18672A0AA5F3004E47FD /* PServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PServices.swift; sourceTree = "<group>"; };
-		0B74DFB12A33F1BA005FDA97 /* DeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVC.swift; sourceTree = "<group>"; };
-		0B74DFB22A33F1BA005FDA97 /* DeleteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteVC.xib; sourceTree = "<group>"; };
+		0B74DFB52A33F39F005FDA97 /* MActDeleteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MActDeleteVC.swift; sourceTree = "<group>"; };
+		0B74DFB62A33F39F005FDA97 /* MActDeleteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MActDeleteVC.xib; sourceTree = "<group>"; };
+		0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MActSuccessVC.swift; sourceTree = "<group>"; };
+		0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MActSuccessVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
@@ -303,8 +311,12 @@
 		0B74DFA02A336D19005FDA97 /* MainAction */ = {
 			isa = PBXGroup;
 			children = (
-				0B74DFB12A33F1BA005FDA97 /* DeleteVC.swift */,
-				0B74DFB22A33F1BA005FDA97 /* DeleteVC.xib */,
+				0B74DFB52A33F39F005FDA97 /* MActDeleteVC.swift */,
+				0B74DFB62A33F39F005FDA97 /* MActDeleteVC.xib */,
+				0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */,
+				0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */,
+				0B1FAE5F2A344E6F00A81565 /* MainActionVC.swift */,
+				0B1FAE602A344E6F00A81565 /* MainActionVC.xib */,
 			);
 			path = MainAction;
 			sourceTree = "<group>";
@@ -732,11 +744,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
+				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
+				0B74DFB82A33F39F005FDA97 /* MActDeleteVC.xib in Resources */,
 				0BA332AA2A2C87F2007ACB14 /* CustomerVC.xib in Resources */,
 				0B2141662A13BE5D00CCAAB4 /* StoreInfoCell.xib in Resources */,
 				0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */,
@@ -754,7 +768,6 @@
 				0BB1D2212A32421400516F25 /* DichVuCell.xib in Resources */,
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
-				0B74DFB42A33F1BA005FDA97 /* DeleteVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
@@ -765,6 +778,7 @@
 				0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */,
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
 				0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */,
+				0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */,
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
@@ -835,6 +849,7 @@
 			files = (
 				0B5D185E2A0A9F69004E47FD /* PStore.swift in Sources */,
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
+				0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */,
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
@@ -850,12 +865,14 @@
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
+				0B74DFBB2A3409FC005FDA97 /* MActSuccessVC.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
 				0BA332AD2A2C8A33007ACB14 /* CustomerItemCell.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
+				0B1FAE612A344E6F00A81565 /* MainActionVC.swift in Sources */,
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
@@ -882,7 +899,6 @@
 				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
-				0B74DFB32A33F1BA005FDA97 /* DeleteVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
 				0BB1D2202A32421400516F25 /* DichVuCell.swift in Sources */,
 				0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */,
@@ -1046,6 +1062,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4524TL74Z9;
@@ -1067,6 +1084,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vimass.qrvn.POS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1082,6 +1100,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4524TL74Z9;
@@ -1103,6 +1122,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vimass.qrvn.POS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
