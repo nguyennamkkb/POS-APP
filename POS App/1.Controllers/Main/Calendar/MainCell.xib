@@ -33,7 +33,7 @@
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="xmark" catalog="system"/>
+                                                <state key="normal" image="trash" catalog="system"/>
                                                 <connections>
                                                     <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZkI-v5-6Y7"/>
                                                 </connections>
@@ -53,9 +53,7 @@
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="rectangle.and.pencil.and.ellipsis" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
-                                                </state>
+                                                <state key="normal" image="play" catalog="system"/>
                                                 <connections>
                                                     <action selector="btnRunPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="50N-J2-VVO"/>
                                                 </connections>
@@ -224,8 +222,8 @@
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="play" catalog="system" width="117" height="128"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

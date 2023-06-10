@@ -244,6 +244,7 @@
             <connections>
                 <outlet property="addressTF" destination="DPR-dQ-9yC" id="Ax7-vP-8yM"/>
                 <outlet property="birthdayTime" destination="W3e-g7-WMA" id="0oQ-RY-qKk"/>
+                <outlet property="btnXacNhan" destination="WOY-Sw-dTS" id="JUx-JO-CET"/>
                 <outlet property="fullNameTF" destination="Jv2-q6-40T" id="3ql-sT-UvP"/>
                 <outlet property="genderBtn" destination="YWE-cI-sV1" id="oUj-Ly-FUI"/>
                 <outlet property="genderLb" destination="hSt-sc-JLK" id="pCI-k6-Mop"/>

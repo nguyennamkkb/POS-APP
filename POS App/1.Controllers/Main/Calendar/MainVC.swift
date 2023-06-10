@@ -39,7 +39,8 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
-        cell.bindData(item: tableData[indexPath.row])
+        let item = tableData[indexPath.row]
+        cell.bindData(item: item)
         
         cell.actionDelete = {
             [weak self] book in

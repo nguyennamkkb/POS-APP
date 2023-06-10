@@ -58,6 +58,7 @@ class MainCell: UITableViewCell {
         khachHangLb.text = "\(item.customer?.fullName ?? "")"
         nhanVienLb.text = "\(item.employee?.fullName ?? "")"
         timeLb.text = Common.getDateFormatFromMiliseonds(time: item.start ?? "")
+   
         setupButton()
         
     }
@@ -100,13 +101,17 @@ class MainCell: UITableViewCell {
         }
     }
     func setupButton(){
+        deleteBtn.isHidden = true
+        editBtn.isHidden = true
+        okBtn.isHidden = true
+        payBtn.isHidden = true
+        btnRun.isHidden = true
         
         switch book.status {
         case 0:
             deleteBtn.isHidden = false
             editBtn.isHidden = false
             btnRun.isHidden = false
-            
         case 1:
             deleteBtn.isHidden = false
             

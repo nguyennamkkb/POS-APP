@@ -18,13 +18,20 @@ class CreateEmployeeCell: UITableViewCell {
     @IBOutlet var addressTF: UITextField!
     @IBOutlet var birthdayTime: UIDatePicker!
     
+    @IBOutlet var btnXacNhan: UIButton!
     @IBOutlet var genderBtn: UIButton!
     @IBOutlet var genderLb: UILabel!
+    
     
     let dropDown = DropDown()
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
+    }
+    func setupUI(){
+        genderBtn.layer.cornerRadius = myCornerRadius.corner5
+        btnXacNhan.layer.cornerRadius = myCornerRadius.corner5
     }
 
     @IBAction func selectGenderPressed(_ sender: UIButton) {

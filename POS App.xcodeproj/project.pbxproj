@@ -79,6 +79,8 @@
 		0BB7FDD82A19CAA7005EF9B9 /* CreateCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */; };
 		0BB7FDDF2A19D6A8005EF9B9 /* CreateCustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */; };
 		0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */; };
+		0BD0CF762A347B7200A0BBE5 /* EmployeeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0CF742A347B7200A0BBE5 /* EmployeeDetailVC.swift */; };
+		0BD0CF772A347B7200A0BBE5 /* EmployeeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0CF752A347B7200A0BBE5 /* EmployeeDetailVC.xib */; };
 		0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */; };
 		0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */; };
 		0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */; };
@@ -205,6 +207,8 @@
 		0BB7FDD62A19CAA7005EF9B9 /* CreateCustomerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCustomerVC.xib; sourceTree = "<group>"; };
 		0BB7FDDD2A19D6A8005EF9B9 /* CreateCustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerCell.swift; sourceTree = "<group>"; };
 		0BB7FDDE2A19D6A8005EF9B9 /* CreateCustomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCustomerCell.xib; sourceTree = "<group>"; };
+		0BD0CF742A347B7200A0BBE5 /* EmployeeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailVC.swift; sourceTree = "<group>"; };
+		0BD0CF752A347B7200A0BBE5 /* EmployeeDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeDetailVC.xib; sourceTree = "<group>"; };
 		0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
 		0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloVC.xib; sourceTree = "<group>"; };
 		0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOwnerVC.swift; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 				0B5B0EB32A2B564600E4B48A /* CreateEmployeeVC.xib */,
 				0B5B0EB62A2B9EA300E4B48A /* CreateEmployeeCell.swift */,
 				0B5B0EB72A2B9EA300E4B48A /* CreateEmployeeCell.xib */,
+				0BD0CF742A347B7200A0BBE5 /* EmployeeDetailVC.swift */,
+				0BD0CF752A347B7200A0BBE5 /* EmployeeDetailVC.xib */,
 			);
 			path = Emoloyee;
 			sourceTree = "<group>";
@@ -766,6 +772,7 @@
 				0BB43EEA29FAC58300F1DE85 /* FavoriteVC.xib in Resources */,
 				0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */,
 				0BB1D2212A32421400516F25 /* DichVuCell.xib in Resources */,
+				0BD0CF772A347B7200A0BBE5 /* EmployeeDetailVC.xib in Resources */,
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
@@ -887,6 +894,7 @@
 				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
+				0BD0CF762A347B7200A0BBE5 /* EmployeeDetailVC.swift in Sources */,
 				0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */,
 				0BB43EE929FAC58300F1DE85 /* FavoriteVC.swift in Sources */,
 				0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */,
