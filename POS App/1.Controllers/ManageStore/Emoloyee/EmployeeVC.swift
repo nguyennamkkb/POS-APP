@@ -50,7 +50,21 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeItemCell", for: indexPath) as? EmployeeItemCell else {return UITableViewCell()}
-        cell.binđata(name: tableData.itemAtIndex(index: indexPath.row)?.fullName ?? "")
+        let item = tableData[indexPath.row]
+        cell.binđata(name: item.fullName ?? "")
+        
+        cell.actionViewInfo = {
+            [weak self] in
+            guard let self = self else {return}
+            let vc = EmployeeDetailVC()
+            vc.bindData(item: item)
+            vc.deleteSuccess = {
+                [weak self] in
+                guard let self = self else {return}
+                self.getAllEployees()
+            }
+            self.present(vc, animated: true)
+        }
         return cell
     }
     
@@ -69,7 +83,7 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         guard let keySearch = keySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
 
-        let param: String = "store_id=\(id)&keySearch=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let param: String = "store_id=\(id)&status=1&keySearch=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         ServiceManager.common.getAllEmployees(param: "?\(param)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

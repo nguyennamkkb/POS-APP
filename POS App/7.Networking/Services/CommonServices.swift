@@ -119,6 +119,45 @@ class CommonServices {
             }
         }
     }
+    func updateStoreMain(param: PStore, completion: @escaping (_ reponse: PStore?) -> Void) {
+        let router = ECommonURLs.storemains.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func deleteStoreMain(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.storemains.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     
     // customer
     func createCustomer(param: PCustomer, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
@@ -127,6 +166,25 @@ class CommonServices {
             completion(nil)
         }
         BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getoOneCustomer(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.customers.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
@@ -160,13 +218,73 @@ class CommonServices {
             }
         }
     }
-    //employee
+    
+    func updateCustomer(param: PCustomer, completion: @escaping (_ reponse: PStore?) -> Void) {
+        let router = ECommonURLs.customers.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func deleteCustomer(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.storemains.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    //Employee
     func createEmployee(param: PEmployee, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.employee.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
         BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getoOneEmployee(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.employee.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
@@ -201,6 +319,45 @@ class CommonServices {
         }
     }
     
+    func updateEmployee(param: PEmployee, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.employee.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func deleteEmployee(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.employee.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     //book
     func createBook(param: PBookCalender, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.book.getPath()
@@ -223,6 +380,25 @@ class CommonServices {
     }
     func getAllBooks(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.book.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getoOneBook(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.book.getPath() + "/\(param)"
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
@@ -301,6 +477,25 @@ class CommonServices {
             }
         }
     }
+    func getoOneServices(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.employee.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     func getAllServices(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.service.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
@@ -308,6 +503,45 @@ class CommonServices {
         }
         print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func updateServices(param: PServices, completion: @escaping (_ reponse: PStore?) -> Void) {
+        let router = ECommonURLs.service.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func deleteServices(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.service.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {

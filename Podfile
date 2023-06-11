@@ -13,5 +13,4 @@ pod 'Kingfisher', '~>5.15.7'
 pod 'DropDown'
 pod 'FittedSheets'
 pod 'SideMenu', '~> 6.0'
-pod 'RealmSwift', '~>10'
 end

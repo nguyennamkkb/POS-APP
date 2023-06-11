@@ -29,6 +29,21 @@ class Common {
         }
         
     }
+    public static func convertTimestampToDate(timestampString: String, dateFormat: String) -> String{
+        
+        if let timestamp = TimeInterval(timestampString) {
+            let timeInSeconds = floor(timestamp / 1000)
+//            let date = Date(timeIntervalSince1970: timestamp)
+            let date = Date(timeIntervalSince1970: timeInSeconds)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = dateFormat
+            
+            return dateFormatter.string(from: date)
+        } else {
+            return ""
+        }
+        
+    }
     public static func getStringStatus(status: Int) -> String {
         switch status {
         case 0:
