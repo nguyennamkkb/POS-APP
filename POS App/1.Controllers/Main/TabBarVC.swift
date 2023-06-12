@@ -16,16 +16,16 @@ class TabBarVC: UITabBarController {
         mainNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_main"), tag: 1)
         
         
-        let favoriteVC = FavoriteVC()
-        let favoriteNavi = UINavigationController(rootViewController: favoriteVC)
-        favoriteNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_qr"), tag: 2)
+        let QRVC = QRVC()
+        let QRNavi = UINavigationController(rootViewController: QRVC)
+        QRNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_qr"), tag: 2)
         
         
         let payVC = PayVC()
         let payNavi = UINavigationController(rootViewController: payVC)
         payNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_pay"), tag: 3)
         
-        self.viewControllers = [mainNavi, favoriteNavi, payNavi]
+        self.viewControllers = [mainNavi, QRNavi, payNavi]
         setLayout()
     }
     func setLayout(){

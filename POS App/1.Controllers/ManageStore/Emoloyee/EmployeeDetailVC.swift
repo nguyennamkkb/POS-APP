@@ -34,13 +34,10 @@ class EmployeeDetailVC: BaseVC {
         
     }
     func setData(){
-        print(employee.birthday)
-        print(employee.createAt)
-        print("======")
         nameLbl.text = "Họ tên: \(employee.fullName ?? "")"
         birthdayLbl.text = "Ngày sinh: \(Common.convertTimestampToDate(timestampString: employee.birthday ?? "", dateFormat: "dd-MM-yyyy"))"
         addressLbl.text = "Địa chỉ: \(employee.address ?? "")"
-        genderLbl.text = "\(employee.gender == 1 ? "Nam" : "Nữ")"
+        genderLbl.text = "Giới tính: \(employee.gender == 1 ? "Nam" : "Nữ")"
         workFrom.text = "Vào làm: \(Common.convertTimestampToDate(timestampString: employee.createAt ?? "", dateFormat: "dd-MM-yyyy"))"
     }
     func bindData(item: PEmployee){

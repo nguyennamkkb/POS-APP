@@ -9,6 +9,8 @@ import UIKit
 
 class CustomerItemCell: UITableViewCell {
 
+    
+    var actionViewInfo: ClosureAction?
     @IBOutlet var nameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,9 +24,10 @@ class CustomerItemCell: UITableViewCell {
     }
     
     @IBAction func btnViewInfo(_ sender: UIButton) {
+        actionViewInfo?()
     }
     func binđata(name: String){
         nameLbl.text = name
     }
-    
+
 }

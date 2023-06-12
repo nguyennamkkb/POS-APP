@@ -8,7 +8,7 @@
 import UIKit
 
 
-class PayVC: UIViewController {
+class PayVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

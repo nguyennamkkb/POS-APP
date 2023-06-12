@@ -219,7 +219,7 @@ class CommonServices {
         }
     }
     
-    func updateCustomer(param: PCustomer, completion: @escaping (_ reponse: PStore?) -> Void) {
+    func updateCustomer(param: PCustomer, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.customers.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
@@ -227,7 +227,7 @@ class CommonServices {
         BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
             if success {
                 if result != nil{
-                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
                         completion(baseResponse)
                     }
                 }else{
