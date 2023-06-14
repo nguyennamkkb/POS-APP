@@ -68,6 +68,10 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     }
     @IBAction func btnSelectNVPressed(_ sender: UIButton) {
         var list =  [String]()
+        if listEmployee.count == 0 {
+            self.showAlert(message: "Không có dữ liệu!")
+            return
+        }
         let dropDown = DropDown()
         listEmployee.forEach{
             list.append($0.fullName ?? "")
@@ -85,6 +89,10 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     }
     @IBAction func btnSelectKHPressed(_ sender: UIButton) {
         var list =  [String]()
+        if listCustomer.count == 0 {
+            self.showAlert(message: "Không có dữ liệu!")
+            return
+        }
         let dropDown = DropDown()
         listCustomer.forEach{
             list.append($0.fullName ?? "")
@@ -137,7 +145,7 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     func getAllEployees(){
         guard let id = Common.userMaster.id else {return}
         
-        let param: String = "store_id=\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let param: String = "store_id=\(id)&status=1".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         ServiceManager.common.getAllEmployees(param: "?\(param)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
@@ -150,11 +158,12 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     func getAllCustomers(){
         guard let id = Common.userMaster.id else {return}
         
-        let param: String = "store_id=\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let param: String = "store_id=\(id)&status=1".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         ServiceManager.common.getAllCustomers(param: "?\(param)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.listCustomer = Mapper<PCustomer>().mapArray(JSONObject: response!.data ) ?? [PCustomer]()
+                
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể lấy dữ liệu")
             }

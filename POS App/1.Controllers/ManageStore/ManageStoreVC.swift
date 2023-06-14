@@ -20,8 +20,9 @@ class ManageStoreVC: BaseVC {
     
     func setupUI(){
         btnKhachHangView.layer.cornerRadius = myCornerRadius.corner5
-        btnKhachHangView.layer.cornerRadius = myCornerRadius.corner5
+        btnDichVuView.layer.cornerRadius = myCornerRadius.corner5
         btnNhanVienView.layer.cornerRadius = myCornerRadius.corner5
+        
     }
     @IBAction func btnBackPressed(_ sender: UIButton) {
         self.wrapRoot(vc: TabBarVC())
@@ -34,14 +35,10 @@ class ManageStoreVC: BaseVC {
     @IBAction func btnCustomerPressed(_ sender: UIButton) {
         self.pushVC(controller: CustomerVC())
     }
-    /*
-    // MARK: - Navigation
+    @IBAction func btnServicesPressed(_ sender: UIButton) {
+        self.pushVC(controller: ServiceVC())
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+   
 
 }

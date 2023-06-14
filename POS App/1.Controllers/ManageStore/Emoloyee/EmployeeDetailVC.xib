@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,9 +20,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmployeeDetailVC" customModule="POS_App" customModuleProvider="target">
             <connections>
+                <outlet property="addressLbl" destination="c2d-hJ-yXD" id="4TR-mp-ZK1"/>
+                <outlet property="birthdayLbl" destination="3Gm-YI-dcg" id="j9Z-hE-xXm"/>
                 <outlet property="btnDelete" destination="X7h-nP-3wi" id="fm2-aW-17x"/>
                 <outlet property="btnEdit" destination="EkQ-f9-NvV" id="7kh-9P-drT"/>
+                <outlet property="genderLbl" destination="ogK-hX-xvq" id="Yeh-7n-ppx"/>
+                <outlet property="nameLbl" destination="I3f-8c-1r8" id="Hr3-dJ-9V5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="workCount" destination="8bq-9l-JLo" id="v6v-RF-fk5"/>
+                <outlet property="workFrom" destination="qqc-pM-MfI" id="bke-T8-yiU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -114,6 +120,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lầm làm:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-9l-JLo">
+                    <rect key="frame" x="24" y="313" width="345" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Jeu-Gj-3qr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0w-rP-uIq">
                     <rect key="frame" x="24" y="774" width="345" height="44"/>
                     <subviews>
@@ -150,15 +165,6 @@
                         <constraint firstAttribute="height" constant="44" id="iJW-tW-3xg"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số lầm làm:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-9l-JLo">
-                    <rect key="frame" x="24" y="313" width="345" height="25"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="25" id="Jeu-Gj-3qr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

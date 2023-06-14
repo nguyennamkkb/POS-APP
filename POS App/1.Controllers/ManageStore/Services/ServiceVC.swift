@@ -1,14 +1,14 @@
 //
-//  EmployeeVC.swift
+//  ServiceVC.swift
 //  POS App
 //
-//  Created by namnl on 03/06/2023.
+//  Created by namnl on 14/06/2023.
 //
 
 import UIKit
 import ObjectMapper
 
-class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet var keySearch: UITextField!
@@ -16,15 +16,15 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var btnAdd: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var viewSearch: UIView!
-    var tableData = [PEmployee]()
+    var tableData = [PServices]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         tableView.dataSource = self
         tableView.delegate = self
-        self.tableView.registerCell(nibName: "EmployeeItemCell")
+        self.tableView.registerCell(nibName: "ServiceItemCell")
         // Do any additional setup after loading the view.
-        getAllEployees()
+        getAllServices()
     }
     
     func setupUI(){
@@ -49,19 +49,19 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeItemCell", for: indexPath) as? EmployeeItemCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceItemCell", for: indexPath) as? ServiceItemCell else {return UITableViewCell()}
         let item = tableData[indexPath.row]
-        cell.binđata(name: item.fullName ?? "")
+        cell.bindData(item: item)
         
         cell.actionViewInfo = {
             [weak self] in
             guard let self = self else {return}
-            let vc = EmployeeDetailVC()
+            let vc = ServiceDetailVC()
             vc.bindData(item: item)
             vc.deleteSuccess = {
                 [weak self] in
                 guard let self = self else {return}
-                self.getAllEployees()
+                self.getAllServices()
             }
             self.present(vc, animated: true)
         }
@@ -73,21 +73,21 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         vc.actionOK = {
             [weak self] in
             guard let self = self else {return}
-            self.getAllEployees()
+            self.getAllServices()
         }
         self.pushVC(controller: CreateEmployeeVC())
         
     }
     
-    func getAllEployees(){
+    func getAllServices(){
         guard let keySearch = keySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
 
-        let param: String = "store_id=\(id)&status=1&keySearch=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        ServiceManager.common.getAllEmployees(param: "?\(param)"){
+        let param: String = "store_id=\(id)&status=1&name=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        ServiceManager.common.getAllServices(param: "?\(param)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
-                self.tableData = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()
+                self.tableData = Mapper<PServices>().mapArray(JSONObject: response!.data ) ?? [PServices]()
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -98,7 +98,7 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func btnSearchPressed(_ sender: UIButton) {
-        getAllEployees()
+        getAllServices()
     }
     
 }

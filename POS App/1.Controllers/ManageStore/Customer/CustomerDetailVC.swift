@@ -1,16 +1,14 @@
-//
-//  EmployeeDetailVC.swift
+    //
+//  CustomerDetailVC.swift
 //  POS App
 //
-//  Created by namnl on 10/06/2023.
+//  Created by namnl on 12/06/2023.
 //
 
 import UIKit
 
-class EmployeeDetailVC: BaseVC {
+class CustomerDetailVC: BaseVC {
 
-    
-    
     var deleteSuccess: ClosureAction?
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var birthdayLbl: UILabel!
@@ -20,7 +18,7 @@ class EmployeeDetailVC: BaseVC {
     @IBOutlet weak var workCount: UILabel!
     @IBOutlet var btnDelete: UIButton!
     @IBOutlet var btnEdit: UIButton!
-    var employee = PEmployee()
+    var customer = PCustomer()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -34,14 +32,14 @@ class EmployeeDetailVC: BaseVC {
         
     }
     func setData(){
-        nameLbl.text = "Họ tên: \(employee.fullName ?? "")"
-        birthdayLbl.text = "Ngày sinh: \(Common.convertTimestampToDate(timestampString: employee.birthday ?? "", dateFormat: "dd-MM-yyyy"))"
-        addressLbl.text = "Địa chỉ: \(employee.address ?? "")"
-        genderLbl.text = "Giới tính: \(employee.gender == 1 ? "Nam" : "Nữ")"
-        workFrom.text = "Vào làm: \(Common.convertTimestampToDate(timestampString: employee.createAt ?? "", dateFormat: "dd-MM-yyyy"))"
+        nameLbl.text = "Họ tên: \(customer.fullName ?? "")"
+        birthdayLbl.text = "Ngày sinh: \(Common.convertTimestampToDate(timestampString: customer.birthday ?? "", dateFormat: "dd-MM-yyyy"))"
+        addressLbl.text = "Địa chỉ: \(customer.address ?? "")"
+        genderLbl.text = "Giới tính: \(customer.gender == 1 ? "Nam" : "Nữ")"
+        workFrom.text = "Vào làm: \(Common.convertTimestampToDate(timestampString: customer.createAt ?? "", dateFormat: "dd-MM-yyyy"))"
     }
-    func bindData(item: PEmployee){
-        employee = item
+    func bindData(item: PCustomer){
+        customer = item
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -52,8 +50,8 @@ class EmployeeDetailVC: BaseVC {
     }
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {
-        employee.status = 0
-        ServiceManager.common.updateEmployee(param: employee){
+        customer.status = 0
+        ServiceManager.common.updateCustomer(param: customer){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Đã xoá!")
@@ -66,5 +64,4 @@ class EmployeeDetailVC: BaseVC {
     }
     
     
-
 }

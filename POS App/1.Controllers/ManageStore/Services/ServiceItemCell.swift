@@ -1,16 +1,18 @@
 //
-//  EmployeeItemCell.swift
+//  ServiceItemCell.swift
 //  POS App
 //
-//  Created by namnl on 03/06/2023.
+//  Created by namnl on 14/06/2023.
 //
 
 import UIKit
 
-class EmployeeItemCell: UITableViewCell {
+class ServiceItemCell: UITableViewCell {
 
     var actionViewInfo: ClosureAction?
+    @IBOutlet var amountLbl: UILabel!
     @IBOutlet var nameLbl: UILabel!
+    var services = PServices()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,12 +23,15 @@ class EmployeeItemCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func bindData(item: PServices){
+        services = item
+        print(services.price ?? 0)
+        amountLbl.text = "\(services.price ?? 0)".currencyFormatting()
+        nameLbl.text = services.name ?? ""
+    }
     
     @IBAction func btnViewInfo(_ sender: UIButton) {
         actionViewInfo?()
     }
     
-    func binđata(name: String){
-        nameLbl.text = name
-    }
 }

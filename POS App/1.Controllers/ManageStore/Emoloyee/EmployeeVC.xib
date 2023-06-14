@@ -128,10 +128,6 @@
                         <constraint firstItem="0HV-my-5HQ" firstAttribute="leading" secondItem="S9k-mx-TXp" secondAttribute="leading" constant="10" id="wfe-YB-npI"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7w1-Vf-7hJ">
-                    <rect key="frame" x="0.0" y="178" width="414" height="684"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-gZ-xHX" userLabel="btnAdd">
                     <rect key="frame" x="355" y="123" width="35" height="35"/>
                     <color key="backgroundColor" name="AccentColor"/>
@@ -146,6 +142,10 @@
                         <action selector="addNewEmployeePressed:" destination="-1" eventType="touchUpInside" id="mVG-O1-5zv"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7w1-Vf-7hJ">
+                    <rect key="frame" x="0.0" y="178" width="414" height="684"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

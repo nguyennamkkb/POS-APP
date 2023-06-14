@@ -35,7 +35,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
             [weak self] status, index in
             guard let self =  self else  {return}
             self.tableData[index].status = status
-            print("index \(index), status \(status)")
+//            print("index \(index), status \(status)")
             self.updateAmount()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -66,7 +66,6 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         print(tableData.toJSON())
     }
     func changeStatus(){
-        print("asdasdas \(tableData.toJSON())")
         for i in 0...tableData.count-1 {
             tableData[i].status = 0
             if listSelected.count > 0 {

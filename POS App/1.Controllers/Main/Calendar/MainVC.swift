@@ -84,6 +84,17 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 self.editBook(item: book)
             }
         }
+        
+        cell.actionEdit = {
+            [weak self] book in
+            guard let self = self else {return}
+            self.showMessageDeveloping()
+        }
+        cell.actionPay = {
+            [weak self] in
+            guard let self = self else {return}
+            self.showMessageDeveloping()
+        }
         return cell
     }
     
