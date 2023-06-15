@@ -139,6 +139,16 @@
 		0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391729F82039002CB20F /* DateHelper.swift */; };
 		0BE0393029F82039002CB20F /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391929F82039002CB20F /* BaseVC.swift */; };
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
+		0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */; };
+		0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */; };
+		0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */; };
+		0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417C22A3B5E2700DD36DA /* CreateServiceCell.xib */; };
+		0BF417C82A3B7A5000DD36DA /* DetailCalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417C62A3B7A5000DD36DA /* DetailCalenderVC.swift */; };
+		0BF417C92A3B7A5000DD36DA /* DetailCalenderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417C72A3B7A5000DD36DA /* DetailCalenderVC.xib */; };
+		0BF417CC2A3B7D6100DD36DA /* BookHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417CA2A3B7D6100DD36DA /* BookHeaderCell.swift */; };
+		0BF417CD2A3B7D6100DD36DA /* BookHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417CB2A3B7D6100DD36DA /* BookHeaderCell.xib */; };
+		0BF417D02A3B838B00DD36DA /* MidBookDetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417CE2A3B838B00DD36DA /* MidBookDetaiCell.swift */; };
+		0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417CF2A3B838B00DD36DA /* MidBookDetaiCell.xib */; };
 		BA1644BF7B780990762E4ADF /* Pods_POS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -277,6 +287,16 @@
 		0BE0391729F82039002CB20F /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0BE0391929F82039002CB20F /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0BE0391A29F82039002CB20F /* BasePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupVC.swift; sourceTree = "<group>"; };
+		0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceVC.swift; sourceTree = "<group>"; };
+		0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServiceVC.xib; sourceTree = "<group>"; };
+		0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceCell.swift; sourceTree = "<group>"; };
+		0BF417C22A3B5E2700DD36DA /* CreateServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServiceCell.xib; sourceTree = "<group>"; };
+		0BF417C62A3B7A5000DD36DA /* DetailCalenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalenderVC.swift; sourceTree = "<group>"; };
+		0BF417C72A3B7A5000DD36DA /* DetailCalenderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCalenderVC.xib; sourceTree = "<group>"; };
+		0BF417CA2A3B7D6100DD36DA /* BookHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHeaderCell.swift; sourceTree = "<group>"; };
+		0BF417CB2A3B7D6100DD36DA /* BookHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHeaderCell.xib; sourceTree = "<group>"; };
+		0BF417CE2A3B838B00DD36DA /* MidBookDetaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidBookDetaiCell.swift; sourceTree = "<group>"; };
+		0BF417CF2A3B838B00DD36DA /* MidBookDetaiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MidBookDetaiCell.xib; sourceTree = "<group>"; };
 		284A6890BF03F09ADA14102B /* Pods-POS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.release.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.release.xcconfig"; sourceTree = "<group>"; };
 		4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.debug.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +337,10 @@
 				0B20549B2A3A260900BA333D /* ServiceItemCell.xib */,
 				0B20549E2A3A28CB00BA333D /* ServiceDetailVC.swift */,
 				0B20549F2A3A28CB00BA333D /* ServiceDetailVC.xib */,
+				0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */,
+				0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */,
+				0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */,
+				0BF417C22A3B5E2700DD36DA /* CreateServiceCell.xib */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,6 +348,7 @@
 		0B21416B2A13E86C00CCAAB4 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				0BF417C52A3B78D400DD36DA /* DetailCalender */,
 				0B74DFA02A336D19005FDA97 /* MainAction */,
 				0BB43EE329FAC56900F1DE85 /* MainVC.swift */,
 				0BB43EE429FAC56900F1DE85 /* MainVC.xib */,
@@ -683,6 +708,19 @@
 			path = 8.Base;
 			sourceTree = "<group>";
 		};
+		0BF417C52A3B78D400DD36DA /* DetailCalender */ = {
+			isa = PBXGroup;
+			children = (
+				0BF417C62A3B7A5000DD36DA /* DetailCalenderVC.swift */,
+				0BF417C72A3B7A5000DD36DA /* DetailCalenderVC.xib */,
+				0BF417CA2A3B7D6100DD36DA /* BookHeaderCell.swift */,
+				0BF417CB2A3B7D6100DD36DA /* BookHeaderCell.xib */,
+				0BF417CE2A3B838B00DD36DA /* MidBookDetaiCell.swift */,
+				0BF417CF2A3B838B00DD36DA /* MidBookDetaiCell.xib */,
+			);
+			path = DetailCalender;
+			sourceTree = "<group>";
+		};
 		1F3555E4D9A8907ED3D5D69F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,12 +819,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
+				0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0B74DFB82A33F39F005FDA97 /* MActDeleteVC.xib in Resources */,
 				0BA332AA2A2C87F2007ACB14 /* CustomerVC.xib in Resources */,
@@ -811,6 +851,7 @@
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
+				0BF417CD2A3B7D6100DD36DA /* BookHeaderCell.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
@@ -823,9 +864,11 @@
 				0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */,
 				0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */,
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
+				0BF417C92A3B7A5000DD36DA /* DetailCalenderVC.xib in Resources */,
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
+				0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */,
 				0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */,
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
@@ -901,6 +944,7 @@
 				0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */,
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
+				0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
 				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
@@ -912,6 +956,7 @@
 				0B74DFBB2A3409FC005FDA97 /* MActSuccessVC.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
 				0BA332AD2A2C8A33007ACB14 /* CustomerItemCell.swift in Sources */,
+				0BF417C82A3B7A5000DD36DA /* DetailCalenderVC.swift in Sources */,
 				0B20549C2A3A260900BA333D /* ServiceItemCell.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */,
@@ -928,12 +973,15 @@
 				0BE0391F29F82039002CB20F /* Reachability.swift in Sources */,
 				0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */,
 				0B5B0EB42A2B564600E4B48A /* CreateEmployeeVC.swift in Sources */,
+				0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */,
 				0BE0392B29F82039002CB20F /* ExString.swift in Sources */,
 				0B21416E2A13E8CE00CCAAB4 /* CreateCalenderVC.swift in Sources */,
 				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
+				0BF417D02A3B838B00DD36DA /* MidBookDetaiCell.swift in Sources */,
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
 				0BD0CF762A347B7200A0BBE5 /* EmployeeDetailVC.swift in Sources */,
+				0BF417CC2A3B7D6100DD36DA /* BookHeaderCell.swift in Sources */,
 				0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */,
 				0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */,
 				0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */,

@@ -16,6 +16,7 @@ class MainCell: UITableViewCell {
     var actionRun: ClosureCustom<PBookCalender>?
     
     
+    @IBOutlet var btnViewDetail: UIButton!
     @IBOutlet var btnRun: UIButton!
     @IBOutlet var stackActions: UIStackView!
     @IBOutlet var itemView: UIView!
@@ -27,6 +28,8 @@ class MainCell: UITableViewCell {
     @IBOutlet var trangThaiLb: UILabel!
     @IBOutlet var khachHangLb: UILabel!
     @IBOutlet var nhanVienLb: UILabel!
+    
+    
     var dateFormatter = DateFormatter()
     var book = PBookCalender()
     
@@ -131,4 +134,9 @@ class MainCell: UITableViewCell {
     //    1: hoàn thành // xoa
     //    2: Chờ thanh toán // xoa, pay, edit
     //    3: Đang thực hiện // xoa, tich
+    
+    @IBAction func btnViewDetaiPressed(_ sender: UIButton) {
+        
+    }
+    
 }

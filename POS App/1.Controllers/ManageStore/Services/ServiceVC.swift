@@ -33,9 +33,7 @@ class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
         btnAdd.layer.cornerRadius = myCornerRadius.corner10
         btnSearch.layer.cornerRadius = myCornerRadius.corner10
     }
-    override func viewDidAppear(_ animated: Bool) {
-//        getAllEployees()
-    }
+
     @IBAction func btnGoHomepressed(_ sender: UIButton) {
         self.wrapRoot(vc: TabBarVC())
     }
@@ -68,14 +66,14 @@ class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    @IBAction func addNewEmployeePressed(_ sender: UIButton) {
-        let vc  = CreateEmployeeVC()
+    @IBAction func addNewServicesPressed(_ sender: UIButton) {
+        let vc  = CreateServiceVC()
         vc.actionOK = {
             [weak self] in
             guard let self = self else {return}
             self.getAllServices()
         }
-        self.pushVC(controller: CreateEmployeeVC())
+        self.pushVC(controller: vc)
         
     }
     

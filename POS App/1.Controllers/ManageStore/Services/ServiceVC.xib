@@ -48,6 +48,9 @@
                             <color key="tintColor" systemColor="systemBlueColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ic_back"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="wUB-8N-oG5"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dịch vụ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmq-Fd-IZb">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -63,6 +66,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="homekit" catalog="system"/>
+                            <connections>
+                                <action selector="btnGoHomepressed:" destination="-1" eventType="touchUpInside" id="COt-sX-3UL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,9 +138,12 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="plus" catalog="system"/>
+                    <connections>
+                        <action selector="addNewServicesPressed:" destination="-1" eventType="touchUpInside" id="euD-F1-vxk"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Df-Vm-5UN">
-                    <rect key="frame" x="0.0" y="189" width="393" height="629"/>
+                    <rect key="frame" x="24" y="189" width="345" height="629"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -148,13 +157,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="98P-lE-O3V" secondAttribute="trailing" constant="24" id="Cty-zO-cn5"/>
                 <constraint firstItem="K3X-DQ-1II" firstAttribute="top" secondItem="eFj-gU-EuG" secondAttribute="bottom" constant="10" id="DqQ-EK-EHc"/>
                 <constraint firstAttribute="trailing" secondItem="eFj-gU-EuG" secondAttribute="trailing" constant="24" id="K0S-10-IVs"/>
-                <constraint firstItem="2Df-Vm-5UN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N6y-pk-iSL"/>
+                <constraint firstItem="2Df-Vm-5UN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="N6y-pk-iSL"/>
                 <constraint firstItem="2Df-Vm-5UN" firstAttribute="top" secondItem="K3X-DQ-1II" secondAttribute="bottom" constant="10" id="NS3-8I-a8W"/>
                 <constraint firstItem="98P-lE-O3V" firstAttribute="centerY" secondItem="K3X-DQ-1II" secondAttribute="centerY" id="Rvw-He-ikW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K3X-DQ-1II" secondAttribute="trailing" constant="70" id="TFj-UU-qwJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iRB-JX-8ab" secondAttribute="trailing" id="d9C-Ll-0SG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lyW-4H-8ql" secondAttribute="trailing" id="gWY-YM-BT0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Df-Vm-5UN" secondAttribute="trailing" id="gnD-Sk-eck"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Df-Vm-5UN" secondAttribute="trailing" constant="24" id="gnD-Sk-eck"/>
                 <constraint firstItem="iRB-JX-8ab" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="imX-ya-JXW"/>
                 <constraint firstItem="eFj-gU-EuG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="jZt-nA-pjT"/>
                 <constraint firstItem="iRB-JX-8ab" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ljS-eO-vmh"/>

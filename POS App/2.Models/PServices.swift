@@ -10,16 +10,24 @@ import ObjectMapper
 
 class PServices: Mappable {
     var id: Int?
+    var store_id: Int?
     var name: String?
     var price: Int?
-    var discount: Int?
     var note: String?
-    var point: Int64?
+    var point: Int?
     var image: String?
+    var status: Int?
     var createAt: String?
     var updateAt: String?
-    var status: Int?
+
     
+    init (name: String, price: Int, point: Int, note: String){
+        self.name = name
+        self.price = price
+        self.point = point
+        self.note = note
+        self.store_id = Common.userMaster.id
+    }
     init (){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
@@ -27,14 +35,15 @@ class PServices: Mappable {
     
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
+        store_id <- map["store_id"]
         name <- map["name"]
         price <- map["price"]
-        discount <- map["discount"]
         note <- map["note"]
         point <- map["point"]
         image <- map["image"]
+        status <- map["status"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
-        status <- map["status"]
+        
     }
 }
