@@ -75,16 +75,17 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             guard let self = self else {return}
             self.getAllEployees()
         }
-        self.pushVC(controller: CreateEmployeeVC())
+        self.pushVC(controller: vc)
         
     }
     
     func getAllEployees(){
         guard let keySearch = keySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
+        
+        let param = ParamSearch(store_id: id, status: 1, keySearch: keySearch)
 
-        let param: String = "store_id=\(id)&status=1&keySearch=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        ServiceManager.common.getAllEmployees(param: "?\(param)"){
+        ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()

@@ -39,6 +39,7 @@ class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     func createEmployee(){
+        employee.sign()
         print("employee \(employee.toJSON())")
         ServiceManager.common.createEmployee(param: employee){
             (response) in

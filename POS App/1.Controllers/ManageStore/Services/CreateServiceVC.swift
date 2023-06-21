@@ -38,7 +38,7 @@ class CreateServiceVC: BaseVC,  UITableViewDataSource, UITableViewDelegate  {
     }
     
     func createServices(){
-        print("services \(services.toJSON())")
+        services.sign()
         ServiceManager.common.createService(param: services){
             (response) in
             self.hideLoading()

@@ -19,6 +19,8 @@ class PServices: Mappable {
     var status: Int?
     var createAt: String?
     var updateAt: String?
+    var cksRequest: String?
+    var timeRequest: Int?
 
     
     init (name: String, price: Int, point: Int, note: String){
@@ -44,6 +46,13 @@ class PServices: Mappable {
         status <- map["status"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
+        cksRequest <- map["cksRequest"]
+        timeRequest <- map["timeRequest"]
         
+    }
+    func sign(){
+        let mili = Common.getMilisecondNow()
+        self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
+        self.timeRequest = mili
     }
 }

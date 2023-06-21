@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import MobileCoreServices
+
 class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     var actionOk: ClosureAction?
-    let imagePicker = UIImagePickerController()
     var customer: PCustomer = PCustomer()
     let baseVC = BaseVC()
     @IBOutlet var tableView: UITableView!
@@ -24,7 +23,6 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -47,6 +45,7 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     }
 
     func createCustomer(){
+        customer.sign()
         self.showLoading()
         ServiceManager.common.createCustomer(param: customer){
             (response) in

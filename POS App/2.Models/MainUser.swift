@@ -12,6 +12,8 @@ class MainUser: Mappable {
 
     var phone: String?
     var password: String?
+    var cksRequest: String?
+    var timeRequest: Int?
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -19,5 +21,12 @@ class MainUser: Mappable {
     func mapping(map: ObjectMapper.Map) {
         phone <- map["phone"]
         password <- map["password"]
+        cksRequest <- map["cksRequest"]
+        timeRequest <- map["timeRequest"]
+    }
+    func sign(){
+        let mili = Common.getMilisecondNow()
+        self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
+        self.timeRequest = mili
     }
 }

@@ -140,7 +140,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                     self.tableView.reloadData()
                 }
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể lấy dữ liệu")
+                self.showMessagError()
             }
         }
     }
@@ -150,7 +150,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             if response?.data != nil, response?.statusCode == 200 {
                 self.getBooks()
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể sửa")
+                self.showMessagError()
             }
         }
     }

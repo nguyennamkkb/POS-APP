@@ -144,7 +144,7 @@ public class Utility {
         print("Nam: \(str)")
     }
     static func getParamFromDirectory(item: [String:Any]) -> String {
-        var param: String = "?"
+        var param: String = ""
         for (key, value) in item {
             if value != nil {
                 param.append("\(key)=\(value)&")

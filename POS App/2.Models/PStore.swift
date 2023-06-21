@@ -21,11 +21,31 @@ class PStore: Mappable {
     var createAt: String?
     var updateAt: String?
     var status: Int?
+    var access_token: String?
+    var cksRequest: String?
+    var timeRequest: Int?
+    
+    
+    
     init (){}
+    
+    init (phone: String){
+        self.phone = phone
+    }
+    
     init (phone: String, password: String){
         self.phone = phone
         self.password = password
     }
+    
+    init (storeName: String,phone: String,address: String,email: String,password: String){
+        self.storeName = storeName
+        self.phone = phone
+        self.address = address
+        self.email = email
+        self.password = password
+    }
+    
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -42,6 +62,13 @@ class PStore: Mappable {
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]
+        access_token <- map["access_token"]
+        cksRequest <- map["cksRequest"]
+        timeRequest <- map["timeRequest"]
     }
-    
+    func sign(){
+        let mili = Common.getMilisecondNow()
+        self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
+        self.timeRequest = mili
+    }
 }

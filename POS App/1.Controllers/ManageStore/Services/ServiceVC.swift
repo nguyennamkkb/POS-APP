@@ -81,7 +81,7 @@ class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
         guard let keySearch = keySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
 
-        let param: String = "store_id=\(id)&status=1&name=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let param = ParamSearch(store_id: id, status: 1, name: keySearch)
         ServiceManager.common.getAllServices(param: "?\(param)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

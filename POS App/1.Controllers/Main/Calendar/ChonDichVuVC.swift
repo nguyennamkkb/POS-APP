@@ -9,13 +9,13 @@ import UIKit
 import ObjectMapper
 
 class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet var amountLbl: UILabel!
     var returnDataSelected: ClosureCustom<[PServices]>?
     @IBOutlet var tableView: UITableView!
     var tableData = [PServices]()
     var listSelected = [PServices]()
-//    var listSelected = [PServices]()
+    //    var listSelected = [PServices]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -35,7 +35,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
             [weak self] status, index in
             guard let self =  self else  {return}
             self.tableData[index].status = status
-//            print("index \(index), status \(status)")
+            //            print("index \(index), status \(status)")
             self.updateAmount()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -43,7 +43,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-
+    
     func getAllServices() {
         guard let id = Common.userMaster.id else {return}
         
@@ -66,23 +66,26 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         print(tableData.toJSON())
     }
     func changeStatus(){
-        for i in 0...tableData.count-1 {
-            tableData[i].status = 0
-            if listSelected.count > 0 {
-                for j in 0...listSelected.count-1 {
-                    if tableData[i].id == listSelected[j].id {
-                        tableData[i].status = 1
+        if tableData.count >= 1 {
+            for i in 0...tableData.count-1 {
+                tableData[i].status = 0
+                if listSelected.count > 0 {
+                    for j in 0...listSelected.count-1 {
+                        if tableData[i].id == listSelected[j].id {
+                            tableData[i].status = 1
+                        }
                     }
                 }
             }
         }
+        
     }
     
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
     @IBAction func btnOkPressed(_ sender: UIButton) {
-//        self.onBackNav()
+        //        self.onBackNav()
         getDataSelected()
         
     }
@@ -91,7 +94,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         print(filtered.toJSON())
         returnDataSelected?(filtered)
         self.onBackNav()
-
+        
     }
     func updateAmount(){
         let filtered = tableData.filter { $0.status == 1 }

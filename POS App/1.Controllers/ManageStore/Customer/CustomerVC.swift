@@ -68,9 +68,10 @@ class CustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     func getAllCustomers(){
         guard let keySearch = keySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
-        let param: String = "store_id=\(id)&status=1&keySearch=\(keySearch)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         
-        ServiceManager.common.getAllCustomers(param: "?\(param)"){
+        let param = ParamSearch(store_id: id, status: 1, keySearch: keySearch)
+        
+        ServiceManager.common.getAllCustomers(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PCustomer>().mapArray(JSONObject: response!.data ) ?? [PCustomer]()

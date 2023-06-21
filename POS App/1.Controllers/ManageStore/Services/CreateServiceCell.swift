@@ -16,12 +16,12 @@ class CreateServiceCell: UITableViewCell {
     @IBOutlet var pointView: UIView!
     @IBOutlet var noteView: UIView!
     
+    @IBOutlet var noteTF: UITextView!
     
     
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var priceTF: UITextField!
     @IBOutlet var pointTF: UITextField!
-    @IBOutlet var noteTF: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +38,7 @@ class CreateServiceCell: UITableViewCell {
         nameView.layer.cornerRadius = myCornerRadius.corner5
         priceView.layer.cornerRadius = myCornerRadius.corner5
         pointView.layer.cornerRadius = myCornerRadius.corner5
-        noteView.layer.cornerRadius = myCornerRadius.corner5
+        noteTF.layer.cornerRadius = myCornerRadius.corner5
     }
     
     @IBAction func btnXacNhanPressed(_ sender: UIButton) {

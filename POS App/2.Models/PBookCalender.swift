@@ -21,6 +21,9 @@ class PBookCalender: Mappable {
     var status: Int?
     var employee: PEmployee?
     var customer: PCustomer?
+    var cksRequest: String?
+    var timeRequest: Int?
+    
     
     init(){}
     required init?(map: ObjectMapper.Map) {
@@ -40,5 +43,13 @@ class PBookCalender: Mappable {
         status <- map["status"]
         customer <- map["customer"]
         employee <- map["employee"]
+        cksRequest <- map["cksRequest"]
+        timeRequest <- map["timeRequest"]
+        
+    }
+    func sign(){
+        let mili = Common.getMilisecondNow()
+        self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
+        self.timeRequest = mili
     }
 }

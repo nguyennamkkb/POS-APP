@@ -7,8 +7,12 @@
 
 import Foundation
 import ObjectMapper
+import var CommonCrypto.CC_MD5_DIGEST_LENGTH
+import func CommonCrypto.CC_MD5
+import typealias CommonCrypto.CC_LONG
 
 class Common {
+    public static var KEY_APP = "50829317681RT3RUH3EZ"
     public static var isInternet = false//false bat tinh năng ckeck ẩn menu để false
     public static var isRunningUpOffW = false
     public static var userMaster: PStore = PStore()
@@ -33,7 +37,7 @@ class Common {
         
         if let timestamp = TimeInterval(timestampString) {
             let timeInSeconds = floor(timestamp / 1000)
-//            let date = Date(timeIntervalSince1970: timestamp)
+            //            let date = Date(timeIntervalSince1970: timestamp)
             let date = Date(timeIntervalSince1970: timeInSeconds)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = dateFormat
@@ -52,7 +56,6 @@ class Common {
             return "Hoàn thành"
         case 2:
             return "Chờ thanh toán"
-            
         case 3:
             return "Đang thực hiện"
             
@@ -64,4 +67,27 @@ class Common {
     //    1: hoàn thành // xoa
     //    2: Chờ thanh toán // xoa, pay, edit
     //    3: Đang thực hiện // xoa, tich
+    
+    public static func MD5(string: String) -> String {
+        let length = Int(CC_MD5_DIGEST_LENGTH)
+        let messageData = string.data(using:.utf8)!
+        var digestData = Data(count: length)
+        
+        _ = digestData.withUnsafeMutableBytes { digestBytes -> UInt8 in
+            messageData.withUnsafeBytes { messageBytes -> UInt8 in
+                if let messageBytesBaseAddress = messageBytes.baseAddress, let digestBytesBlindMemory = digestBytes.bindMemory(to: UInt8.self).baseAddress {
+                    let messageLength = CC_LONG(messageData.count)
+                    CC_MD5(messageBytesBaseAddress, messageLength, digestBytesBlindMemory)
+                }
+                return 0
+            }
+        }
+        return  digestData.map { String(format: "%02hhx", $0) }.joined()
+    }
+    
+    public static func getMilisecondNow() -> Int {
+        let date = Date()
+        let milliseconds = Int(date.timeIntervalSince1970 * 1000)
+        return milliseconds
+    }
 }

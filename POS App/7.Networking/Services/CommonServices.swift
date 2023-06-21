@@ -13,27 +13,29 @@ import Alamofire
 fileprivate class ListCommonService {
     
     // account
-    static let storemains = ServiceManager.ROOT + "main-store"
+    static let user = ServiceManager.ROOT + "user"
+    static let checkuser = ServiceManager.ROOT + "user/checkuser"
     static let customer = ServiceManager.ROOT + "customer"
     static let employee = ServiceManager.ROOT + "employee"
-    static let auth = ServiceManager.ROOT + "auth"
+    static let auth = ServiceManager.ROOT + "auth/signin"
     static let book = ServiceManager.ROOT + "books"
     static let service = ServiceManager.ROOT + "products"
 }
 
 fileprivate enum ECommonURLs {
-    case storemains
+    case user
     case customers
     case auth
     case employee
     case book
     case service
+    case checkuser
     
     
     func getPath() -> String {
         switch self {
-        case .storemains:
-            return ListCommonService.storemains
+        case .user:
+            return ListCommonService.user
         case .customers:
             return ListCommonService.customer
         case .auth:
@@ -44,6 +46,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.book
         case .service:
             return ListCommonService.service
+        case .checkuser:
+            return ListCommonService.checkuser
             
         }
         func getMethod() -> HTTPMethod {
@@ -61,7 +65,7 @@ fileprivate enum ECommonURLs {
 class CommonServices {
     
     
-    func login(param: LoginParam?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    func signIn(param: LoginParam?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.auth.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
@@ -80,9 +84,9 @@ class CommonServices {
             }
         }
     }
-
-    func getStoreMain(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
-        let router = ECommonURLs.storemains.getPath() + (param ?? "")
+    
+    func getUsers(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.user.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
@@ -100,15 +104,34 @@ class CommonServices {
             }
         }
     }
-    func createStoreMain(param: PStore, completion: @escaping (_ reponse: PStore?) -> Void) {
-        let router = ECommonURLs.storemains.getPath()
+    func checkUser(param: PStore?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.checkuser.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param?.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func createUser(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.user.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
         BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
             if success {
                 if result != nil{
-                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
                         completion(baseResponse)
                     }
                 }else{
@@ -119,15 +142,15 @@ class CommonServices {
             }
         }
     }
-    func updateStoreMain(param: PStore, completion: @escaping (_ reponse: PStore?) -> Void) {
-        let router = ECommonURLs.storemains.getPath()
+    func updateUSer(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.user.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
         BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
             if success {
                 if result != nil{
-                    if let baseResponse = Mapper<PStore>().map(JSONObject: result) {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
                         completion(baseResponse)
                     }
                 }else{
@@ -138,8 +161,8 @@ class CommonServices {
             }
         }
     }
-    func deleteStoreMain(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
-        let router = ECommonURLs.storemains.getPath() + "/\(param)"
+    func deleteUser(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.user.getPath() + "/\(param)"
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
@@ -239,7 +262,7 @@ class CommonServices {
         }
     }
     func deleteCustomer(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
-        let router = ECommonURLs.storemains.getPath() + "/\(param)"
+        let router = ECommonURLs.customers.getPath() + "/\(param)"
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
@@ -303,7 +326,6 @@ class CommonServices {
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
-        print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
@@ -379,6 +401,8 @@ class CommonServices {
         }
     }
     func getAllBooks(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        
+        
         let router = ECommonURLs.book.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)

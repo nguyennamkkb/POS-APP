@@ -121,7 +121,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvv-7F-Q4i" userLabel="note">
-                        <rect key="frame" x="24" y="288" width="520" height="150"/>
+                        <rect key="frame" x="24" y="288" width="520" height="90"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mô tả thêm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-5p-NVn">
                                 <rect key="frame" x="0.0" y="0.0" width="520" height="20"/>
@@ -132,27 +132,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Nhập mô tả" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-aG-U5X">
-                                <rect key="frame" x="0.0" y="30" width="520" height="120"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cbo-Jm-h5i">
+                                <rect key="frame" x="0.0" y="30" width="520" height="55"/>
+                                <color key="backgroundColor" red="0.94904881720000001" green="0.94898742439999995" blue="0.96708649400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="2hx-si-pJY"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="RDG-aG-U5X" secondAttribute="trailing" id="4A4-CL-CIe"/>
+                            <constraint firstAttribute="trailing" secondItem="cbo-Jm-h5i" secondAttribute="trailing" id="5Ax-4X-zxj"/>
+                            <constraint firstItem="cbo-Jm-h5i" firstAttribute="leading" secondItem="Vvv-7F-Q4i" secondAttribute="leading" id="ABk-IG-WC6"/>
                             <constraint firstItem="v4P-5p-NVn" firstAttribute="top" secondItem="Vvv-7F-Q4i" secondAttribute="top" id="K7A-HZ-TNw"/>
-                            <constraint firstAttribute="height" constant="150" id="Tov-dd-get"/>
-                            <constraint firstItem="RDG-aG-U5X" firstAttribute="leading" secondItem="Vvv-7F-Q4i" secondAttribute="leading" id="Ufq-Ut-bHa"/>
-                            <constraint firstAttribute="bottom" secondItem="RDG-aG-U5X" secondAttribute="bottom" id="ZMT-Z4-97R"/>
-                            <constraint firstItem="RDG-aG-U5X" firstAttribute="top" secondItem="v4P-5p-NVn" secondAttribute="bottom" constant="10" id="aph-wz-Ds3"/>
+                            <constraint firstAttribute="height" constant="90" id="Tov-dd-get"/>
+                            <constraint firstItem="cbo-Jm-h5i" firstAttribute="top" secondItem="v4P-5p-NVn" secondAttribute="bottom" constant="10" id="aZi-OL-UL1"/>
                             <constraint firstAttribute="trailing" secondItem="v4P-5p-NVn" secondAttribute="trailing" id="sfZ-12-ylF"/>
                             <constraint firstItem="v4P-5p-NVn" firstAttribute="leading" secondItem="Vvv-7F-Q4i" secondAttribute="leading" id="xgs-c4-nXy"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFv-yZ-kO4">
-                        <rect key="frame" x="24" y="448" width="520" height="44"/>
+                        <rect key="frame" x="24" y="388" width="520" height="44"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="DNy-M0-7qf"/>
@@ -173,7 +176,7 @@
                     <constraint firstItem="mFv-yZ-kO4" firstAttribute="top" secondItem="Vvv-7F-Q4i" secondAttribute="bottom" constant="10" id="5M0-Wt-T1Y"/>
                     <constraint firstItem="fsi-jy-mUW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="9Ex-QK-SI1"/>
                     <constraint firstItem="Vvv-7F-Q4i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="GN5-WX-UuW"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="mFv-yZ-kO4" secondAttribute="bottom" id="Grh-w0-Oco"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="mFv-yZ-kO4" secondAttribute="bottom" priority="999" id="Grh-w0-Oco"/>
                     <constraint firstAttribute="trailing" secondItem="Vvv-7F-Q4i" secondAttribute="trailing" constant="24" id="MHO-oT-uWb"/>
                     <constraint firstItem="8Q2-Kb-79f" firstAttribute="top" secondItem="qR9-dV-xWN" secondAttribute="bottom" constant="10" id="MSj-Vg-9t0"/>
                     <constraint firstItem="qR9-dV-xWN" firstAttribute="top" secondItem="fsi-jy-mUW" secondAttribute="bottom" constant="10" id="QA1-4T-jeR"/>
@@ -189,7 +192,7 @@
                 <outlet property="btnXacNhan" destination="mFv-yZ-kO4" id="DbC-Lc-JKD"/>
                 <outlet property="nameTF" destination="nwf-yc-snx" id="1sF-nt-2Hd"/>
                 <outlet property="nameView" destination="fsi-jy-mUW" id="qeL-RB-zPT"/>
-                <outlet property="noteTF" destination="RDG-aG-U5X" id="Sh4-Pj-slW"/>
+                <outlet property="noteTF" destination="cbo-Jm-h5i" id="tQE-5k-hEQ"/>
                 <outlet property="noteView" destination="Vvv-7F-Q4i" id="orv-p4-e8l"/>
                 <outlet property="pointTF" destination="wZh-4J-8O5" id="Lzf-yP-PqI"/>
                 <outlet property="pointView" destination="8Q2-Kb-79f" id="UxG-lr-MJ1"/>
@@ -203,6 +206,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

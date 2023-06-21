@@ -142,8 +142,6 @@
                     <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="J2V-Db-Hct"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="OiR-vg-Daj"/>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="57" id="XAD-91-jN7"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

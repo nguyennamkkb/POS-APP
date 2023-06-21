@@ -19,6 +19,7 @@ class BaseNetWorking {
     static func getHeaderFields() -> HTTPHeaders {
         var headers: [String: String] = [:]
         headers["Content-Type"] = "application/json"
+        headers["Authorization"] = "Bearer \(Common.userMaster.access_token ?? "")"
         return headers
     }
     
@@ -26,7 +27,6 @@ class BaseNetWorking {
         do {
             var originalRequest = try URLRequest(url: fromURl ?? "" , method: method, headers: BaseNetWorking.getHeaderFields())
             originalRequest.timeoutInterval = 20
-            
             let encoding : ParameterEncoding = JSONEncoding.default
             let encodeURLRequest = try encoding.encode(originalRequest, with: parameter)
             Alamofire.request(encodeURLRequest).responseString { (response) in

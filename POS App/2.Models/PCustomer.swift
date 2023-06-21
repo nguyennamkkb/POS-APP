@@ -23,8 +23,12 @@ class PCustomer: Mappable {
     var createAt: String?
     var updateAt: String?
     var status: Int?
+    var cksRequest: String?
+    var timeRequest: Int?
     
-    init(){}
+    init(){
+        sign()
+    }
     init (store_id: Int, fullName: String,  phone: String, address: String, birthday: String, gender: Int ){
         self.store_id = store_id
         self.fullName = fullName
@@ -32,6 +36,7 @@ class PCustomer: Mappable {
         self.address = address
         self.birthday = birthday
         self.gender = gender
+        sign()
     }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
@@ -52,6 +57,13 @@ class PCustomer: Mappable {
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]
+        cksRequest <- map["cksRequest"]
+        timeRequest <- map["timeRequest"]
         
+    }
+    func sign(){
+        let mili = Common.getMilisecondNow()
+        self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
+        self.timeRequest = mili
     }
 }

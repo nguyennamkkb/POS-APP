@@ -14,6 +14,11 @@ class LoginParam: Mappable {
     var phone: String?
     var password: String?
     
+    init(){}
+    init(phone: String){
+        self.phone  = phone
+    }
+    
     init(phone: String, password: String){
         self.phone  = phone
         self.password = password

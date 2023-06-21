@@ -24,11 +24,15 @@ class LoginVC: BaseVC {
         super.viewDidLoad()
         setupUI()
         // Do any additional setup after loading the view.
+        setupData()
     }
     func bindData(item:PStore){
         storeData = item
-        phoneTF.text = item.phone
-        passwordTF.text = item.password
+
+    }
+    func setupData(){
+        phoneTF.text = storeData.phone
+        passwordTF.text = storeData.password
     }
     @IBAction func backPressed(_ sender: UIButton) {
         self.onBackNav()
@@ -93,7 +97,7 @@ class LoginVC: BaseVC {
     }
     func login(phone: String, password: String){
         let paramRequest = LoginParam(phone: phone, password: password)
-        ServiceManager.common.login(param: paramRequest){
+        ServiceManager.common.signIn(param: paramRequest){
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {

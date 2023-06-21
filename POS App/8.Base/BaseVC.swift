@@ -95,6 +95,9 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func showMessageDeveloping(){
         showAlert(message: "Chức năng đang phát triển")
     }
+    func showMessagError(){
+        showAlert(message: "Lỗi")
+    }
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

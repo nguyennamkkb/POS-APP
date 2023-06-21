@@ -21,8 +21,9 @@ class CreateInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
 //        tableView.register(nib, forCellReuseIdentifier: "StoreInfoCell")
     }
     
-    func bindData(item:PStore){
-        storeData = item
+    func bindData(item: PStore){
+        storeData.phone = item.phone
+        storeData.password = item.password
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -36,15 +37,16 @@ class CreateInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             guard let self = self else {return}
             self.storeData = item
             self.showLoading()
-            ServiceManager.common.createStoreMain(param: self.storeData){
+            ServiceManager.common.createUser(param: self.storeData){
                 (response) in
                 self.hideLoading()
-                if response != nil {
+                if response?.statusCode == 200 {
                     CacheManager.share.setRegister(true)
                     let vc = LoginVC()
                     vc.bindData(item: self.storeData)
                     self.pushVC(controller: vc)
                 } else {
+                    self.showAlert(message: "Lỗi thêm mới")
                 }
             }
         }

@@ -66,7 +66,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1G9-FM-Mae">
-                    <rect key="frame" x="10" y="102" width="394" height="750"/>
+                    <rect key="frame" x="20" y="102" width="374" height="750"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -77,9 +77,9 @@
                 <constraint firstItem="1G9-FM-Mae" firstAttribute="top" secondItem="4Kq-Ow-b0E" secondAttribute="bottom" constant="10" id="SXh-Ie-s68"/>
                 <constraint firstItem="bP7-DK-oid" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eQw-5X-6gW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1G9-FM-Mae" secondAttribute="bottom" constant="10" id="m9z-e1-VEg"/>
-                <constraint firstItem="1G9-FM-Mae" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="o4i-1V-QKv"/>
+                <constraint firstItem="1G9-FM-Mae" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="o4i-1V-QKv"/>
                 <constraint firstItem="4Kq-Ow-b0E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uNQ-Os-Roh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1G9-FM-Mae" secondAttribute="trailing" constant="10" id="va9-nf-et0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1G9-FM-Mae" secondAttribute="trailing" constant="20" id="va9-nf-et0"/>
                 <constraint firstItem="bP7-DK-oid" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xV7-vh-ORG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Kq-Ow-b0E" secondAttribute="trailing" id="xq8-LM-IuD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bP7-DK-oid" secondAttribute="trailing" id="yMQ-EI-KjJ"/>

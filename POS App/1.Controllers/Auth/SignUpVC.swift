@@ -32,19 +32,18 @@ class SignUpVC: BaseVC {
         guard let phone = phoneTF.text else {return}
         guard let password =  passwordTF.text, password.count >= 6 else {return}
         self.showLoading()
-        let store = PStore()
-        store.phone = phone
-        let paramRequest = Utility.getParamFromDirectory(item: store.toJSON())
-        ServiceManager.common.getStoreMain(param: paramRequest){
+        
+        let store = PStore(phone:phone,password: password)
+//        let paramRequest = Utility.getParamFromDirectory(item: store.toJSON())
+        ServiceManager.common.checkUser(param: store){
             (response) in
             self.hideLoading()
-            if response != nil {
-                self.messageLbl.text = "Thông báo: Số điện thoại đã đăng ký cửa hàng, mời đăng nhập"
-            } else {
-                store.password = password
+            if response?.statusCode == 200 {
                 let vc = CreateInfoVC()
                 vc.bindData(item: store)
                 self.pushVC(controller: vc)
+            } else {
+                self.messageLbl.text = "Thông báo: Lỗi đăng ký"
             }
         }
        

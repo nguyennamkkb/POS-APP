@@ -15,10 +15,10 @@ class StoreInfoCell: UITableViewCell {
     let dropDown = DropDown()
     @IBOutlet var xacNhanBtn: UIButton!
     @IBOutlet var emailTF: UITextField!
-    @IBOutlet var accoutNumberTF: UITextField!
+//    @IBOutlet var accoutNumberTF: UITextField!
     @IBOutlet var addressTF: UITextField!
     @IBOutlet var storeNameTF: UITextField!
-    @IBOutlet var bankCodeDRop: UIButton!
+//    @IBOutlet var bankCodeDRop: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,7 +27,7 @@ class StoreInfoCell: UITableViewCell {
     }
     func setupUI(){
         xacNhanBtn.layer.cornerRadius = myCornerRadius.corner10
-        bankCodeDRop.contentEdgeInsets = UIEdgeInsets(top:0,left:0,bottom:0,right:5)
+//        bankCodeDRop.contentEdgeInsets = UIEdgeInsets(top:0,left:0,bottom:0,right:5)
         
         //setup dropdown
        
@@ -48,21 +48,15 @@ class StoreInfoCell: UITableViewCell {
     }
 
     @IBAction func XacNhanAction(_ sender: UIButton) {
-        print("Xac nhan")
         guard let name = storeNameTF.text else {return}
         guard let address = addressTF.text else {return}
-        guard let bankCode = bankCodeDRop.titleLabel?.text else {return}
-        guard let accoutNumber = accoutNumberTF.text else {return}
-        guard let email = emailTF.text else {return}
-        //Lấy dữ liệu cache storeMain
-        
-        //cap nhat du lieu cua hang
-        storeData.storeName = name
-        storeData.address = address
-        storeData.bankCode = bankCode
-        storeData.accountNumber = accoutNumber
-        storeData.email = email
-        actionSuccess?(storeData)
+        guard let phone = storeData.phone else {return}
+        guard let password = storeData.password else {return}
+    
+//        guard let bankCode = bankCodeDRop.titleLabel?.text else {return}
+//        guard let accoutNumber = accoutNumberTF.text else {return}
+        let store = PStore(storeName: name, phone: phone, address: address, email: emailTF.text ?? "", password: password)
+        actionSuccess?(store)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
