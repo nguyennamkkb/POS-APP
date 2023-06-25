@@ -48,6 +48,8 @@
 		0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
+		0B9244292A4888D8001AF674 /* CustomerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9244272A4888D8001AF674 /* CustomerDetailVC.swift */; };
+		0B92442A2A4888D8001AF674 /* CustomerDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9244282A4888D8001AF674 /* CustomerDetailVC.xib */; };
 		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
 		0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */; };
 		0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA332A72A2C87F2007ACB14 /* CustomerVC.swift */; };
@@ -86,8 +88,6 @@
 		0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF19842A43696A004F11CB /* ParamSearch.swift */; };
 		0BD0CF762A347B7200A0BBE5 /* EmployeeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0CF742A347B7200A0BBE5 /* EmployeeDetailVC.swift */; };
 		0BD0CF772A347B7200A0BBE5 /* EmployeeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0CF752A347B7200A0BBE5 /* EmployeeDetailVC.xib */; };
-		0BD2F37A2A3647A800FC6796 /* CustomerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2F3782A3647A800FC6796 /* CustomerDetailVC.swift */; };
-		0BD2F37B2A3647A800FC6796 /* CustomerDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2F3792A3647A800FC6796 /* CustomerDetailVC.xib */; };
 		0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */; };
 		0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */; };
 		0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */; };
@@ -195,6 +195,8 @@
 		0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MActSuccessVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		0B9244272A4888D8001AF674 /* CustomerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailVC.swift; sourceTree = "<group>"; };
+		0B9244282A4888D8001AF674 /* CustomerDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerDetailVC.xib; sourceTree = "<group>"; };
 		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
 		0B9BAFAC2A1A22F2008679DE /* TakePhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakePhotoVC.xib; sourceTree = "<group>"; };
 		0BA332A72A2C87F2007ACB14 /* CustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerVC.swift; sourceTree = "<group>"; };
@@ -233,8 +235,6 @@
 		0BCF19842A43696A004F11CB /* ParamSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearch.swift; sourceTree = "<group>"; };
 		0BD0CF742A347B7200A0BBE5 /* EmployeeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailVC.swift; sourceTree = "<group>"; };
 		0BD0CF752A347B7200A0BBE5 /* EmployeeDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeDetailVC.xib; sourceTree = "<group>"; };
-		0BD2F3782A3647A800FC6796 /* CustomerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailVC.swift; sourceTree = "<group>"; };
-		0BD2F3792A3647A800FC6796 /* CustomerDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerDetailVC.xib; sourceTree = "<group>"; };
 		0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloVC.swift; sourceTree = "<group>"; };
 		0BD5BABE29F8A3DC009F2A66 /* HelloVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloVC.xib; sourceTree = "<group>"; };
 		0BD5BAC629F8A419009F2A66 /* LoginOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOwnerVC.swift; sourceTree = "<group>"; };
@@ -452,8 +452,8 @@
 				0BA332A82A2C87F2007ACB14 /* CustomerVC.xib */,
 				0BA332AB2A2C8A33007ACB14 /* CustomerItemCell.swift */,
 				0BA332AC2A2C8A33007ACB14 /* CustomerItemCell.xib */,
-				0BD2F3782A3647A800FC6796 /* CustomerDetailVC.swift */,
-				0BD2F3792A3647A800FC6796 /* CustomerDetailVC.xib */,
+				0B9244272A4888D8001AF674 /* CustomerDetailVC.swift */,
+				0B9244282A4888D8001AF674 /* CustomerDetailVC.xib */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -845,8 +845,8 @@
 				0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
 				0B20549D2A3A260900BA333D /* ServiceItemCell.xib in Resources */,
+				0B92442A2A4888D8001AF674 /* CustomerDetailVC.xib in Resources */,
 				0BD5BAC929F8A419009F2A66 /* LoginOwnerVC.xib in Resources */,
-				0BD2F37B2A3647A800FC6796 /* CustomerDetailVC.xib in Resources */,
 				0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */,
 				0BB1D2212A32421400516F25 /* DichVuCell.xib in Resources */,
 				0B2054A12A3A28CB00BA333D /* ServiceDetailVC.xib in Resources */,
@@ -943,7 +943,6 @@
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */,
-				0BD2F37A2A3647A800FC6796 /* CustomerDetailVC.swift in Sources */,
 				0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */,
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
@@ -1016,6 +1015,7 @@
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
 				0B2054A02A3A28CB00BA333D /* ServiceDetailVC.swift in Sources */,
+				0B9244292A4888D8001AF674 /* CustomerDetailVC.swift in Sources */,
 				0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
