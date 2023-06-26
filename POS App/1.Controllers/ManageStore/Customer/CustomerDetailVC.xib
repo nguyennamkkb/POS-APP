@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -13,32 +13,29 @@
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
-        <array key="Rubik-Regular.ttf">
-            <string>Rubik-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomerDetailVC" customModule="POS_App" customModuleProvider="target">
             <connections>
-                <outlet property="QRImage" destination="D7h-5u-ayN" id="hUe-HB-9hA"/>
+                <outlet property="QRImage" destination="Rt8-fc-MPi" id="oX8-9R-nxj"/>
                 <outlet property="cardView" destination="NhX-Mh-OL0" id="8Ew-iH-cWe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNt-dV-Qzf" userLabel="top">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="103"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D28-Hb-hZn" userLabel="nav">
-                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGr-zP-g6Q" userLabel="back">
-                            <rect key="frame" x="24" y="4.6666666666666643" width="35" height="35"/>
+                            <rect key="frame" x="24" y="4.5" width="35" height="35"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="fYt-ip-XUl"/>
@@ -49,7 +46,7 @@
                             <state key="normal" image="ic_back"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYU-5B-6mq" userLabel="Thông tin">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
@@ -67,86 +64,82 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-Mh-OL0" userLabel="card">
-                    <rect key="frame" x="24" y="122.99999999999999" width="345" height="216.66666666666663"/>
+                    <rect key="frame" x="24" y="112" width="366" height="230"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7h-5u-ayN" userLabel="left">
-                            <rect key="frame" x="0.0" y="0.0" width="138" height="216.66666666666666"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Nguyễn Lương Nam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYZ-DI-ReM">
+                            <rect key="frame" x="10" y="10" width="187" height="28.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: số 20/24/119 Hồ Đắc Di" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpz-1J-182">
+                            <rect key="frame" x="10" y="48.5" width="234.5" height="19.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_LNPOS" translatesAutoresizingMaskIntoConstraints="NO" id="Rt8-fc-MPi">
+                            <rect key="frame" x="10" y="105" width="115" height="115"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Rt8-fc-MPi" secondAttribute="height" id="t59-QH-Khm"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOd-qh-DRy">
+                            <rect key="frame" x="135" y="105" width="221" height="115"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_LNPOS" translatesAutoresizingMaskIntoConstraints="NO" id="SvV-Yw-4I5">
-                                    <rect key="frame" x="13.666666666666664" y="34.999999999999993" width="110.66666666666669" height="110.33333333333331"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="SvV-Yw-4I5" secondAttribute="height" id="lUC-va-xo2"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LN POS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-eQ-u1r">
-                                    <rect key="frame" x="39.333333333333329" y="165.33333333333331" width="59.333333333333329" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 0358737373" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDd-WN-IIG">
+                                    <rect key="frame" x="10" y="0.0" width="157" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính: Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESv-3E-RLG">
+                                    <rect key="frame" x="10" y="27" width="80" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinh nhật: 23/03/1997" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcg-lR-gXB">
+                                    <rect key="frame" x="10" y="54" width="142.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điểm: 1200000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="057-mR-CvR">
+                                    <rect key="frame" x="10" y="81" width="99.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.10520751301140119" green="0.51575035157644444" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="8pq-eQ-u1r" firstAttribute="top" secondItem="SvV-Yw-4I5" secondAttribute="bottom" constant="20" id="1uG-VV-T4O"/>
-                                <constraint firstItem="SvV-Yw-4I5" firstAttribute="top" secondItem="D7h-5u-ayN" secondAttribute="top" constant="35" id="2Jr-OE-oPB"/>
-                                <constraint firstItem="SvV-Yw-4I5" firstAttribute="centerX" secondItem="D7h-5u-ayN" secondAttribute="centerX" id="rIa-r7-PD5"/>
-                                <constraint firstItem="SvV-Yw-4I5" firstAttribute="width" secondItem="D7h-5u-ayN" secondAttribute="width" multiplier="0.8" id="sBJ-ed-a4T"/>
-                                <constraint firstItem="8pq-eQ-u1r" firstAttribute="centerX" secondItem="SvV-Yw-4I5" secondAttribute="centerX" id="w9g-Ky-xjq"/>
+                                <constraint firstItem="ESv-3E-RLG" firstAttribute="top" secondItem="aDd-WN-IIG" secondAttribute="bottom" constant="10" id="0Kx-Ld-1Ja"/>
+                                <constraint firstItem="057-mR-CvR" firstAttribute="top" secondItem="Dcg-lR-gXB" secondAttribute="bottom" constant="10" id="ZAA-B2-7av"/>
+                                <constraint firstItem="Dcg-lR-gXB" firstAttribute="leading" secondItem="DOd-qh-DRy" secondAttribute="leading" constant="10" id="g5i-mH-O1J"/>
+                                <constraint firstItem="057-mR-CvR" firstAttribute="leading" secondItem="DOd-qh-DRy" secondAttribute="leading" constant="10" id="jmO-M8-46F"/>
+                                <constraint firstItem="ESv-3E-RLG" firstAttribute="leading" secondItem="DOd-qh-DRy" secondAttribute="leading" constant="10" id="lxx-qk-2BW"/>
+                                <constraint firstItem="Dcg-lR-gXB" firstAttribute="top" secondItem="ESv-3E-RLG" secondAttribute="bottom" constant="10" id="s7l-oF-i8w"/>
+                                <constraint firstItem="aDd-WN-IIG" firstAttribute="leading" secondItem="DOd-qh-DRy" secondAttribute="leading" constant="10" id="zWy-oG-5Xg"/>
+                                <constraint firstItem="aDd-WN-IIG" firstAttribute="top" secondItem="DOd-qh-DRy" secondAttribute="top" id="zix-FV-jGr"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Lương Nam" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1n-Hf-XGh">
-                            <rect key="frame" x="143" y="20" width="197" height="20.333333333333329"/>
-                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số 22/24/119 Hồ Đắc Di, Nam Đồng, Đống Đa, Hà Nôi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slD-UP-nfN">
-                            <rect key="frame" x="143" y="65.333333333333343" width="197" height="28.666666666666671"/>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điện thoại: 0358737373" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F35-UZ-VuU">
-                            <rect key="frame" x="143" y="104" width="197" height="14.333333333333329"/>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinh nhật: 23/03/1997" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-fD-DPf">
-                            <rect key="frame" x="143" y="128.33333333333334" width="197" height="14.333333333333343"/>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điểm: 130000" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-nV-JV8">
-                            <rect key="frame" x="143" y="152.66666666666669" width="197" height="14.333333333333343"/>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
-                        <constraint firstItem="D7h-5u-ayN" firstAttribute="leading" secondItem="NhX-Mh-OL0" secondAttribute="leading" id="8U9-EO-2p3"/>
-                        <constraint firstItem="F35-UZ-VuU" firstAttribute="top" secondItem="slD-UP-nfN" secondAttribute="bottom" constant="10" id="8ph-TN-gVY"/>
-                        <constraint firstItem="UvW-nV-JV8" firstAttribute="top" secondItem="aRB-fD-DPf" secondAttribute="bottom" constant="10" id="CCV-9Z-xx8"/>
-                        <constraint firstAttribute="trailing" secondItem="slD-UP-nfN" secondAttribute="trailing" constant="5" id="Kal-fx-P3h"/>
-                        <constraint firstItem="R1n-Hf-XGh" firstAttribute="leading" secondItem="D7h-5u-ayN" secondAttribute="trailing" constant="5" id="KxQ-7K-fBw"/>
-                        <constraint firstItem="R1n-Hf-XGh" firstAttribute="top" secondItem="NhX-Mh-OL0" secondAttribute="top" constant="20" id="LAq-TU-flC"/>
-                        <constraint firstItem="D7h-5u-ayN" firstAttribute="top" secondItem="NhX-Mh-OL0" secondAttribute="top" id="OeL-dv-ZDY"/>
-                        <constraint firstItem="UvW-nV-JV8" firstAttribute="leading" secondItem="D7h-5u-ayN" secondAttribute="trailing" constant="5" id="RyV-pe-9M5"/>
-                        <constraint firstItem="slD-UP-nfN" firstAttribute="top" secondItem="R1n-Hf-XGh" secondAttribute="bottom" constant="25" id="UAS-bf-8gV"/>
-                        <constraint firstAttribute="bottom" secondItem="D7h-5u-ayN" secondAttribute="bottom" id="VEf-8C-YtC"/>
-                        <constraint firstAttribute="trailing" secondItem="aRB-fD-DPf" secondAttribute="trailing" constant="5" id="Xvl-sa-73W"/>
-                        <constraint firstItem="F35-UZ-VuU" firstAttribute="leading" secondItem="D7h-5u-ayN" secondAttribute="trailing" constant="5" id="fMS-Nn-6hn"/>
-                        <constraint firstAttribute="trailing" secondItem="F35-UZ-VuU" secondAttribute="trailing" constant="5" id="fZ6-Be-EJ2"/>
-                        <constraint firstItem="D7h-5u-ayN" firstAttribute="width" secondItem="NhX-Mh-OL0" secondAttribute="width" multiplier="2:5" id="mVK-SY-MnS"/>
-                        <constraint firstAttribute="trailing" secondItem="UvW-nV-JV8" secondAttribute="trailing" constant="5" id="qmz-16-qVu"/>
-                        <constraint firstAttribute="trailing" secondItem="R1n-Hf-XGh" secondAttribute="trailing" constant="5" id="sR5-9w-4m3"/>
+                        <constraint firstItem="DOd-qh-DRy" firstAttribute="centerY" secondItem="Rt8-fc-MPi" secondAttribute="centerY" id="3JJ-hz-aeq"/>
+                        <constraint firstItem="DOd-qh-DRy" firstAttribute="top" secondItem="fpz-1J-182" secondAttribute="bottom" constant="37.000000000000014" id="3do-cD-tqN"/>
+                        <constraint firstItem="DOd-qh-DRy" firstAttribute="height" secondItem="Rt8-fc-MPi" secondAttribute="height" id="ERg-PY-0SI"/>
+                        <constraint firstItem="fpz-1J-182" firstAttribute="leading" secondItem="NhX-Mh-OL0" secondAttribute="leading" constant="10" id="EyM-9w-TqE"/>
+                        <constraint firstItem="QYZ-DI-ReM" firstAttribute="leading" secondItem="NhX-Mh-OL0" secondAttribute="leading" constant="10" id="M5v-U0-3zG"/>
+                        <constraint firstItem="QYZ-DI-ReM" firstAttribute="top" secondItem="NhX-Mh-OL0" secondAttribute="top" constant="10" id="MRg-Oc-ROT"/>
+                        <constraint firstItem="DOd-qh-DRy" firstAttribute="leading" secondItem="Rt8-fc-MPi" secondAttribute="trailing" constant="10" id="ROl-lK-zAu"/>
+                        <constraint firstAttribute="trailing" secondItem="DOd-qh-DRy" secondAttribute="trailing" constant="10" id="XN1-u7-SPz"/>
+                        <constraint firstItem="fpz-1J-182" firstAttribute="top" secondItem="QYZ-DI-ReM" secondAttribute="bottom" constant="10" id="dn5-TF-VNK"/>
+                        <constraint firstItem="Rt8-fc-MPi" firstAttribute="leading" secondItem="NhX-Mh-OL0" secondAttribute="leading" constant="10" id="fWZ-d6-e06"/>
+                        <constraint firstAttribute="bottom" secondItem="Rt8-fc-MPi" secondAttribute="bottom" constant="10" id="lCe-tp-Vhs"/>
+                        <constraint firstItem="Rt8-fc-MPi" firstAttribute="height" secondItem="NhX-Mh-OL0" secondAttribute="height" multiplier="0.5" id="mKq-EP-9wq"/>
                         <constraint firstAttribute="width" secondItem="NhX-Mh-OL0" secondAttribute="height" multiplier="86:54" id="tg2-eN-AAB"/>
-                        <constraint firstItem="aRB-fD-DPf" firstAttribute="leading" secondItem="D7h-5u-ayN" secondAttribute="trailing" constant="5" id="upM-2j-WDD"/>
-                        <constraint firstItem="aRB-fD-DPf" firstAttribute="top" secondItem="F35-UZ-VuU" secondAttribute="bottom" constant="10" id="w67-Ze-Dyq"/>
-                        <constraint firstItem="slD-UP-nfN" firstAttribute="leading" secondItem="D7h-5u-ayN" secondAttribute="trailing" constant="5" id="xIC-fc-AtG"/>
                     </constraints>
                 </view>
             </subviews>
@@ -178,6 +171,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

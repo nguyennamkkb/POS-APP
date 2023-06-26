@@ -31,7 +31,7 @@ class CustomerDetailVC: BaseVC {
     func setupUI(){
 //        btnDelete.layer.cornerRadius = myCornerRadius.corner5
 //        btnEdit.layer.cornerRadius = myCornerRadius.corner5
-        cardView.layer.cornerRadius = myCornerRadius.corner5
+        cardView.layer.cornerRadius = myCornerRadius.corner10
         QRImage.layer.cornerRadius = myCornerRadius.corner10
         
         
