@@ -61,7 +61,7 @@ class CustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 guard let self = self else {return}
                 self.getAllCustomers()
             }
-            self.present(vc, animated: true)
+            self.pushVC(controller: vc)
         }
         return cell
     }

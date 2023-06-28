@@ -1,15 +1,18 @@
-    //
+//
 //  CustomerDetailVC.swift
 //  POS App
 //
-//  Created by namnl on 12/06/2023.
+//  Created by namnl on 25/06/2023.
 //
 
 import UIKit
 
 class CustomerDetailVC: BaseVC {
-
     var deleteSuccess: ClosureAction?
+    
+    
+    @IBOutlet weak var QRImage: UIView!
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var birthdayLbl: UILabel!
     @IBOutlet weak var addressLbl: UILabel!
@@ -22,12 +25,14 @@ class CustomerDetailVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setData()
+//        setData()
     }
     
     func setupUI(){
-        btnDelete.layer.cornerRadius = myCornerRadius.corner5
-        btnEdit.layer.cornerRadius = myCornerRadius.corner5
+//        btnDelete.layer.cornerRadius = myCornerRadius.corner5
+//        btnEdit.layer.cornerRadius = myCornerRadius.corner5
+        cardView.layer.cornerRadius = myCornerRadius.corner10
+        QRImage.layer.cornerRadius = myCornerRadius.corner10
         
         
     }

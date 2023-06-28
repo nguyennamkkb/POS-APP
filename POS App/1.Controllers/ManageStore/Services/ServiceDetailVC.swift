@@ -24,8 +24,6 @@ class ServiceDetailVC: BaseVC {
     func setupUI(){
         btnDelete.layer.cornerRadius = myCornerRadius.corner5
         btnEdit.layer.cornerRadius = myCornerRadius.corner5
-        
-        
     }
     func setData(){
         nodelbl.text = "\(services.note ?? "")"
@@ -35,12 +33,16 @@ class ServiceDetailVC: BaseVC {
 
     func bindData(item: PServices){
         services = item
+        
     }
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
     @IBAction func btnEditPressed(_ sender: UIButton) {
-        self.showMessageDeveloping()
+        print("edit")
+        let vc = CreateServiceVC()
+        vc.bindDataEdit(item: services)
+        self.pushVC(controller: vc)
     }
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {

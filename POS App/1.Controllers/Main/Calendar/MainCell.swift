@@ -115,9 +115,9 @@ class MainCell: UITableViewCell {
             deleteBtn.isHidden = false
             editBtn.isHidden = false
             btnRun.isHidden = false
-        case 1:
-            deleteBtn.isHidden = false
-            
+//        case 1:
+//            deleteBtn.isHidden = false
+//
         case 2:
             deleteBtn.isHidden = false
             editBtn.isHidden = false
