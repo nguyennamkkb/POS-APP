@@ -39,14 +39,21 @@ class ServiceDetailVC: BaseVC {
         self.onBackNav()
     }
     @IBAction func btnEditPressed(_ sender: UIButton) {
-        print("edit")
+
         let vc = CreateServiceVC()
         vc.bindDataEdit(item: services)
+        vc.actionUpdateOK = {
+            [weak self] item in
+            guard let self = self else {return}
+            self.services = item
+            self.setData()
+        }
         self.pushVC(controller: vc)
     }
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {
         services.status = 0
+        services.sign()
         ServiceManager.common.updateServices(param: services){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

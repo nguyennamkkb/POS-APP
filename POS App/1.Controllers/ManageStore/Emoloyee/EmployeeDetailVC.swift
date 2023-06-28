@@ -53,6 +53,7 @@ class EmployeeDetailVC: BaseVC {
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {
         employee.status = 0
+        employee.sign()
         ServiceManager.common.updateEmployee(param: employee){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

@@ -150,7 +150,7 @@ public class Utility {
                 param.append("\(key)=\(value)&")
             }
         }
-        return param
+        return param.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
     }
 }
 

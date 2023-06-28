@@ -82,7 +82,8 @@ class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
         guard let id = Common.userMaster.id else {return}
 
         let param = ParamSearch(store_id: id, status: 1, name: keySearch)
-        ServiceManager.common.getAllServices(param: "?\(param)"){
+        
+        ServiceManager.common.getAllServices(param: "?\(Utility.getParamFromDirectory(item: param.toJSON())))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PServices>().mapArray(JSONObject: response!.data ) ?? [PServices]()

@@ -47,6 +47,7 @@ class MActDeleteVC: BaseVC {
         deleteBook(id: id)
     }
     func deleteBook(id: Int){
+        book.status = 0
         ServiceManager.common.deleteBook(param: id){
             (response) in
             self.hideLoading()

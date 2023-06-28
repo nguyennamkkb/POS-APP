@@ -56,6 +56,7 @@ class CustomerDetailVC: BaseVC {
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {
         customer.status = 0
+        customer.sign()
         ServiceManager.common.updateCustomer(param: customer){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

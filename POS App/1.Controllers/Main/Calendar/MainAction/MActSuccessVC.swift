@@ -33,6 +33,7 @@ class MActSuccessVC: BaseVC {
         self.showLoading()
         guard let param = book else {return}
         param.status = 2
+        param.sign()
         ServiceManager.common.editBook(param: param){
             (response) in
             self.hideLoading()

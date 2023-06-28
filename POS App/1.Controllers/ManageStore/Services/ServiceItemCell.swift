@@ -21,11 +21,9 @@ class ServiceItemCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     func bindData(item: PServices){
         services = item
-        print(services.price ?? 0)
         amountLbl.text = "\(services.price ?? 0)".currencyFormatting()
         nameLbl.text = services.name ?? ""
     }

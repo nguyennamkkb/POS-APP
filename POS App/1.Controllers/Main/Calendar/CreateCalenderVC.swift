@@ -144,9 +144,8 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     func getAllEployees(){
         guard let id = Common.userMaster.id else {return}
-        
-        let param: String = "store_id=\(id)&status=1".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        ServiceManager.common.getAllEmployees(param: "?\(param)"){
+        let param = ParamSearch(store_id: id, status: 1)
+        ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.listEmployee = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()
@@ -157,9 +156,8 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     }
     func getAllCustomers(){
         guard let id = Common.userMaster.id else {return}
-        
-        let param: String = "store_id=\(id)&status=1".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        ServiceManager.common.getAllCustomers(param: "?\(param)"){
+        let param = ParamSearch(store_id: id, status: 1)
+        ServiceManager.common.getAllCustomers(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.listCustomer = Mapper<PCustomer>().mapArray(JSONObject: response!.data ) ?? [PCustomer]()
@@ -192,7 +190,7 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         book.status = 0
         book.idEmployee = employeeSelected.id
         book.idCustomer = customerSelected.id
-
+        book.sign()
         createBook(item: book)
     }
     func createBook(item: PBookCalender){

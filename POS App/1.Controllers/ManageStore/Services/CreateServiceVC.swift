@@ -10,6 +10,7 @@ import UIKit
 class CreateServiceVC: BaseVC,  UITableViewDataSource, UITableViewDelegate  {
 
     var actionOK: ClosureAction?
+    var actionUpdateOK: ClosureCustom<PServices>?
     var services: PServices = PServices()
     var statusCreateOrUpdate = 1
     @IBOutlet var tableView: UITableView!
@@ -25,6 +26,7 @@ class CreateServiceVC: BaseVC,  UITableViewDataSource, UITableViewDelegate  {
         self.onBackNav()
     }
     func bindDataEdit(item: PServices){
+        print("bindDataEdit")
         print(services.toJSON())
         services =  item
         statusCreateOrUpdate = 0
@@ -35,7 +37,11 @@ class CreateServiceVC: BaseVC,  UITableViewDataSource, UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateServiceCell", for: indexPath) as? CreateServiceCell else {return UITableViewCell()}
-        cell.bindDataUpdate(item: services)
+        
+        if statusCreateOrUpdate == 0 {
+            cell.bindDataUpdate(item: services)
+        }
+        
         cell.dataCreate = {
             [weak self] item in
             guard let self = self else {return}
@@ -71,7 +77,7 @@ class CreateServiceVC: BaseVC,  UITableViewDataSource, UITableViewDelegate  {
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Thành công!")
-                self.actionOK?()
+                self.actionUpdateOK?(self.services)
                 self.onBackNav()
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")

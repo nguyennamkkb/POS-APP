@@ -71,7 +71,7 @@ class CustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         
         let param = ParamSearch(store_id: id, status: 1, keySearch: keySearch)
         
-        ServiceManager.common.getAllCustomers(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"){
+        ServiceManager.common.getAllCustomers(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PCustomer>().mapArray(JSONObject: response!.data ) ?? [PCustomer]()

@@ -46,9 +46,8 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     
     func getAllServices() {
         guard let id = Common.userMaster.id else {return}
-        
-        let param: String = "store_id=\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-        ServiceManager.common.getAllServices(param: "?\(param)"){
+        let param = ParamSearch(store_id: id, status: 1)
+        ServiceManager.common.getAllServices(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PServices>().mapArray(JSONObject: response!.data ) ?? [PServices]()

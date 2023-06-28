@@ -20,7 +20,7 @@ class ParamSearch: Mappable {
     init(){}
     
     
-    init(store_id: Int, status: Int, keySearch: String? = nil, name: String? = nil){
+    init(store_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil){
         let mili = Common.getMilisecondNow()
         self.store_id  = store_id
         self.status = status

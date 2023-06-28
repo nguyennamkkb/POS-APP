@@ -85,7 +85,7 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         
         let param = ParamSearch(store_id: id, status: 1, keySearch: keySearch)
 
-        ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"){
+        ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()

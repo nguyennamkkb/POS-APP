@@ -27,12 +27,10 @@ class CreateServiceCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
-        setupData()
     }
 
     func bindDataUpdate(item: PServices){
         services =  item
-        print(services.toJSON())
         setupData()
     }
     func setupData(){
@@ -57,6 +55,7 @@ class CreateServiceCell: UITableViewCell {
         guard let price = priceTF.text else {return}
         guard let point = pointTF.text else {return}
         let note = noteTF.text ?? ""
+        services.store_id = Common.userMaster.id
         services.name = name
         services.price = Int(price)
         services.point = Int(point)
