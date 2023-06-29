@@ -112,6 +112,8 @@
 		0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */; };
 		0BD709422A370DA200D467EC /* QRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD709402A370DA200D467EC /* QRVC.swift */; };
 		0BD709432A370DA200D467EC /* QRVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD709412A370DA200D467EC /* QRVC.xib */; };
+		0BD914332A4DEA96006C223B /* CustomerServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD914312A4DEA96006C223B /* CustomerServicesCell.swift */; };
+		0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD914322A4DEA96006C223B /* CustomerServicesCell.xib */; };
 		0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E029F81F6D002CB20F /* AppDelegate.swift */; };
 		0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E229F81F6D002CB20F /* SceneDelegate.swift */; };
 		0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E429F81F6D002CB20F /* ViewController.swift */; };
@@ -259,6 +261,8 @@
 		0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageStoreVC.xib; sourceTree = "<group>"; };
 		0BD709402A370DA200D467EC /* QRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRVC.swift; sourceTree = "<group>"; };
 		0BD709412A370DA200D467EC /* QRVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRVC.xib; sourceTree = "<group>"; };
+		0BD914312A4DEA96006C223B /* CustomerServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServicesCell.swift; sourceTree = "<group>"; };
+		0BD914322A4DEA96006C223B /* CustomerServicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerServicesCell.xib; sourceTree = "<group>"; };
 		0BE038DD29F81F6D002CB20F /* POS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE038E029F81F6D002CB20F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE038E229F81F6D002CB20F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -454,6 +458,8 @@
 				0BA332AC2A2C8A33007ACB14 /* CustomerItemCell.xib */,
 				0B9244272A4888D8001AF674 /* CustomerDetailVC.swift */,
 				0B9244282A4888D8001AF674 /* CustomerDetailVC.xib */,
+				0BD914312A4DEA96006C223B /* CustomerServicesCell.swift */,
+				0BD914322A4DEA96006C223B /* CustomerServicesCell.xib */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -823,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
+				0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
@@ -939,6 +946,7 @@
 				0B5D185E2A0A9F69004E47FD /* PStore.swift in Sources */,
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */,
+				0BD914332A4DEA96006C223B /* CustomerServicesCell.swift in Sources */,
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,

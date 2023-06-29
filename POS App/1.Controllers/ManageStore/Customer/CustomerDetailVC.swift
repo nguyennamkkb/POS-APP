@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class CustomerDetailVC: BaseVC {
+class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+
+    
     var deleteSuccess: ClosureAction?
     
     
+    @IBOutlet weak var pointLbl: UILabel!
     @IBOutlet weak var QRImage: UIView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var nameLbl: UILabel!
@@ -22,10 +26,17 @@ class CustomerDetailVC: BaseVC {
     @IBOutlet var btnDelete: UIButton!
     @IBOutlet var btnEdit: UIButton!
     var customer = PCustomer()
+    var customerServices = [PBookCalender]()
+    
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        setData()
+        setData()
+        tableView.dataSource = self
+        tableView.delegate = self
+        self.tableView.registerCell(nibName: "CustomerServicesCell")
+        getBooks()
     }
     
     func setupUI(){
@@ -37,11 +48,11 @@ class CustomerDetailVC: BaseVC {
         
     }
     func setData(){
-        nameLbl.text = "Họ tên: \(customer.fullName ?? "")"
+        nameLbl.text = "\(customer.fullName ?? "")"
         birthdayLbl.text = "Ngày sinh: \(Common.convertTimestampToDate(timestampString: customer.birthday ?? "", dateFormat: "dd-MM-yyyy"))"
-        addressLbl.text = "Địa chỉ: \(customer.address ?? "")"
+        addressLbl.text = "\(customer.address ?? "")"
         genderLbl.text = "Giới tính: \(customer.gender == 1 ? "Nam" : "Nữ")"
-        workFrom.text = "Vào làm: \(Common.convertTimestampToDate(timestampString: customer.createAt ?? "", dateFormat: "dd-MM-yyyy"))"
+        pointLbl.text = "Điểm: \(customer.loyalty ?? 0)"
     }
     func bindData(item: PCustomer){
         customer = item
@@ -60,14 +71,42 @@ class CustomerDetailVC: BaseVC {
         ServiceManager.common.updateCustomer(param: customer){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Đã xoá!")
+                self.showAlert(message: "Thành công!")
                 self.deleteSuccess?()
                 self.onBackNav()
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể xoá")
+                self.showAlert(message: "Lỗi")
             }
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customerServices.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerServicesCell", for: indexPath) as? CustomerServicesCell else {return UITableViewCell()}
+       
+        
+        let item = customerServices[indexPath.row]
+        cell.bindData(item: item)
+        return cell
+    }
+    
+    func getBooks(){
+        guard let id = Common.userMaster.id else {return}
+        let param = ParamSearch(store_id: id,status: 1)
+        ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))&idCustomer=\(customer.id ?? 0)"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.customerServices = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else if response?.statusCode == 0 {
+                self.showMessagError()
+            }
+        }
+    }
 }
+

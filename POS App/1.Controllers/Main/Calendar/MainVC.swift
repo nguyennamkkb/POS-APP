@@ -131,7 +131,6 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     func getBooks(){
         guard let id = Common.userMaster.id else {return}
         let param = ParamSearch(store_id: id)
-        
         ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
