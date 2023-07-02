@@ -12,6 +12,9 @@ class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
 
     var actionOK: ClosureAction?
     var employee: PEmployee = PEmployee()
+    var actionUpdateOK: ClosureCustom<PEmployee>?
+    var statusCreateOrUpdate = 1
+    let dateFormater = DateFormatter()
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,24 +26,38 @@ class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
+    
+    func bindDataEdit(item: PEmployee){
+        employee =  item
+        statusCreateOrUpdate = 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateEmployeeCell", for: indexPath) as? CreateEmployeeCell else {return UITableViewCell()}
-        cell.returnEmployee = {
+        
+        if statusCreateOrUpdate == 0 {
+            cell.bindDataUpdate(item: employee)
+        }
+        
+        cell.actionOK = {
             [weak self] item in
             guard let self = self else {return}
             self.employee = item
-            self.createEmployee()
+            if self.statusCreateOrUpdate == 1 {
+                self.createEmployee()
+            }else {
+                self.updateEmployee()
+            }
         }
         return cell
     }
     
     func createEmployee(){
         employee.sign()
-        print("employee \(employee.toJSON())")
         ServiceManager.common.createEmployee(param: employee){
             (response) in
             self.hideLoading()
@@ -53,5 +70,19 @@ class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             }
         }
         
+    }
+    func updateEmployee(){
+        employee.sign()
+        ServiceManager.common.updateEmployee(param: employee){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công!")
+                self.actionUpdateOK?(self.employee)
+                self.onBackNav()
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
     }
 }

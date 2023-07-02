@@ -12,7 +12,7 @@ class MainCell: UITableViewCell {
     var actionDelete: ClosureCustom<PBookCalender>?
     var actionEdit: ClosureCustom<PBookCalender>?
     var actionSuccess: ClosureCustom<PBookCalender>?
-    var actionPay: ClosureAction?
+    var actionPay: ClosureCustom<PBookCalender>?
     var actionRun: ClosureCustom<PBookCalender>?
     
     
@@ -61,7 +61,9 @@ class MainCell: UITableViewCell {
         khachHangLb.text = "\(item.customer?.fullName ?? "")"
         nhanVienLb.text = "\(item.employee?.fullName ?? "")"
         timeLb.text = Common.getDateFormatFromMiliseonds(time: item.start ?? "")
-   
+        
+        itemView.layer.borderWidth = 1
+        itemView.layer.borderColor = getColorByStatus(status: item.status ?? 0).cgColor
         setupButton()
         
     }
@@ -81,7 +83,7 @@ class MainCell: UITableViewCell {
     }
     
     @IBAction func payPressed(_ sender: Any) {
-        actionPay?()
+        actionPay?(book)
     }
     @IBAction func btnRunPressed(_ sender: UIButton) {
         actionRun?(book)

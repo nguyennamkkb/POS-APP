@@ -23,6 +23,7 @@
                 <outlet property="cardView" destination="NhX-Mh-OL0" id="8Ew-iH-cWe"/>
                 <outlet property="genderLbl" destination="ESv-3E-RLG" id="BMO-w8-MaO"/>
                 <outlet property="nameLbl" destination="QYZ-DI-ReM" id="mT6-J0-MbS"/>
+                <outlet property="phoneLbl" destination="aDd-WN-IIG" id="PoT-cl-e3m"/>
                 <outlet property="pointLbl" destination="057-mR-CvR" id="ukw-dS-2iD"/>
                 <outlet property="tableView" destination="vUK-9j-8fA" id="Z0Q-5S-cUL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -168,6 +169,9 @@
                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Sửa"/>
+                                    <connections>
+                                        <action selector="btnEditPressed:" destination="-1" eventType="touchUpInside" id="uuT-Xb-m1S"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pN-DB-Cfk">
                                     <rect key="frame" x="195" y="0.0" width="171" height="44"/>
@@ -190,7 +194,7 @@
                         <constraint firstAttribute="trailing" secondItem="MTJ-VN-ZLa" secondAttribute="trailing" id="qpq-WG-7bk"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-9j-8fA">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-9j-8fA">
                     <rect key="frame" x="24" y="377.5" width="366" height="440.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

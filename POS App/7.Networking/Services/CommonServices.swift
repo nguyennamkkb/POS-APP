@@ -441,7 +441,7 @@ class CommonServices {
         }
     }
     
-    func deleteBook(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    func deleteBook(param: String, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.book.getPath() + "/\(param)"
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)

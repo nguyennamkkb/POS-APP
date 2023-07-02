@@ -72,6 +72,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Thanh toán"/>
+                                    <connections>
+                                        <action selector="btnPayPressed:" destination="-1" eventType="touchUpInside" id="raR-cz-Z5e"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

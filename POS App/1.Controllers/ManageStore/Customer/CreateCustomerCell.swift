@@ -17,6 +17,8 @@ class CreateCustomerCell: UITableViewCell {
     var actionChupAnh: ClosureAction?
     var actionOK: ClosureCustom<PCustomer>?
     let dropDown = DropDown()
+    var customer = PCustomer()
+    let dateFormater = DateFormatter()
     @IBOutlet var gender: UIButton!
     @IBOutlet var timeSelect: UIDatePicker!
     @IBOutlet var addressFT: UITextField!
@@ -33,6 +35,20 @@ class CreateCustomerCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
+    }
+    func bindDataUpdate(item: PCustomer){
+        customer =  item
+        setupData()
+    }
+    func setupData(){
+        genderLb.text = "\(customer.gender == 1 ? "Nam" : "Nữ")"
+        phoneTF.text = "\(customer.phone ?? "")"
+        addressFT.text = "\(customer.address ?? "")"
+        nameTF.text = customer.fullName ?? ""
+        if let date = dateFormater.date(from: customer.birthday ?? "") {
+            timeSelect.setDate(date, animated: true)
+        }
+        
     }
     func setupUI(){
         gender.layer.cornerRadius  = myCornerRadius.corner5
@@ -51,9 +67,10 @@ class CreateCustomerCell: UITableViewCell {
         guard let address = addressFT.text, address != "" else {return}
         guard let gender = genderLb.text, gender != "" else {return}
         
-        let customer = PCustomer(store_id: Common.userMaster.id ?? -1, fullName: name, phone: phone, address: address, birthday: String(timeSelect.date.timeIntervalSince1970), gender: gender == "Nam" ? 1: 0)
-        actionOK?(customer)
-        print("getDataForm ok")
+        let item = PCustomer(store_id: Common.userMaster.id ?? -1, fullName: name, phone: phone, address: address, birthday: String(timeSelect.date.millisecondsSince1970), gender: gender == "Nam" ? 1: 0)
+        item.id = customer.id ?? 0
+        actionOK?(item)
+//        print("getDataForm ok")
     }
     
     

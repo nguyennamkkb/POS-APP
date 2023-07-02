@@ -14,6 +14,7 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     var deleteSuccess: ClosureAction?
     
     
+    @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var pointLbl: UILabel!
     @IBOutlet weak var QRImage: UIView!
     @IBOutlet weak var cardView: UIView!
@@ -21,8 +22,7 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var birthdayLbl: UILabel!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var genderLbl: UILabel!
-    @IBOutlet weak var workFrom: UILabel!
-    @IBOutlet weak var workCount: UILabel!
+
     @IBOutlet var btnDelete: UIButton!
     @IBOutlet var btnEdit: UIButton!
     var customer = PCustomer()
@@ -53,6 +53,7 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         addressLbl.text = "\(customer.address ?? "")"
         genderLbl.text = "Giới tính: \(customer.gender == 1 ? "Nam" : "Nữ")"
         pointLbl.text = "Điểm: \(customer.loyalty ?? 0)"
+        phoneLbl.text = "Điện thoại: \(customer.phone ?? "")"
     }
     func bindData(item: PCustomer){
         customer = item
@@ -62,7 +63,15 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         self.onBackNav()
     }
     @IBAction func btnEditPressed(_ sender: UIButton) {
-        self.showMessageDeveloping()
+        let vc = CreateCustomerVC()
+        vc.bindDataEdit(item: customer)
+        vc.actionUpdateOK = {
+            [weak self] item in
+            guard let self = self else {return}
+            self.customer = item
+            self.setData()
+        }
+        self.pushVC(controller: vc)
     }
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {

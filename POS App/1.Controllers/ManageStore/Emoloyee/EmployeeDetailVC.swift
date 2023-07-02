@@ -48,7 +48,15 @@ class EmployeeDetailVC: BaseVC {
         self.onBackNav()
     }
     @IBAction func btnEditPressed(_ sender: UIButton) {
-        self.showMessageDeveloping()
+        let vc = CreateEmployeeVC()
+        vc.bindDataEdit(item: employee)
+        vc.actionUpdateOK = {
+            [weak self] item in
+            guard let self = self else {return}
+            self.employee = item
+            self.setData()
+        }
+        self.pushVC(controller: vc)
     }
     
     @IBAction func btnDeletePressed(_ sender: UIButton) {

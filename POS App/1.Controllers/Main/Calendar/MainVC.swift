@@ -12,10 +12,13 @@ import FittedSheets
 
 class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
+
+    @IBOutlet var countPending: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var taoLichBtn: UIButton!
     @IBOutlet var btnSearch: UIButton!
     @IBOutlet var menuView: UIView!
+    var paramSearch = ParamSearchBook(store_id: Common.userMaster.id ?? 0)
     var tableData = [PBookCalender]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,9 +94,18 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             self.showMessageDeveloping()
         }
         cell.actionPay = {
-            [weak self] in
+            [weak self] book in
             guard let self = self else {return}
-            self.showMessageDeveloping()
+            let vc = MainActionVC()
+            vc.bindData(title: "Thông báo!", content: "Tiến hanh thanh toán?")
+            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+            self.present(sheet, animated: true)
+            vc.actionOK = {
+                [weak self] in
+                guard let self = self else {return}
+                book.status  = 1
+                self.editBook(item: book)
+            }
         }
         return cell
     }
@@ -104,6 +116,8 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         menuView.layer.borderColor = myColor.greyDrak?.cgColor
         btnSearch.layer.borderColor = myColor.greyDrak?.cgColor
         taoLichBtn.layer.cornerRadius = myCornerRadius.corner5
+        btnSearch.layer.cornerRadius = myCornerRadius.corner10
+        btnSearch.layer.borderWidth = 0.5
     }
     
     @IBAction func sideLeftPressed(_ sender: UIButton) {
@@ -129,12 +143,11 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     func getBooks(){
-        guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(store_id: id)
-        ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+        ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: paramSearch.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
+                self.countPending.text = "\(response?.meta?.totalCount ?? 0)"
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -156,6 +169,15 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
    
     @IBAction func btnSearchPressed(_ sender: UIButton) {
-        
+        let vc = MainFilterVC()
+        vc.actionFilter = {
+            [weak self] item in
+            guard let self = self else {return}
+            self.paramSearch = item
+            print(item.toJSON())
+            self.getBooks()
+        }
+        self.present(vc, animated: true)
     }
+//ádasd
 }

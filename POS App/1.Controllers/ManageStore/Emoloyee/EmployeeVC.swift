@@ -63,7 +63,7 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 guard let self = self else {return}
                 self.getAllEployees()
             }
-            self.present(vc, animated: true)
+            self.pushVC(controller: vc)
         }
         return cell
     }

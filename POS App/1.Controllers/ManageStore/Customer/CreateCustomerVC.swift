@@ -11,7 +11,8 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     var actionOk: ClosureAction?
     var customer: PCustomer = PCustomer()
-    let baseVC = BaseVC()
+    var actionUpdateOK: ClosureCustom<PCustomer>?
+    var statusCreateOrUpdate = 1
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,23 +24,29 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
-    
+    func bindDataEdit(item: PCustomer){
+        customer =  item
+        statusCreateOrUpdate = 0
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateCustomerCell", for: indexPath) as? CreateCustomerCell else {return UITableViewCell()}
-
+        if statusCreateOrUpdate == 0 {
+            cell.bindDataUpdate(item: customer)
+        }
+        
         cell.actionOK = {
             [weak self] item in
             guard let self = self else {return}
             self.customer = item
-            print("actionOK")
-            self.createCustomer()
-            print("ket thuc")
-            
-
+            if self.statusCreateOrUpdate == 1 {
+                self.createCustomer()
+            }else {
+                self.updateCustomer()
+            }
         }
         return cell
     }
@@ -59,5 +66,19 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             }
         }
         
+    }
+    func updateCustomer(){
+        customer.sign()
+        ServiceManager.common.updateCustomer(param: customer){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công!")
+                self.actionUpdateOK?(self.customer)
+                self.onBackNav()
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
     }
 }

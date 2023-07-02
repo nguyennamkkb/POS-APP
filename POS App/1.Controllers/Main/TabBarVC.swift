@@ -21,7 +21,7 @@ class TabBarVC: UITabBarController {
         QRNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_qr"), tag: 2)
         
         
-        let payVC = PayVC()
+        let payVC = ManageStoreVC()
         let payNavi = UINavigationController(rootViewController: payVC)
         payNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_pay"), tag: 3)
         

@@ -26,8 +26,6 @@ class CreateServiceVC: BaseVC,  UITableViewDataSource, UITableViewDelegate  {
         self.onBackNav()
     }
     func bindDataEdit(item: PServices){
-        print("bindDataEdit")
-        print(services.toJSON())
         services =  item
         statusCreateOrUpdate = 0
     }

@@ -47,8 +47,8 @@ class MActDeleteVC: BaseVC {
         deleteBook(id: id)
     }
     func deleteBook(id: Int){
-        book.status = 0
-        ServiceManager.common.deleteBook(param: id){
+        let param = ParamSearch(store_id: id)
+        ServiceManager.common.deleteBook(param: "\(id)?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {

@@ -29,10 +29,11 @@ class MActSuccessVC: BaseVC {
     func bindData(item: PBookCalender){
         book = item
     }
-    func editBook(){
+    func editStatusBook(status: Int){
+        print("editStatusBook")
         self.showLoading()
         guard let param = book else {return}
-        param.status = 2
+        param.status = status
         param.sign()
         ServiceManager.common.editBook(param: param){
             (response) in
@@ -47,8 +48,12 @@ class MActSuccessVC: BaseVC {
         }
     }
     @IBAction func btnXacNhanPressed(_ sender: UIButton) {
-        editBook()
+        editStatusBook(status: 2)
     }
     
-
+    @IBAction func btnPayPressed(_ sender: UIButton) {
+        editStatusBook(status: 1)
+    }
+    
+    
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,14 +14,12 @@
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
-        <array key="Rubik-Regular.ttf">
-            <string>Rubik-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="POS_App" customModuleProvider="target">
             <connections>
-                <outlet property="btnSearch" destination="7nF-Mg-7Km" id="hML-Vm-IQ5"/>
+                <outlet property="btnSearch" destination="DmY-Ez-Jfo" id="Dqb-Ty-OBc"/>
+                <outlet property="countPending" destination="vFg-oD-fpg" id="7bI-b6-PT5"/>
                 <outlet property="menuView" destination="lgj-FZ-x5E" id="kdP-OV-5uw"/>
                 <outlet property="tableView" destination="QBI-be-t06" id="iJY-tE-JvD"/>
                 <outlet property="taoLichBtn" destination="Gwt-nS-HQe" id="etz-mt-eJx"/>
@@ -75,26 +73,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-FZ-x5E" userLabel="menu">
                     <rect key="frame" x="0.0" y="108" width="393" height="56"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách làm việc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o54-xH-fLQ">
-                            <rect key="frame" x="20" y="0.0" width="143.66666666666666" height="56"/>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nF-Mg-7Km" userLabel="btn search">
-                            <rect key="frame" x="223" y="0.0" width="56" height="56"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="56" id="rtU-jA-BuW"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="filemenu.and.cursorarrow" catalog="system"/>
-                            <connections>
-                                <action selector="btnSearchPressed:" destination="-1" eventType="touchUpInside" id="3YR-xi-YPx"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwt-nS-HQe">
-                            <rect key="frame" x="279" y="6" width="90" height="44"/>
+                            <rect key="frame" x="5" y="6" width="90" height="44"/>
                             <color key="backgroundColor" name="AccentColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="JcB-RT-3TM"/>
@@ -107,18 +87,47 @@
                                 <action selector="BtnCreateCalenderPressed:" destination="-1" eventType="touchUpInside" id="Dz2-UF-nUO"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmY-Ez-Jfo" userLabel="btnSearch">
+                            <rect key="frame" x="105" y="6" width="44" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="DRg-gU-bLI"/>
+                                <constraint firstAttribute="width" constant="44" id="Y9C-R4-WpW"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <imageReference key="image" image="ic_filter" symbolScale="medium"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
+                            </state>
+                            <connections>
+                                <action selector="btnSearchPressed:" destination="-1" eventType="touchUpInside" id="EY3-D7-OD3"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFg-oD-fpg">
+                            <rect key="frame" x="378.33333333333331" y="17.666666666666671" width="9.6666666666666856" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chưa hoàn thành: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPN-Hp-tJf">
+                            <rect key="frame" x="239.66666666666669" y="17.666666666666671" width="138.66666666666669" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="7nF-Mg-7Km" firstAttribute="top" secondItem="lgj-FZ-x5E" secondAttribute="top" id="HIE-J7-d4B"/>
+                        <constraint firstItem="vFg-oD-fpg" firstAttribute="leading" secondItem="HPN-Hp-tJf" secondAttribute="trailing" id="Axs-UY-iAZ"/>
+                        <constraint firstItem="vFg-oD-fpg" firstAttribute="centerY" secondItem="lgj-FZ-x5E" secondAttribute="centerY" id="KlN-nj-3Nd"/>
                         <constraint firstAttribute="height" constant="56" id="NEH-t0-DIr"/>
-                        <constraint firstItem="o54-xH-fLQ" firstAttribute="top" secondItem="lgj-FZ-x5E" secondAttribute="top" id="VHC-IN-J0J"/>
-                        <constraint firstItem="o54-xH-fLQ" firstAttribute="leading" secondItem="lgj-FZ-x5E" secondAttribute="leading" constant="20" id="ew6-0y-iWf"/>
+                        <constraint firstItem="Gwt-nS-HQe" firstAttribute="leading" secondItem="lgj-FZ-x5E" secondAttribute="leading" constant="5" id="Pem-46-vDe"/>
+                        <constraint firstItem="DmY-Ez-Jfo" firstAttribute="centerY" secondItem="lgj-FZ-x5E" secondAttribute="centerY" id="PfO-Ht-f5O"/>
+                        <constraint firstItem="HPN-Hp-tJf" firstAttribute="centerY" secondItem="vFg-oD-fpg" secondAttribute="centerY" id="Sdw-l0-JUQ"/>
                         <constraint firstItem="Gwt-nS-HQe" firstAttribute="centerY" secondItem="lgj-FZ-x5E" secondAttribute="centerY" id="g42-bs-g1l"/>
-                        <constraint firstAttribute="bottom" secondItem="o54-xH-fLQ" secondAttribute="bottom" id="iJu-kj-Gh9"/>
-                        <constraint firstAttribute="bottom" secondItem="7nF-Mg-7Km" secondAttribute="bottom" id="r0h-WD-8il"/>
-                        <constraint firstItem="Gwt-nS-HQe" firstAttribute="leading" secondItem="7nF-Mg-7Km" secondAttribute="trailing" id="w6j-AV-zqN"/>
-                        <constraint firstAttribute="trailing" secondItem="Gwt-nS-HQe" secondAttribute="trailing" constant="24" id="y0I-5B-Aqk"/>
+                        <constraint firstItem="DmY-Ez-Jfo" firstAttribute="leading" secondItem="Gwt-nS-HQe" secondAttribute="trailing" constant="10" id="hDI-qz-GqQ"/>
+                        <constraint firstAttribute="trailing" secondItem="vFg-oD-fpg" secondAttribute="trailing" constant="5" id="qBj-M0-jVs"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="68M-dd-Nyd">
@@ -162,14 +171,11 @@
         </view>
     </objects>
     <resources>
-        <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="97"/>
+        <image name="ic_filter" width="24" height="24"/>
         <image name="sidebar.left" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

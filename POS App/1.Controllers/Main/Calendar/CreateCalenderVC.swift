@@ -105,20 +105,7 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             guard let self = self else { return }
             self.khachHangLb.text = item
             self.customerSelected = self.listCustomer.itemAtIndex(index: index) ?? PCustomer()
-//            print(self.listCustomer.itemAtIndex(index: index)?.toJSON() ?? "")
         }
-    }
-    
-    @IBAction func BtnSelectDateTime(_ sender: UIButton) {
-//        print("BtnSelectDateTime")
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .dateAndTime
-        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-        view.addSubview(datePicker)
-    }
-    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
-        let selectedDate = sender.date.timeIntervalSince1970
-        print(selectedDate)
     }
     
     @IBAction func themMoiKHPressed(_ sender: UIButton) {
