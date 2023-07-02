@@ -19,18 +19,13 @@ class Common {
     public static var anhChupAvatar: String = ""
     static var dateFormatter = DateFormatter()
     public static func getDateFormatFromMiliseonds(time: String) -> String{
-        let timestampString = time
-        if let timestamp = TimeInterval(timestampString) {
-            let date = Date(timeIntervalSince1970: timestamp)
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
-            
-            let formattedDateString = dateFormatter.string(from: date)
-            return (formattedDateString) // Output: "11-03-2023 14:10"
-        } else {
-            return("Invalid timestamp")
-        }
+        let date = Date(milliseconds: Int64(time) ?? 0)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        
+        let formattedDateString = dateFormatter.string(from: date)
+        return (formattedDateString) // Output: "11-03-2023 14:10"
         
     }
     public static func convertTimestampToDate(timestampString: String, dateFormat: String) -> String{

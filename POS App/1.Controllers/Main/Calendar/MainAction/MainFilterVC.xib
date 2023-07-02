@@ -162,7 +162,6 @@
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="wQK-hS-ret">
                                             <rect key="frame" x="0.0" y="35.333333333333314" width="186.66666666666666" height="34.666666666666657"/>
-                                            <locale key="locale" localeIdentifier="vi_VN"/>
                                         </datePicker>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,7 +185,6 @@
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-m9-Upk">
                                             <rect key="frame" x="0.0" y="35.333333333333314" width="186.33333333333334" height="34.666666666666657"/>
-                                            <locale key="locale" localeIdentifier="vi_VN"/>
                                         </datePicker>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

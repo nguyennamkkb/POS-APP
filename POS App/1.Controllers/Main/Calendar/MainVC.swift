@@ -116,7 +116,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         menuView.layer.borderColor = myColor.greyDrak?.cgColor
         btnSearch.layer.borderColor = myColor.greyDrak?.cgColor
         taoLichBtn.layer.cornerRadius = myCornerRadius.corner5
-        btnSearch.layer.cornerRadius = myCornerRadius.corner10
+        btnSearch.layer.cornerRadius = myCornerRadius.corner5
         btnSearch.layer.borderWidth = 0.5
     }
     

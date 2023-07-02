@@ -170,7 +170,7 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     @IBAction func btnAcceptPresses(_ sender: UIButton) {
         let book = PBookCalender()
-        book.start = String(dateTimePicker.date.timeIntervalSince1970)
+        book.start = String(dateTimePicker.date.millisecondsSince1970)
         book.store_id = Common.userMaster.id
         book.listService = listServices.toJSONString()
         book.amount = getTotalAmount()
