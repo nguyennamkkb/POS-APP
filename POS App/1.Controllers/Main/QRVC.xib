@@ -20,20 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM1-pi-bba" userLabel="VIDEO">
-                    <rect key="frame" x="96.666666666666686" y="338.66666666666669" width="200" height="200.00000000000006"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM1-pi-bba" userLabel="Camera">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="Gei-Xk-z6i"/>
-                        <constraint firstAttribute="width" constant="200" id="rRy-xl-rci"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="AM1-pi-bba" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1DO-Cw-q5U"/>
-                <constraint firstItem="AM1-pi-bba" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="RQU-eF-Nq4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AM1-pi-bba" secondAttribute="bottom" id="Eg0-cr-85P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AM1-pi-bba" secondAttribute="trailing" id="TT0-fb-4gU"/>
+                <constraint firstItem="AM1-pi-bba" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pxD-EH-sck"/>
+                <constraint firstItem="AM1-pi-bba" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vFg-Bi-0gf"/>
             </constraints>
             <point key="canvasLocation" x="14" y="-11"/>
         </view>

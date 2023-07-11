@@ -143,6 +143,11 @@ extension UIView {
         self.layer.cornerRadius = corner
         self.layer.maskedCorners = mask
     }
+    func addShadow() {
+      self.layer.shadowColor = UIColor.gray.cgColor
+      self.layer.shadowOffset = CGSize(width: 1, height: 1)
+      self.layer.shadowOpacity = 1
+    }
 }
 
 extension UIImage {

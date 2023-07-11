@@ -35,5 +35,9 @@ class CustomerServicesCell: UITableViewCell {
     }
     func setupUI(){
         itemView.layer.cornerRadius = myCornerRadius.corner5
+        itemView.layer.borderWidth = 0.1
+        itemView.layer.shadowOffset = CGSize(width: 1, height:1)
+
+
     }
 }

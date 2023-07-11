@@ -16,8 +16,13 @@ class QRVC: BaseVC, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupCamera()
         
-        view.backgroundColor = UIColor.black
+        captureSession.startRunning()
+    }
+
+    func setupCamera(){
+//        view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
 
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -53,9 +58,7 @@ class QRVC: BaseVC, AVCaptureMetadataOutputObjectsDelegate {
         previewLayer.videoGravity = .resizeAspectFill
         video.layer.addSublayer(previewLayer)
 
-        captureSession.startRunning()
     }
-
     func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -86,6 +89,7 @@ class QRVC: BaseVC, AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            captureSession.stopRunning()
             found(code: stringValue)
         }
 
@@ -94,6 +98,7 @@ class QRVC: BaseVC, AVCaptureMetadataOutputObjectsDelegate {
 
     func found(code: String) {
         print(code)
+        captureSession.startRunning()
     }
 
     override var prefersStatusBarHidden: Bool {

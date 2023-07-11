@@ -146,13 +146,13 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBM-0V-XL2" userLabel="dateView">
-                    <rect key="frame" x="10" y="249" width="373" height="75"/>
+                    <rect key="frame" x="10" y="249" width="373" height="150"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-au-XxT">
-                            <rect key="frame" x="0.0" y="0.0" width="373" height="75"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-au-XxT">
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="150"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A4-3F-o2Z" userLabel="ViewFrom">
-                                    <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="217.33333333333331" height="75"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-8X-JIa">
                                             <rect key="frame" x="0.0" y="5" width="19.333333333333332" height="20.333333333333332"/>
@@ -160,8 +160,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="wQK-hS-ret">
-                                            <rect key="frame" x="0.0" y="35.333333333333314" width="186.66666666666666" height="34.666666666666657"/>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="wQK-hS-ret">
+                                            <rect key="frame" x="0.0" y="35.333333333333314" width="217.33333333333334" height="34.666666666666657"/>
                                         </datePicker>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,7 +175,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-Bg-KVB" userLabel="ViewTo">
-                                    <rect key="frame" x="186.66666666666663" y="0.0" width="186.33333333333337" height="75"/>
+                                    <rect key="frame" x="0.0" y="75" width="217.33333333333331" height="75"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đến" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-1I-tMC">
                                             <rect key="frame" x="0.0" y="5" width="31.333333333333332" height="20.333333333333332"/>
@@ -183,8 +183,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-m9-Upk">
-                                            <rect key="frame" x="0.0" y="35.333333333333314" width="186.33333333333334" height="34.666666666666657"/>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-m9-Upk">
+                                            <rect key="frame" x="0.0" y="35.333333333333314" width="217.33333333333334" height="34.666666666666657"/>
                                         </datePicker>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -203,14 +203,14 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="LnO-au-XxT" secondAttribute="trailing" id="5tZ-C0-rNr"/>
-                        <constraint firstAttribute="height" constant="75" id="EbM-KF-3Cd"/>
+                        <constraint firstAttribute="height" constant="150" id="EbM-KF-3Cd"/>
                         <constraint firstItem="LnO-au-XxT" firstAttribute="top" secondItem="yBM-0V-XL2" secondAttribute="top" id="gtG-w3-5DR"/>
                         <constraint firstItem="LnO-au-XxT" firstAttribute="leading" secondItem="yBM-0V-XL2" secondAttribute="leading" id="hoX-Kp-ios"/>
                         <constraint firstAttribute="bottom" secondItem="LnO-au-XxT" secondAttribute="bottom" id="qEQ-1d-Cg4"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0h-pJ-sy4" userLabel="chonTT">
-                    <rect key="frame" x="10" y="334" width="373" height="75"/>
+                    <rect key="frame" x="10" y="409" width="373" height="75"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trạng thái" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-JS-VFJ">
                             <rect key="frame" x="0.0" y="0.0" width="373" height="20"/>
