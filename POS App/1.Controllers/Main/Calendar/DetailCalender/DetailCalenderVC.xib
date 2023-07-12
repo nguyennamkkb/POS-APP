@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailCalenderVC" customModule="POS_App" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="sEK-WY-Aqm" id="gYr-xY-CN6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,6 +43,9 @@
                             <color key="tintColor" systemColor="systemBlueColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ic_back"/>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="IC6-N7-xbS"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chi tiết" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-wL-vpf">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -62,21 +66,21 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sEK-WY-Aqm">
-                    <rect key="frame" x="24" y="113" width="345" height="705"/>
+                    <rect key="frame" x="0.0" y="113" width="393" height="705"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sEK-WY-Aqm" secondAttribute="trailing" constant="24" id="CYk-iq-my0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sEK-WY-Aqm" secondAttribute="trailing" id="CYk-iq-my0"/>
                 <constraint firstItem="Vhq-Aa-c37" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Cgz-Wl-jh8"/>
                 <constraint firstItem="6QT-xc-pew" firstAttribute="bottom" secondItem="Vhq-Aa-c37" secondAttribute="bottom" id="D60-Bd-W0u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sEK-WY-Aqm" secondAttribute="bottom" id="FgI-EH-pUa"/>
                 <constraint firstItem="Vhq-Aa-c37" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="M1q-W5-csc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="Vhq-Aa-c37" secondAttribute="leading" id="NPs-XY-wC6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="6QT-xc-pew" secondAttribute="leading" id="Wab-gA-sm2"/>
-                <constraint firstItem="sEK-WY-Aqm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="ds4-Iq-h2y"/>
+                <constraint firstItem="sEK-WY-Aqm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ds4-Iq-h2y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6QT-xc-pew" secondAttribute="trailing" id="nyu-oW-Yki"/>
                 <constraint firstItem="6QT-xc-pew" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="q6N-tz-ka1"/>
                 <constraint firstItem="sEK-WY-Aqm" firstAttribute="top" secondItem="Vhq-Aa-c37" secondAttribute="bottom" constant="10" id="yQF-NP-hXr"/>

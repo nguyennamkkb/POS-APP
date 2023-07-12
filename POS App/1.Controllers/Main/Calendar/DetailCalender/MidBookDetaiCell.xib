@@ -8,56 +8,37 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="MidBookDetaiCell" customModule="POS_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="485" height="140"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="276" id="KGk-i7-Jjw" customClass="MidBookDetaiCell" customModule="POS_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="276"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="485" height="140"/>
+                <rect key="frame" x="0.0" y="0.0" width="423" height="276"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwq-ej-TPT">
-                        <rect key="frame" x="0.0" y="0.0" width="485" height="30"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36c-mU-p47">
-                                <rect key="frame" x="10" y="5" width="28" height="20"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El2-Zc-oDo">
-                                <rect key="frame" x="450" y="4.6666666666666679" width="25" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="N1C-Q4-loC">
+                        <rect key="frame" x="24" y="0.0" width="375" height="50"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="36c-mU-p47" firstAttribute="leading" secondItem="Kwq-ej-TPT" secondAttribute="leading" constant="10" id="G0m-Rv-aZR"/>
-                            <constraint firstItem="El2-Zc-oDo" firstAttribute="centerY" secondItem="Kwq-ej-TPT" secondAttribute="centerY" id="KKI-c7-DrN"/>
-                            <constraint firstItem="36c-mU-p47" firstAttribute="centerY" secondItem="Kwq-ej-TPT" secondAttribute="centerY" id="Yyf-Eb-YSI"/>
-                            <constraint firstAttribute="trailing" secondItem="El2-Zc-oDo" secondAttribute="trailing" constant="10" id="c3F-Xb-404"/>
-                            <constraint firstAttribute="height" constant="30" id="up3-2p-hNI"/>
+                            <constraint firstAttribute="height" constant="50" id="1DV-hJ-iwU"/>
                         </constraints>
-                    </view>
+                    </tableView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Kwq-ej-TPT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bvd-js-x4F"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Kwq-ej-TPT" secondAttribute="bottom" id="cHP-7V-Cmx"/>
-                    <constraint firstAttribute="trailing" secondItem="Kwq-ej-TPT" secondAttribute="trailing" id="f3f-fG-QPL"/>
-                    <constraint firstItem="Kwq-ej-TPT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pCr-mc-mRk"/>
+                    <constraint firstItem="N1C-Q4-loC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Aog-Ia-E7i"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N1C-Q4-loC" secondAttribute="bottom" priority="999" id="SV1-pg-PeV"/>
+                    <constraint firstItem="N1C-Q4-loC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="msB-fj-tN3"/>
+                    <constraint firstAttribute="trailing" secondItem="N1C-Q4-loC" secondAttribute="trailing" constant="24" id="rRU-k6-fb7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="235.87786259541983" y="54.225352112676056"/>
+            <connections>
+                <outlet property="tableView" destination="N1C-Q4-loC" id="fZl-nN-QbY"/>
+                <outlet property="tableViewHeightConstraint" destination="1DV-hJ-iwU" id="Et2-gk-UFt"/>
+            </connections>
+            <point key="canvasLocation" x="188.54961832061068" y="101.40845070422536"/>
         </tableViewCell>
     </objects>
     <resources>

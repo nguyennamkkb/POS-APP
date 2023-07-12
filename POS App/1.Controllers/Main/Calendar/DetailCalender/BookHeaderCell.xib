@@ -115,6 +115,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="NhanVien" destination="oCE-ta-Ip3" id="MZ3-e1-6N0"/>
+                <outlet property="idDatCho" destination="CaI-qj-1R2" id="OTd-ih-lN4"/>
+                <outlet property="khachHang" destination="eQU-QZ-Re2" id="fgV-ux-OH8"/>
+                <outlet property="ngayThucHien" destination="8bP-Co-45g" id="UFM-LY-IhB"/>
+                <outlet property="shopAddress" destination="VwB-IY-g9K" id="bih-ro-mIm"/>
+                <outlet property="shopPhone" destination="ryf-4A-bQG" id="pWi-wY-qWd"/>
+                <outlet property="shopname" destination="cw9-xC-NBO" id="OOw-Nm-2cs"/>
+            </connections>
             <point key="canvasLocation" x="258.01526717557249" y="127.11267605633803"/>
         </tableViewCell>
     </objects>

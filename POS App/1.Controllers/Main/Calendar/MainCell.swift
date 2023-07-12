@@ -14,6 +14,7 @@ class MainCell: UITableViewCell {
     var actionSuccess: ClosureCustom<PBookCalender>?
     var actionPay: ClosureCustom<PBookCalender>?
     var actionRun: ClosureCustom<PBookCalender>?
+    var actionDetail: ClosureCustom<PBookCalender>?
     
     
     @IBOutlet var btnViewDetail: UIButton!
@@ -89,7 +90,9 @@ class MainCell: UITableViewCell {
         actionRun?(book)
     }
     
-    
+    @IBAction func btnDetailPressed(_ sender: UIButton) {
+        actionDetail?(book)
+    }
     func getColorByStatus(status: Int) -> UIColor {
         switch status {
         case 0:

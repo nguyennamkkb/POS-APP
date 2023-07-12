@@ -107,9 +107,17 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 self.editBook(item: book)
             }
         }
+        cell.actionDetail = {
+            [weak self] book in
+            guard let self = self else {return}
+            let vc = DetailCalenderVC()
+            vc.bindData(item: book)
+            self.pushVC(controller: vc)
+        }
         return cell
     }
-    
+
+
     
     func setupUI(){
         menuView.layer.borderWidth = 0.5
