@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -176,7 +176,7 @@
                     <constraint firstItem="mFv-yZ-kO4" firstAttribute="top" secondItem="Vvv-7F-Q4i" secondAttribute="bottom" constant="10" id="5M0-Wt-T1Y"/>
                     <constraint firstItem="fsi-jy-mUW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="9Ex-QK-SI1"/>
                     <constraint firstItem="Vvv-7F-Q4i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="GN5-WX-UuW"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="mFv-yZ-kO4" secondAttribute="bottom" priority="999" id="Grh-w0-Oco"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="mFv-yZ-kO4" secondAttribute="bottom" priority="999" constant="5" id="Grh-w0-Oco"/>
                     <constraint firstAttribute="trailing" secondItem="Vvv-7F-Q4i" secondAttribute="trailing" constant="24" id="MHO-oT-uWb"/>
                     <constraint firstItem="8Q2-Kb-79f" firstAttribute="top" secondItem="qR9-dV-xWN" secondAttribute="bottom" constant="10" id="MSj-Vg-9t0"/>
                     <constraint firstItem="qR9-dV-xWN" firstAttribute="top" secondItem="fsi-jy-mUW" secondAttribute="bottom" constant="10" id="QA1-4T-jeR"/>

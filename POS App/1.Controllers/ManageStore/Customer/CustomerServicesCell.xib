@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,7 +54,7 @@
                 <constraints>
                     <constraint firstItem="MnD-gi-aGo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ISu-17-Dhu"/>
                     <constraint firstItem="MnD-gi-aGo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="L5e-WT-3eD"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MnD-gi-aGo" secondAttribute="bottom" id="oNZ-hn-0uu"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MnD-gi-aGo" secondAttribute="bottom" constant="5" id="oNZ-hn-0uu"/>
                     <constraint firstAttribute="trailing" secondItem="MnD-gi-aGo" secondAttribute="trailing" id="rw9-eo-qmM"/>
                 </constraints>
             </tableViewCellContentView>

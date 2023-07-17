@@ -26,10 +26,10 @@ class BookHeaderCell: UITableViewCell {
 
     func bindData(item: PBookCalender){
         book = item
-        NhanVien.text = book.employee?.fullName ?? ""
-        khachHang.text = book.customer?.fullName ?? ""
-        ngayThucHien.text = book.updateAt
-        idDatCho.text = "#\(book.id ?? 0)"
+        NhanVien.text = "Nhân viên: \(book.employee?.fullName ?? "")"
+        khachHang.text = "Khách hàng: \(book.customer?.fullName ?? "")"
+        ngayThucHien.text = "Ngày: \(Common.convertTimestampToDate(timestampString: book.updateAt ?? "", dateFormat: "dd/MM/yyyy"))"
+        idDatCho.text = "Số HĐ: #\(book.id ?? 0)"
         shopAddress.text = Common.userMaster.address
         shopPhone.text = Common.userMaster.phone
         shopname.text = Common.userMaster.storeName

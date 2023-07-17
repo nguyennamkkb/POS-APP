@@ -75,7 +75,7 @@ class CreateCustomerCell: UITableViewCell {
     
     
     @IBAction func selectGenderPressed(_ sender: UIButton) {
-        dropDown.dataSource = ["Nam", "Nũ"]//4
+        dropDown.dataSource = ["Nam", "Nữ"]//4
         dropDown.anchorView = sender //5
         dropDown.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
         dropDown.show() //7

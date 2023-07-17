@@ -24,7 +24,7 @@ class ParamSearch: Mappable {
         let mili = Common.getMilisecondNow()
         self.store_id  = store_id
         self.status = status
-        self.keySearch = keySearch
+        self.name = name
         self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
         self.timeRequest = mili
     }
