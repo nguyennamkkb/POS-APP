@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */; };
 		0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */; };
+		0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */; };
+		0B1D555D2A6D20C00071E8F0 /* ChartDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1D555B2A6D20C00071E8F0 /* ChartDayCell.xib */; };
+		0B1D55602A6D6F040071E8F0 /* OverviewRPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D555E2A6D6F040071E8F0 /* OverviewRPVC.swift */; };
+		0B1D55612A6D6F040071E8F0 /* OverviewRPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1D555F2A6D6F040071E8F0 /* OverviewRPVC.xib */; };
+		0B1D55642A6D6F240071E8F0 /* DetailRPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D55622A6D6F240071E8F0 /* DetailRPVC.swift */; };
+		0B1D55652A6D6F240071E8F0 /* DetailRPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1D55632A6D6F240071E8F0 /* DetailRPVC.xib */; };
+		0B1D55682A6D937E0071E8F0 /* ReportMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D55662A6D937E0071E8F0 /* ReportMainVC.swift */; };
+		0B1D55692A6D937E0071E8F0 /* ReportMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1D55672A6D937E0071E8F0 /* ReportMainVC.xib */; };
+		0B1D556C2A6D96A20071E8F0 /* MenuReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D556A2A6D96A20071E8F0 /* MenuReportVC.swift */; };
+		0B1D556D2A6D96A20071E8F0 /* MenuReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1D556B2A6D96A20071E8F0 /* MenuReportVC.xib */; };
 		0B1FAE612A344E6F00A81565 /* MainActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1FAE5F2A344E6F00A81565 /* MainActionVC.swift */; };
 		0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1FAE602A344E6F00A81565 /* MainActionVC.xib */; };
 		0B2054982A3A23DB00BA333D /* ServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2054962A3A23DB00BA333D /* ServiceVC.swift */; };
@@ -50,6 +60,10 @@
 		0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
+		0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */; };
+		0B8F9E2F2A6C276600D24CB3 /* ChartEmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2D2A6C276600D24CB3 /* ChartEmployeeCell.xib */; };
+		0B8F9E322A6C3DBD00D24CB3 /* ChonVNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E302A6C3DBD00D24CB3 /* ChonVNVC.swift */; };
+		0B8F9E332A6C3DBD00D24CB3 /* ChonVNVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8F9E312A6C3DBD00D24CB3 /* ChonVNVC.xib */; };
 		0B9244292A4888D8001AF674 /* CustomerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9244272A4888D8001AF674 /* CustomerDetailVC.swift */; };
 		0B92442A2A4888D8001AF674 /* CustomerDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9244282A4888D8001AF674 /* CustomerDetailVC.xib */; };
 		0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */; };
@@ -108,8 +122,6 @@
 		0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */; };
 		0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */; };
 		0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */; };
-		0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE729F8A708009F2A66 /* ReportMainVC.swift */; };
-		0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE829F8A708009F2A66 /* ReportMainVC.xib */; };
 		0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */; };
 		0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */; };
 		0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */; };
@@ -163,6 +175,16 @@
 /* Begin PBXFileReference section */
 		0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
+		0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDayCell.swift; sourceTree = "<group>"; };
+		0B1D555B2A6D20C00071E8F0 /* ChartDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDayCell.xib; sourceTree = "<group>"; };
+		0B1D555E2A6D6F040071E8F0 /* OverviewRPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRPVC.swift; sourceTree = "<group>"; };
+		0B1D555F2A6D6F040071E8F0 /* OverviewRPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewRPVC.xib; sourceTree = "<group>"; };
+		0B1D55622A6D6F240071E8F0 /* DetailRPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRPVC.swift; sourceTree = "<group>"; };
+		0B1D55632A6D6F240071E8F0 /* DetailRPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRPVC.xib; sourceTree = "<group>"; };
+		0B1D55662A6D937E0071E8F0 /* ReportMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMainVC.swift; sourceTree = "<group>"; };
+		0B1D55672A6D937E0071E8F0 /* ReportMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMainVC.xib; sourceTree = "<group>"; };
+		0B1D556A2A6D96A20071E8F0 /* MenuReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuReportVC.swift; sourceTree = "<group>"; };
+		0B1D556B2A6D96A20071E8F0 /* MenuReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuReportVC.xib; sourceTree = "<group>"; };
 		0B1FAE5F2A344E6F00A81565 /* MainActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionVC.swift; sourceTree = "<group>"; };
 		0B1FAE602A344E6F00A81565 /* MainActionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainActionVC.xib; sourceTree = "<group>"; };
 		0B2054962A3A23DB00BA333D /* ServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceVC.swift; sourceTree = "<group>"; };
@@ -204,6 +226,10 @@
 		0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MActSuccessVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmployeeCell.swift; sourceTree = "<group>"; };
+		0B8F9E2D2A6C276600D24CB3 /* ChartEmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartEmployeeCell.xib; sourceTree = "<group>"; };
+		0B8F9E302A6C3DBD00D24CB3 /* ChonVNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonVNVC.swift; sourceTree = "<group>"; };
+		0B8F9E312A6C3DBD00D24CB3 /* ChonVNVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonVNVC.xib; sourceTree = "<group>"; };
 		0B9244272A4888D8001AF674 /* CustomerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailVC.swift; sourceTree = "<group>"; };
 		0B9244282A4888D8001AF674 /* CustomerDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerDetailVC.xib; sourceTree = "<group>"; };
 		0B9BAFAB2A1A22F2008679DE /* TakePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoVC.swift; sourceTree = "<group>"; };
@@ -262,8 +288,6 @@
 		0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTransactionVC.xib; sourceTree = "<group>"; };
 		0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterVC.swift; sourceTree = "<group>"; };
 		0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionFilterVC.xib; sourceTree = "<group>"; };
-		0BD5BAE729F8A708009F2A66 /* ReportMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMainVC.swift; sourceTree = "<group>"; };
-		0BD5BAE829F8A708009F2A66 /* ReportMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMainVC.xib; sourceTree = "<group>"; };
 		0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFilterVC.swift; sourceTree = "<group>"; };
 		0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportFilterVC.xib; sourceTree = "<group>"; };
 		0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreVC.swift; sourceTree = "<group>"; };
@@ -527,10 +551,22 @@
 		0BD5BAE629F8A6ED009F2A66 /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				0BD5BAE729F8A708009F2A66 /* ReportMainVC.swift */,
-				0BD5BAE829F8A708009F2A66 /* ReportMainVC.xib */,
 				0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */,
 				0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */,
+				0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */,
+				0B8F9E2D2A6C276600D24CB3 /* ChartEmployeeCell.xib */,
+				0B8F9E302A6C3DBD00D24CB3 /* ChonVNVC.swift */,
+				0B8F9E312A6C3DBD00D24CB3 /* ChonVNVC.xib */,
+				0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */,
+				0B1D555B2A6D20C00071E8F0 /* ChartDayCell.xib */,
+				0B1D555E2A6D6F040071E8F0 /* OverviewRPVC.swift */,
+				0B1D555F2A6D6F040071E8F0 /* OverviewRPVC.xib */,
+				0B1D55622A6D6F240071E8F0 /* DetailRPVC.swift */,
+				0B1D55632A6D6F240071E8F0 /* DetailRPVC.xib */,
+				0B1D55662A6D937E0071E8F0 /* ReportMainVC.swift */,
+				0B1D55672A6D937E0071E8F0 /* ReportMainVC.xib */,
+				0B1D556A2A6D96A20071E8F0 /* MenuReportVC.swift */,
+				0B1D556B2A6D96A20071E8F0 /* MenuReportVC.xib */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -851,7 +887,8 @@
 				0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
-				0BD5BAEA29F8A708009F2A66 /* ReportMainVC.xib in Resources */,
+				0B8F9E332A6C3DBD00D24CB3 /* ChonVNVC.xib in Resources */,
+				0B1D55692A6D937E0071E8F0 /* ReportMainVC.xib in Resources */,
 				0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0B74DFB82A33F39F005FDA97 /* MActDeleteVC.xib in Resources */,
@@ -875,6 +912,7 @@
 				0BB1D2212A32421400516F25 /* DichVuCell.xib in Resources */,
 				0B2054A12A3A28CB00BA333D /* ServiceDetailVC.xib in Resources */,
 				0BD0CF772A347B7200A0BBE5 /* EmployeeDetailVC.xib in Resources */,
+				0B1D55652A6D6F240071E8F0 /* DetailRPVC.xib in Resources */,
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
@@ -895,14 +933,18 @@
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
+				0B1D555D2A6D20C00071E8F0 /* ChartDayCell.xib in Resources */,
 				0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */,
+				0B8F9E2F2A6C276600D24CB3 /* ChartEmployeeCell.xib in Resources */,
 				0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */,
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
 				0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */,
 				0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */,
+				0B1D55612A6D6F040071E8F0 /* OverviewRPVC.xib in Resources */,
 				0B5B0EB52A2B564600E4B48A /* CreateEmployeeVC.xib in Resources */,
 				0BB43F0629FAD82F00F1DE85 /* Rubik-BlackItalic.ttf in Resources */,
+				0B1D556D2A6D96A20071E8F0 /* MenuReportVC.xib in Resources */,
 				0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */,
 				0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */,
 				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
@@ -967,6 +1009,7 @@
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
+				0B1D55682A6D937E0071E8F0 /* ReportMainVC.swift in Sources */,
 				0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */,
 				0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */,
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
@@ -997,10 +1040,13 @@
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
 				0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */,
+				0B1D55642A6D6F240071E8F0 /* DetailRPVC.swift in Sources */,
 				0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */,
 				0BB7FDD72A19CAA7005EF9B9 /* CreateCustomerVC.swift in Sources */,
 				0BE0391F29F82039002CB20F /* Reachability.swift in Sources */,
 				0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */,
+				0B1D55602A6D6F040071E8F0 /* OverviewRPVC.swift in Sources */,
+				0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */,
 				0B5B0EB42A2B564600E4B48A /* CreateEmployeeVC.swift in Sources */,
 				0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */,
 				0BE0392B29F82039002CB20F /* ExString.swift in Sources */,
@@ -1017,9 +1063,9 @@
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BB7FDDF2A19D6A8005EF9B9 /* CreateCustomerCell.swift in Sources */,
-				0BD5BAE929F8A708009F2A66 /* ReportMainVC.swift in Sources */,
 				0B2141652A13BE5D00CCAAB4 /* StoreInfoCell.swift in Sources */,
 				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
+				0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
@@ -1029,8 +1075,10 @@
 				0BD709422A370DA200D467EC /* QRVC.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
+				0B8F9E322A6C3DBD00D24CB3 /* ChonVNVC.swift in Sources */,
 				0B5B0EB82A2B9EA300E4B48A /* CreateEmployeeCell.swift in Sources */,
 				0BE0392529F82039002CB20F /* Logger.swift in Sources */,
+				0B1D556C2A6D96A20071E8F0 /* MenuReportVC.swift in Sources */,
 				0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */,
 				0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */,
 				0BB43EED29FAC59100F1DE85 /* PayVC.swift in Sources */,

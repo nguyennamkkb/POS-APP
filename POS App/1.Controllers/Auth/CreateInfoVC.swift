@@ -36,6 +36,7 @@ class CreateInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             [weak self] item in
             guard let self = self else {return}
             self.storeData = item
+            self.storeData.sign()
             self.showLoading()
             ServiceManager.common.createUser(param: self.storeData){
                 (response) in

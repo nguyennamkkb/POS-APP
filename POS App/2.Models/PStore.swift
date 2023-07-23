@@ -36,6 +36,7 @@ class PStore: Mappable {
     init (phone: String, password: String){
         self.phone = phone
         self.password = password
+        sign()
     }
     
     init (storeName: String,phone: String,address: String,email: String,password: String){

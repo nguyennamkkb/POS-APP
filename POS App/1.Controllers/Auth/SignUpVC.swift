@@ -56,7 +56,6 @@ class SignUpVC: BaseVC {
             btnShowPassword.setImage(UIImage(systemName: "eye"), for: .normal)
             //code show
         }else{
-            
             btnShowPassword.setImage(UIImage(systemName: "eye.slash"), for: .normal)
             //code hide
         }
