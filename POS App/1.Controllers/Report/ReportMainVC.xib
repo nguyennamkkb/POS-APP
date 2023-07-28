@@ -17,8 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportMainVC" customModule="POS_App" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Jjj-CQ-dPa" id="PGV-ab-XvR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewTab" destination="9nb-SX-em3" id="MuD-Vr-0gw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -63,10 +63,10 @@
                         <constraint firstItem="HUD-z9-paw" firstAttribute="leading" secondItem="nQP-hy-ulb" secondAttribute="leading" id="ki0-La-FTy"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nb-SX-em3">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-CQ-dPa">
                     <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,14 +74,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="nQP-hy-ulb" secondAttribute="leading" id="63F-Fv-EoC"/>
                 <constraint firstItem="nQP-hy-ulb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7kY-e6-hSO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="AuR-79-YB6" secondAttribute="leading" id="812-eF-x1x"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9nb-SX-em3" secondAttribute="bottom" id="HEw-NX-djd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9nb-SX-em3" secondAttribute="trailing" id="OoO-46-Uba"/>
-                <constraint firstItem="9nb-SX-em3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qcx-km-NJC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nQP-hy-ulb" secondAttribute="trailing" id="WFK-Rl-aVd"/>
-                <constraint firstItem="9nb-SX-em3" firstAttribute="top" secondItem="AuR-79-YB6" secondAttribute="bottom" id="fn6-f0-XKf"/>
                 <constraint firstItem="nQP-hy-ulb" firstAttribute="bottom" secondItem="AuR-79-YB6" secondAttribute="bottom" id="goQ-Tl-Dqr"/>
+                <constraint firstItem="Jjj-CQ-dPa" firstAttribute="top" secondItem="AuR-79-YB6" secondAttribute="bottom" id="k32-CR-KEh"/>
                 <constraint firstItem="AuR-79-YB6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lfD-fR-W4e"/>
                 <constraint firstItem="AuR-79-YB6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lyA-YZ-rsm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jjj-CQ-dPa" secondAttribute="trailing" id="md9-0a-Lrr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Jjj-CQ-dPa" secondAttribute="bottom" id="niZ-Wj-VOd"/>
+                <constraint firstItem="Jjj-CQ-dPa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="o7m-GW-4Z8"/>
             </constraints>
             <point key="canvasLocation" x="59" y="21"/>
         </view>

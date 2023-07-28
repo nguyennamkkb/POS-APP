@@ -8,32 +8,40 @@
 import UIKit
 import CarbonKit
 
-class ReportMainVC: BaseVC {
-
-    @IBOutlet var viewTab: UIView!
-    var tabMenuContainerViewController: MenuReportVC!
-
-//    let listVC: [UIViewController] = [OverviewRPVC(),DetailRPVC()]
+class ReportMainVC: BaseVC{
+    
+    
+    
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabMenuContainerViewController = MenuReportVC()
-        addChild(tabMenuContainerViewController)
-        viewTab.addSubview(tabMenuContainerViewController.view)
-        tabMenuContainerViewController.didMove(toParent: self)
-        
-//        let carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: ["Tab 1", "Tab 2"], delegate: self)
-//        carbonTabSwipeNavigation.insert(intoRootViewController: self, andTargetView: self.view)
-//
-//        for (index, _) in listVC.enumerated() {
-//            carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(view.frame.width / CGFloat(listVC.count), forSegmentAt: index)
-//        }
+        tableView.dataSource = self
+        tableView.delegate = self
+        self.tableView.registerCells(cells: ["RPHeaderCell","ChartDayCell","ChartEmployeeCell"])
     }
-
-
+    
+    
 }
-//extension ReportMainVC: CarbonTabSwipeNavigationDelegate {
-//    func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
-//
-//        return listVC.itemAtIndex(index: Int(index)) ?? UIViewController()
-//    }
-//}
+
+
+extension ReportMainVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RPHeaderCell", for: indexPath) as? RPHeaderCell else {return UITableViewCell()}
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChartDayCell", for: indexPath) as? ChartDayCell else {return UITableViewCell()}
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChartEmployeeCell", for: indexPath) as? ChartEmployeeCell else {return UITableViewCell()}
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+}
