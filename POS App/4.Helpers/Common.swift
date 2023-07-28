@@ -81,4 +81,15 @@ class Common {
         let milliseconds = Int(date.timeIntervalSince1970 * 1000)
         return milliseconds
     }
+    public static func  dateStringToMilis(dateString: String) -> Int64? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "vi_VN")
+        
+        if let date = dateFormatter.date(from: dateString) {
+            return Int64(date.timeIntervalSince1970 * 1000)
+        }
+        
+        return nil
+    }
 }

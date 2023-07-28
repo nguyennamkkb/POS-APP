@@ -42,6 +42,9 @@
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-8z-tHp">
                                                         <rect key="frame" x="3" y="25.666666666666668" width="220" height="34.333333333333329"/>
                                                         <locale key="locale" localeIdentifier="vi_VN"/>
+                                                        <connections>
+                                                            <action selector="timeFromChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="37K-Hl-mdK"/>
+                                                        </connections>
                                                     </datePicker>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,6 +72,9 @@
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="xuq-td-YQT">
                                                         <rect key="frame" x="3" y="25.666666666666668" width="220" height="34.333333333333329"/>
                                                         <locale key="locale" localeIdentifier="vi_VN"/>
+                                                        <connections>
+                                                            <action selector="timeToChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="55v-Ni-SHl"/>
+                                                        </connections>
                                                     </datePicker>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -190,6 +196,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLbl" destination="qT1-H4-fw0" id="51a-If-P8s"/>
+                <outlet property="moneyLbl" destination="vwa-3K-d1K" id="5MY-xF-UEr"/>
+            </connections>
             <point key="canvasLocation" x="316.79389312977099" y="-24.295774647887324"/>
         </tableViewCell>
     </objects>

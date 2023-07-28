@@ -31,8 +31,10 @@ class LoginVC: BaseVC {
 
     }
     func setupData(){
-        phoneTF.text = storeData.phone
-        passwordTF.text = storeData.password
+//        phoneTF.text = storeData.phone
+//        passwordTF.text = storeData.password
+        phoneTF.text = "0358737373"
+        passwordTF.text = "123456"
     }
     @IBAction func backPressed(_ sender: UIButton) {
         self.onBackNav()

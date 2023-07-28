@@ -19,6 +19,7 @@ fileprivate class ListCommonService {
     static let employee = ServiceManager.ROOT + "employee"
     static let auth = ServiceManager.ROOT + "auth/signin"
     static let book = ServiceManager.ROOT + "books"
+    static let report = ServiceManager.ROOT + "books/RpEachEmployee"
     static let service = ServiceManager.ROOT + "products"
 }
 
@@ -30,6 +31,7 @@ fileprivate enum ECommonURLs {
     case book
     case service
     case checkuser
+    case report
     
     
     func getPath() -> String {
@@ -48,6 +50,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.service
         case .checkuser:
             return ListCommonService.checkuser
+        case .report:
+            return ListCommonService.report
             
         }
         func getMethod() -> HTTPMethod {
@@ -566,6 +570,26 @@ class CommonServices {
         }
         print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    // bao cao, report
+    func getReport(param: String, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.report.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {

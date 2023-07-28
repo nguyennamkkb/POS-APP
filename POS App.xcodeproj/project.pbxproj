@@ -56,6 +56,7 @@
 		0B74DFB82A33F39F005FDA97 /* MActDeleteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFB62A33F39F005FDA97 /* MActDeleteVC.xib */; };
 		0B74DFBB2A3409FC005FDA97 /* MActSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */; };
 		0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */; };
+		0B76B93F2A7441F900B91761 /* PReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76B93E2A7441F800B91761 /* PReport.swift */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */; };
@@ -220,6 +221,7 @@
 		0B74DFB62A33F39F005FDA97 /* MActDeleteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MActDeleteVC.xib; sourceTree = "<group>"; };
 		0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MActSuccessVC.swift; sourceTree = "<group>"; };
 		0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MActSuccessVC.xib; sourceTree = "<group>"; };
+		0B76B93E2A7441F800B91761 /* PReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PReport.swift; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmployeeCell.swift; sourceTree = "<group>"; };
@@ -718,6 +720,7 @@
 				0B5D18632A0AA355004E47FD /* PBookCalender.swift */,
 				0B5D18652A0AA54F004E47FD /* PProduct.swift */,
 				0B5D18672A0AA5F3004E47FD /* PServices.swift */,
+				0B76B93E2A7441F800B91761 /* PReport.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -1017,6 +1020,7 @@
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
+				0B76B93F2A7441F900B91761 /* PReport.swift in Sources */,
 				0BB37E1B2A5EDE070003AAA3 /* ItemServicesCell.swift in Sources */,
 				0B74DFBB2A3409FC005FDA97 /* MActSuccessVC.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,

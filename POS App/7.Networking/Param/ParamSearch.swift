@@ -16,17 +16,22 @@ class ParamSearch: Mappable {
     var name: String?
     var cksRequest: String?
     var timeRequest: Int?
+    var from: Int64?
+    var to: Int64?
     
     init(){}
     
     
-    init(store_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil){
+    init(store_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil, from: Int64? = nil, to: Int64? = nil){
         let mili = Common.getMilisecondNow()
         self.store_id  = store_id
         self.status = status
+        self.keySearch = keySearch
         self.name = name
         self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
         self.timeRequest = mili
+        self.from = from
+        self.to = to
     }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
