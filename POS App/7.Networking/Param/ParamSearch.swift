@@ -44,5 +44,7 @@ class ParamSearch: Mappable {
         name <- map["name"]
         cksRequest <- map["cksRequest"]
         timeRequest <- map["timeRequest"]
+        from <- map["from"]
+        to <- map["to"]
     }
 }

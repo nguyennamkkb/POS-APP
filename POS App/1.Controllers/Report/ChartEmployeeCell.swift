@@ -11,6 +11,7 @@ class ChartEmployeeCell: UITableViewCell {
 
     @IBOutlet var employeeTF: UITextField!
     @IBOutlet var tableView: UITableView!
+    var tableData = [ListEmplEach]()
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     var NV = PEmployee()
     override func awakeFromNib() {
@@ -18,9 +19,17 @@ class ChartEmployeeCell: UITableViewCell {
         // Initialization code
         tableView.delegate = self
         tableView.dataSource = self
-        let height = 70 * 2
-        tableViewHeightConstraint.constant = CGFloat(height)
+        
         self.tableView.registerCells(cells: ["RPEmployeeCell"])
+    }
+    func binData(item: [ListEmplEach]){
+        tableData = item
+        print("ChartEmployeeCell \(tableData.toJSON())")
+        let height = 70 * tableData.count
+        tableViewHeightConstraint.constant = CGFloat(height)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,11 +43,13 @@ class ChartEmployeeCell: UITableViewCell {
 }
 extension ChartEmployeeCell: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RPEmployeeCell", for: indexPath) as? RPEmployeeCell else {return UITableViewCell()}
+        
+        cell.bindData(item: tableData.itemAtIndex(index: indexPath.row) ?? ListEmplEach())
         return cell
     }
     

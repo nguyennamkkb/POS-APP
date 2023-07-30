@@ -24,8 +24,8 @@ class RPHeaderCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func bindData(money: String, count: String){
-        moneyLbl.text = "\(money.currencyFormatting())đ"
+    func bindData(money: Int, count: Int){
+        moneyLbl.text = "\(String(money).currencyFormatting())đ"
         countLbl.text = "\(count)"
     }
     @IBAction func timeFromChanged(_ sender: UIDatePicker) {
@@ -43,7 +43,7 @@ class RPHeaderCell: UITableViewCell {
         if var timeToMilis = Common.dateStringToMilis(dateString:timeString) {
             timeToMilis = timeToMilis + 86400000 - 1
 //            print(timeToMilis)
-            fromSelect?(timeToMilis)
+            toSelect?(timeToMilis)
         }
     }
     

@@ -9,9 +9,9 @@ import Foundation
 import ObjectMapper
 
 class PReport: Mappable {
-    var chartDay: ChartDay?
+    var chartDay: [ChartDay]?
     var totalBook: TotalBook?
-    var listEmplEach: ListEmplEach?
+    var listEmplEach: [ListEmplEach]?
    
     init(){}
     required init?(map: ObjectMapper.Map) {
@@ -31,11 +31,11 @@ class ChartDay: Mappable {
     var money: Int?
     var recordsCount: Int?
    
-   
+    init(){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
-    }
-    
+        }
+        
     func mapping(map: ObjectMapper.Map) {
         date <- map["date"]
         money <- map["money"]
@@ -45,9 +45,9 @@ class ChartDay: Mappable {
 }
 
 class TotalBook: Mappable {
-    var money: String?
+    var money: Int?
     var book: Int?
-
+    init(){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
@@ -65,6 +65,7 @@ class ListEmplEach: Mappable {
     var totalMoney: Int?
     var tolalBook: Int?
 
+    init(){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

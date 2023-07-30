@@ -10,14 +10,15 @@ import DGCharts
 
 class ChartDayCell: UITableViewCell,ChartViewDelegate {
     
+    @IBOutlet weak var moneyLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet var chartView: UIView!
     var barChartView: BarChartView!
-    var data = [PBookCalender]()
+    var data = [ChartDay]()
     override func awakeFromNib() {
         super.awakeFromNib()
-        barChartView = BarChartView(frame: CGRect(x: 0, y: 0, width: chartView.frame.width - 50, height: chartView.frame.height))
+        barChartView = BarChartView(frame: CGRect(x: -10, y: 0, width: chartView.frame.width - 20 , height: chartView.frame.height))
         chartView.addSubview(barChartView)
-        setupHorizontalBarChart()
         barChartView.delegate = self
     }
     
@@ -27,8 +28,15 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
         // Configure the view for the selected state
     }
     
-    func bindData (item: [PBookCalender]){
+    func bindData (item: [ChartDay]){
         data = item
+
+        setupHorizontalBarChart()
+        
+        let item = data.itemAtIndex(index: 0)
+        dateLbl.text = "Ngày: \(item?.date ?? "")"
+        moneyLbl.text = "Doanh thu: \(item?.money ?? 0)đ - Lượt khach: \(item?.recordsCount ?? 0) "
+        
     }
     func setupHorizontalBarChart() {
         // Sample data for the chart
@@ -40,10 +48,10 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
         //            BarChartDataEntry(x: 5, y: 30)
         //        ]
         var dataEntries = [BarChartDataEntry]()
-        for x in 0..<31 {
-            dataEntries.append(BarChartDataEntry(x: Double(x), y: Double.random(in: 100000...4000000)))
+        for x in 0..<data.count {
+            dataEntries.append(BarChartDataEntry(x: Double(x), y: Double(data[x].money ?? 0)))
         }
-        let dataSet = BarChartDataSet(entries: dataEntries, label: "Cột tương ứng với ngày")
+        let dataSet = BarChartDataSet(entries: dataEntries, label: "Chạm vào cột để xem thông tin")
         
         // Add data labels to the chart
         dataSet.valueFormatter = DefaultValueFormatter(decimals: 0)
@@ -71,11 +79,10 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
     }
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         // Show the data value for the selected column
-        let value = entry.y
-        print("Selected Column Value: \(value)")
+        let item = data.itemAtIndex(index: Int(entry.x))
+        dateLbl.text = "Ngày: \(item?.date ?? "")"
+        moneyLbl.text = "Doanh thu: \(String(describing: item?.money ?? 0).currencyFormatting())đ - Lượt khach: \(item?.recordsCount ?? 0) "
     }
-    
-    // Called when nothing is selected or an "un-select" has been made.
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
         // Hide or do something when no column is selected
     }
