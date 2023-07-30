@@ -121,8 +121,6 @@
 		0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */; };
 		0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */; };
 		0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */; };
-		0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */; };
-		0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */; };
 		0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */; };
 		0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */; };
 		0BD709422A370DA200D467EC /* QRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD709402A370DA200D467EC /* QRVC.swift */; };
@@ -286,8 +284,6 @@
 		0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTransactionVC.xib; sourceTree = "<group>"; };
 		0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterVC.swift; sourceTree = "<group>"; };
 		0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionFilterVC.xib; sourceTree = "<group>"; };
-		0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFilterVC.swift; sourceTree = "<group>"; };
-		0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportFilterVC.xib; sourceTree = "<group>"; };
 		0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreVC.swift; sourceTree = "<group>"; };
 		0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageStoreVC.xib; sourceTree = "<group>"; };
 		0BD709402A370DA200D467EC /* QRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRVC.swift; sourceTree = "<group>"; };
@@ -549,8 +545,6 @@
 		0BD5BAE629F8A6ED009F2A66 /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				0BD5BAEB29F8A765009F2A66 /* ReportFilterVC.swift */,
-				0BD5BAEC29F8A765009F2A66 /* ReportFilterVC.xib */,
 				0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */,
 				0B8F9E2D2A6C276600D24CB3 /* ChartEmployeeCell.xib */,
 				0B8F9E302A6C3DBD00D24CB3 /* ChonVNVC.swift */,
@@ -921,7 +915,6 @@
 				0BD709432A370DA200D467EC /* QRVC.xib in Resources */,
 				0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */,
 				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
-				0BD5BAEE29F8A765009F2A66 /* ReportFilterVC.xib in Resources */,
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
 				0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */,
 				0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */,
@@ -1028,7 +1021,6 @@
 				0BF417C82A3B7A5000DD36DA /* DetailCalenderVC.swift in Sources */,
 				0B20549C2A3A260900BA333D /* ServiceItemCell.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
-				0BD5BAED29F8A765009F2A66 /* ReportFilterVC.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
 				0B2054982A3A23DB00BA333D /* ServiceVC.swift in Sources */,

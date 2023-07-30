@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import MobileCoreServices
+import DropDown
+import AVFoundation
 
 class RPHeaderCell: UITableViewCell {
 
+    @IBOutlet weak var timeFromDPicker: UIDatePicker!
+    @IBOutlet weak var timeToDPicker: UIDatePicker!
     var fromSelect: ClosureCustom<Int64>?
     var toSelect: ClosureCustom<Int64>?
+    let dateFormater = DateFormatter()
     
     @IBOutlet var countLbl: UILabel!
     @IBOutlet var moneyLbl: UILabel!
@@ -24,9 +30,15 @@ class RPHeaderCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func bindData(money: Int, count: Int){
+    func bindData(money: Int, count: Int, timeFrom: Int64, timeTo: Int64){
         moneyLbl.text = "\(String(money).currencyFormatting())đ"
         countLbl.text = "\(count)"
+    
+        print(timeFrom)
+        print(timeTo)
+        timeFromDPicker.date = Common.dateFromUnixTimestamp(milliseconds: Double(timeFrom))
+        timeToDPicker.date = Common.dateFromUnixTimestamp(milliseconds: Double(timeTo))
+
     }
     @IBAction func timeFromChanged(_ sender: UIDatePicker) {
         let time = sender.date.millisecondsSince1970

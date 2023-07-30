@@ -23,10 +23,30 @@ class ReportMainVC: BaseVC{
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCells(cells: ["RPHeaderCell","ChartDayCell","ChartEmployeeCell"])
+        setUpTime()
         getReport()
     }
+    
+    @IBAction func goHomePressed(_ sender: UIButton) {
+        self.wrapRoot(vc: TabBarVC())
+    }
+    func setUpTime(){
+        let currentDate = Common.getCurrentDayMonthYear()
+        let from = "1-\(currentDate.month)-\(currentDate.year) 00:00:00"
+        let to = "\(currentDate.day)-\(currentDate.month)-\(currentDate.year) 00:00:00"
+        if let timeFromMilis = Common.dateStringToMilis(dateString:from) {
+            timeFrom = timeFromMilis
+//            print(timeFromMilis)
+        }
+        if var timeToMilis = Common.dateStringToMilis(dateString:to) {
+            timeToMilis = timeToMilis + Int64(Common.MillisecondsOfDay)
+            timeTo = timeToMilis
+//            print(timeToMilis)
+        }
+        
+    }
     func getReport(){
-//        guard let keySearch = keySearch.text else {return}
+//        guard let keySearch = k   eySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
         guard let from = timeFrom else {return}
         guard let to = timeTo else {return}
@@ -39,10 +59,12 @@ class ReportMainVC: BaseVC{
                     self.tableView.reloadData()
                 }
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.showAlert(message: "Không có dữ liệu")
             }
         }
     }
+    
+    
 }
 
 
@@ -55,7 +77,7 @@ extension ReportMainVC: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RPHeaderCell", for: indexPath) as? RPHeaderCell else {return UITableViewCell()}
-            cell.bindData(money: tableData.totalBook?.money ?? 0, count: tableData.totalBook?.book ?? 0)
+            cell.bindData(money: tableData.totalBook?.money ?? 0, count: tableData.totalBook?.book ?? 0,timeFrom: timeFrom ?? 0, timeTo: timeTo ?? 0)
             cell.fromSelect = {
                 [weak self] from in
                 guard let self = self else {return}

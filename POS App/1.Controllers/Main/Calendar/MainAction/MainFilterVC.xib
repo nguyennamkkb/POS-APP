@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -152,7 +152,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="373" height="160"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A4-3F-o2Z" userLabel="ViewFrom">
-                                    <rect key="frame" x="0.0" y="0.0" width="217.33333333333334" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-8X-JIa">
                                             <rect key="frame" x="0.0" y="5" width="19.333333333333332" height="20.333333333333332"/>
@@ -161,7 +161,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="wQK-hS-ret">
-                                            <rect key="frame" x="0.0" y="35.333333333333314" width="217.33333333333334" height="39.666666666666657"/>
+                                            <rect key="frame" x="0.0" y="35.333333333333314" width="250.33333333333334" height="39.666666666666657"/>
+                                            <locale key="locale" localeIdentifier="vi_VN"/>
                                         </datePicker>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,7 +176,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-Bg-KVB" userLabel="ViewTo">
-                                    <rect key="frame" x="0.0" y="80" width="217.33333333333334" height="80"/>
+                                    <rect key="frame" x="0.0" y="80" width="250.33333333333334" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đến" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-1I-tMC">
                                             <rect key="frame" x="0.0" y="5" width="31.333333333333332" height="20.333333333333332"/>
@@ -184,7 +185,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-m9-Upk">
-                                            <rect key="frame" x="0.0" y="35.333333333333314" width="217.33333333333334" height="39.666666666666657"/>
+                                            <rect key="frame" x="0.0" y="35.333333333333314" width="250.33333333333334" height="39.666666666666657"/>
+                                            <locale key="locale" localeIdentifier="vi_VN"/>
                                         </datePicker>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -22,7 +22,8 @@ class SlideMenuVC: BaseVC {
 
     @IBAction func bntBaoCaoPressed(_ sender: UIButton) {
         let vc = ReportMainVC()
-        self.pushVC(controller: vc)
+        let navi = UINavigationController(rootViewController: vc)
+        self.wrapRoot(vc: navi)
     }
     @IBAction func bntQuanLyPressed(_ sender: UIButton) {
         let navi = UINavigationController(rootViewController: ManageStoreVC())

@@ -3,7 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,7 +34,7 @@
                     <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-l4-x5h" userLabel="back">
-                            <rect key="frame" x="24" y="4.6666666666666643" width="35" height="35"/>
+                            <rect key="frame" x="331" y="4.6666666666666643" width="35" height="35"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="eG1-zT-zzp"/>
@@ -42,7 +42,10 @@
                             </constraints>
                             <color key="tintColor" systemColor="systemBlueColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_back"/>
+                            <state key="normal" image="homekit" catalog="system"/>
+                            <connections>
+                                <action selector="goHomePressed:" destination="-1" eventType="touchUpInside" id="o2j-m8-tdc"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Báo cáo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUD-z9-paw">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
@@ -58,8 +61,8 @@
                         <constraint firstAttribute="height" constant="44" id="GDy-Mr-LwT"/>
                         <constraint firstItem="HUD-z9-paw" firstAttribute="top" secondItem="nQP-hy-ulb" secondAttribute="top" id="KrZ-hh-QMi"/>
                         <constraint firstAttribute="bottom" secondItem="HUD-z9-paw" secondAttribute="bottom" id="O5C-Mb-qWd"/>
-                        <constraint firstItem="a5b-l4-x5h" firstAttribute="leading" secondItem="nQP-hy-ulb" secondAttribute="leading" constant="24" id="buB-NJ-ec0"/>
                         <constraint firstItem="a5b-l4-x5h" firstAttribute="centerY" secondItem="nQP-hy-ulb" secondAttribute="centerY" id="dNf-Ul-M1E"/>
+                        <constraint firstAttribute="trailing" secondItem="a5b-l4-x5h" secondAttribute="trailing" constant="24" id="kFR-1p-jk8"/>
                         <constraint firstItem="HUD-z9-paw" firstAttribute="leading" secondItem="nQP-hy-ulb" secondAttribute="leading" id="ki0-La-FTy"/>
                     </constraints>
                 </view>
@@ -87,7 +90,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_back" width="34" height="34"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
