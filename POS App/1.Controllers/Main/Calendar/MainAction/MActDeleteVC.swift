@@ -24,7 +24,7 @@ class MActDeleteVC: BaseVC {
     var book =  PBookCalender()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.amountLbl.text = "Tổng tiền: \(String(describing: book.amount ?? 0))"
+        self.amountLbl.text = "Tổng tiền: \(String(book.amount ?? 0).currencyFormatting())đ"
         self.timeLbl.text = "Thời gian: \(Common.getDateFormatFromMiliseonds(time: book.start ?? ""))"
         self.customerLbl.text = "Khách hàng: \(book.customer?.fullName ?? "")"
         setupUI()

@@ -564,6 +564,7 @@
 		0BD5BAEF29F8A777009F2A66 /* ManageStore */ = {
 			isa = PBXGroup;
 			children = (
+				0BF5BD722A76C39C00ECBE10 /* New Group */,
 				0B2054952A3A23B400BA333D /* Services */,
 				0BB7FDD42A19CA8F005EF9B9 /* Customer */,
 				0BB7FDD32A19CA87005EF9B9 /* Emoloyee */,
@@ -770,6 +771,13 @@
 				0BB37E1A2A5EDE070003AAA3 /* ItemServicesCell.xib */,
 			);
 			path = DetailCalender;
+			sourceTree = "<group>";
+		};
+		0BF5BD722A76C39C00ECBE10 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		1F3555E4D9A8907ED3D5D69F /* Pods */ = {

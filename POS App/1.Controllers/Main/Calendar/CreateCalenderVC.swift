@@ -30,20 +30,20 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var HeadTableView: UIView!
     @IBOutlet var tableView: UITableView!
-    
-    
     @IBOutlet var totalAmountLbl: UILabel!
+    
+    var statusCreateOrUpdate = 0 //0: create, 1 update
+    var itemBookUpdate = PBookCalender()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "DichVuCell")
-        
         setupUI()
         getAllEployees()
         getAllCustomers()
-        print("viewdidload")
+        setupData()
     }
     func setupUI() {
         chonNVView.layer.cornerRadius = myCornerRadius.corner10
@@ -53,6 +53,19 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         tableHeader.isHidden = true
     }
     
+    func bindData(item: PBookCalender){
+        itemBookUpdate = item
+        statusCreateOrUpdate = 1
+    }
+    func setupData(){
+        khachHangLb.text = itemBookUpdate.customer?.fullName ?? "Chọn khách hàng"
+        nhanVienLb.text = itemBookUpdate.employee?.fullName ?? "Chọn nhân viên"
+        employeeSelected = itemBookUpdate.employee ?? PEmployee()
+        customerSelected = itemBookUpdate.customer  ?? PCustomer()
+        listServices = Mapper<PServices>().mapArray(JSONString: itemBookUpdate.listService ?? "" ) ?? [PServices]()
+        dateTimePicker.date = Common.dateFromUnixTimestamp(milliseconds: Double( itemBookUpdate.start ?? "0") ?? 0)
+        updateAmount()
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listServices.count
     }
@@ -178,12 +191,34 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         book.idEmployee = employeeSelected.id
         book.idCustomer = customerSelected.id
         book.sign()
-        createBook(item: book)
+        if statusCreateOrUpdate == 0 {
+            createBook(item: book)
+        }else{
+            updateBook(item: book)
+        }
+       
     }
     func createBook(item: PBookCalender){
 //        print("PBookCalender \(item.toJSON())")
         self.showLoading()
         ServiceManager.common.createBook(param: item){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công!")
+                self.actionOK?()
+                self.onBackNav()
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
+        
+    }
+    func updateBook(item: PBookCalender){
+//        print("PBookCalender \(item.toJSON())")
+        item.id = itemBookUpdate.id ?? 0
+        self.showLoading()
+        ServiceManager.common.editBook(param: item){
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {

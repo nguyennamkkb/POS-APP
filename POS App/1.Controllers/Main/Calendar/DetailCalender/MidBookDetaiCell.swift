@@ -11,6 +11,7 @@ class MidBookDetaiCell: UITableViewCell, UITableViewDelegate, UITableViewDataSou
 
     
 
+    @IBOutlet weak var totalMoneyLbl: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
 
@@ -29,6 +30,7 @@ class MidBookDetaiCell: UITableViewCell, UITableViewDelegate, UITableViewDataSou
         height = Float(tableData.count * 30)
         tableViewHeightConstraint.constant = CGFloat(height)
         tableView.layoutIfNeeded()
+        totalMoneyLbl.text = "\(String(getTotalMoney(list: list)).currencyFormatting())đ"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -45,5 +47,12 @@ class MidBookDetaiCell: UITableViewCell, UITableViewDelegate, UITableViewDataSou
         let item = tableData[indexPath.row]
         cell.bindData(name: item.name ?? "", price: item.price ?? 0)
         return cell
+    }
+    func getTotalMoney(list: [PServices]) -> Int{
+        var total = 0
+        for e in list {
+            total += e.price ?? 0
+        }
+        return total
     }
 }

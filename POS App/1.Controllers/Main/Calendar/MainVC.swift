@@ -91,7 +91,15 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         cell.actionEdit = {
             [weak self] book in
             guard let self = self else {return}
-            self.showMessageDeveloping()
+            let vc = CreateCalenderVC()
+            vc.bindData(item: book)
+            vc.actionOK = {
+                [weak self] in
+                guard let self = self else {return}
+                self.getBooks()
+            }
+            self.pushVC(controller: vc)
+//            self.showMessageDeveloping()
         }
         cell.actionPay = {
             [weak self] book in

@@ -9,7 +9,7 @@ import UIKit
 import ObjectMapper
 
 class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
-
+    
     
     var deleteSuccess: ClosureAction?
     
@@ -22,7 +22,7 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var birthdayLbl: UILabel!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var genderLbl: UILabel!
-
+    
     @IBOutlet var btnDelete: UIButton!
     @IBOutlet var btnEdit: UIButton!
     var customer = PCustomer()
@@ -40,12 +40,10 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     func setupUI(){
-//        btnDelete.layer.cornerRadius = myCornerRadius.corner5
-//        btnEdit.layer.cornerRadius = myCornerRadius.corner5
         cardView.layer.cornerRadius = myCornerRadius.corner10
         QRImage.layer.cornerRadius = myCornerRadius.corner10
-        
-        
+        btnDelete.layer.cornerRadius = myCornerRadius.corner5
+        btnEdit.layer.cornerRadius = myCornerRadius.corner5
     }
     func setData(){
         nameLbl.text = "\(customer.fullName ?? "")"
@@ -95,7 +93,7 @@ class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerServicesCell", for: indexPath) as? CustomerServicesCell else {return UITableViewCell()}
-       
+        
         
         let item = customerServices[indexPath.row]
         cell.bindData(item: item)

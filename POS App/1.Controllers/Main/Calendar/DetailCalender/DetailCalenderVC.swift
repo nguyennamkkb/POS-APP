@@ -26,6 +26,9 @@ class DetailCalenderVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
+    @IBAction func btnPrintPressed(_ sender: UIButton) {
+        self.showAlert(message: "Đang in")
+    }
     
     func bindData(item: PBookCalender){
         self.book = item

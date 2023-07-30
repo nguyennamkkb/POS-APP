@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,6 +20,8 @@
                 <outlet property="QRImage" destination="Rt8-fc-MPi" id="9xz-o8-bod"/>
                 <outlet property="addressLbl" destination="fpz-1J-182" id="rJ3-fs-xDL"/>
                 <outlet property="birthdayLbl" destination="Dcg-lR-gXB" id="LEY-YI-l6x"/>
+                <outlet property="btnDelete" destination="3pN-DB-Cfk" id="Vkf-Yb-J8r"/>
+                <outlet property="btnEdit" destination="y96-LW-lcK" id="2sF-7w-Xpg"/>
                 <outlet property="cardView" destination="NhX-Mh-OL0" id="8Ew-iH-cWe"/>
                 <outlet property="genderLbl" destination="ESv-3E-RLG" id="BMO-w8-MaO"/>
                 <outlet property="nameLbl" destination="QYZ-DI-ReM" id="mT6-J0-MbS"/>
@@ -194,7 +196,7 @@
                         <constraint firstAttribute="trailing" secondItem="MTJ-VN-ZLa" secondAttribute="trailing" id="qpq-WG-7bk"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-9j-8fA">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-9j-8fA">
                     <rect key="frame" x="24" y="377.5" width="366" height="440.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

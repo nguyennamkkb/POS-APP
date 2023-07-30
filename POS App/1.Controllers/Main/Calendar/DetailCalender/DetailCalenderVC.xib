@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -53,6 +53,18 @@
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="via-Gm-zH6">
+                            <rect key="frame" x="334" y="4.6666666666666643" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="5Eh-PU-wcP"/>
+                                <constraint firstAttribute="width" constant="35" id="aYo-ea-QYP"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="printer.filled.and.paper" catalog="system"/>
+                            <connections>
+                                <action selector="btnPrintPressed:" destination="-1" eventType="touchUpInside" id="K67-9O-eLg"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -60,12 +72,14 @@
                         <constraint firstAttribute="trailing" secondItem="59Q-wL-vpf" secondAttribute="trailing" id="GaX-4t-13e"/>
                         <constraint firstItem="mTM-Fe-j3u" firstAttribute="centerY" secondItem="6QT-xc-pew" secondAttribute="centerY" id="MRa-cP-K6K"/>
                         <constraint firstItem="mTM-Fe-j3u" firstAttribute="leading" secondItem="6QT-xc-pew" secondAttribute="leading" constant="24" id="OqQ-Bu-IxI"/>
+                        <constraint firstItem="via-Gm-zH6" firstAttribute="centerY" secondItem="6QT-xc-pew" secondAttribute="centerY" id="Z2s-Eb-UKA"/>
                         <constraint firstAttribute="height" constant="44" id="fkW-U3-540"/>
                         <constraint firstItem="59Q-wL-vpf" firstAttribute="top" secondItem="6QT-xc-pew" secondAttribute="top" id="o1a-cJ-rp3"/>
+                        <constraint firstAttribute="trailing" secondItem="via-Gm-zH6" secondAttribute="trailing" constant="24" id="t4t-Rq-W5C"/>
                         <constraint firstItem="59Q-wL-vpf" firstAttribute="leading" secondItem="6QT-xc-pew" secondAttribute="leading" id="wxd-1w-W7Y"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sEK-WY-Aqm">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sEK-WY-Aqm">
                     <rect key="frame" x="0.0" y="113" width="393" height="705"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -90,6 +104,7 @@
     </objects>
     <resources>
         <image name="ic_back" width="34" height="34"/>
+        <image name="printer.filled.and.paper" catalog="system" width="128" height="112"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
