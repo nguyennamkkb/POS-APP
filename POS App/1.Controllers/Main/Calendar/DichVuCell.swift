@@ -22,6 +22,6 @@ class DichVuCell: UITableViewCell {
     }
     func bindData(item: PServices){
         self.nameLbl.text = item.name ?? ""
-        self.amountLbl.text = item.price?.formatNumberInt(maxFraction: 0)
+        self.amountLbl.text = "\(item.price?.formatNumberInt(maxFraction: 0) ?? "0")đ"
     }
 }

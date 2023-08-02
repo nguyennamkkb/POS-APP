@@ -65,18 +65,20 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         print(tableData.toJSON())
     }
     func changeStatus(){
-        if tableData.count >= 1 {
-            for i in 0...tableData.count-1 {
-                tableData[i].status = 0
-                if listSelected.count > 0 {
-                    for j in 0...listSelected.count-1 {
-                        if tableData[i].id == listSelected[j].id {
-                            tableData[i].status = 1
-                        }
+        if tableData.count <= 1 {
+            return
+        }
+        for i in 0...tableData.count-1 {
+            tableData[i].status = 0
+            if listSelected.count > 0 {
+                for j in 0...listSelected.count-1 {
+                    if tableData[i].id == listSelected[j].id {
+                        tableData[i].status = 1
                     }
                 }
             }
         }
+        
         
     }
     
@@ -90,7 +92,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
     }
     func getDataSelected(){
         let filtered = tableData.filter { $0.status == 1 }
-        print(filtered.toJSON())
+//        print(filtered.toJSON())
         returnDataSelected?(filtered)
         self.onBackNav()
         
@@ -103,7 +105,7 @@ class ChonDichVuVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
                 amount += item.price ?? 0
             }
         }
-        amountLbl.text = String(amount).currencyFormatting()
+        amountLbl.text = "\(String(amount).currencyFormatting())đ" 
     }
     func bindData(listItem: [PServices]){
         listSelected = listItem

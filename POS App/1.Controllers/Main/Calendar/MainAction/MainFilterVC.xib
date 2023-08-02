@@ -3,17 +3,12 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Regular.ttf">
-            <string>Rubik-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainFilterVC" customModule="POS_App" customModuleProvider="target">
             <connections>
@@ -45,7 +40,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="YNn-bh-NLM"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -99,7 +94,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="5GL-eL-QkC"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -155,13 +150,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="250.33333333333334" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-8X-JIa">
-                                            <rect key="frame" x="0.0" y="5" width="19.333333333333332" height="20.333333333333332"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="0.0" y="5" width="23" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="wQK-hS-ret">
-                                            <rect key="frame" x="0.0" y="35.333333333333314" width="250.33333333333334" height="39.666666666666657"/>
+                                            <rect key="frame" x="0.0" y="36" width="250.33333333333334" height="39"/>
                                             <locale key="locale" localeIdentifier="vi_VN"/>
                                         </datePicker>
                                     </subviews>
@@ -179,13 +174,13 @@
                                     <rect key="frame" x="0.0" y="80" width="250.33333333333334" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đến" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-1I-tMC">
-                                            <rect key="frame" x="0.0" y="5" width="31.333333333333332" height="20.333333333333332"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="0.0" y="5" width="33" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="5s6-m9-Upk">
-                                            <rect key="frame" x="0.0" y="35.333333333333314" width="250.33333333333334" height="39.666666666666657"/>
+                                            <rect key="frame" x="0.0" y="36" width="250.33333333333334" height="39"/>
                                             <locale key="locale" localeIdentifier="vi_VN"/>
                                         </datePicker>
                                     </subviews>
@@ -219,7 +214,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="7qX-Lw-Xlh"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -268,12 +263,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acf-Xv-nFN">
                     <rect key="frame" x="10" y="774" width="373" height="44"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hgL-EG-EqS">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hgL-EG-EqS">
                             <rect key="frame" x="0.0" y="0.0" width="373" height="44"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptz-vl-r2t">
-                                    <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Tất cả"/>
                                     <connections>
@@ -281,8 +277,9 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-wR-LMz">
-                                    <rect key="frame" x="198.66666666666663" y="0.0" width="174.33333333333337" height="44"/>
+                                    <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="44"/>
                                     <color key="backgroundColor" name="AccentColor"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Lọc"/>
                                     <connections>

@@ -35,6 +35,7 @@
 		0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */; };
 		0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */; };
 		0B3D44F82A2F79B200A6186C /* ChonDichVuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */; };
+		0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */; };
 		0B5012332A516899009D3C0B /* MainFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5012312A516899009D3C0B /* MainFilterVC.swift */; };
 		0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5012322A516899009D3C0B /* MainFilterVC.xib */; };
 		0B5B0EB42A2B564600E4B48A /* CreateEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5B0EB22A2B564600E4B48A /* CreateEmployeeVC.swift */; };
@@ -198,6 +199,7 @@
 		0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuVC.xib; sourceTree = "<group>"; };
 		0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVuCell.swift; sourceTree = "<group>"; };
 		0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuCell.xib; sourceTree = "<group>"; };
+		0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beautiful-color-palettes-combinations-schemes-rainbow-dash.png"; sourceTree = "<group>"; };
 		0B5012312A516899009D3C0B /* MainFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFilterVC.swift; sourceTree = "<group>"; };
 		0B5012322A516899009D3C0B /* MainFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainFilterVC.xib; sourceTree = "<group>"; };
 		0B5B0EB22A2B564600E4B48A /* CreateEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVC.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 		0BB43EEF29FAD82300F1DE85 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */,
 				0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */,
 				0BB43EF829FAD82F00F1DE85 /* Rubik-BlackItalic.ttf */,
 				0BB43EF729FAD82E00F1DE85 /* Rubik-Bold.ttf */,
@@ -881,6 +884,7 @@
 				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
 				0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
+				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */,

@@ -23,7 +23,7 @@ class Common {
         let date = Date(milliseconds: Int64(time) ?? 0)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
         
         let formattedDateString = dateFormatter.string(from: date)
         return (formattedDateString) // Output: "11-03-2023 14:10"
@@ -106,6 +106,7 @@ class Common {
     }
     
     public static func dateFromUnixTimestamp(milliseconds: Double) -> Date {
+        
         return Date(timeIntervalSince1970: milliseconds / 1000.0)
     }
 }

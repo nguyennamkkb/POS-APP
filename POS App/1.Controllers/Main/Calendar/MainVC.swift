@@ -163,7 +163,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
-                self.countPending.text = "\(response?.meta?.totalCount ?? 0)"
+                self.countPending.text = "Có \(response?.meta?.totalCount ?? 0) lượt chờ!"
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

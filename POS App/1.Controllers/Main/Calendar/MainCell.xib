@@ -93,20 +93,20 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bắt đầu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-4a-9TP">
-                                <rect key="frame" x="5.0000000000000036" y="5" width="63.333333333333343" height="21"/>
+                                <rect key="frame" x="5.0000000000000036" y="5" width="61.333333333333343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="z59-YG-int"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16/05/2023 12:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-58-EJb">
-                                <rect key="frame" x="70.333333333333329" y="5" width="134.33333333333337" height="21"/>
+                                <rect key="frame" x="68.333333333333343" y="5" width="126.33333333333334" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0XX-xp-xo7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -116,16 +116,16 @@
                                     <constraint firstAttribute="width" constant="81" id="OTF-f5-vKO"/>
                                     <constraint firstAttribute="height" constant="21" id="x6F-ec-doS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NVA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-Yi-wZX">
-                                <rect key="frame" x="88" y="31" width="33.333333333333343" height="21"/>
+                                <rect key="frame" x="88" y="31" width="31" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Zw5-9M-PJo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -135,16 +135,16 @@
                                     <constraint firstAttribute="width" constant="95" id="1SD-eM-Wpu"/>
                                     <constraint firstAttribute="height" constant="21" id="J4n-XW-hob"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KHA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBy-sB-juD">
-                                <rect key="frame" x="102" y="57" width="34" height="21"/>
+                                <rect key="frame" x="102" y="57" width="32.666666666666657" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4r7-hi-XcL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -154,16 +154,16 @@
                                     <constraint firstAttribute="width" constant="81" id="7Ml-bu-NgI"/>
                                     <constraint firstAttribute="height" constant="21" id="Yl7-p9-V0u"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang thực hiện" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCf-Vo-ewO">
-                                <rect key="frame" x="88" y="83" width="115.66666666666669" height="21"/>
+                                <rect key="frame" x="88" y="83" width="120.66666666666669" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DnT-EB-cT7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -176,7 +176,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.09129191962799732" green="0.25553754240458171" blue="1" alpha="0.060220356228985361" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.67204436365983877" green="0.99090605970000001" blue="0.91624461695856485" alpha="0.095006289768207353" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Pup-gZ-cfd" secondAttribute="trailing" id="6CZ-uK-KbJ"/>
                             <constraint firstItem="Ozh-GN-qkB" firstAttribute="top" secondItem="Rdo-lw-0dB" secondAttribute="top" id="7FV-a0-whi"/>

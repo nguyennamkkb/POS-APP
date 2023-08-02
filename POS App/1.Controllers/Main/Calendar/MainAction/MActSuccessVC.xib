@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MActSuccessVC" customModule="POS_App" customModuleProvider="target">
             <connections>
@@ -34,9 +29,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojP-Q6-gih" userLabel="nav">
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoàn thành?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiF-ZZ-Zw6">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoàn thành" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiF-ZZ-Zw6">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -51,27 +46,31 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91o-dd-QC3">
-                    <rect key="frame" x="24" y="183" width="345" height="44"/>
+                    <rect key="frame" x="24" y="764" width="345" height="44"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wq0-On-WjB">
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wq0-On-WjB">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36v-88-MxJ" userLabel="ok">
-                                    <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Xác nhận"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Xác nhận">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                    </buttonConfiguration>
                                     <connections>
                                         <action selector="btnXacNhanPressed:" destination="-1" eventType="touchUpInside" id="l8A-HX-5GH"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-LD-4uv" userLabel="okPay">
-                                    <rect key="frame" x="184.66666666666663" y="0.0" width="160.33333333333337" height="44"/>
+                                    <rect key="frame" x="177.66666666666663" y="0.0" width="167.33333333333337" height="44"/>
                                     <color key="backgroundColor" name="AccentColor"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Thanh toán"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Thanh toán">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                    </buttonConfiguration>
                                     <connections>
                                         <action selector="btnPayPressed:" destination="-1" eventType="touchUpInside" id="raR-cz-Z5e"/>
                                     </connections>
@@ -89,11 +88,11 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã hoàn thành các dịch vụ và xác nhận hoặc tiến đến thanh toán ngay" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aT-eq-crd">
-                    <rect key="frame" x="24" y="113" width="345" height="50"/>
+                    <rect key="frame" x="10" y="113" width="373" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="QU3-bc-5Mb"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -102,8 +101,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="3fV-5t-3Fq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="07J-AF-KwQ"/>
-                <constraint firstItem="91o-dd-QC3" firstAttribute="top" secondItem="4aT-eq-crd" secondAttribute="bottom" constant="20" id="5OB-sF-ugM"/>
-                <constraint firstItem="4aT-eq-crd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="GD9-gA-HF2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="91o-dd-QC3" secondAttribute="bottom" constant="10" id="CYw-I8-vIi"/>
+                <constraint firstItem="4aT-eq-crd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="GD9-gA-HF2"/>
                 <constraint firstItem="3fV-5t-3Fq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Gjk-w9-pg0"/>
                 <constraint firstItem="91o-dd-QC3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="IOv-H8-LjJ"/>
                 <constraint firstItem="ojP-Q6-gih" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JWi-W5-Tye"/>
@@ -113,7 +112,7 @@
                 <constraint firstItem="ojP-Q6-gih" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ewg-Wi-uRP"/>
                 <constraint firstItem="4aT-eq-crd" firstAttribute="top" secondItem="3fV-5t-3Fq" secondAttribute="bottom" constant="10" id="fuo-cE-uZR"/>
                 <constraint firstItem="ojP-Q6-gih" firstAttribute="bottom" secondItem="3fV-5t-3Fq" secondAttribute="bottom" id="l4f-8d-8Gf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4aT-eq-crd" secondAttribute="trailing" constant="24" id="vuh-6Y-arj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4aT-eq-crd" secondAttribute="trailing" constant="10" id="vuh-6Y-arj"/>
             </constraints>
             <point key="canvasLocation" x="20" y="21"/>
         </view>
