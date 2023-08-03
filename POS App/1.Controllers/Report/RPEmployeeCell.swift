@@ -9,14 +9,20 @@ import UIKit
 
 class RPEmployeeCell: UITableViewCell {
 
+    @IBOutlet var RPEmployeeView: UIView!
     @IBOutlet weak var moneyLbl: UILabel!
     @IBOutlet weak var employeeLbl: UILabel!
     var data = ListEmplEach()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
+    func setupUI() {
+        RPEmployeeView.layer.cornerRadius = myCornerRadius.corner5
+        RPEmployeeView.layer.borderWidth = 0.1
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

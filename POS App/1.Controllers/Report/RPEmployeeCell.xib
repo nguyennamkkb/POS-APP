@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,25 +19,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGg-MG-bWz">
-                        <rect key="frame" x="0.0" y="0.0" width="467" height="65"/>
+                        <rect key="frame" x="5" y="0.0" width="457" height="65"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhân viên 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyW-z4-rPh">
-                                <rect key="frame" x="0.0" y="0.0" width="467" height="25"/>
+                                <rect key="frame" x="5" y="0.0" width="447" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Tep-eY-don"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doanh thu: 1.430.000đ, Lượt khách: 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdq-xL-quj">
-                                <rect key="frame" x="0.0" y="35" width="467" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="5" y="35" width="447" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANd-00-dMl">
-                                <rect key="frame" x="437" y="0.0" width="30" height="30"/>
+                                <rect key="frame" x="427" y="0.0" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Y6e-ca-oix"/>
                                     <constraint firstAttribute="height" constant="30" id="ZN4-z9-i8i"/>
@@ -48,29 +48,30 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.70761981093944426" green="1" blue="0.24403688140254809" alpha="0.10914273805256132" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.040355752529999997" green="0.54119459619999999" blue="1" alpha="0.059999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tdq-xL-quj" firstAttribute="leading" secondItem="hGg-MG-bWz" secondAttribute="leading" id="0JR-me-ehg"/>
-                            <constraint firstAttribute="trailing" secondItem="tdq-xL-quj" secondAttribute="trailing" id="Crf-UZ-oeG"/>
+                            <constraint firstItem="tdq-xL-quj" firstAttribute="leading" secondItem="hGg-MG-bWz" secondAttribute="leading" constant="5" id="0JR-me-ehg"/>
+                            <constraint firstAttribute="trailing" secondItem="tdq-xL-quj" secondAttribute="trailing" constant="5" id="Crf-UZ-oeG"/>
                             <constraint firstAttribute="trailing" secondItem="ANd-00-dMl" secondAttribute="trailing" id="O4c-ar-Xtq"/>
                             <constraint firstItem="ZyW-z4-rPh" firstAttribute="top" secondItem="hGg-MG-bWz" secondAttribute="top" id="VXw-XD-04c"/>
                             <constraint firstItem="tdq-xL-quj" firstAttribute="top" secondItem="ZyW-z4-rPh" secondAttribute="bottom" constant="10" id="inJ-5P-K8o"/>
                             <constraint firstItem="ANd-00-dMl" firstAttribute="top" secondItem="hGg-MG-bWz" secondAttribute="top" id="j0N-1b-r39"/>
-                            <constraint firstAttribute="trailing" secondItem="ZyW-z4-rPh" secondAttribute="trailing" id="qSM-fe-g1n"/>
-                            <constraint firstItem="ZyW-z4-rPh" firstAttribute="leading" secondItem="hGg-MG-bWz" secondAttribute="leading" id="sJj-Bg-KfF"/>
+                            <constraint firstAttribute="trailing" secondItem="ZyW-z4-rPh" secondAttribute="trailing" constant="5" id="qSM-fe-g1n"/>
+                            <constraint firstItem="ZyW-z4-rPh" firstAttribute="leading" secondItem="hGg-MG-bWz" secondAttribute="leading" constant="5" id="sJj-Bg-KfF"/>
                             <constraint firstAttribute="height" constant="65" id="vfJ-oL-rXn"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hGg-MG-bWz" secondAttribute="bottom" constant="5" id="bT4-26-ZBw"/>
-                    <constraint firstAttribute="trailing" secondItem="hGg-MG-bWz" secondAttribute="trailing" id="e5W-NX-ILb"/>
-                    <constraint firstItem="hGg-MG-bWz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eAM-dC-6q8"/>
+                    <constraint firstAttribute="trailing" secondItem="hGg-MG-bWz" secondAttribute="trailing" constant="5" id="e5W-NX-ILb"/>
+                    <constraint firstItem="hGg-MG-bWz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="eAM-dC-6q8"/>
                     <constraint firstItem="hGg-MG-bWz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uQu-uX-bdW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="RPEmployeeView" destination="hGg-MG-bWz" id="93c-MW-D0a"/>
                 <outlet property="employeeLbl" destination="ZyW-z4-rPh" id="KwA-F8-ZmB"/>
                 <outlet property="moneyLbl" destination="tdq-xL-quj" id="jDo-i8-aJp"/>
             </connections>

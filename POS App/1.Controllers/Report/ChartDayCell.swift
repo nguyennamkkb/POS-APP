@@ -10,6 +10,7 @@ import DGCharts
 
 class ChartDayCell: UITableViewCell,ChartViewDelegate {
     
+    @IBOutlet var boundsView: UIView!
     @IBOutlet weak var moneyLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet var chartView: UIView!
@@ -17,11 +18,15 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
     var data = [ChartDay]()
     override func awakeFromNib() {
         super.awakeFromNib()
-        barChartView = BarChartView(frame: CGRect(x: -10, y: 0, width: chartView.frame.width - 20 , height: chartView.frame.height))
+        barChartView = BarChartView(frame: CGRect(x: -10, y: 0, width: chartView.frame.width - 29 , height: chartView.frame.height))
         chartView.addSubview(barChartView)
         barChartView.delegate = self
+        setupUI()
     }
-    
+    func setupUI() {
+        boundsView.layer.cornerRadius = myCornerRadius.corner5
+        boundsView.layer.borderWidth = 0.1
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

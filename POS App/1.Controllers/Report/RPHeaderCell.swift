@@ -12,6 +12,10 @@ import AVFoundation
 
 class RPHeaderCell: UITableViewCell {
 
+    @IBOutlet var luotKhachView: UIView!
+    @IBOutlet var doanhThuView: UIView!
+    @IBOutlet var totalView: UIView!
+    @IBOutlet var filterView: UIView!
     @IBOutlet weak var timeFromDPicker: UIDatePicker!
     @IBOutlet weak var timeToDPicker: UIDatePicker!
     var fromSelect: ClosureCustom<Int64>?
@@ -23,12 +27,22 @@ class RPHeaderCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func setupUI(){
+        filterView.layer.cornerRadius = myCornerRadius.corner5
+        filterView.layer.borderWidth = 0.1
+        doanhThuView.layer.cornerRadius = myCornerRadius.corner5
+        doanhThuView.layer.borderWidth = 0.1
+        luotKhachView.layer.cornerRadius = myCornerRadius.corner5
+        luotKhachView.layer.borderWidth = 0.1
+        
     }
     func bindData(money: Int, count: Int, timeFrom: Int64, timeTo: Int64){
         moneyLbl.text = "\(String(money).currencyFormatting())đ"
