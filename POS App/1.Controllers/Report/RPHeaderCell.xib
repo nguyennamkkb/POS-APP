@@ -24,47 +24,45 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHb-vm-i4C" userLabel="Viewfilter">
                                 <rect key="frame" x="5" y="5" width="414" height="70"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-MW-Qhd">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-MW-Qhd">
                                         <rect key="frame" x="5" y="5" width="404" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-Jd-7pt">
-                                                <rect key="frame" x="0.0" y="0.0" width="197" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="60"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RMN-Fa-Ujr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="60"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ ngày" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVK-Yl-XVz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="WHw-rE-3Lj"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <datePicker contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-8z-tHp">
-                                                                <rect key="frame" x="0.0" y="22" width="168.66666666666666" height="38"/>
-                                                                <locale key="locale" localeIdentifier="vi_VN"/>
-                                                                <connections>
-                                                                    <action selector="timeFromChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="37K-Hl-mdK"/>
-                                                                </connections>
-                                                            </datePicker>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Từ ngày" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVK-Yl-XVz">
+                                                        <rect key="frame" x="0.0" y="2" width="67" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="WHw-rE-3Lj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <datePicker contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="AZR-8z-tHp">
+                                                        <rect key="frame" x="0.0" y="25.666666666666661" width="150" height="34.333333333333343"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="PiZ-Rf-lOe"/>
+                                                        </constraints>
+                                                        <locale key="locale" localeIdentifier="vi_VN"/>
+                                                        <connections>
+                                                            <action selector="timeFromChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="37K-Hl-mdK"/>
+                                                        </connections>
+                                                    </datePicker>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="RMN-Fa-Ujr" firstAttribute="leading" secondItem="PcZ-Jd-7pt" secondAttribute="leading" id="7JR-jJ-34x"/>
-                                                    <constraint firstAttribute="trailing" secondItem="RMN-Fa-Ujr" secondAttribute="trailing" id="Efe-qF-NS1"/>
-                                                    <constraint firstAttribute="bottom" secondItem="RMN-Fa-Ujr" secondAttribute="bottom" id="Yho-Fw-Y3q"/>
-                                                    <constraint firstItem="RMN-Fa-Ujr" firstAttribute="top" secondItem="PcZ-Jd-7pt" secondAttribute="top" id="i5C-uv-XVC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AZR-8z-tHp" secondAttribute="bottom" id="ANx-Pz-acA"/>
+                                                    <constraint firstItem="AZR-8z-tHp" firstAttribute="leading" secondItem="PcZ-Jd-7pt" secondAttribute="leading" id="Ulz-pj-kfo"/>
+                                                    <constraint firstItem="WVK-Yl-XVz" firstAttribute="leading" secondItem="PcZ-Jd-7pt" secondAttribute="leading" id="gPT-2B-bl7"/>
+                                                    <constraint firstItem="WVK-Yl-XVz" firstAttribute="top" secondItem="PcZ-Jd-7pt" secondAttribute="top" constant="2" id="vDE-HR-uhW"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pZ-fm-mkk">
-                                                <rect key="frame" x="207" y="0.0" width="197" height="60"/>
+                                                <rect key="frame" x="204.66666666666663" y="0.0" width="199.33333333333337" height="60"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CqU-EG-RVm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="199.33333333333334" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đến ngày" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4Q-BQ-bIc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="20"/>
@@ -77,7 +75,10 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <datePicker contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="xuq-td-YQT">
-                                                                <rect key="frame" x="0.0" y="22" width="197" height="38"/>
+                                                                <rect key="frame" x="0.0" y="22" width="150" height="38"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="150" id="iro-YX-QKI"/>
+                                                                </constraints>
                                                                 <locale key="locale" localeIdentifier="vi_VN"/>
                                                                 <connections>
                                                                     <action selector="timeToChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="55v-Ni-SHl"/>

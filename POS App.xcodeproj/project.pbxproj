@@ -156,6 +156,8 @@
 		0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391729F82039002CB20F /* DateHelper.swift */; };
 		0BE0393029F82039002CB20F /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391929F82039002CB20F /* BaseVC.swift */; };
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
+		0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */; };
+		0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */; };
 		0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */; };
 		0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */; };
 		0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */; };
@@ -292,7 +294,7 @@
 		0BD709412A370DA200D467EC /* QRVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRVC.xib; sourceTree = "<group>"; };
 		0BD914312A4DEA96006C223B /* CustomerServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServicesCell.swift; sourceTree = "<group>"; };
 		0BD914322A4DEA96006C223B /* CustomerServicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerServicesCell.xib; sourceTree = "<group>"; };
-		0BE038DD29F81F6D002CB20F /* POS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE038DD29F81F6D002CB20F /* LN POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LN POS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE038E029F81F6D002CB20F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE038E229F81F6D002CB20F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0BE038E429F81F6D002CB20F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +324,8 @@
 		0BE0391729F82039002CB20F /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0BE0391929F82039002CB20F /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0BE0391A29F82039002CB20F /* BasePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupVC.swift; sourceTree = "<group>"; };
+		0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMainVC.swift; sourceTree = "<group>"; };
+		0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMainVC.xib; sourceTree = "<group>"; };
 		0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceVC.swift; sourceTree = "<group>"; };
 		0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServiceVC.xib; sourceTree = "<group>"; };
 		0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceCell.swift; sourceTree = "<group>"; };
@@ -590,7 +594,7 @@
 		0BE038DE29F81F6D002CB20F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BE038DD29F81F6D002CB20F /* POS App.app */,
+				0BE038DD29F81F6D002CB20F /* LN POS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -661,6 +665,7 @@
 		0BE0390229F82038002CB20F /* 1.Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BE55CE42A7D62C900D49182 /* Store */,
 				0B9BAFAA2A1A22C9008679DE /* Orther */,
 				0BB43EE029FAC4CD00F1DE85 /* Main */,
 				0BD5BAEF29F8A777009F2A66 /* ManageStore */,
@@ -761,6 +766,15 @@
 			path = 8.Base;
 			sourceTree = "<group>";
 		};
+		0BE55CE42A7D62C900D49182 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */,
+				0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		0BF417C52A3B78D400DD36DA /* DetailCalender */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,9 +838,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0BE038DC29F81F6D002CB20F /* POS App */ = {
+		0BE038DC29F81F6D002CB20F /* LN POS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "POS App" */;
+			buildConfigurationList = 0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "LN POS" */;
 			buildPhases = (
 				11D44196EB001C1BF4E4AC12 /* [CP] Check Pods Manifest.lock */,
 				0BE038D929F81F6D002CB20F /* Sources */,
@@ -838,9 +852,9 @@
 			);
 			dependencies = (
 			);
-			name = "POS App";
+			name = "LN POS";
 			productName = "POS App";
-			productReference = 0BE038DD29F81F6D002CB20F /* POS App.app */;
+			productReference = 0BE038DD29F81F6D002CB20F /* LN POS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -871,7 +885,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0BE038DC29F81F6D002CB20F /* POS App */,
+				0BE038DC29F81F6D002CB20F /* LN POS */,
 			);
 		};
 /* End PBXProject section */
@@ -891,6 +905,7 @@
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0B8F9E332A6C3DBD00D24CB3 /* ChonVNVC.xib in Resources */,
+				0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */,
 				0B1D55692A6D937E0071E8F0 /* ReportMainVC.xib in Resources */,
 				0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
@@ -1023,6 +1038,7 @@
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */,
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
+				0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
 				0B76B93F2A7441F900B91761 /* PReport.swift in Sources */,
@@ -1244,6 +1260,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
@@ -1282,6 +1299,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
@@ -1320,7 +1338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "POS App" */ = {
+		0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "LN POS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BE038F529F81F6F002CB20F /* Debug */,

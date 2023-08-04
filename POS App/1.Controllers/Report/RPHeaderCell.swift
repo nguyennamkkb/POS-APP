@@ -12,6 +12,13 @@ import AVFoundation
 
 class RPHeaderCell: UITableViewCell {
 
+    
+    
+    
+    @IBOutlet var fromdate: UITextField!
+    let datepicker = UIDatePicker()
+    
+    
     @IBOutlet var luotKhachView: UIView!
     @IBOutlet var doanhThuView: UIView!
     @IBOutlet var totalView: UIView!
@@ -28,8 +35,33 @@ class RPHeaderCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         setupUI()
+//        createDatePicker()
     }
-
+//    func createToolBar() -> UIToolbar {
+//        let toolbar =  UIToolbar()
+//        toolbar.sizeToFit()
+//
+//        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+//        toolbar.setItems([doneBtn], animated: true)
+//        return toolbar
+//    }
+//    func createDatePicker(){
+//        if #available(iOS 13.4, *) {
+//            datepicker.preferredDatePickerStyle = .wheels
+//        } else {
+//            // Fallback on earlier versions
+//        }
+//
+//        datepicker.datePickerMode   = .date
+//        let loc = Locale(identifier: "vi")
+//        datepicker.locale = loc
+//        fromdate.inputView = datepicker
+//        fromdate.inputAccessoryView =  createToolBar()
+//
+//    }
+//    @objc func donePressed(){
+//        fromdate.endEditing(true)
+//    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

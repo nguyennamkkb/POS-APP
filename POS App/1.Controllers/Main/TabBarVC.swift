@@ -22,11 +22,11 @@ class TabBarVC: UITabBarController {
         QRNavi.tabBarItem = UITabBarItem(title: "Quét", image: UIImage(systemName: "qrcode"), tag: 2)
         QRNavi.navigationBar.tintColor = UIColor.white
         
-        let payVC = ManageStoreVC()
-        let payNavi = UINavigationController(rootViewController: payVC)
-        payNavi.tabBarItem = UITabBarItem(title: "Cửa hàng", image: UIImage(systemName: "house"), tag: 3)
+        let store = StoreMainVC()
+        let storeNavi = UINavigationController(rootViewController: store)
+        storeNavi.tabBarItem = UITabBarItem(title: "Cửa hàng", image: UIImage(systemName: "house"), tag: 3)
         
-        self.viewControllers = [mainNavi, QRNavi, payNavi]
+        self.viewControllers = [mainNavi, QRNavi, storeNavi]
         setLayout()
     }
     func setLayout(){
