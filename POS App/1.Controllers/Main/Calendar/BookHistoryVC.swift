@@ -1,25 +1,22 @@
 //
-//  MainVC.swift
-//  POS App
+//  BookHistoryVC.swift
+//  LN POS
 //
-//  Created by namnl on 27/04/2023.
+//  Created by namnl on 05/08/2023.
 //
 
 import UIKit
-import SideMenu
-import ObjectMapper
 import FittedSheets
+import ObjectMapper
 
-class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+class BookHistoryVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+
     
-
-    @IBOutlet var BtnViewAllBook: UIButton!
-    @IBOutlet var countPending: UILabel!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var taoLichBtn: UIButton!
-    @IBOutlet var menuView: UIView!
+    @IBOutlet var btnFilter: UIButton!
     var paramSearch = ParamSearchBook(store_id: Common.userMaster.id ?? 0)
     var tableData = [PBookCalender]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,15 +24,13 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
         getBooks()
+    }
+    @IBAction func btnBackPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    func setupUI(){
 
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-   
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
@@ -124,49 +119,11 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
-
-
-    
-    func setupUI(){
-        menuView.layer.borderWidth = 0.5
-        menuView.layer.borderColor = myColor.greyDrak?.cgColor
-        taoLichBtn.layer.cornerRadius = myCornerRadius.corner5
-        BtnViewAllBook.layer.cornerRadius = myCornerRadius.corner5
-    }
-    
-    @IBAction func btnViewAllBookPressed(_ sender: UIButton) {
-        let vc = BookHistoryVC()
-        self.pushVC(controller: vc)
-    }
-    
-    @IBAction func sideLeftPressed(_ sender: UIButton) {
-        //        let menu = SideMenuNavigationController(rootViewController: SlideMenuVC())
-        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: SlideMenuVC())
-        
-        SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
-        SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        leftMenuNavigationController.menuWidth = 300
-        present(leftMenuNavigationController, animated: true, completion: nil)
-    }
-    
-    @IBAction func BtnCreateCalenderPressed(_ sender: Any) {
-        let vc = CreateCalenderVC()
-        vc.actionOK = {
-            [weak self] in
-            guard let self = self else {return}
-            self.getBooks()
-        }
-        self.pushVC(controller: vc)
-
-    }
-    
     func getBooks(){
-        ServiceManager.common.getAllBookInSuccess(param: "?\(Utility.getParamFromDirectory(item: paramSearch.toJSON()))"){
+        ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: paramSearch.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
-                self.countPending.text = "Có \(response?.meta?.totalCount ?? 0) lượt chưa hoàn thành."
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -187,16 +144,15 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         }
     }
    
-//    @IBAction func btnSearchPressed(_ sender: UIButton) {
-//        let vc = MainFilterVC()
-//        vc.actionFilter = {
-//            [weak self] item in
-//            guard let self = self else {return}
-//            self.paramSearch = item
-//            print(item.toJSON())
-//            self.getBooks()
-//        }
-//        self.present(vc, animated: true)
-//    }
-//ádasd
+    @IBAction func btnSearchPressed(_ sender: UIButton) {
+        let vc = MainFilterVC()
+        vc.actionFilter = {
+            [weak self] item in
+            guard let self = self else {return}
+            self.paramSearch = item
+            print(item.toJSON())
+            self.getBooks()
+        }
+        self.present(vc, animated: true)
+    }
 }

@@ -19,7 +19,8 @@ fileprivate class ListCommonService {
     static let employee = ServiceManager.ROOT + "employee"
     static let auth = ServiceManager.ROOT + "auth/signin"
     static let book = ServiceManager.ROOT + "books"
-    static let report = ServiceManager.ROOT + "books/RpEachEmployee"
+    static let report = ServiceManager.ROOT + "books/report"
+    static let bookinsuccess = ServiceManager.ROOT + "books/bookinsuccess"
     static let service = ServiceManager.ROOT + "products"
 }
 
@@ -32,6 +33,7 @@ fileprivate enum ECommonURLs {
     case service
     case checkuser
     case report
+    case bookinsuccess
     
     
     func getPath() -> String {
@@ -52,6 +54,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.checkuser
         case .report:
             return ListCommonService.report
+         case .bookinsuccess:
+            return ListCommonService.bookinsuccess
             
         }
         func getMethod() -> HTTPMethod {
@@ -408,6 +412,27 @@ class CommonServices {
         
         
         let router = ECommonURLs.book.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getAllBookInSuccess(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        
+        
+        let router = ECommonURLs.bookinsuccess.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }

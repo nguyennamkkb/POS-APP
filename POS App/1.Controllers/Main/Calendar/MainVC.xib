@@ -13,11 +13,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="LN_POS" customModuleProvider="target">
             <connections>
-                <outlet property="btnSearch" destination="DmY-Ez-Jfo" id="Dqb-Ty-OBc"/>
+                <outlet property="BtnViewAllBook" destination="Gwt-nS-HQe" id="t1G-LL-pDn"/>
                 <outlet property="countPending" destination="vFg-oD-fpg" id="7bI-b6-PT5"/>
                 <outlet property="menuView" destination="lgj-FZ-x5E" id="kdP-OV-5uw"/>
                 <outlet property="tableView" destination="QBI-be-t06" id="iJY-tE-JvD"/>
-                <outlet property="taoLichBtn" destination="Gwt-nS-HQe" id="etz-mt-eJx"/>
+                <outlet property="taoLichBtn" destination="jtM-iU-7sP" id="INv-9s-QkC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,11 +39,11 @@
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQf-lw-MVx" userLabel="btn Side left">
-                            <rect key="frame" x="10" y="2" width="40" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQf-lw-MVx" userLabel="btn Side left">
+                            <rect key="frame" x="10" y="7" width="30" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="A2Z-RD-ubR"/>
-                                <constraint firstAttribute="width" constant="40" id="FMY-ab-EKP"/>
+                                <constraint firstAttribute="height" constant="30" id="A2Z-RD-ubR"/>
+                                <constraint firstAttribute="width" constant="30" id="FMY-ab-EKP"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal">
@@ -53,17 +53,30 @@
                                 <action selector="sideLeftPressed:" destination="-1" eventType="touchUpInside" id="zRM-vT-HGc"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtM-iU-7sP">
-                            <rect key="frame" x="159" y="4" width="75" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtM-iU-7sP">
+                            <rect key="frame" x="353" y="7" width="30" height="30"/>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Lei-K8-pqV"/>
+                                <constraint firstAttribute="width" constant="30" id="zfR-Fb-qw0"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                            </state>
+                            <connections>
+                                <action selector="BtnCreateCalenderPressed:" destination="-1" eventType="touchUpInside" id="GPL-20-UjG"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="LQf-lw-MVx" firstAttribute="centerY" secondItem="qNb-4y-KKC" secondAttribute="centerY" id="0f9-ba-uW6"/>
                         <constraint firstAttribute="height" constant="44" id="0t6-0m-L33"/>
+                        <constraint firstItem="jtM-iU-7sP" firstAttribute="centerY" secondItem="qNb-4y-KKC" secondAttribute="centerY" id="Krh-Ig-2oK"/>
+                        <constraint firstAttribute="trailing" secondItem="jtM-iU-7sP" secondAttribute="trailing" constant="10" id="XGV-kX-Xjp"/>
                         <constraint firstAttribute="trailing" secondItem="87c-dw-4qX" secondAttribute="trailing" id="ZGj-AW-BXB"/>
                         <constraint firstAttribute="bottom" secondItem="87c-dw-4qX" secondAttribute="bottom" id="f6I-aj-5Gl"/>
                         <constraint firstItem="LQf-lw-MVx" firstAttribute="leading" secondItem="qNb-4y-KKC" secondAttribute="leading" constant="10" id="hWq-41-Kx0"/>
@@ -83,30 +96,13 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Tạo lịch"/>
+                            <state key="normal" title="Tất cả"/>
                             <connections>
-                                <action selector="BtnCreateCalenderPressed:" destination="-1" eventType="touchUpInside" id="Dz2-UF-nUO"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmY-Ez-Jfo" userLabel="btnSearch">
-                            <rect key="frame" x="110" y="6" width="44" height="44"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="DRg-gU-bLI"/>
-                                <constraint firstAttribute="width" constant="44" id="Y9C-R4-WpW"/>
-                            </constraints>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal">
-                                <imageReference key="image" image="ic_filter" symbolScale="medium"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
-                            </state>
-                            <connections>
-                                <action selector="btnSearchPressed:" destination="-1" eventType="touchUpInside" id="EY3-D7-OD3"/>
+                                <action selector="btnViewAllBookPressed:" destination="-1" eventType="touchUpInside" id="NZH-B8-zDB"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luot khach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFg-oD-fpg">
-                            <rect key="frame" x="303" y="18.666666666666671" width="80" height="18.666666666666671"/>
+                            <rect key="frame" x="110" y="18.666666666666671" width="273" height="18.666666666666671"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -114,12 +110,11 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="vFg-oD-fpg" firstAttribute="leading" secondItem="Gwt-nS-HQe" secondAttribute="trailing" constant="10" id="E6y-OV-Uo5"/>
                         <constraint firstItem="vFg-oD-fpg" firstAttribute="centerY" secondItem="lgj-FZ-x5E" secondAttribute="centerY" id="KlN-nj-3Nd"/>
                         <constraint firstAttribute="height" constant="56" id="NEH-t0-DIr"/>
                         <constraint firstItem="Gwt-nS-HQe" firstAttribute="leading" secondItem="lgj-FZ-x5E" secondAttribute="leading" constant="10" id="Pem-46-vDe"/>
-                        <constraint firstItem="DmY-Ez-Jfo" firstAttribute="centerY" secondItem="lgj-FZ-x5E" secondAttribute="centerY" id="PfO-Ht-f5O"/>
                         <constraint firstItem="Gwt-nS-HQe" firstAttribute="centerY" secondItem="lgj-FZ-x5E" secondAttribute="centerY" id="g42-bs-g1l"/>
-                        <constraint firstItem="DmY-Ez-Jfo" firstAttribute="leading" secondItem="Gwt-nS-HQe" secondAttribute="trailing" constant="10" id="hDI-qz-GqQ"/>
                         <constraint firstAttribute="trailing" secondItem="vFg-oD-fpg" secondAttribute="trailing" constant="10" id="qBj-M0-jVs"/>
                     </constraints>
                 </view>
@@ -133,7 +128,7 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-be-t06">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-be-t06">
                     <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
@@ -164,7 +159,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_filter" width="24" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sidebar.left" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

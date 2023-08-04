@@ -158,6 +158,8 @@
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
 		0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */; };
 		0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */; };
+		0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */; };
+		0BE55CEC2A7D6DE600D49182 /* BookHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */; };
 		0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */; };
 		0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */; };
 		0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */; };
@@ -326,6 +328,8 @@
 		0BE0391A29F82039002CB20F /* BasePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupVC.swift; sourceTree = "<group>"; };
 		0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMainVC.swift; sourceTree = "<group>"; };
 		0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMainVC.xib; sourceTree = "<group>"; };
+		0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHistoryVC.swift; sourceTree = "<group>"; };
+		0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHistoryVC.xib; sourceTree = "<group>"; };
 		0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceVC.swift; sourceTree = "<group>"; };
 		0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServiceVC.xib; sourceTree = "<group>"; };
 		0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceCell.swift; sourceTree = "<group>"; };
@@ -402,6 +406,8 @@
 				0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */,
 				0BB1D21E2A32421400516F25 /* DichVuCell.swift */,
 				0BB1D21F2A32421400516F25 /* DichVuCell.xib */,
+				0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */,
+				0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -919,6 +925,7 @@
 				0BB420652A2A5ED10008B7D7 /* EmployeeVC.xib in Resources */,
 				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
 				0BD5BACD29F8A439009F2A66 /* LoginEmployeeVC.xib in Resources */,
+				0BE55CEC2A7D6DE600D49182 /* BookHistoryVC.xib in Resources */,
 				0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */,
 				0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
@@ -1022,6 +1029,7 @@
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B33C63C2A70346900201CA0 /* RPHeaderCell.swift in Sources */,
 				0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */,
+				0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */,
 				0BD914332A4DEA96006C223B /* CustomerServicesCell.swift in Sources */,
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
