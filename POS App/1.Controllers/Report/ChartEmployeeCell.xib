@@ -18,34 +18,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="439" height="312"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLX-T8-AOt" userLabel="line">
-                        <rect key="frame" x="0.0" y="0.0" width="439" height="0.66666666666666663"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="LhC-bX-FEh"/>
-                        </constraints>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhân viên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-7Y-QBN">
-                        <rect key="frame" x="5" y="10" width="81" height="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhân viên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-7Y-QBN">
+                        <rect key="frame" x="10" y="10" width="81" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="81" id="5rN-R8-VfM"/>
                             <constraint firstAttribute="height" constant="25" id="DFs-lt-kB4"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên nhân viên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K43-Rg-ZqE">
-                        <rect key="frame" x="91" y="10" width="343" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="n4F-ng-SQQ"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                        <connections>
-                            <action selector="EmployeeChanged:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="Yuq-Ki-nP1"/>
-                        </connections>
-                    </textField>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="icX-rp-Wkb">
                         <rect key="frame" x="5" y="45" width="429" height="100"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,21 +39,14 @@
                 <constraints>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="icX-rp-Wkb" secondAttribute="bottom" priority="999" id="1fu-YZ-ugs"/>
                     <constraint firstAttribute="trailing" secondItem="icX-rp-Wkb" secondAttribute="trailing" constant="5" id="2aN-hG-84x"/>
-                    <constraint firstItem="K43-Rg-ZqE" firstAttribute="leading" secondItem="zhy-7Y-QBN" secondAttribute="trailing" constant="5" id="40L-vV-KjH"/>
-                    <constraint firstItem="mLX-T8-AOt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="A7P-Jq-RW4"/>
                     <constraint firstItem="icX-rp-Wkb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="BJi-cm-EcC"/>
                     <constraint firstItem="icX-rp-Wkb" firstAttribute="top" secondItem="zhy-7Y-QBN" secondAttribute="bottom" constant="10" id="CGz-Lf-AzH"/>
-                    <constraint firstItem="mLX-T8-AOt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HVr-rl-SJN"/>
                     <constraint firstItem="zhy-7Y-QBN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XI4-fv-jg2"/>
-                    <constraint firstItem="K43-Rg-ZqE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Xts-my-BZS"/>
-                    <constraint firstAttribute="trailing" secondItem="mLX-T8-AOt" secondAttribute="trailing" id="gyj-lP-w8q"/>
-                    <constraint firstAttribute="trailing" secondItem="K43-Rg-ZqE" secondAttribute="trailing" constant="5" id="ivY-5l-j9A"/>
-                    <constraint firstItem="zhy-7Y-QBN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="rXk-oJ-DCH"/>
+                    <constraint firstItem="zhy-7Y-QBN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rXk-oJ-DCH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="employeeTF" destination="K43-Rg-ZqE" id="TtX-zs-Anz"/>
                 <outlet property="tableView" destination="icX-rp-Wkb" id="4oi-8G-NTb"/>
                 <outlet property="tableViewHeightConstraint" destination="VdF-c9-U3v" id="Tpr-9q-bh3"/>
             </connections>

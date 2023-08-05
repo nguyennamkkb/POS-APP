@@ -9,11 +9,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateServiceVC" customModule="POS_App" customModuleProvider="target">
             <connections>
@@ -34,12 +29,13 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BF-WD-paY" userLabel="back">
-                            <rect key="frame" x="24" y="4.6666666666666643" width="35" height="35"/>
+                            <rect key="frame" x="10" y="4.6666666666666643" width="35" height="35"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="J0g-ab-9dD"/>
                                 <constraint firstAttribute="height" constant="35" id="P6Z-yf-OVP"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <color key="tintColor" systemColor="systemBlueColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ic_back"/>
@@ -49,7 +45,7 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm dịch vụ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIf-Sf-xkl">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -61,9 +57,16 @@
                         <constraint firstAttribute="trailing" secondItem="UIf-Sf-xkl" secondAttribute="trailing" id="Csv-h7-LyW"/>
                         <constraint firstItem="9BF-WD-paY" firstAttribute="centerY" secondItem="Jdh-Iy-p44" secondAttribute="centerY" id="LJ8-7x-VoF"/>
                         <constraint firstItem="UIf-Sf-xkl" firstAttribute="centerY" secondItem="Jdh-Iy-p44" secondAttribute="centerY" id="R2l-uO-LcE"/>
-                        <constraint firstItem="9BF-WD-paY" firstAttribute="leading" secondItem="Jdh-Iy-p44" secondAttribute="leading" constant="24" id="SuE-Q7-tbd"/>
+                        <constraint firstItem="9BF-WD-paY" firstAttribute="leading" secondItem="Jdh-Iy-p44" secondAttribute="leading" constant="10" id="SuE-Q7-tbd"/>
                         <constraint firstAttribute="height" constant="44" id="fWf-Fl-Xay"/>
                         <constraint firstItem="UIf-Sf-xkl" firstAttribute="leading" secondItem="Jdh-Iy-p44" secondAttribute="leading" id="hbc-q7-vGd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZR8-FB-kmH" userLabel="line">
+                    <rect key="frame" x="0.0" y="102" width="393" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="50Z-gF-Lqw"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ElF-Pa-yOR">
@@ -76,10 +79,13 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jdh-Iy-p44" secondAttribute="trailing" id="0dE-eS-swb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ElF-Pa-yOR" secondAttribute="bottom" id="9bK-vd-Mqo"/>
+                <constraint firstItem="ZR8-FB-kmH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9pO-Cc-sGy"/>
+                <constraint firstItem="ZR8-FB-kmH" firstAttribute="bottom" secondItem="Jdh-Iy-p44" secondAttribute="bottom" id="H29-hu-2JX"/>
                 <constraint firstItem="Jqi-pe-uqc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jt4-9z-zEA"/>
                 <constraint firstItem="ElF-Pa-yOR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mi5-Ml-aYc"/>
                 <constraint firstItem="ElF-Pa-yOR" firstAttribute="top" secondItem="Jqi-pe-uqc" secondAttribute="bottom" constant="10" id="OhJ-IU-Epl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jqi-pe-uqc" secondAttribute="trailing" id="T3x-hb-Xrd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZR8-FB-kmH" secondAttribute="trailing" id="Uwc-sF-MAM"/>
                 <constraint firstItem="Jdh-Iy-p44" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gvu-c7-vJy"/>
                 <constraint firstItem="Jqi-pe-uqc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="htG-YB-NvJ"/>
                 <constraint firstItem="Jdh-Iy-p44" firstAttribute="bottom" secondItem="Jqi-pe-uqc" secondAttribute="bottom" id="oab-5X-XgN"/>

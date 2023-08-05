@@ -10,11 +10,14 @@ import UIKit
 class CustomerItemCell: UITableViewCell {
 
     
+    @IBOutlet var itemView: UIView!
     var actionViewInfo: ClosureAction?
     @IBOutlet var nameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        itemView.layer.cornerRadius = myCornerRadius.corner5
+        itemView.layer.borderWidth = 0.05
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

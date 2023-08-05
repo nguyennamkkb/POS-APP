@@ -3,17 +3,12 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Regular.ttf">
-            <string>Rubik-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd5-yS-2fN">
-                        <rect key="frame" x="0.0" y="0.0" width="464" height="55"/>
+                        <rect key="frame" x="10" y="0.0" width="444" height="55"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách hàng A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuZ-Em-kPF">
-                                <rect key="frame" x="20.000000000000007" y="17" width="115.66666666666669" height="21"/>
-                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                <rect key="frame" x="5" y="18.333333333333329" width="100.66666666666667" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ay-47-I55">
-                                <rect key="frame" x="0.0" y="10" width="454" height="35"/>
+                                <rect key="frame" x="10" y="10" width="424" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="bnX-Us-ZBO"/>
                                 </constraints>
@@ -48,26 +43,27 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.48448228119999998" green="0.68162246780000002" blue="1" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9ay-47-I55" firstAttribute="leading" secondItem="yd5-yS-2fN" secondAttribute="leading" id="EsX-uK-y2H"/>
+                            <constraint firstItem="9ay-47-I55" firstAttribute="leading" secondItem="yd5-yS-2fN" secondAttribute="leading" constant="10" id="EsX-uK-y2H"/>
                             <constraint firstItem="yuZ-Em-kPF" firstAttribute="centerY" secondItem="yd5-yS-2fN" secondAttribute="centerY" id="FRl-oY-KVv"/>
                             <constraint firstItem="9ay-47-I55" firstAttribute="centerY" secondItem="yd5-yS-2fN" secondAttribute="centerY" id="GJW-JU-cWX"/>
                             <constraint firstAttribute="height" constant="55" id="ZwW-hz-3rU"/>
                             <constraint firstAttribute="trailing" secondItem="9ay-47-I55" secondAttribute="trailing" constant="10" id="hlZ-fC-1Jr"/>
-                            <constraint firstItem="yuZ-Em-kPF" firstAttribute="leading" secondItem="yd5-yS-2fN" secondAttribute="leading" constant="20" id="k95-0O-Oxc"/>
+                            <constraint firstItem="yuZ-Em-kPF" firstAttribute="leading" secondItem="yd5-yS-2fN" secondAttribute="leading" constant="5" id="k95-0O-Oxc"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="yd5-yS-2fN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1R8-pt-uHI"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yd5-yS-2fN" secondAttribute="bottom" id="2AS-tv-cKG"/>
-                    <constraint firstItem="yd5-yS-2fN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2WD-PX-nCX"/>
-                    <constraint firstAttribute="trailing" secondItem="yd5-yS-2fN" secondAttribute="trailing" id="73F-oo-T3p"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yd5-yS-2fN" secondAttribute="bottom" constant="7" id="2AS-tv-cKG"/>
+                    <constraint firstItem="yd5-yS-2fN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2WD-PX-nCX"/>
+                    <constraint firstAttribute="trailing" secondItem="yd5-yS-2fN" secondAttribute="trailing" constant="10" id="73F-oo-T3p"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="itemView" destination="yd5-yS-2fN" id="Q7A-6I-r2c"/>
                 <outlet property="nameLbl" destination="yuZ-Em-kPF" id="SOG-a7-Erq"/>
             </connections>
             <point key="canvasLocation" x="219.84732824427479" y="118.30985915492958"/>
@@ -80,9 +76,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

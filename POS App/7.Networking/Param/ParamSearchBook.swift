@@ -14,15 +14,15 @@ class ParamSearchBook: Mappable {
     var status: Int?
     var idCustomer: Int?
     var idEmployee: Int?
-    var from: Int?
-    var to: Int?
+    var from: Int64?
+    var to: Int64?
     var cksRequest: String?
     var timeRequest: Int?
     
     init(){}
     
     
-    init(store_id: Int, status: Int? = nil, from: Int? = nil,to: Int? = nil, idCustomer: Int? = nil, idEmployee: Int? = nil){
+    init(store_id: Int, status: Int? = nil, from: Int64? = nil,to: Int64? = nil, idCustomer: Int? = nil, idEmployee: Int? = nil){
         let mili = Common.getMilisecondNow()
         self.store_id  = store_id
         self.status = status

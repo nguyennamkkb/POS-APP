@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnD-gi-aGo">
-                        <rect key="frame" x="0.0" y="0.0" width="433" height="87"/>
+                        <rect key="frame" x="10" y="0.0" width="413" height="87"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cj-wp-E7i">
                                 <rect key="frame" x="5" y="5" width="44" height="20"/>
@@ -52,10 +52,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MnD-gi-aGo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ISu-17-Dhu"/>
+                    <constraint firstItem="MnD-gi-aGo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ISu-17-Dhu"/>
                     <constraint firstItem="MnD-gi-aGo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="L5e-WT-3eD"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MnD-gi-aGo" secondAttribute="bottom" constant="5" id="oNZ-hn-0uu"/>
-                    <constraint firstAttribute="trailing" secondItem="MnD-gi-aGo" secondAttribute="trailing" id="rw9-eo-qmM"/>
+                    <constraint firstAttribute="trailing" secondItem="MnD-gi-aGo" secondAttribute="trailing" constant="10" id="rw9-eo-qmM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

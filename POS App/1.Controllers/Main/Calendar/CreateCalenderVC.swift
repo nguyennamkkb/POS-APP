@@ -28,7 +28,6 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
     var listServices = [PServices]()
     @IBOutlet var dateTimePicker: UIDatePicker!
     
-    @IBOutlet var HeadTableView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var totalAmountLbl: UILabel!
     
@@ -50,12 +49,14 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         chonKHView.layer.cornerRadius = myCornerRadius.corner10
         btnChonDichVu.layer.cornerRadius = myCornerRadius.corner10
         btnChot.layer.cornerRadius = myCornerRadius.corner10
-        tableHeader.isHidden = true
+        
+        
     }
     
     func bindData(item: PBookCalender){
         itemBookUpdate = item
         statusCreateOrUpdate = 1
+        
     }
     func setupData(){
         khachHangLb.text = itemBookUpdate.customer?.fullName ?? "Chọn khách hàng"
@@ -63,8 +64,15 @@ class CreateCalenderVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
         employeeSelected = itemBookUpdate.employee ?? PEmployee()
         customerSelected = itemBookUpdate.customer  ?? PCustomer()
         listServices = Mapper<PServices>().mapArray(JSONString: itemBookUpdate.listService ?? "" ) ?? [PServices]()
-        dateTimePicker.date = Common.dateFromUnixTimestamp(milliseconds: Double( itemBookUpdate.start ?? "0") ?? 0)
+//        print("timeInterval update\(itemBookUpdate.start ?? "0")")
+        
         updateAmount()
+        if statusCreateOrUpdate == 1 {
+            tableHeader.isHidden = false
+            dateTimePicker.date = Common.dateFromUnixTimestamp(milliseconds: Double( itemBookUpdate.start ?? "0") ?? 0    )
+        }else{
+            tableHeader.isHidden = true
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listServices.count

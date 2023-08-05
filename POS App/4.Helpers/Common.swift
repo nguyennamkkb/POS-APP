@@ -15,7 +15,7 @@ class Common {
     public static var KEY_APP = "50829317681RT3RUH3EZ"
     public static var isInternet = false//false bat tinh năng ckeck ẩn menu để false
     public static var isRunningUpOffW = false
-    public static var MillisecondsOfDay = 86400000 - 1
+    public static var MillisecondsOfDay: Int64 = 86400000 - 1
     public static var userMaster: PStore = PStore()
     public static var anhChupAvatar: String = ""
     static var dateFormatter = DateFormatter()
@@ -23,7 +23,7 @@ class Common {
         let date = Date(milliseconds: Int64(time) ?? 0)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
         
         let formattedDateString = dateFormatter.string(from: date)
         return (formattedDateString) // Output: "11-03-2023 14:10"
@@ -106,6 +106,7 @@ class Common {
     }
     
     public static func dateFromUnixTimestamp(milliseconds: Double) -> Date {
+        
         return Date(timeIntervalSince1970: milliseconds / 1000.0)
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B049BD92A7E365500A2295A /* RPListInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B049BD72A7E365500A2295A /* RPListInfoVC.swift */; };
+		0B049BDA2A7E365500A2295A /* RPListInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B049BD82A7E365500A2295A /* RPListInfoVC.xib */; };
+		0B049BDD2A7E37D300A2295A /* RPInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B049BDB2A7E37D300A2295A /* RPInfoCell.swift */; };
+		0B049BDE2A7E37D300A2295A /* RPInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */; };
 		0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */; };
 		0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */; };
 		0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */; };
@@ -35,6 +39,7 @@
 		0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */; };
 		0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */; };
 		0B3D44F82A2F79B200A6186C /* ChonDichVuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */; };
+		0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */; };
 		0B5012332A516899009D3C0B /* MainFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5012312A516899009D3C0B /* MainFilterVC.swift */; };
 		0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B5012322A516899009D3C0B /* MainFilterVC.xib */; };
 		0B5B0EB42A2B564600E4B48A /* CreateEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5B0EB22A2B564600E4B48A /* CreateEmployeeVC.swift */; };
@@ -155,6 +160,10 @@
 		0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391729F82039002CB20F /* DateHelper.swift */; };
 		0BE0393029F82039002CB20F /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391929F82039002CB20F /* BaseVC.swift */; };
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
+		0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */; };
+		0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */; };
+		0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */; };
+		0BE55CEC2A7D6DE600D49182 /* BookHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */; };
 		0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */; };
 		0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */; };
 		0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */; };
@@ -170,6 +179,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B049BD72A7E365500A2295A /* RPListInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPListInfoVC.swift; sourceTree = "<group>"; };
+		0B049BD82A7E365500A2295A /* RPListInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPListInfoVC.xib; sourceTree = "<group>"; };
+		0B049BDB2A7E37D300A2295A /* RPInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPInfoCell.swift; sourceTree = "<group>"; };
+		0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPInfoCell.xib; sourceTree = "<group>"; };
 		0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 		0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDayCell.swift; sourceTree = "<group>"; };
@@ -198,6 +211,7 @@
 		0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuVC.xib; sourceTree = "<group>"; };
 		0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVuCell.swift; sourceTree = "<group>"; };
 		0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuCell.xib; sourceTree = "<group>"; };
+		0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beautiful-color-palettes-combinations-schemes-rainbow-dash.png"; sourceTree = "<group>"; };
 		0B5012312A516899009D3C0B /* MainFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFilterVC.swift; sourceTree = "<group>"; };
 		0B5012322A516899009D3C0B /* MainFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainFilterVC.xib; sourceTree = "<group>"; };
 		0B5B0EB22A2B564600E4B48A /* CreateEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVC.swift; sourceTree = "<group>"; };
@@ -290,7 +304,7 @@
 		0BD709412A370DA200D467EC /* QRVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRVC.xib; sourceTree = "<group>"; };
 		0BD914312A4DEA96006C223B /* CustomerServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServicesCell.swift; sourceTree = "<group>"; };
 		0BD914322A4DEA96006C223B /* CustomerServicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerServicesCell.xib; sourceTree = "<group>"; };
-		0BE038DD29F81F6D002CB20F /* POS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE038DD29F81F6D002CB20F /* LN POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LN POS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE038E029F81F6D002CB20F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE038E229F81F6D002CB20F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0BE038E429F81F6D002CB20F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +334,10 @@
 		0BE0391729F82039002CB20F /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0BE0391929F82039002CB20F /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0BE0391A29F82039002CB20F /* BasePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupVC.swift; sourceTree = "<group>"; };
+		0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMainVC.swift; sourceTree = "<group>"; };
+		0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMainVC.xib; sourceTree = "<group>"; };
+		0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHistoryVC.swift; sourceTree = "<group>"; };
+		0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHistoryVC.xib; sourceTree = "<group>"; };
 		0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceVC.swift; sourceTree = "<group>"; };
 		0BF417BE2A3B5CDF00DD36DA /* CreateServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServiceVC.xib; sourceTree = "<group>"; };
 		0BF417C12A3B5E2700DD36DA /* CreateServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceCell.swift; sourceTree = "<group>"; };
@@ -396,6 +414,8 @@
 				0B3D44F62A2F79B200A6186C /* ChonDichVuCell.xib */,
 				0BB1D21E2A32421400516F25 /* DichVuCell.swift */,
 				0BB1D21F2A32421400516F25 /* DichVuCell.xib */,
+				0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */,
+				0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -440,6 +460,7 @@
 		0BB43EEF29FAD82300F1DE85 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */,
 				0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */,
 				0BB43EF829FAD82F00F1DE85 /* Rubik-BlackItalic.ttf */,
 				0BB43EF729FAD82E00F1DE85 /* Rubik-Bold.ttf */,
@@ -557,6 +578,10 @@
 				0B33C63B2A70346900201CA0 /* RPHeaderCell.xib */,
 				0B73E5BA2A72CB1800C4575A /* RPEmployeeCell.swift */,
 				0B73E5BB2A72CB1800C4575A /* RPEmployeeCell.xib */,
+				0B049BD72A7E365500A2295A /* RPListInfoVC.swift */,
+				0B049BD82A7E365500A2295A /* RPListInfoVC.xib */,
+				0B049BDB2A7E37D300A2295A /* RPInfoCell.swift */,
+				0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -587,7 +612,7 @@
 		0BE038DE29F81F6D002CB20F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BE038DD29F81F6D002CB20F /* POS App.app */,
+				0BE038DD29F81F6D002CB20F /* LN POS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -658,6 +683,7 @@
 		0BE0390229F82038002CB20F /* 1.Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BE55CE42A7D62C900D49182 /* Store */,
 				0B9BAFAA2A1A22C9008679DE /* Orther */,
 				0BB43EE029FAC4CD00F1DE85 /* Main */,
 				0BD5BAEF29F8A777009F2A66 /* ManageStore */,
@@ -758,6 +784,15 @@
 			path = 8.Base;
 			sourceTree = "<group>";
 		};
+		0BE55CE42A7D62C900D49182 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */,
+				0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		0BF417C52A3B78D400DD36DA /* DetailCalender */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,9 +856,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0BE038DC29F81F6D002CB20F /* POS App */ = {
+		0BE038DC29F81F6D002CB20F /* LN POS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "POS App" */;
+			buildConfigurationList = 0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "LN POS" */;
 			buildPhases = (
 				11D44196EB001C1BF4E4AC12 /* [CP] Check Pods Manifest.lock */,
 				0BE038D929F81F6D002CB20F /* Sources */,
@@ -835,9 +870,9 @@
 			);
 			dependencies = (
 			);
-			name = "POS App";
+			name = "LN POS";
 			productName = "POS App";
-			productReference = 0BE038DD29F81F6D002CB20F /* POS App.app */;
+			productReference = 0BE038DD29F81F6D002CB20F /* LN POS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -868,7 +903,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0BE038DC29F81F6D002CB20F /* POS App */,
+				0BE038DC29F81F6D002CB20F /* LN POS */,
 			);
 		};
 /* End PBXProject section */
@@ -878,15 +913,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B049BDA2A7E365500A2295A /* RPListInfoVC.xib in Resources */,
 				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
 				0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
+				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0B8F9E332A6C3DBD00D24CB3 /* ChonVNVC.xib in Resources */,
+				0B049BDE2A7E37D300A2295A /* RPInfoCell.xib in Resources */,
+				0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */,
 				0B1D55692A6D937E0071E8F0 /* ReportMainVC.xib in Resources */,
 				0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
@@ -900,6 +939,7 @@
 				0BB420652A2A5ED10008B7D7 /* EmployeeVC.xib in Resources */,
 				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
 				0BD5BACD29F8A439009F2A66 /* LoginEmployeeVC.xib in Resources */,
+				0BE55CEC2A7D6DE600D49182 /* BookHistoryVC.xib in Resources */,
 				0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */,
 				0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
@@ -1000,9 +1040,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5D185E2A0A9F69004E47FD /* PStore.swift in Sources */,
+				0B049BD92A7E365500A2295A /* RPListInfoVC.swift in Sources */,
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B33C63C2A70346900201CA0 /* RPHeaderCell.swift in Sources */,
 				0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */,
+				0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */,
 				0BD914332A4DEA96006C223B /* CustomerServicesCell.swift in Sources */,
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
@@ -1019,6 +1061,7 @@
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BD5BAC829F8A419009F2A66 /* LoginOwnerVC.swift in Sources */,
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
+				0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
 				0B76B93F2A7441F900B91761 /* PReport.swift in Sources */,
@@ -1085,6 +1128,7 @@
 				0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */,
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0B5012332A516899009D3C0B /* MainFilterVC.swift in Sources */,
+				0B049BDD2A7E37D300A2295A /* RPInfoCell.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
 				0B2054A02A3A28CB00BA333D /* ServiceDetailVC.swift in Sources */,
 				0B9244292A4888D8001AF674 /* CustomerDetailVC.swift in Sources */,
@@ -1240,6 +1284,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
@@ -1278,6 +1323,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
@@ -1316,7 +1362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "POS App" */ = {
+		0BE038F429F81F6F002CB20F /* Build configuration list for PBXNativeTarget "LN POS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BE038F529F81F6F002CB20F /* Debug */,

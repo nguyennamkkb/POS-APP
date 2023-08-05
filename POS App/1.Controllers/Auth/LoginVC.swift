@@ -88,9 +88,9 @@ class LoginVC: BaseVC {
                         self.phoneTF.text = pStore.phone
                         self.passwordTF.text = pStore.password
                         self.login(phone: pStore.phone ?? "", password: pStore.password ?? "")
-                        print("thanh cong")
+//                        print("thanh cong")
                     } else {
-                        print("That bai")
+//                        print("That bai")
                     }
                 }
             }

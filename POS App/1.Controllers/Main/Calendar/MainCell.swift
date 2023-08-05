@@ -53,6 +53,10 @@ class MainCell: UITableViewCell {
         okBtn.isHidden = true
         payBtn.isHidden = true
         btnRun.isHidden = true
+        
+//        itemView.layer.shadowColor = UIColor.gray.cgColor
+//        itemView.layer.shadowOffset = CGSize(width: 1, height: 1)
+//        itemView.layer.shadowOpacity = 0.3
     }
     
     func bindData(item: PBookCalender){
@@ -63,7 +67,7 @@ class MainCell: UITableViewCell {
         nhanVienLb.text = "\(item.employee?.fullName ?? "")"
         timeLb.text = Common.getDateFormatFromMiliseonds(time: item.start ?? "")
         
-        itemView.layer.borderWidth = 1
+        itemView.layer.borderWidth = 1.1
         itemView.layer.borderColor = getColorByStatus(status: item.status ?? 0).cgColor
         setupButton()
         

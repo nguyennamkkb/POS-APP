@@ -3,19 +3,14 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
-        </array>
-    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportMainVC" customModule="POS_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportMainVC" customModule="LN_POS" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="Jjj-CQ-dPa" id="PGV-ab-XvR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -49,7 +44,7 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Báo cáo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUD-z9-paw">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
-                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -66,6 +61,13 @@
                         <constraint firstItem="HUD-z9-paw" firstAttribute="leading" secondItem="nQP-hy-ulb" secondAttribute="leading" id="ki0-La-FTy"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utB-6A-UTK" userLabel="line">
+                    <rect key="frame" x="0.0" y="90" width="390" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rcg-bu-oh5"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-CQ-dPa">
                     <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,8 +79,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="nQP-hy-ulb" secondAttribute="leading" id="63F-Fv-EoC"/>
                 <constraint firstItem="nQP-hy-ulb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7kY-e6-hSO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="AuR-79-YB6" secondAttribute="leading" id="812-eF-x1x"/>
+                <constraint firstItem="utB-6A-UTK" firstAttribute="bottom" secondItem="nQP-hy-ulb" secondAttribute="bottom" id="HyI-b2-ij4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="utB-6A-UTK" secondAttribute="trailing" id="RJ4-ap-cb0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nQP-hy-ulb" secondAttribute="trailing" id="WFK-Rl-aVd"/>
                 <constraint firstItem="nQP-hy-ulb" firstAttribute="bottom" secondItem="AuR-79-YB6" secondAttribute="bottom" id="goQ-Tl-Dqr"/>
+                <constraint firstItem="utB-6A-UTK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hcG-5I-ZUp"/>
                 <constraint firstItem="Jjj-CQ-dPa" firstAttribute="top" secondItem="AuR-79-YB6" secondAttribute="bottom" id="k32-CR-KEh"/>
                 <constraint firstItem="AuR-79-YB6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lfD-fR-W4e"/>
                 <constraint firstItem="AuR-79-YB6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lyA-YZ-rsm"/>

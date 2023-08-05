@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateEmployeeVC" customModule="POS_App" customModuleProvider="target">
             <connections>
@@ -34,7 +29,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvc-YT-vok" userLabel="back">
-                            <rect key="frame" x="24" y="4.6666666666666643" width="35" height="35"/>
+                            <rect key="frame" x="10" y="4.6666666666666643" width="35" height="35"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="d3w-uU-TXl"/>
@@ -47,9 +42,9 @@
                                 <action selector="back:" destination="-1" eventType="touchUpInside" id="xiN-3m-lkT"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm mới NV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otT-Td-GrE">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm nhân viên" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otT-Td-GrE">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -59,30 +54,40 @@
                         <constraint firstAttribute="bottom" secondItem="otT-Td-GrE" secondAttribute="bottom" id="5LG-lx-pOo"/>
                         <constraint firstItem="otT-Td-GrE" firstAttribute="top" secondItem="RMK-4k-ggf" secondAttribute="top" id="BlU-Op-pFK"/>
                         <constraint firstAttribute="height" constant="44" id="Eyj-qT-h5w"/>
-                        <constraint firstItem="Zvc-YT-vok" firstAttribute="leading" secondItem="RMK-4k-ggf" secondAttribute="leading" constant="24" id="HiJ-Dc-GnW"/>
+                        <constraint firstItem="Zvc-YT-vok" firstAttribute="leading" secondItem="RMK-4k-ggf" secondAttribute="leading" constant="10" id="HiJ-Dc-GnW"/>
                         <constraint firstItem="Zvc-YT-vok" firstAttribute="centerY" secondItem="RMK-4k-ggf" secondAttribute="centerY" id="RUH-sk-Sx1"/>
                         <constraint firstItem="otT-Td-GrE" firstAttribute="centerY" secondItem="RMK-4k-ggf" secondAttribute="centerY" id="TXi-jd-mrr"/>
                         <constraint firstItem="otT-Td-GrE" firstAttribute="leading" secondItem="RMK-4k-ggf" secondAttribute="leading" id="agC-28-C2A"/>
                         <constraint firstAttribute="trailing" secondItem="otT-Td-GrE" secondAttribute="trailing" id="h3t-0P-KrU"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myl-Oc-4Au" userLabel="line">
+                    <rect key="frame" x="0.0" y="102" width="393" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HGd-OF-2Uj"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AkV-p0-zVL">
-                    <rect key="frame" x="10" y="113" width="373" height="705"/>
+                    <rect key="frame" x="0.0" y="113" width="393" height="705"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AkV-p0-zVL" secondAttribute="trailing" constant="10" id="5gQ-i7-v4g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AkV-p0-zVL" secondAttribute="trailing" id="5gQ-i7-v4g"/>
+                <constraint firstItem="Myl-Oc-4Au" firstAttribute="bottom" secondItem="RMK-4k-ggf" secondAttribute="bottom" id="9N1-Om-fhh"/>
                 <constraint firstItem="RMK-4k-ggf" firstAttribute="bottom" secondItem="NTR-pJ-Uy8" secondAttribute="bottom" id="9iz-jD-Wlc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AkV-p0-zVL" secondAttribute="bottom" id="AtY-gN-VTN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Myl-Oc-4Au" secondAttribute="trailing" id="EMw-x9-XLq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="NTR-pJ-Uy8" secondAttribute="leading" id="F3s-rV-wqh"/>
                 <constraint firstItem="AkV-p0-zVL" firstAttribute="top" secondItem="NTR-pJ-Uy8" secondAttribute="bottom" constant="10" id="GdZ-vd-gf6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RMK-4k-ggf" secondAttribute="trailing" id="HVM-NO-lLK"/>
                 <constraint firstItem="NTR-pJ-Uy8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TnP-mb-L3b"/>
                 <constraint firstItem="RMK-4k-ggf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WJL-f9-WTV"/>
-                <constraint firstItem="AkV-p0-zVL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="ncB-8k-Qtn"/>
+                <constraint firstItem="Myl-Oc-4Au" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m9Y-x6-wgh"/>
+                <constraint firstItem="AkV-p0-zVL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ncB-8k-Qtn"/>
                 <constraint firstItem="NTR-pJ-Uy8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="v5O-co-pGW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="RMK-4k-ggf" secondAttribute="leading" id="xo5-If-lhB"/>
             </constraints>
