@@ -10,6 +10,9 @@ import DGCharts
 
 class ChartDayCell: UITableViewCell,ChartViewDelegate {
     
+    
+    var dataSelect: String?
+    var actionViewList: ClosureCustom<Int64>?
     @IBOutlet var boundsView: UIView!
     @IBOutlet weak var moneyLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
@@ -35,12 +38,11 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
     
     func bindData (item: [ChartDay]){
         data = item
-
         setupHorizontalBarChart()
-        
-        let item = data.itemAtIndex(index: 0)
-        dateLbl.text = "Ngày: \(item?.date ?? "")"
-        moneyLbl.text = "Doanh thu: \(item?.money ?? 0)đ - Lượt khach: \(item?.recordsCount ?? 0) "
+        let e = data.itemAtIndex(index: 0)
+        dateLbl.text = "Ngày: \(e?.date ?? "")"
+        moneyLbl.text = "Doanh thu: \(e?.money ?? 0)đ - Lượt khach: \(e?.recordsCount ?? 0) "
+        dataSelect = e?.date ?? ""
         
     }
     func setupHorizontalBarChart() {
@@ -86,9 +88,17 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
         // Show the data value for the selected column
         let item = data.itemAtIndex(index: Int(entry.x))
         dateLbl.text = "Ngày: \(item?.date ?? "")"
+        dataSelect = item?.date ?? ""
         moneyLbl.text = "Doanh thu: \(String(describing: item?.money ?? 0).currencyFormatting())đ - Lượt khach: \(item?.recordsCount ?? 0) "
     }
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
         // Hide or do something when no column is selected
     }
+    @IBAction func btnListInfoPressed(_ sender: UIButton) {
+        let time = "\(dataSelect ?? "") 00:00:00"
+        let miliseconds = Common.dateStringToMilis(dateString: time)
+        actionViewList?(miliseconds ?? 0)
+    }
+    
+    
 }

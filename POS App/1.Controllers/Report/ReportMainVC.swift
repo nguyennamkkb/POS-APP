@@ -95,12 +95,25 @@ extension ReportMainVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChartDayCell", for: indexPath) as? ChartDayCell else {return UITableViewCell()}
-            
             cell.bindData(item: tableData.chartDay ?? [ChartDay]())
+            cell.actionViewList = {
+                [weak self] timeMilis in
+                guard let self = self else {return}
+                let vc = RPListInfoVC()
+                vc.bindData(timeFrom: timeMilis, timeTo: (timeMilis + Common.MillisecondsOfDay))
+                self.pushVC(controller: vc)
+            }
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChartEmployeeCell", for: indexPath) as? ChartEmployeeCell else {return UITableViewCell()}
             cell.binData(item: tableData.listEmplEach ?? [ListEmplEach]())
+            cell.returnIdEmployee = {
+                [weak self] id in
+                guard let self = self else {return}
+                let vc = RPListInfoVC()
+                vc.bindData(timeFrom: timeFrom ?? 0, timeTo: timeTo ?? 0, idEmployee: id)
+                self.pushVC(controller: vc)
+            }
             return cell
         default:
             return UITableViewCell()

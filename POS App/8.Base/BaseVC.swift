@@ -108,7 +108,7 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             dismiss(animated: animated, completion: nil)
         }
     }
-    func pushVC(controller vc: UIViewController, hidesBottomBarWhenPushed hidesBottomBar: Bool = false, animation anima: Bool = false) {
+    func pushVC(controller vc: UIViewController, hidesBottomBarWhenPushed hidesBottomBar: Bool = false, animation anima: Bool = true) {
         vc.hidesBottomBarWhenPushed = hidesBottomBar
         self.navigationController?.pushViewController(vc, animated: anima)
     }

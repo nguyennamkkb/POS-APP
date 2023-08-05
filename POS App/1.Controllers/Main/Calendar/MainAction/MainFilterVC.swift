@@ -121,8 +121,8 @@ class MainFilterVC: BaseVC {
         if employeeSelected.id != nil {
             param.idEmployee = employeeSelected.id
         }
-        param.from = Int(timeFrom.date.millisecondsSince1970)
-        param.to = Int(timeTo.date.millisecondsSince1970)
+        param.from = Int64(timeFrom.date.millisecondsSince1970)
+        param.to = Int64(timeTo.date.millisecondsSince1970)
         actionFilter?(param)
         dismissVC(animated: true)
     }

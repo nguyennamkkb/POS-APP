@@ -15,7 +15,7 @@ class Common {
     public static var KEY_APP = "50829317681RT3RUH3EZ"
     public static var isInternet = false//false bat tinh năng ckeck ẩn menu để false
     public static var isRunningUpOffW = false
-    public static var MillisecondsOfDay = 86400000 - 1
+    public static var MillisecondsOfDay: Int64 = 86400000 - 1
     public static var userMaster: PStore = PStore()
     public static var anhChupAvatar: String = ""
     static var dateFormatter = DateFormatter()

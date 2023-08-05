@@ -120,6 +120,7 @@ class BookHistoryVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     func getBooks(){
+        self.showLoading()
         ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: paramSearch.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
@@ -131,6 +132,7 @@ class BookHistoryVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 self.showMessagError()
             }
         }
+        self.hideLoading()
     }
     func editBook(item: PBookCalender){
         item.sign()
@@ -146,6 +148,10 @@ class BookHistoryVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
    
     @IBAction func btnSearchPressed(_ sender: UIButton) {
         let vc = MainFilterVC()
+        //SCREEN_HEIGHT
+        let sheet = SheetViewController(controller: vc, sizes: [.fixed(SCREEN_HEIGHT - 44)])
+        self.present(sheet, animated: true)
+        
         vc.actionFilter = {
             [weak self] item in
             guard let self = self else {return}
@@ -153,6 +159,6 @@ class BookHistoryVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             print(item.toJSON())
             self.getBooks()
         }
-        self.present(vc, animated: true)
+//        self.present(vc, animated: true)
     }
 }

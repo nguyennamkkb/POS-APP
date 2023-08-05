@@ -9,6 +9,7 @@ import UIKit
 
 class ChartEmployeeCell: UITableViewCell {
 
+    var returnIdEmployee: ClosureCustom<Int>?
     @IBOutlet var employeeTF: UITextField!
     @IBOutlet var tableView: UITableView!
     var tableData = [ListEmplEach]()
@@ -50,6 +51,11 @@ extension ChartEmployeeCell: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RPEmployeeCell", for: indexPath) as? RPEmployeeCell else {return UITableViewCell()}
         
         cell.bindData(item: tableData.itemAtIndex(index: indexPath.row) ?? ListEmplEach())
+        cell.actionViewList = {
+            [weak self] id in
+            guard let self = self else {return}
+            self.returnIdEmployee?(id)
+        }
         return cell
     }
     

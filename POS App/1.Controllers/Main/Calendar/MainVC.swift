@@ -136,7 +136,7 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func btnViewAllBookPressed(_ sender: UIButton) {
         let vc = BookHistoryVC()
-        self.pushVC(controller: vc)
+        self.pushVC(controller: vc, animation: true)
     }
     
     @IBAction func sideLeftPressed(_ sender: UIButton) {

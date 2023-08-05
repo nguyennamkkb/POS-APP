@@ -79,9 +79,7 @@ class RPHeaderCell: UITableViewCell {
     func bindData(money: Int, count: Int, timeFrom: Int64, timeTo: Int64){
         moneyLbl.text = "\(String(money).currencyFormatting())đ"
         countLbl.text = "\(count)"
-    
-//        print(timeFrom)
-//        print(timeTo)
+
         timeFromDPicker.date = Common.dateFromUnixTimestamp(milliseconds: Double(timeFrom))
         timeToDPicker.date = Common.dateFromUnixTimestamp(milliseconds: Double(timeTo))
 

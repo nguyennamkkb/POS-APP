@@ -9,6 +9,7 @@ import UIKit
 
 class RPEmployeeCell: UITableViewCell {
 
+    var actionViewList: ClosureCustom<Int>?
     @IBOutlet var RPEmployeeView: UIView!
     @IBOutlet weak var moneyLbl: UILabel!
     @IBOutlet weak var employeeLbl: UILabel!
@@ -32,6 +33,9 @@ class RPEmployeeCell: UITableViewCell {
         data = item
         employeeLbl.text = data.name ?? ""
         moneyLbl.text = "Doanh thu: \(String(data.totalMoney ?? 0).currencyFormatting()) đ - Lượt khách: \(data.tolalBook ?? 0)"
+    }
+    @IBAction func btnListInfoPressed(_ sender: UIButton) {
+        actionViewList?(data.idEmployee ?? 0)
     }
     
 }
