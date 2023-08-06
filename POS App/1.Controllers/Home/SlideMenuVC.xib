@@ -3,13 +3,14 @@
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideMenuVC" customModule="POS_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideMenuVC" customModule="LN_POS" customModuleProvider="target">
             <connections>
                 <outlet property="storeNameLbl" destination="QHN-2e-PzP" id="FJE-fT-JWb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -101,11 +102,11 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="cửa hàng ">
-                        <color key="titleColor" name="AccentColor"/>
+                    <state key="normal" title="Liên hệ">
+                        <color key="titleColor" systemColor="systemRedColor"/>
                     </state>
                     <connections>
-                        <action selector="bntCuaHangPressed:" destination="-1" eventType="touchUpInside" id="LSB-kI-ErH"/>
+                        <action selector="btnContactPressed:" destination="-1" eventType="touchUpInside" id="uLU-qd-XqD"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqm-ds-iHM" userLabel="line">
@@ -113,27 +114,6 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="0.30034753340709058" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="s0S-8A-QsX"/>
-                    </constraints>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bS-ww-9Ex">
-                    <rect key="frame" x="24" y="331" width="382" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="OXr-IQ-gkn"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Hỗ trợ ">
-                        <color key="titleColor" name="AccentColor"/>
-                    </state>
-                    <connections>
-                        <action selector="btnHoTroPressed:" destination="-1" eventType="touchUpInside" id="reV-fU-zgw"/>
-                    </connections>
-                </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyU-xj-tmp" userLabel="line">
-                    <rect key="frame" x="11" y="374" width="408" height="1"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.29793007766144186" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="ZQ6-qB-S1j"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-rR-FUW" userLabel="right">
@@ -168,16 +148,11 @@
             <constraints>
                 <constraint firstItem="Nuy-kW-JhP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Hg-n7-NsK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mkp-C4-njC" secondAttribute="trailing" id="1cs-hD-grm"/>
-                <constraint firstItem="vyU-xj-tmp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="4BB-4a-duJ"/>
-                <constraint firstItem="6bS-ww-9Ex" firstAttribute="top" secondItem="1bB-ce-jOp" secondAttribute="bottom" constant="10" id="5fg-DE-dHu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6bS-ww-9Ex" secondAttribute="trailing" constant="24" id="7JI-jN-rkR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EDf-QV-VA5" secondAttribute="trailing" constant="20" id="8Dh-Ck-0em"/>
-                <constraint firstItem="6bS-ww-9Ex" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Dch-pV-ZYC"/>
                 <constraint firstAttribute="trailing" secondItem="Pqm-ds-iHM" secondAttribute="trailing" constant="11" id="Gda-If-CkC"/>
                 <constraint firstItem="Nuy-kW-JhP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H1w-rH-TuX"/>
                 <constraint firstItem="5Pg-rR-FUW" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Hxu-bL-bCx"/>
                 <constraint firstItem="EAZ-Yd-e21" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="I9K-ZG-bWi"/>
-                <constraint firstItem="vyU-xj-tmp" firstAttribute="bottom" secondItem="6bS-ww-9Ex" secondAttribute="bottom" id="Iwj-fH-y7i"/>
                 <constraint firstItem="EDf-QV-VA5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="JZn-Nd-GYS"/>
                 <constraint firstItem="1bB-ce-jOp" firstAttribute="top" secondItem="m2O-2t-CUY" secondAttribute="bottom" constant="10" id="KjE-zR-0xJ"/>
                 <constraint firstItem="Pqm-ds-iHM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="Lcf-5n-8ff"/>
@@ -193,7 +168,6 @@
                 <constraint firstItem="Mkp-C4-njC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fLL-7U-5Mg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="apk-a7-bOS" secondAttribute="trailing" id="hvM-8h-CxT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Pg-rR-FUW" secondAttribute="trailing" id="n5V-Jh-lOw"/>
-                <constraint firstAttribute="trailing" secondItem="vyU-xj-tmp" secondAttribute="trailing" constant="11" id="o0G-Nh-wGW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zqJ-K3-z5h" secondAttribute="trailing" constant="11" id="pP3-So-qfL"/>
                 <constraint firstItem="5Pg-rR-FUW" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="qP4-df-1HS"/>
                 <constraint firstItem="EDf-QV-VA5" firstAttribute="top" secondItem="Nuy-kW-JhP" secondAttribute="bottom" constant="10" id="sHQ-JH-ee5"/>
@@ -211,5 +185,8 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

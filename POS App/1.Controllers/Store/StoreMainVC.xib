@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,16 +34,6 @@
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-rf-qSS" userLabel="back">
-                            <rect key="frame" x="10" y="5" width="35" height="35"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="35" id="2Zh-Yu-He7"/>
-                                <constraint firstAttribute="height" constant="35" id="v3V-Ai-hYm"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="systemMintColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_back"/>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ: Hà Nội" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-O2-osY">
                             <rect key="frame" x="10" y="62" width="404" height="19"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -59,13 +49,11 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="uPN-rf-qSS" firstAttribute="leading" secondItem="Qyw-fa-EuI" secondAttribute="leading" constant="10" id="1eU-9f-jST"/>
                         <constraint firstAttribute="height" constant="120" id="4A1-Rk-a9J"/>
                         <constraint firstItem="zxp-uU-RdS" firstAttribute="leading" secondItem="Qyw-fa-EuI" secondAttribute="leading" id="8p5-BV-wID"/>
                         <constraint firstAttribute="trailing" secondItem="TEA-O2-osY" secondAttribute="trailing" id="92T-j4-JlH"/>
                         <constraint firstAttribute="bottom" secondItem="D6B-dk-lIA" secondAttribute="bottom" constant="10" id="Fy1-jd-S7k"/>
                         <constraint firstItem="D6B-dk-lIA" firstAttribute="leading" secondItem="Qyw-fa-EuI" secondAttribute="leading" constant="10" id="GoX-uU-9jo"/>
-                        <constraint firstItem="uPN-rf-qSS" firstAttribute="top" secondItem="Qyw-fa-EuI" secondAttribute="top" constant="5" id="PpT-LG-aHM"/>
                         <constraint firstItem="D6B-dk-lIA" firstAttribute="top" secondItem="TEA-O2-osY" secondAttribute="bottom" constant="10" id="dcV-2b-MLl"/>
                         <constraint firstItem="zxp-uU-RdS" firstAttribute="top" secondItem="Qyw-fa-EuI" secondAttribute="top" constant="10" id="exy-SE-V2q"/>
                         <constraint firstItem="TEA-O2-osY" firstAttribute="leading" secondItem="Qyw-fa-EuI" secondAttribute="leading" constant="10" id="siI-zV-VlR"/>
@@ -116,6 +104,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cI-Mg-qyF">
                             <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="huongDanPressed:" destination="-1" eventType="touchUpInside" id="4Pf-0h-2Zq"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hướng dẫn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mq-Ok-gQh">
                             <rect key="frame" x="10" y="11.5" width="95" height="21.5"/>
@@ -147,6 +138,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQv-11-7ka">
                             <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="LogoutPressed:" destination="-1" eventType="touchUpInside" id="43F-rG-A7J"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng xuất" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtU-6h-ctj">
                             <rect key="frame" x="10" y="11.5" width="85.5" height="21.5"/>
@@ -209,15 +203,11 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_back" width="34" height="34"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
