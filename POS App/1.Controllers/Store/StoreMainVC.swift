@@ -25,7 +25,12 @@ class StoreMainVC: BaseVC {
     
     @IBAction func LogoutPressed(_ sender: UIButton) {
         let vc = LoginVC()
-        self.wrapRoot(vc: vc)
+        let navi = UINavigationController(rootViewController: vc)
+        self.wrapRoot(vc: navi)
+    }
+    @IBAction func editStorePressed(_ sender: Any) {
+        let vc = EditStoreVC()
+        self.pushVC(controller: vc)
     }
     
 }

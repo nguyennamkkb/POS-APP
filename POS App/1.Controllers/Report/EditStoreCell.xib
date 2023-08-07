@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="556" id="KGk-i7-Jjw" customClass="EditStoreCell" customModule="LN_POS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="597" height="556"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="597" height="556"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rju-cY-Kap" userLabel="tencuahang">
+                        <rect key="frame" x="10" y="10" width="577" height="86"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên cửa hàng *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8v-vF-EEO">
+                                <rect key="frame" x="0.0" y="0.0" width="577" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vcz-IA-Fgd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên cửa hàng" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Lq-Eh-Ush">
+                                <rect key="frame" x="0.0" y="30" width="577" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="86" id="1ER-dt-TDi"/>
+                            <constraint firstItem="f8v-vF-EEO" firstAttribute="top" secondItem="Rju-cY-Kap" secondAttribute="top" id="GK0-58-VDJ"/>
+                            <constraint firstAttribute="trailing" secondItem="0Lq-Eh-Ush" secondAttribute="trailing" id="IgA-Lt-ooh"/>
+                            <constraint firstItem="0Lq-Eh-Ush" firstAttribute="top" secondItem="f8v-vF-EEO" secondAttribute="bottom" constant="10" id="MWG-XR-xw8"/>
+                            <constraint firstAttribute="trailing" secondItem="f8v-vF-EEO" secondAttribute="trailing" id="OxQ-Sc-pBB"/>
+                            <constraint firstItem="f8v-vF-EEO" firstAttribute="leading" secondItem="Rju-cY-Kap" secondAttribute="leading" id="XP4-BP-zRp"/>
+                            <constraint firstItem="0Lq-Eh-Ush" firstAttribute="leading" secondItem="Rju-cY-Kap" secondAttribute="leading" id="nyl-Jw-57A"/>
+                            <constraint firstAttribute="bottom" secondItem="0Lq-Eh-Ush" secondAttribute="bottom" id="wFe-7g-0NX"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdl-ww-D5W" userLabel="diachi">
+                        <rect key="frame" x="10" y="106" width="577" height="86"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Am-Gy-Q4S">
+                                <rect key="frame" x="0.0" y="0.0" width="577" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0fz-aG-PkQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập địa chỉ cửa hàng" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oo-hK-Qz1">
+                                <rect key="frame" x="0.0" y="30" width="577" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Am-Gy-Q4S" secondAttribute="trailing" id="2ay-tD-uF4"/>
+                            <constraint firstItem="6oo-hK-Qz1" firstAttribute="top" secondItem="5Am-Gy-Q4S" secondAttribute="bottom" constant="10" id="A3y-z3-tqj"/>
+                            <constraint firstItem="5Am-Gy-Q4S" firstAttribute="leading" secondItem="Fdl-ww-D5W" secondAttribute="leading" id="BbW-kc-WU8"/>
+                            <constraint firstAttribute="trailing" secondItem="6oo-hK-Qz1" secondAttribute="trailing" id="CDo-Vm-pcE"/>
+                            <constraint firstItem="6oo-hK-Qz1" firstAttribute="leading" secondItem="Fdl-ww-D5W" secondAttribute="leading" id="CoK-DG-1x4"/>
+                            <constraint firstAttribute="bottom" secondItem="6oo-hK-Qz1" secondAttribute="bottom" id="Uvv-zP-Knv"/>
+                            <constraint firstItem="5Am-Gy-Q4S" firstAttribute="top" secondItem="Fdl-ww-D5W" secondAttribute="top" id="abh-ma-MYQ"/>
+                            <constraint firstAttribute="height" constant="86" id="hj6-dh-WNK"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-PC-fkK" userLabel="email">
+                        <rect key="frame" x="10" y="202" width="577" height="86"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51K-NL-XXR">
+                                <rect key="frame" x="0.0" y="0.0" width="577" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="wyA-8U-Mpn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-16-xf7">
+                                <rect key="frame" x="0.0" y="30" width="577" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b9P-16-xf7" firstAttribute="top" secondItem="51K-NL-XXR" secondAttribute="bottom" constant="10" id="JHr-0i-yFq"/>
+                            <constraint firstAttribute="bottom" secondItem="b9P-16-xf7" secondAttribute="bottom" id="Teo-02-uHb"/>
+                            <constraint firstAttribute="height" constant="86" id="aDY-dO-V1L"/>
+                            <constraint firstAttribute="trailing" secondItem="51K-NL-XXR" secondAttribute="trailing" id="dCC-6C-lji"/>
+                            <constraint firstItem="51K-NL-XXR" firstAttribute="top" secondItem="uSe-PC-fkK" secondAttribute="top" id="ffe-aL-Zxr"/>
+                            <constraint firstAttribute="trailing" secondItem="b9P-16-xf7" secondAttribute="trailing" id="ouK-nn-FmQ"/>
+                            <constraint firstItem="b9P-16-xf7" firstAttribute="leading" secondItem="uSe-PC-fkK" secondAttribute="leading" id="qye-MP-MKZ"/>
+                            <constraint firstItem="51K-NL-XXR" firstAttribute="leading" secondItem="uSe-PC-fkK" secondAttribute="leading" id="vFZ-Gz-Qqh"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R0-0Y-z2Q" userLabel="mat khau">
+                        <rect key="frame" x="10" y="298" width="577" height="86"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mật khẩu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZh-Ap-EqR">
+                                <rect key="frame" x="0.0" y="0.0" width="577" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="LSp-DX-Ooq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập mật khẩu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhL-nH-0NF">
+                                <rect key="frame" x="0.0" y="30" width="577" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fhL-nH-0NF" secondAttribute="bottom" id="0bK-Up-UB3"/>
+                            <constraint firstItem="fhL-nH-0NF" firstAttribute="leading" secondItem="6R0-0Y-z2Q" secondAttribute="leading" id="IFl-tu-mky"/>
+                            <constraint firstAttribute="trailing" secondItem="uZh-Ap-EqR" secondAttribute="trailing" id="LH8-CW-CNU"/>
+                            <constraint firstAttribute="trailing" secondItem="fhL-nH-0NF" secondAttribute="trailing" id="W6H-Qa-mWj"/>
+                            <constraint firstItem="uZh-Ap-EqR" firstAttribute="top" secondItem="6R0-0Y-z2Q" secondAttribute="top" id="bWv-Ow-CXr"/>
+                            <constraint firstAttribute="height" constant="86" id="dG3-0O-jai"/>
+                            <constraint firstItem="uZh-Ap-EqR" firstAttribute="leading" secondItem="6R0-0Y-z2Q" secondAttribute="leading" id="dKg-d4-7qs"/>
+                            <constraint firstItem="fhL-nH-0NF" firstAttribute="top" secondItem="uZh-Ap-EqR" secondAttribute="bottom" constant="10" id="jYj-0G-A38"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX9-L7-iLE">
+                        <rect key="frame" x="10" y="404" width="577" height="57"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="Kbq-S7-Oud"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Xác nhận"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6R0-0Y-z2Q" secondAttribute="trailing" constant="10" id="25b-fb-o11"/>
+                    <constraint firstItem="uSe-PC-fkK" firstAttribute="top" secondItem="Fdl-ww-D5W" secondAttribute="bottom" constant="10" id="6nf-xb-5Ar"/>
+                    <constraint firstAttribute="trailing" secondItem="Fdl-ww-D5W" secondAttribute="trailing" constant="10" id="9ju-hZ-LEX"/>
+                    <constraint firstItem="Fdl-ww-D5W" firstAttribute="top" secondItem="Rju-cY-Kap" secondAttribute="bottom" priority="999" constant="20" id="AOz-q2-Myl"/>
+                    <constraint firstItem="Fdl-ww-D5W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DWR-gd-gA1"/>
+                    <constraint firstAttribute="trailing" secondItem="uSe-PC-fkK" secondAttribute="trailing" constant="10" id="Hrc-Z5-8aF"/>
+                    <constraint firstItem="6R0-0Y-z2Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KCj-LH-MaU"/>
+                    <constraint firstItem="Rju-cY-Kap" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="KkA-Qz-Q7Z"/>
+                    <constraint firstItem="6R0-0Y-z2Q" firstAttribute="top" secondItem="uSe-PC-fkK" secondAttribute="bottom" constant="10" id="Kog-QF-lTP"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bX9-L7-iLE" secondAttribute="bottom" constant="5" id="MAw-Uf-Ppt"/>
+                    <constraint firstItem="Fdl-ww-D5W" firstAttribute="top" secondItem="Rju-cY-Kap" secondAttribute="bottom" constant="10" id="QZa-21-7Sy"/>
+                    <constraint firstItem="uSe-PC-fkK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="S3X-Lj-XX0"/>
+                    <constraint firstItem="bX9-L7-iLE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="WRX-Tr-oLq"/>
+                    <constraint firstItem="Rju-cY-Kap" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="m2t-Ah-UiA"/>
+                    <constraint firstAttribute="trailing" secondItem="Rju-cY-Kap" secondAttribute="trailing" constant="10" id="olB-yg-76n"/>
+                    <constraint firstItem="bX9-L7-iLE" firstAttribute="top" secondItem="6R0-0Y-z2Q" secondAttribute="bottom" constant="20" id="qCK-dc-lev"/>
+                    <constraint firstItem="uSe-PC-fkK" firstAttribute="top" secondItem="Fdl-ww-D5W" secondAttribute="bottom" priority="999" constant="10" id="uuv-S4-DqG"/>
+                    <constraint firstAttribute="trailing" secondItem="bX9-L7-iLE" secondAttribute="trailing" constant="10" id="zHH-SH-boa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnXacNhan" destination="bX9-L7-iLE" id="O3e-D2-JZu"/>
+                <outlet property="storeAddressTF" destination="6oo-hK-Qz1" id="0rG-5l-seX"/>
+                <outlet property="storeEmailTF" destination="b9P-16-xf7" id="eNm-jQ-oAe"/>
+                <outlet property="storeNameTF" destination="0Lq-Eh-Ush" id="ScS-eT-jaw"/>
+                <outlet property="storePassworkTF" destination="fhL-nH-0NF" id="vFH-Yh-Xms"/>
+            </connections>
+            <point key="canvasLocation" x="312.21374045801525" y="128.16901408450704"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

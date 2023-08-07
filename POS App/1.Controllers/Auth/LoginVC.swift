@@ -74,7 +74,7 @@ class LoginVC: BaseVC {
     }
     
     @IBAction func authBiometrics(_ sender: UIButton) {
-        print("xac thuc")
+//        print("xac thuc")
         let context = LAContext()
         var error: NSError?
         

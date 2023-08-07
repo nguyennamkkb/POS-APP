@@ -118,16 +118,6 @@
                         <constraint firstAttribute="trailing" secondItem="vFg-oD-fpg" secondAttribute="trailing" constant="10" id="qBj-M0-jVs"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="68M-dd-Nyd">
-                    <rect key="frame" x="0.0" y="159" width="393" height="659"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qsz-MN-Gqr">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-be-t06">
                     <rect key="frame" x="0.0" y="159" width="393" height="659"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,8 +128,6 @@
             <constraints>
                 <constraint firstItem="4Sz-KC-Ja1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1yX-UE-3b3"/>
                 <constraint firstItem="4Sz-KC-Ja1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7J6-2q-ji5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="68M-dd-Nyd" secondAttribute="trailing" id="CA6-BW-UWk"/>
-                <constraint firstItem="68M-dd-Nyd" firstAttribute="top" secondItem="lgj-FZ-x5E" secondAttribute="bottom" id="Eie-zf-zfw"/>
                 <constraint firstItem="QBI-be-t06" firstAttribute="top" secondItem="lgj-FZ-x5E" secondAttribute="bottom" id="HQN-u5-jv5"/>
                 <constraint firstItem="QBI-be-t06" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hr8-5H-L1t"/>
                 <constraint firstItem="lgj-FZ-x5E" firstAttribute="top" secondItem="4Sz-KC-Ja1" secondAttribute="bottom" id="QQm-WF-8GT"/>
@@ -148,8 +136,6 @@
                 <constraint firstItem="qNb-4y-KKC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VuY-Mp-UAJ"/>
                 <constraint firstItem="lgj-FZ-x5E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YRD-wF-kjG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qNb-4y-KKC" secondAttribute="trailing" id="hqP-0d-BvC"/>
-                <constraint firstItem="68M-dd-Nyd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iCs-5X-yrM"/>
-                <constraint firstItem="68M-dd-Nyd" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="iXy-mR-fmL"/>
                 <constraint firstItem="qNb-4y-KKC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="klD-W0-WPP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QBI-be-t06" secondAttribute="bottom" id="q8O-5q-t76"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Sz-KC-Ja1" secondAttribute="trailing" id="uP2-8n-NLc"/>

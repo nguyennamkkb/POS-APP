@@ -37,6 +37,10 @@
 		0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B21416D2A13E8CE00CCAAB4 /* CreateCalenderVC.xib */; };
 		0B33C63C2A70346900201CA0 /* RPHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33C63A2A70346900201CA0 /* RPHeaderCell.swift */; };
 		0B33C63D2A70346900201CA0 /* RPHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B33C63B2A70346900201CA0 /* RPHeaderCell.xib */; };
+		0B3851932A8155DC006153BA /* EditStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3851912A8155DC006153BA /* EditStoreVC.swift */; };
+		0B3851942A8155DC006153BA /* EditStoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3851922A8155DC006153BA /* EditStoreVC.xib */; };
+		0B3851972A81584D006153BA /* EditStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3851952A81584D006153BA /* EditStoreCell.swift */; };
+		0B3851982A81584D006153BA /* EditStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3851962A81584D006153BA /* EditStoreCell.xib */; };
 		0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D44F12A2F70F200A6186C /* ChonDichVuVC.swift */; };
 		0B3D44F42A2F70F200A6186C /* ChonDichVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */; };
 		0B3D44F72A2F79B200A6186C /* ChonDichVuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */; };
@@ -211,6 +215,10 @@
 		0B21416D2A13E8CE00CCAAB4 /* CreateCalenderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateCalenderVC.xib; sourceTree = "<group>"; };
 		0B33C63A2A70346900201CA0 /* RPHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPHeaderCell.swift; sourceTree = "<group>"; };
 		0B33C63B2A70346900201CA0 /* RPHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPHeaderCell.xib; sourceTree = "<group>"; };
+		0B3851912A8155DC006153BA /* EditStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditStoreVC.swift; path = "POS App/1.Controllers/Report/EditStoreVC.swift"; sourceTree = SOURCE_ROOT; };
+		0B3851922A8155DC006153BA /* EditStoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditStoreVC.xib; path = "POS App/1.Controllers/Report/EditStoreVC.xib"; sourceTree = SOURCE_ROOT; };
+		0B3851952A81584D006153BA /* EditStoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditStoreCell.swift; path = "POS App/1.Controllers/Report/EditStoreCell.swift"; sourceTree = SOURCE_ROOT; };
+		0B3851962A81584D006153BA /* EditStoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditStoreCell.xib; path = "POS App/1.Controllers/Report/EditStoreCell.xib"; sourceTree = SOURCE_ROOT; };
 		0B3D44F12A2F70F200A6186C /* ChonDichVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVuVC.swift; sourceTree = "<group>"; };
 		0B3D44F22A2F70F200A6186C /* ChonDichVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChonDichVuVC.xib; sourceTree = "<group>"; };
 		0B3D44F52A2F79B200A6186C /* ChonDichVuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVuCell.swift; sourceTree = "<group>"; };
@@ -593,7 +601,7 @@
 		0BD5BAEF29F8A777009F2A66 /* ManageStore */ = {
 			isa = PBXGroup;
 			children = (
-				0BF5BD722A76C39C00ECBE10 /* New Group */,
+				0BF5BD722A76C39C00ECBE10 /* EditStore */,
 				0B2054952A3A23B400BA333D /* Services */,
 				0BB7FDD42A19CA8F005EF9B9 /* Customer */,
 				0BB7FDD32A19CA87005EF9B9 /* Emoloyee */,
@@ -814,11 +822,15 @@
 			path = DetailCalender;
 			sourceTree = "<group>";
 		};
-		0BF5BD722A76C39C00ECBE10 /* New Group */ = {
+		0BF5BD722A76C39C00ECBE10 /* EditStore */ = {
 			isa = PBXGroup;
 			children = (
+				0B3851912A8155DC006153BA /* EditStoreVC.swift */,
+				0B3851922A8155DC006153BA /* EditStoreVC.xib */,
+				0B3851952A81584D006153BA /* EditStoreCell.swift */,
+				0B3851962A81584D006153BA /* EditStoreCell.xib */,
 			);
-			path = "New Group";
+			path = EditStore;
 			sourceTree = "<group>";
 		};
 		1F3555E4D9A8907ED3D5D69F /* Pods */ = {
@@ -922,6 +934,7 @@
 				0B049BDA2A7E365500A2295A /* RPListInfoVC.xib in Resources */,
 				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
 				0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */,
+				0B3851982A81584D006153BA /* EditStoreCell.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
@@ -991,6 +1004,7 @@
 				0BB43F0629FAD82F00F1DE85 /* Rubik-BlackItalic.ttf in Resources */,
 				0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */,
 				0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */,
+				0B3851942A8155DC006153BA /* EditStoreVC.xib in Resources */,
 				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
 				0B3D44F82A2F79B200A6186C /* ChonDichVuCell.xib in Resources */,
 				0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */,
@@ -1106,6 +1120,7 @@
 				0BF417CC2A3B7D6100DD36DA /* BookHeaderCell.swift in Sources */,
 				0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */,
 				0B73E5BC2A72CB1800C4575A /* RPEmployeeCell.swift in Sources */,
+				0B3851972A81584D006153BA /* EditStoreCell.swift in Sources */,
 				0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */,
 				0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
@@ -1134,6 +1149,7 @@
 				0BE0392929F82039002CB20F /* CommonExtension.swift in Sources */,
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
 				0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */,
+				0B3851932A8155DC006153BA /* EditStoreVC.swift in Sources */,
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0B5012332A516899009D3C0B /* MainFilterVC.swift in Sources */,
 				0B049BDD2A7E37D300A2295A /* RPInfoCell.swift in Sources */,

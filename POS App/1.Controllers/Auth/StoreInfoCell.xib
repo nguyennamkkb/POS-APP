@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,7 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="707" id="KGk-i7-Jjw" customClass="StoreInfoCell" customModule="POS_App" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="707" id="KGk-i7-Jjw" customClass="StoreInfoCell" customModule="LN_POS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="521" height="707"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -89,19 +89,6 @@
                             <constraint firstItem="kT5-TS-Zcy" firstAttribute="top" secondItem="w5b-KK-q8O" secondAttribute="top" id="vAN-L3-6gl"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDi-0L-cab">
-                        <rect key="frame" x="20" y="339" width="481" height="57"/>
-                        <color key="backgroundColor" name="AccentColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="57" id="dwU-mN-8Ai"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Xác nhận"/>
-                        <connections>
-                            <action selector="XacNhanAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LGh-rE-yfg"/>
-                        </connections>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAl-06-FTG" userLabel="email">
                         <rect key="frame" x="20" y="233" width="481" height="86"/>
                         <subviews>
@@ -114,8 +101,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập só tk" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixo-LE-Ixe">
-                                <rect key="frame" x="8" y="30" width="481" height="56"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập só tk" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixo-LE-Ixe">
+                                <rect key="frame" x="0.0" y="30" width="481" height="56"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -133,6 +120,19 @@
                             <constraint firstItem="YYP-l1-Ign" firstAttribute="top" secondItem="kAl-06-FTG" secondAttribute="top" id="zJP-WI-1Rm"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDi-0L-cab">
+                        <rect key="frame" x="20" y="339" width="481" height="57"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="dwU-mN-8Ai"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Xác nhận"/>
+                        <connections>
+                            <action selector="XacNhanAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LGh-rE-yfg"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="lDi-0L-cab" secondAttribute="bottom" id="Hfw-Md-KAL"/>
