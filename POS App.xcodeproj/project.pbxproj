@@ -11,6 +11,8 @@
 		0B049BDA2A7E365500A2295A /* RPListInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B049BD82A7E365500A2295A /* RPListInfoVC.xib */; };
 		0B049BDD2A7E37D300A2295A /* RPInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B049BDB2A7E37D300A2295A /* RPInfoCell.swift */; };
 		0B049BDE2A7E37D300A2295A /* RPInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */; };
+		0B10790E2A7F7CA400C7652C /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B10790C2A7F7CA400C7652C /* ContactVC.swift */; };
+		0B10790F2A7F7CA400C7652C /* ContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B10790D2A7F7CA400C7652C /* ContactVC.xib */; };
 		0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */; };
 		0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */; };
 		0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */; };
@@ -183,6 +185,8 @@
 		0B049BD82A7E365500A2295A /* RPListInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPListInfoVC.xib; sourceTree = "<group>"; };
 		0B049BDB2A7E37D300A2295A /* RPInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPInfoCell.swift; sourceTree = "<group>"; };
 		0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPInfoCell.xib; sourceTree = "<group>"; };
+		0B10790C2A7F7CA400C7652C /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactVC.swift; path = "POS App/1.Controllers/ManageStore/Customer/ContactVC.swift"; sourceTree = SOURCE_ROOT; };
+		0B10790D2A7F7CA400C7652C /* ContactVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContactVC.xib; path = "POS App/1.Controllers/ManageStore/Customer/ContactVC.xib"; sourceTree = SOURCE_ROOT; };
 		0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 		0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDayCell.swift; sourceTree = "<group>"; };
@@ -676,6 +680,8 @@
 		0BE0390129F82038002CB20F /* 3.Views */ = {
 			isa = PBXGroup;
 			children = (
+				0B10790C2A7F7CA400C7652C /* ContactVC.swift */,
+				0B10790D2A7F7CA400C7652C /* ContactVC.xib */,
 			);
 			path = 3.Views;
 			sourceTree = "<group>";
@@ -958,6 +964,7 @@
 				0BF417CD2A3B7D6100DD36DA /* BookHeaderCell.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
+				0B10790F2A7F7CA400C7652C /* ContactVC.xib in Resources */,
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0BD709432A370DA200D467EC /* QRVC.xib in Resources */,
@@ -1073,6 +1080,7 @@
 				0B20549C2A3A260900BA333D /* ServiceItemCell.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
+				0B10790E2A7F7CA400C7652C /* ContactVC.swift in Sources */,
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
 				0B2054982A3A23DB00BA333D /* ServiceVC.swift in Sources */,
 				0BFD87312A518535005DE099 /* ParamSearchBook.swift in Sources */,

@@ -30,10 +30,10 @@ class SlideMenuVC: BaseVC {
         self.wrapRoot(vc: navi)
 //        self.pushVC(controller: ManageStoreVC(),animation: true)
     }
-    @IBAction func bntCuaHangPressed(_ sender: UIButton) {
-        self.showMessageDeveloping()
+    @IBAction func btnContactPressed(_ sender: UIButton) {
+        let vc = ContactVC()
+        let navi = UINavigationController(rootViewController: vc)
+        self.wrapRoot(vc: navi)
     }
-    @IBAction func btnHoTroPressed(_ sender: Any) {
-        self.showMessageDeveloping()
-    }
+    
 }
