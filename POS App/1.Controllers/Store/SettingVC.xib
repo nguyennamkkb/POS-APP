@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingVC" customModule="LN_POS" customModuleProvider="target">
+            <connections>
+                <outlet property="hourTF" destination="7Pr-di-TnS" id="IrG-nV-QPW"/>
+                <outlet property="minTF" destination="tux-5K-NKX" id="rNL-rU-U7V"/>
+                <outlet property="msgTF" destination="lad-XZ-baG" id="gQz-zS-POT"/>
+                <outlet property="secondTF" destination="f7w-Vo-9WC" id="hm0-vP-ibN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpC-R3-1ud">
+                    <rect key="frame" x="15" y="235" width="363" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="sendThongBao:" destination="-1" eventType="touchUpInside" id="wJ0-70-x1q"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Xin chao" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lad-XZ-baG">
+                    <rect key="frame" x="15" y="59" width="363" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="QTv-LD-1eJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="21" borderStyle="roundedRect" placeholder="Giờ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Pr-di-TnS">
+                    <rect key="frame" x="15" y="103" width="363" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="ukf-zy-XeM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="11" borderStyle="roundedRect" placeholder="Phut" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tux-5K-NKX">
+                    <rect key="frame" x="15" y="147" width="363" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="tdy-vy-MYl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" placeholder="Giây" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7w-Vo-9WC">
+                    <rect key="frame" x="15" y="191" width="363" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="1js-pi-G1v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7Pr-di-TnS" firstAttribute="top" secondItem="lad-XZ-baG" secondAttribute="bottom" constant="10" id="2CW-JU-Tsf"/>
+                <constraint firstItem="lad-XZ-baG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4K7-Mf-dPA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lpC-R3-1ud" secondAttribute="trailing" constant="15" id="9PH-Em-n9z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f7w-Vo-9WC" secondAttribute="trailing" constant="15" id="Acq-2P-AKV"/>
+                <constraint firstItem="lad-XZ-baG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="IoT-71-VnZ"/>
+                <constraint firstItem="f7w-Vo-9WC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Oyu-6K-FZQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tux-5K-NKX" secondAttribute="trailing" constant="15" id="PMC-bc-Zdg"/>
+                <constraint firstItem="lpC-R3-1ud" firstAttribute="top" secondItem="f7w-Vo-9WC" secondAttribute="bottom" constant="10" id="RTQ-uI-ey1"/>
+                <constraint firstItem="tux-5K-NKX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Roh-K7-OsX"/>
+                <constraint firstItem="7Pr-di-TnS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="eY8-nV-Pqz"/>
+                <constraint firstItem="f7w-Vo-9WC" firstAttribute="top" secondItem="tux-5K-NKX" secondAttribute="bottom" constant="10" id="iuj-c8-1GV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lad-XZ-baG" secondAttribute="trailing" constant="15" id="ris-PD-1eW"/>
+                <constraint firstItem="tux-5K-NKX" firstAttribute="top" secondItem="7Pr-di-TnS" secondAttribute="bottom" constant="10" id="wXc-Yc-rRb"/>
+                <constraint firstItem="lpC-R3-1ud" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ySX-7B-Yza"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Pr-di-TnS" secondAttribute="trailing" constant="15" id="zMN-kx-PUe"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

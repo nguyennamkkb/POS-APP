@@ -106,7 +106,19 @@ class Common {
     }
     
     public static func dateFromUnixTimestamp(milliseconds: Double) -> Date {
-        
         return Date(timeIntervalSince1970: milliseconds / 1000.0)
     }
+    public static func timeFromUnixTimestamp(milliseconds: Double) -> (year: Int, month: Int, day: Int, hour: Int, minute: Int, second: Int) {
+        let date  = Date(timeIntervalSince1970: milliseconds / 1000.0)
+        let calendar = Calendar.current
+        let second = calendar.component(.second, from: date)
+        let minute = calendar.component(.minute, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        return (year, month, day, hour, minute, second)
+        
+    }
+    
 }

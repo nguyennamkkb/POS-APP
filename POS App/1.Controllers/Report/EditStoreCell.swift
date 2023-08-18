@@ -21,7 +21,7 @@ class EditStoreCell: UITableViewCell {
         
         setupData()
         setupUI()
-        print(localUser.toJSON())
+//        print(localUser.toJSON())
     }
     
     

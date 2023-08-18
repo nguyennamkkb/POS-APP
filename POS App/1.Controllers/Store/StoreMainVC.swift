@@ -32,5 +32,9 @@ class StoreMainVC: BaseVC {
         let vc = EditStoreVC()
         self.pushVC(controller: vc)
     }
+    @IBAction func CaiDatPressed(_ sender: Any) {
+        let vc = SettingVC()
+        self.pushVC(controller: vc)
+    }
     
 }

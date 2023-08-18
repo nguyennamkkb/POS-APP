@@ -68,6 +68,11 @@
 		0B74DFBB2A3409FC005FDA97 /* MActSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */; };
 		0B74DFBC2A3409FC005FDA97 /* MActSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */; };
 		0B76B93F2A7441F900B91761 /* PReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76B93E2A7441F800B91761 /* PReport.swift */; };
+		0B7A4FC92A8E6BC50062E878 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FC72A8E6BC50062E878 /* NotificationVC.swift */; };
+		0B7A4FCA2A8E6BC50062E878 /* NotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FC82A8E6BC50062E878 /* NotificationVC.xib */; };
+		0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCB2A8E72600062E878 /* Notifications.swift */; };
+		0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCD2A8E79570062E878 /* SettingVC.swift */; };
+		0B7A4FD02A8E79570062E878 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCE2A8E79570062E878 /* SettingVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */; };
@@ -246,6 +251,11 @@
 		0B74DFB92A3409FC005FDA97 /* MActSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MActSuccessVC.swift; sourceTree = "<group>"; };
 		0B74DFBA2A3409FC005FDA97 /* MActSuccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MActSuccessVC.xib; sourceTree = "<group>"; };
 		0B76B93E2A7441F800B91761 /* PReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PReport.swift; sourceTree = "<group>"; };
+		0B7A4FC72A8E6BC50062E878 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationVC.swift; path = "POS App/1.Controllers/Report/NotificationVC.swift"; sourceTree = SOURCE_ROOT; };
+		0B7A4FC82A8E6BC50062E878 /* NotificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NotificationVC.xib; path = "POS App/1.Controllers/Report/NotificationVC.xib"; sourceTree = SOURCE_ROOT; };
+		0B7A4FCB2A8E72600062E878 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		0B7A4FCD2A8E79570062E878 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		0B7A4FCE2A8E79570062E878 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmployeeCell.swift; sourceTree = "<group>"; };
@@ -690,6 +700,8 @@
 			children = (
 				0B10790C2A7F7CA400C7652C /* ContactVC.swift */,
 				0B10790D2A7F7CA400C7652C /* ContactVC.xib */,
+				0B7A4FC72A8E6BC50062E878 /* NotificationVC.swift */,
+				0B7A4FC82A8E6BC50062E878 /* NotificationVC.xib */,
 			);
 			path = 3.Views;
 			sourceTree = "<group>";
@@ -772,6 +784,7 @@
 				0BE0391729F82039002CB20F /* DateHelper.swift */,
 				0B5D18502A0A968C004E47FD /* CacheManager.swift */,
 				0B5D18522A0A97D0004E47FD /* KeyCommon.swift */,
+				0B7A4FCB2A8E72600062E878 /* Notifications.swift */,
 			);
 			path = 4.Helpers;
 			sourceTree = "<group>";
@@ -803,6 +816,8 @@
 			children = (
 				0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */,
 				0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */,
+				0B7A4FCD2A8E79570062E878 /* SettingVC.swift */,
+				0B7A4FCE2A8E79570062E878 /* SettingVC.xib */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -973,6 +988,7 @@
 				0BD0CF772A347B7200A0BBE5 /* EmployeeDetailVC.xib in Resources */,
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
+				0B7A4FD02A8E79570062E878 /* SettingVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BF417CD2A3B7D6100DD36DA /* BookHeaderCell.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
@@ -990,6 +1006,7 @@
 				0BF417C92A3B7A5000DD36DA /* DetailCalenderVC.xib in Resources */,
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
+				0B7A4FCA2A8E6BC50062E878 /* NotificationVC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
 				0B1D555D2A6D20C00071E8F0 /* ChartDayCell.xib in Resources */,
 				0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */,
@@ -1077,6 +1094,7 @@
 				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
+				0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */,
 				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
@@ -1101,6 +1119,7 @@
 				0B1FAE612A344E6F00A81565 /* MainActionVC.swift in Sources */,
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
+				0B7A4FC92A8E6BC50062E878 /* NotificationVC.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
 				0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */,
 				0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */,
@@ -1116,6 +1135,7 @@
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0BF417D02A3B838B00DD36DA /* MidBookDetaiCell.swift in Sources */,
 				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
+				0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */,
 				0BD0CF762A347B7200A0BBE5 /* EmployeeDetailVC.swift in Sources */,
 				0BF417CC2A3B7D6100DD36DA /* BookHeaderCell.swift in Sources */,
 				0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */,
