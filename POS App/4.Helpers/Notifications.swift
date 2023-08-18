@@ -28,7 +28,7 @@ class Notification {
             } else {
                 print("Pending notifications:")
                 for request in requests {
-                    print("Title: \(request.content.title), Body: \(request.content.body), Trigger Date: \(request.trigger.debugDescription)")
+                    print("Title: \(request.content.title), Body: \(request.content.body), Trigger Date: \(request.trigger.debugDescription), identifier \(request.identifier)")
                 }
             }
         }
@@ -46,8 +46,19 @@ class Notification {
             }
         }
     }
-    public static func scheduleLocalNotificationAtMilis(title: String?, message: String?, time: Int64) {
-        let identifier = "my-noti"
+    public static func deleteNotification(withIdentifier identifier: String) {
+        let center = UNUserNotificationCenter.current()
+
+        center.getPendingNotificationRequests { requests in
+            let identifiers = requests.filter { $0.identifier == identifier }.map { $0.identifier }
+
+            if !identifiers.isEmpty {
+                center.removePendingNotificationRequests(withIdentifiers: identifiers)
+            }
+        }
+    }
+    public static func scheduleLocalNotificationAtMilis(title: String?, message: String?, time: Int64, identifier: String?) {
+        let identifier = identifier ?? ""
         let title = title ?? ""
         let body = message ?? ""
         let noti = UNUserNotificationCenter.current()

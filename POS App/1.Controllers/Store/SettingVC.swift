@@ -21,48 +21,12 @@ class SettingVC: UIViewController {
         
     }
     @IBAction func sendThongBao(_ sender: Any) {
-//        setLich ()
+        //        setLich ()
         let mili = Common.getMilisecondNow()
-        Notification.scheduleLocalNotificationAtMilis(title: "Thông báo", message: "Bạn là ai", time: Int64(mili + 2000))
+        Notification.scheduleLocalNotificationAtMilis(title: "Thông báo", message: "Bạn là ai 1111", time: Int64(mili + 4000), identifier: String(mili + 4000))
+        Notification.scheduleLocalNotificationAtMilis(title: "Thông báo", message: "Bạn là ai 2222", time: Int64(mili + 8000), identifier: String(mili + 8000))
+        Notification.deleteNotification(withIdentifier: String(mili + 8000))
+        Notification.viewPendingNotifications()
     }
-    func setLich (){
-        let identifier = "my-noti"
-        let title = "Thong báo"
-        let body = msgTF.text ?? ""
-        let hour = Int(hourTF.text ?? "0")
-        let minute = Int(minTF.text ?? "0")
-        let noti = UNUserNotificationCenter.current()
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
-        content.sound = .default
-        let calender = Calendar.current
-        var dateComponents =  DateComponents(calendar: calender, timeZone: TimeZone(abbreviation: "UTC+7"))
-        dateComponents.hour = hour
-        dateComponents.minute = minute
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        noti.removePendingNotificationRequests(withIdentifiers: [identifier])
-
-//        noti.add(request)
-        noti.add(request) { (error) in
-            if let error = error {
-                print("Error scheduling notification: \(error)")
-            } else {
-                print("Local notification scheduled successfully.")
-            }
-        }
-    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
