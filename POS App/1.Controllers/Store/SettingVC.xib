@@ -16,6 +16,7 @@
                 <outlet property="msgTF" destination="lad-XZ-baG" id="gQz-zS-POT"/>
                 <outlet property="secondTF" destination="f7w-Vo-9WC" id="hm0-vP-ibN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="TOF-xX-gDL" id="RRd-fH-qyM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -63,6 +64,14 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOF-xX-gDL">
+                    <rect key="frame" x="0.0" y="270" width="393" height="548"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,13 +80,17 @@
                 <constraint firstItem="lad-XZ-baG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4K7-Mf-dPA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lpC-R3-1ud" secondAttribute="trailing" constant="15" id="9PH-Em-n9z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f7w-Vo-9WC" secondAttribute="trailing" constant="15" id="Acq-2P-AKV"/>
+                <constraint firstItem="TOF-xX-gDL" firstAttribute="top" secondItem="lpC-R3-1ud" secondAttribute="bottom" id="DnA-zz-AtS"/>
+                <constraint firstItem="TOF-xX-gDL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FdW-oF-EA1"/>
                 <constraint firstItem="lad-XZ-baG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="IoT-71-VnZ"/>
                 <constraint firstItem="f7w-Vo-9WC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Oyu-6K-FZQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tux-5K-NKX" secondAttribute="trailing" constant="15" id="PMC-bc-Zdg"/>
                 <constraint firstItem="lpC-R3-1ud" firstAttribute="top" secondItem="f7w-Vo-9WC" secondAttribute="bottom" constant="10" id="RTQ-uI-ey1"/>
                 <constraint firstItem="tux-5K-NKX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Roh-K7-OsX"/>
                 <constraint firstItem="7Pr-di-TnS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="eY8-nV-Pqz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TOF-xX-gDL" secondAttribute="bottom" id="hyY-lb-dbL"/>
                 <constraint firstItem="f7w-Vo-9WC" firstAttribute="top" secondItem="tux-5K-NKX" secondAttribute="bottom" constant="10" id="iuj-c8-1GV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TOF-xX-gDL" secondAttribute="trailing" id="nP7-C7-oYB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lad-XZ-baG" secondAttribute="trailing" constant="15" id="ris-PD-1eW"/>
                 <constraint firstItem="tux-5K-NKX" firstAttribute="top" secondItem="7Pr-di-TnS" secondAttribute="bottom" constant="10" id="wXc-Yc-rRb"/>
                 <constraint firstItem="lpC-R3-1ud" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ySX-7B-Yza"/>

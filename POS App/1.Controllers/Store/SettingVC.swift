@@ -7,10 +7,12 @@
 
 import UIKit
 import UserNotifications
+import WebKit
 
-class SettingVC: UIViewController {
+class SettingVC: UIViewController, WKNavigationDelegate {
     
     
+    @IBOutlet var webView: WKWebView!
     @IBOutlet var msgTF: UITextField!
     @IBOutlet var hourTF: UITextField!
     @IBOutlet var minTF: UITextField!
@@ -18,6 +20,11 @@ class SettingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let url = URL(string: "http://langtamviet.com/") else {return}
+        let urlRequest = URLRequest(url: url)
+        print("OK")
+        webView.load(urlRequest)
+        webView.navigationDelegate = self
         
     }
     @IBAction func sendThongBao(_ sender: Any) {
@@ -29,4 +36,10 @@ class SettingVC: UIViewController {
         Notification.viewPendingNotifications()
     }
     
+//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//        loadding.stopAnimating()
+//    }
+//    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+//        loadding.stopAnimating()
+//    }
 }
