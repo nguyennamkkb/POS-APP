@@ -99,7 +99,9 @@ class EmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func btnSearchPressed(_ sender: UIButton) {
+        Common.wLog("Nam")
         getAllEployees()
+
     }
     
 }

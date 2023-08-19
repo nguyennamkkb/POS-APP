@@ -31,4 +31,5 @@ class LoginParam: Mappable {
         phone <- map["phone"]
         password <- map["password"]
     }
+    
 }

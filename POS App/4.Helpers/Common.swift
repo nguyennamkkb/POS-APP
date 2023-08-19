@@ -120,5 +120,12 @@ class Common {
         return (year, month, day, hour, minute, second)
         
     }
-    
+    public static func wLog(_ s: Any) -> Void {
+        
+        Thread.runOnBackground {
+#if DEBUG
+            print("Namnl:\(s)")
+#endif
+        }
+    }
 }
