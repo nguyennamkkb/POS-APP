@@ -1,3 +1,2 @@
 # POS-APP
-
-    <img src="/nguyennamkkb/POS-APP/blob/main/image-app/1_1.jpg" alt="">
+[Hình ảnh của ứng dụng](https://drive.google.com/drive/folders/1GRPt95EYjBBLC6esUxUpEQTv1ExMs0Rm?usp=sharing)
