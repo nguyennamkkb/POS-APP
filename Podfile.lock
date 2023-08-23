@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.9.1)
-  - CarbonKit (2.3.1)
   - DGCharts (5.0.0):
     - DGCharts/Core (= 5.0.0)
   - DGCharts/Core (5.0.0)
@@ -12,10 +11,10 @@ PODS:
   - Kingfisher/Core (5.15.8)
   - ObjectMapper (4.2.0)
   - SideMenu (6.5.0)
+  - XLPagerTabStrip (9.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8)
-  - CarbonKit
   - DGCharts
   - DropDown
   - FittedSheets
@@ -23,11 +22,11 @@ DEPENDENCIES:
   - Kingfisher (~> 5.15.7)
   - ObjectMapper
   - SideMenu (~> 6.0)
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - CarbonKit
     - DGCharts
     - DropDown
     - FittedSheets
@@ -35,10 +34,10 @@ SPEC REPOS:
     - Kingfisher
     - ObjectMapper
     - SideMenu
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
   DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
@@ -46,7 +45,8 @@ SPEC CHECKSUMS:
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  XLPagerTabStrip: 27f3bfe23c53b4251c6481b06b1c289458a3fc1d
 
-PODFILE CHECKSUM: ba4e7c1f2b87da0bb97418d4982ebe3837092bd1
+PODFILE CHECKSUM: fe0eab2a78aeaafd93b6ecf57215527b06cbb6ef
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.12.0

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CarbonKit
 import ObjectMapper
 
 class ReportMainVC: BaseVC{

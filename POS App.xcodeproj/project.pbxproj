@@ -73,6 +73,14 @@
 		0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCB2A8E72600062E878 /* Notifications.swift */; };
 		0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCD2A8E79570062E878 /* SettingVC.swift */; };
 		0B7A4FD02A8E79570062E878 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCE2A8E79570062E878 /* SettingVC.xib */; };
+		0B7B7CE52A908B150070D838 /* TestTabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE32A908B150070D838 /* TestTabsVC.swift */; };
+		0B7B7CE62A908B150070D838 /* TestTabsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE42A908B150070D838 /* TestTabsVC.xib */; };
+		0B7B7CE92A90919E0070D838 /* Tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE72A90919E0070D838 /* Tab1VC.swift */; };
+		0B7B7CEA2A90919E0070D838 /* Tab1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE82A90919E0070D838 /* Tab1VC.xib */; };
+		0B7B7CED2A9091AD0070D838 /* Tab2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CEB2A9091AD0070D838 /* Tab2VC.swift */; };
+		0B7B7CEE2A9091AD0070D838 /* Tab2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CEC2A9091AD0070D838 /* Tab2VC.xib */; };
+		0B7B7CF12A90935C0070D838 /* MMMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CEF2A90935C0070D838 /* MMMVC.swift */; };
+		0B7B7CF22A90935C0070D838 /* MMMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CF02A90935C0070D838 /* MMMVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */; };
@@ -186,7 +194,7 @@
 		0BF417D02A3B838B00DD36DA /* MidBookDetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417CE2A3B838B00DD36DA /* MidBookDetaiCell.swift */; };
 		0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417CF2A3B838B00DD36DA /* MidBookDetaiCell.xib */; };
 		0BFD87312A518535005DE099 /* ParamSearchBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD87302A518535005DE099 /* ParamSearchBook.swift */; };
-		BA1644BF7B780990762E4ADF /* Pods_POS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */; };
+		C034F48E2108B057E3342CD7 /* Pods_LN_POS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +264,14 @@
 		0B7A4FCB2A8E72600062E878 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		0B7A4FCD2A8E79570062E878 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		0B7A4FCE2A8E79570062E878 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
+		0B7B7CE32A908B150070D838 /* TestTabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabsVC.swift; sourceTree = "<group>"; };
+		0B7B7CE42A908B150070D838 /* TestTabsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTabsVC.xib; sourceTree = "<group>"; };
+		0B7B7CE72A90919E0070D838 /* Tab1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1VC.swift; sourceTree = "<group>"; };
+		0B7B7CE82A90919E0070D838 /* Tab1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tab1VC.xib; sourceTree = "<group>"; };
+		0B7B7CEB2A9091AD0070D838 /* Tab2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2VC.swift; sourceTree = "<group>"; };
+		0B7B7CEC2A9091AD0070D838 /* Tab2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tab2VC.xib; sourceTree = "<group>"; };
+		0B7B7CEF2A90935C0070D838 /* MMMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMMVC.swift; sourceTree = "<group>"; };
+		0B7B7CF02A90935C0070D838 /* MMMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMMVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmployeeCell.swift; sourceTree = "<group>"; };
@@ -372,8 +388,10 @@
 		0BF417CF2A3B838B00DD36DA /* MidBookDetaiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MidBookDetaiCell.xib; sourceTree = "<group>"; };
 		0BFD87302A518535005DE099 /* ParamSearchBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearchBook.swift; sourceTree = "<group>"; };
 		284A6890BF03F09ADA14102B /* Pods-POS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.release.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.release.xcconfig"; sourceTree = "<group>"; };
-		4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3198EAE189DC674652D74074 /* Pods-LN POS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN POS.debug.xcconfig"; path = "Target Support Files/Pods-LN POS/Pods-LN POS.debug.xcconfig"; sourceTree = "<group>"; };
+		83F740E68D111F233932ED53 /* Pods-LN POS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN POS.release.xcconfig"; path = "Target Support Files/Pods-LN POS/Pods-LN POS.release.xcconfig"; sourceTree = "<group>"; };
 		A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.debug.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.debug.xcconfig"; sourceTree = "<group>"; };
+		B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LN_POS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97165A029FA240C00D08327 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
 		D97165A129FA240C00D08327 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		D97165A229FA240C00D08327 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -395,7 +413,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA1644BF7B780990762E4ADF /* Pods_POS_App.framework in Frameworks */,
+				C034F48E2108B057E3342CD7 /* Pods_LN_POS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +836,14 @@
 				0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */,
 				0B7A4FCD2A8E79570062E878 /* SettingVC.swift */,
 				0B7A4FCE2A8E79570062E878 /* SettingVC.xib */,
+				0B7B7CE32A908B150070D838 /* TestTabsVC.swift */,
+				0B7B7CE42A908B150070D838 /* TestTabsVC.xib */,
+				0B7B7CE72A90919E0070D838 /* Tab1VC.swift */,
+				0B7B7CE82A90919E0070D838 /* Tab1VC.xib */,
+				0B7B7CEB2A9091AD0070D838 /* Tab2VC.swift */,
+				0B7B7CEC2A9091AD0070D838 /* Tab2VC.xib */,
+				0B7B7CEF2A90935C0070D838 /* MMMVC.swift */,
+				0B7B7CF02A90935C0070D838 /* MMMVC.xib */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -853,6 +879,8 @@
 			children = (
 				A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */,
 				284A6890BF03F09ADA14102B /* Pods-POS App.release.xcconfig */,
+				3198EAE189DC674652D74074 /* Pods-LN POS.debug.xcconfig */,
+				83F740E68D111F233932ED53 /* Pods-LN POS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -881,7 +909,7 @@
 		F2357538D706085EBC2C7B18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F7EA84666864ABF0E12EDDE /* Pods_POS_App.framework */,
+				B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -948,10 +976,12 @@
 			files = (
 				0B049BDA2A7E365500A2295A /* RPListInfoVC.xib in Resources */,
 				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
+				0B7B7CE62A908B150070D838 /* TestTabsVC.xib in Resources */,
 				0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */,
 				0B3851982A81584D006153BA /* EditStoreCell.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
+				0B7B7CF22A90935C0070D838 /* MMMVC.xib in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */,
@@ -995,6 +1025,7 @@
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
 				0B10790F2A7F7CA400C7652C /* ContactVC.xib in Resources */,
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
+				0B7B7CEA2A90919E0070D838 /* Tab1VC.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0BD709432A370DA200D467EC /* QRVC.xib in Resources */,
 				0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */,
@@ -1007,6 +1038,7 @@
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
 				0B7A4FCA2A8E6BC50062E878 /* NotificationVC.xib in Resources */,
+				0B7B7CEE2A9091AD0070D838 /* Tab2VC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
 				0B1D555D2A6D20C00071E8F0 /* ChartDayCell.xib in Resources */,
 				0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */,
@@ -1046,7 +1078,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-POS App-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LN POS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1059,15 +1091,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-POS App/Pods-POS App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LN POS/Pods-LN POS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-POS App/Pods-POS App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LN POS/Pods-LN POS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-POS App/Pods-POS App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LN POS/Pods-LN POS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1082,6 +1114,8 @@
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B33C63C2A70346900201CA0 /* RPHeaderCell.swift in Sources */,
 				0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */,
+				0B7B7CE52A908B150070D838 /* TestTabsVC.swift in Sources */,
+				0B7B7CF12A90935C0070D838 /* MMMVC.swift in Sources */,
 				0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */,
 				0BD914332A4DEA96006C223B /* CustomerServicesCell.swift in Sources */,
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
@@ -1120,6 +1154,7 @@
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
 				0B7A4FC92A8E6BC50062E878 /* NotificationVC.swift in Sources */,
+				0B7B7CE92A90919E0070D838 /* Tab1VC.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
 				0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */,
 				0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */,
@@ -1150,6 +1185,7 @@
 				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
 				0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
+				0B7B7CED2A9091AD0070D838 /* Tab2VC.swift in Sources */,
 				0BD5BACC29F8A439009F2A66 /* LoginEmployeeVC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
 				0BB1D2202A32421400516F25 /* DichVuCell.swift in Sources */,
@@ -1318,7 +1354,7 @@
 		};
 		0BE038F529F81F6F002CB20F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */;
+			baseConfigurationReference = 3198EAE189DC674652D74074 /* Pods-LN POS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1357,7 +1393,7 @@
 		};
 		0BE038F629F81F6F002CB20F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 284A6890BF03F09ADA14102B /* Pods-POS App.release.xcconfig */;
+			baseConfigurationReference = 83F740E68D111F233932ED53 /* Pods-LN POS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
