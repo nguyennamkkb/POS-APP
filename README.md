@@ -16,4 +16,4 @@
 Kết nối RESTful API
 
 # Server NestJs, CentOS 7, MySQL
-[Mã nguồn server LN-POS-API tại đây: https://github.com/nguyennamkkb/LN-POS-API]([https://drive.google.com/drive/folders/1GRPt95EYjBBLC6esUxUpEQTv1ExMs0Rm?usp=sharin](https://github.com/nguyennamkkb/LN-POS-API)https://github.com/nguyennamkkb/LN-POS-APIg)
+[Mã nguồn server LN-POS-API tại đây: https://github.com/nguyennamkkb/LN-POS-API](https://github.com/nguyennamkkb/LN-POS-API)
