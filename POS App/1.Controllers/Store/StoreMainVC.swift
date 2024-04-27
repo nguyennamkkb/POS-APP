@@ -23,6 +23,18 @@ class StoreMainVC: BaseVC {
            }
     }
     
+    @IBAction func btnDichVuPressed(_ sender: Any) {
+        let vc =  ServiceVC()
+        self.pushVC(controller: vc)
+    }
+    @IBAction func btnKhachHangPressed(_ sender: Any) {
+        let vc = CustomerVC()
+        self.pushVC(controller: vc)
+    }
+    @IBAction func btnNhanVienPressed(_ sender: Any) {
+        let vc = EmployeeVC()
+        self.pushVC(controller: vc)
+    }
     @IBAction func LogoutPressed(_ sender: UIButton) {
         let vc = LoginVC()
         let navi = UINavigationController(rootViewController: vc)

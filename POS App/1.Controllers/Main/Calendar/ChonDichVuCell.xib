@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="167" id="KGk-i7-Jjw" customClass="ChonDichVuCell" customModule="POS_App" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="167" id="KGk-i7-Jjw" customClass="ChonDichVuCell" customModule="LN_POS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="406" height="167"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -19,48 +19,49 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-rJ-JiK">
-                        <rect key="frame" x="0.0" y="0.0" width="406" height="65"/>
+                        <rect key="frame" x="0.0" y="0.0" width="406" height="75"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dich vu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44t-bq-dnZ">
-                                <rect key="frame" x="9.9999999999999964" y="5" width="53.666666666666657" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trị nám" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44t-bq-dnZ">
+                                <rect key="frame" x="10" y="5" width="67.666666666666671" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="zZZ-fQ-NYn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" name="SPA_F8"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.dotted" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n4i-uK-jJQ">
-                                <rect key="frame" x="371" y="20.666666666666664" width="25" height="23.666666666666664"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n4i-uK-jJQ">
+                                <rect key="frame" x="371" y="26" width="25" height="23.666666666666671"/>
+                                <color key="tintColor" name="SPA_AE"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="1hO-W6-Mkm"/>
                                     <constraint firstAttribute="height" constant="25" id="Dxw-ke-HDu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giá:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQS-xH-tF7" userLabel="price">
-                                <rect key="frame" x="10" y="35" width="27" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQS-xH-tF7" userLabel="price">
+                                <rect key="frame" x="10.000000000000004" y="45" width="63.333333333333343" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="kU8-LP-M7X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="SPA_Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-ph-bUJ" userLabel="select">
-                                <rect key="frame" x="0.0" y="0.0" width="406" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="406" height="75"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="SelectPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ylc-23-6b1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="44t-bq-dnZ" firstAttribute="top" secondItem="iDn-rJ-JiK" secondAttribute="top" constant="5" id="1cb-BS-LGH"/>
                             <constraint firstAttribute="bottom" secondItem="oRi-ph-bUJ" secondAttribute="bottom" id="AYo-LK-b9W"/>
                             <constraint firstItem="oRi-ph-bUJ" firstAttribute="top" secondItem="iDn-rJ-JiK" secondAttribute="top" id="J6M-Ej-5fX"/>
                             <constraint firstAttribute="trailing" secondItem="oRi-ph-bUJ" secondAttribute="trailing" id="PXj-hU-nrM"/>
-                            <constraint firstAttribute="height" constant="65" id="Puo-Pa-Kk5"/>
+                            <constraint firstAttribute="height" constant="75" id="Puo-Pa-Kk5"/>
                             <constraint firstItem="qQS-xH-tF7" firstAttribute="leading" secondItem="iDn-rJ-JiK" secondAttribute="leading" constant="10" id="UeM-VC-fRO"/>
                             <constraint firstItem="n4i-uK-jJQ" firstAttribute="centerY" secondItem="iDn-rJ-JiK" secondAttribute="centerY" id="a8p-4N-euB"/>
                             <constraint firstItem="44t-bq-dnZ" firstAttribute="leading" secondItem="iDn-rJ-JiK" secondAttribute="leading" constant="10" id="cbm-iK-tcn"/>
@@ -70,26 +71,35 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="iDn-rJ-JiK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J8x-7g-3Hp"/>
                     <constraint firstAttribute="trailing" secondItem="iDn-rJ-JiK" secondAttribute="trailing" id="SdZ-XQ-GqH"/>
                     <constraint firstItem="iDn-rJ-JiK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hYF-EN-I5d"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iDn-rJ-JiK" secondAttribute="bottom" id="zme-uT-jlj"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iDn-rJ-JiK" secondAttribute="bottom" constant="8" id="zme-uT-jlj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="checkImage" destination="n4i-uK-jJQ" id="oO4-GP-BvW"/>
                 <outlet property="dichVuLbl" destination="44t-bq-dnZ" id="6b1-lD-rJ7"/>
                 <outlet property="priceLbl" destination="qQS-xH-tF7" id="uxx-DU-MUi"/>
+                <outlet property="vItem" destination="iDn-rJ-JiK" id="KZF-ov-BtS"/>
             </connections>
             <point key="canvasLocation" x="204.58015267175571" y="63.732394366197184"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="circle.dotted" catalog="system" width="128" height="123"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <namedColor name="SPA_AE">
+            <color red="0.68160122629999997" green="0.69915080070000002" blue="0.72209030389999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_Black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_F8">
+            <color red="0.97214514019999998" green="0.3401286006" blue="0.4894454479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

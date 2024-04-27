@@ -42,14 +42,14 @@ class RPListInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
         let item = tableData[indexPath.row]
-        cell.bindData(item: item)
-        cell.actionDetail = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = DetailCalenderVC()
-            vc.bindData(item: book)
-            self.pushVC(controller: vc)
-        }
+//        cell.bindData(item: item)
+//        cell.actionDetail = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = DetailCalenderVC()
+//            vc.bindData(item: book)
+//            self.pushVC(controller: vc)
+//        }
         return cell
     }
     

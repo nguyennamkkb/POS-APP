@@ -12,7 +12,7 @@ import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
 
 class Common {
-    public static var KEY_APP = "50829317681RT3RUH3EZ"
+    public static var KEY_APP = "yY9I5VY3zcyEASDW22xxxwq1"
     public static var isInternet = false//false bat tinh năng ckeck ẩn menu để false
     public static var isRunningUpOffW = false
     public static var MillisecondsOfDay: Int64 = 86400000 - 1
@@ -24,6 +24,17 @@ class Common {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
+        
+        let formattedDateString = dateFormatter.string(from: date)
+        return (formattedDateString) // Output: "11-03-2023 14:10"
+        
+    }
+    
+    public static func layNgayTheoMilisecond(time: String) -> String{
+        let date = Date(milliseconds: Int64(time) ?? 0)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
         let formattedDateString = dateFormatter.string(from: date)
         return (formattedDateString) // Output: "11-03-2023 14:10"

@@ -8,112 +8,126 @@
 import UIKit
 import ObjectMapper
 
-class CustomerDetailVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+class CustomerDetailVC: BaseVC{
     
     
-    var deleteSuccess: ClosureAction?
+    var itemData: PCustomer = PCustomer()
+    var actXoa: ClosureAction?
     
     
-    @IBOutlet weak var phoneLbl: UILabel!
-    @IBOutlet weak var pointLbl: UILabel!
-    @IBOutlet weak var QRImage: UIView!
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var birthdayLbl: UILabel!
-    @IBOutlet weak var addressLbl: UILabel!
-    @IBOutlet weak var genderLbl: UILabel!
+    @IBOutlet weak var lbDiaChi: UILabel!
+    @IBOutlet weak var lbSinhNhat: UILabel!
+    @IBOutlet weak var lbHoTen: UILabel!
+    @IBOutlet weak var lbDienThoai: UILabel!
     
-    @IBOutlet var btnDelete: UIButton!
-    @IBOutlet var btnEdit: UIButton!
-    var customer = PCustomer()
-    var customerServices = [PBookCalender]()
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var btnSua: UIButton!
+    @IBOutlet weak var btnXoa: UIButton!
+    
+    
+    @IBOutlet weak var vDiemSo: UIView!
+    @IBOutlet weak var vDienThoai: UIView!
+    @IBOutlet weak var vSinhNhat: UIView!
+    @IBOutlet weak var imgGioiTinh: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    var customer: PCustomer = PCustomer()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setData()
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "CustomerServicesCell")
-        getBooks()
+        setupData()
     }
+    
+
     
     func setupUI(){
-        cardView.layer.cornerRadius = myCornerRadius.corner10
-        QRImage.layer.cornerRadius = myCornerRadius.corner10
-        btnDelete.layer.cornerRadius = myCornerRadius.corner5
-        btnEdit.layer.cornerRadius = myCornerRadius.corner5
+        vDiemSo.layer.cornerRadius = myCornerRadius.corner10
+        
+        vSinhNhat.layer.cornerRadius = myCornerRadius.corner10
+        vDienThoai.layer.cornerRadius = myCornerRadius.corner10
+        btnSua.layer.cornerRadius = myCornerRadius.corner10
+        btnXoa.layer.cornerRadius = myCornerRadius.corner10
+        
+        vDiemSo.addNDropShadow()
+        vSinhNhat.addNDropShadow()
+        vDienThoai.addNDropShadow()
+        
     }
-    func setData(){
-        nameLbl.text = "\(customer.fullName ?? "")"
-        birthdayLbl.text = "Ngày sinh: \(Common.convertTimestampToDate(timestampString: customer.birthday ?? "", dateFormat: "dd-MM-yyyy"))"
-        addressLbl.text = "\(customer.address ?? "")"
-        genderLbl.text = "Giới tính: \(customer.gender == 1 ? "Nam" : "Nữ")"
-        pointLbl.text = "Điểm: \(customer.loyalty ?? 0)"
-        phoneLbl.text = "Điện thoại: \(customer.phone ?? "")"
-    }
-    func bindData(item: PCustomer){
-        customer = item
-    }
-    
-    @IBAction func back(_ sender: UIButton) {
+    @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
-    @IBAction func btnEditPressed(_ sender: UIButton) {
+    
+    func bindData(e: PCustomer){
+        itemData = e
+    }
+    
+    func setupData(){
+        if itemData.gender == 0 {
+            imgGioiTinh.image = UIImage(named: "ic_nu")
+          
+        }else {
+            imgGioiTinh.image = UIImage(named: "ic_nam")
+        }
+        
+        lbHoTen.text = "\(itemData.fullName ?? "")"
+        lbDienThoai.text = "\(itemData.phone ?? "")"
+        lbDiaChi.text = "\(itemData.address ?? "")"
+        print(itemData.birthday ?? "0")
+        lbSinhNhat.text = "\(Common.layNgayTheoMilisecond(time: itemData.birthday ?? "0"))"
+        
+    }
+    @IBAction func btnXoaPressed(_ sender: Any) {
+        let act = XacNhanVC()
+        act.bindData(s: "Đồng ý xoá nhân biên \(itemData.fullName ?? "")")
+        act.modalPresentationStyle = .overCurrentContext
+        act.modalTransitionStyle = .crossDissolve
+        act.actDongY = {
+            [weak self] in
+            guard let self = self else {return}
+            self.xoaKhachHang()
+        }
+        present(act, animated: false, completion: nil)
+    }
+    @IBAction func btnSuaPressed(_ sender: Any) {
         let vc = CreateCustomerVC()
-        vc.bindDataEdit(item: customer)
-        vc.actionUpdateOK = {
+        vc.bindDataSua(e: itemData)
+        vc.actionCapNhatOK = {
             [weak self] item in
             guard let self = self else {return}
-            self.customer = item
-            self.setData()
+            
+            itemData = item
+            self.setupData()
+            
         }
         self.pushVC(controller: vc)
     }
     
-    @IBAction func btnDeletePressed(_ sender: UIButton) {
-        customer.status = 0
-        customer.sign()
-        ServiceManager.common.updateCustomer(param: customer){
+    func xoaKhachHang(){
+        itemData.status = 0
+        itemData.sign()
+        ServiceManager.common.updateCustomer(param: itemData){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
-                self.deleteSuccess?()
                 self.onBackNav()
+                self.actXoa?()
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Lỗi")
-            }
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return customerServices.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerServicesCell", for: indexPath) as? CustomerServicesCell else {return UITableViewCell()}
-        
-        
-        let item = customerServices[indexPath.row]
-        cell.bindData(item: item)
-        return cell
-    }
-    
-    func getBooks(){
-        guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(store_id: id,status: 1)
-        ServiceManager.common.getAllBooks(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))&idCustomer=\(customer.id ?? 0)"){
-            (response) in
-            if response?.data != nil, response?.statusCode == 200 {
-                self.customerServices = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } else if response?.statusCode == 0 {
-                self.showMessagError()
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Không thể xoá")
             }
         }
     }
 }
 
+extension CustomerDetailVC:  UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerServicesCell", for: indexPath) as? CustomerServicesCell else {return UITableViewCell()}
+        return cell
+    }
+    
+    
+}

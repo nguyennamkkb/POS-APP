@@ -11,64 +11,129 @@ import DropDown
 
 
 class CreateEmployeeCell: UITableViewCell {
-
+    
     var actionOK: ClosureCustom<PEmployee>?
-    var employee = PEmployee()
-    @IBOutlet var fullNameTF: UITextField!
-    @IBOutlet var phoneTF: UITextField!
-    @IBOutlet var addressTF: UITextField!
-    @IBOutlet var birthdayTime: UIDatePicker!
+    var employee: PEmployee = PEmployee()
+    @IBOutlet weak var tfHoten: UITextField!
+    @IBOutlet weak var tfSoDieThoai: UITextField!
+    @IBOutlet weak var tfDiaChi: UITextField!
     
-    @IBOutlet var btnXacNhan: UIButton!
-    @IBOutlet var genderBtn: UIButton!
-    @IBOutlet var genderLb: UILabel!
-    let dateFormater = DateFormatter()
     
-    let dropDown = DropDown()
+    @IBOutlet var dpSinhNhat: UIDatePicker!
+    
+    @IBOutlet weak var vXoa: UIView!
+    @IBOutlet weak var vGio: UIView!
+    @IBOutlet weak var vGioiTinhNam: UIView!
+    @IBOutlet weak var vGioiTinhNu: UIView!
+    @IBOutlet weak var vDiaChi: UIView!
+    @IBOutlet weak var vDienThoai: UIView!
+    @IBOutlet weak var vHoten: UIView!
+    
+//    let dateFormater = DateFormatter()
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupUI()
-    }
-    func bindDataUpdate(item: PEmployee){
-        employee =  item
-        setupData()
-    }
-    func setupData(){
-        genderLb.text = "\(employee.gender == 1 ? "Nam" : "Nữ")"
-        phoneTF.text = "\(employee.phone ?? "")"
-        addressTF.text = "\(employee.address ?? "")"
-        fullNameTF.text = employee.fullName ?? ""
-        if let date = dateFormater.date(from: employee.birthday ?? "") {
-            birthdayTime.setDate(date, animated: true)
-        }
+        resetGioiTinh()
         
     }
     func setupUI(){
-        genderBtn.layer.cornerRadius = myCornerRadius.corner5
-        btnXacNhan.layer.cornerRadius = myCornerRadius.corner5
-    }
+        vXoa.layer.cornerRadius = myCornerRadius.corner10
+        vGio.layer.cornerRadius = myCornerRadius.corner10
+        vGioiTinhNam.layer.cornerRadius = myCornerRadius.corner10
+        vGioiTinhNu.layer.cornerRadius = myCornerRadius.corner10
+        vDiaChi.layer.cornerRadius = myCornerRadius.corner10
+        vDienThoai.layer.cornerRadius = myCornerRadius.corner10
+        vHoten.layer.cornerRadius = myCornerRadius.corner10
+        
+        
+        vXoa.addBorder(color: myColor.SPA_FE!, width: 1)
+        vGio.addBorder(color: myColor.SPA_FE!, width: 1)
+        vDiaChi.addBorder(color: myColor.SPA_FE!, width: 1)
+        vXoa.addBorder(color: myColor.SPA_FE!, width: 1)
+        vDienThoai.addBorder(color: myColor.SPA_FE!, width: 1)
+        vHoten.addBorder(color: myColor.SPA_FE!, width: 1)
+        
 
-    @IBAction func selectGenderPressed(_ sender: UIButton) {
-        dropDown.dataSource = ["Nam", "Nữ"]//4
-        dropDown.anchorView = sender //5
-        dropDown.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
-        dropDown.show() //7
-        dropDown.selectionAction = { [weak self] (index: Int, item: String) in //8
-            guard let _ = self else { return }
-//            sender.setTitle(item, for: .normal) //9
-            self?.genderLb.text = item
+        vXoa.isHidden = true
+    }
+    
+    func setupData(){
+        tfHoten.text = employee.fullName ?? ""
+        tfSoDieThoai.text = employee.phone ?? ""
+        tfDiaChi.text = employee.address ?? ""
+        employee.gender = employee.gender ?? 0
+        resetGioiTinh(employee.gender ?? 0)
+        let timeDouble: Double =  Double(Common.getMilisecondNow())
+        dpSinhNhat.date = Common.dateFromUnixTimestamp(milliseconds: Double(employee.birthday ?? String(timeDouble)) ?? timeDouble )
+
+    }
+    func bindData(item: PEmployee){
+        print(item.toJSON())
+        employee = item
+        employee.birthday = String(Common.getMilisecondNow())
+        
+        setupData()
+    }
+    
+    @IBAction func nhapDienThoai(_ sender: Any) {
+        employee.phone = tfSoDieThoai.text ?? ""
+    }
+    @IBAction func nhapDiaChi(_ sender: Any) {
+        employee.address = tfDiaChi.text ?? ""
+    }
+    
+    
+    @IBAction func chonNgayPressed(_ sender: Any) {
+        employee.birthday = String(dpSinhNhat.date.millisecondsSince1970)
+    }
+    @IBAction func btnGtNuPressed(_ sender: Any) {
+        employee.gender = 0
+        resetGioiTinh(0)
+    }
+    @IBAction func btnGTNamPressed(_ sender: Any) {
+        employee.gender = 1
+        resetGioiTinh(1)
+    }
+    
+    @IBAction func nhapHoTen(_ sender: Any) {
+        employee.fullName = tfHoten.text ?? ""
+    }
+    
+
+    func resetGioiTinh(_ gioiTinhHienTai: Int = 0){
+        switch gioiTinhHienTai {
+        case 0:
+            vGioiTinhNu.alpha = 1
+            vGioiTinhNu.addBorder(color: myColor.SPA_FE!, width: 1)
+            vGioiTinhNu.backgroundColor = myColor.SPA_FF
+            
+            vGioiTinhNam.addBorder(color: myColor.SPA_FE!, width: 0)
+            vGioiTinhNam.backgroundColor = myColor.SPA_FF
+            vGioiTinhNam.alpha = 0.5
+            
+            break
+        case 1:
+            vGioiTinhNam.alpha = 1
+            vGioiTinhNam.addBorder(color: myColor.SPA_FE!, width: 1)
+            vGioiTinhNam.backgroundColor = myColor.SPA_FF
+            
+            vGioiTinhNu.addBorder(color: myColor.SPA_FE!, width: 0)
+            vGioiTinhNu.backgroundColor = myColor.SPA_FF
+            vGioiTinhNu.alpha = 0.5
+            break
+            
+            
+        default:
+            vGioiTinhNu.alpha = 1
+            vGioiTinhNu.addBorder(color: myColor.SPA_FE!, width: 1)
+            vGioiTinhNu.backgroundColor = myColor.SPA_FF
+            
+            vGioiTinhNam.addBorder(color: myColor.SPA_FE!, width: 0)
+            vGioiTinhNam.backgroundColor = myColor.SPA_FF
+            vGioiTinhNam.alpha = 0.5
         }
+        
     }
-    @IBAction func btnXacNhanPressed(_ sender: UIButton) {
-        guard let fullName = fullNameTF.text else {return}
-        guard let phone = phoneTF.text else {return}
-        guard let address = addressTF.text else {return}
-        guard let gender = genderLb.text else {return}
-        let item = PEmployee(store_id: Common.userMaster.id ?? -1, fullName: fullName, phone: phone, address: address, birthday: String(birthdayTime.date.millisecondsSince1970), gender: gender == "nam" ? 1 : 0)
-        item.id = employee.id
-        actionOK?(item)
-
-    }
+    
 }
- 

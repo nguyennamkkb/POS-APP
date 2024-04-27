@@ -14,10 +14,10 @@ class StoreInfoCell: UITableViewCell {
     var actionSuccess: ClosureCustom<PStore>?
     let dropDown = DropDown()
     @IBOutlet var xacNhanBtn: UIButton!
-    @IBOutlet var emailTF: UITextField!
+    @IBOutlet var tfDienThoai: UITextField!
 //    @IBOutlet var accoutNumberTF: UITextField!
-    @IBOutlet var addressTF: UITextField!
-    @IBOutlet var storeNameTF: UITextField!
+    @IBOutlet var tfDiaChi: UITextField!
+    @IBOutlet var tfTenCuaHang: UITextField!
 //    @IBOutlet var bankCodeDRop: UIButton!
     
     override func awakeFromNib() {
@@ -48,14 +48,15 @@ class StoreInfoCell: UITableViewCell {
     }
 
     @IBAction func XacNhanAction(_ sender: UIButton) {
-        guard let name = storeNameTF.text else {return}
-        guard let address = addressTF.text else {return}
-        guard let phone = storeData.phone else {return}
+        guard let name = tfTenCuaHang.text else {return}
+        guard let address = tfDiaChi.text else {return}
+        guard let phone = tfDienThoai.text else {return}
+        guard let email = storeData.email else {return}
         guard let password = storeData.password else {return}
     
 //        guard let bankCode = bankCodeDRop.titleLabel?.text else {return}
 //        guard let accoutNumber = accoutNumberTF.text else {return}
-        let store = PStore(storeName: name, phone: phone, address: address, email: emailTF.text ?? "", password: password)
+        let store = PStore(storeName: name, phone: phone, address: address, email: email, password: password)
         actionSuccess?(store)
     }
     

@@ -18,8 +18,7 @@ class PEmployee: Mappable {
     var gender: Int?
     var image: String?
     var type: Int64?
-    var bankCode: String?
-    var accountNumber: String?
+    var luotKhach: Int?
     var keySearch: String?
     var createAt: String?
     var updateAt: String?
@@ -28,6 +27,7 @@ class PEmployee: Mappable {
     var timeRequest: Int?
     
     init (){
+        
         sign()
     }
     init (store_id: Int, fullName: String,  phone: String, address: String, birthday: String, gender: Int ){
@@ -53,8 +53,8 @@ class PEmployee: Mappable {
         gender <- map["gender"]
         image <- map["image"]
         type <- map["type"]
-        bankCode <- map["bankCode"]
-        accountNumber <- map["accountNumber"]
+        luotKhach <- map["luotKhach"]
+
         keySearch <- map["keySearch"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]

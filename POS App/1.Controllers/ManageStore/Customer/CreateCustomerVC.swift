@@ -7,48 +7,78 @@
 
 import UIKit
 
-class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
+class CreateCustomerVC: BaseVC{
     
     var actionOk: ClosureAction?
+    var actionCapNhatOK: ClosureCustom<PCustomer>?
     var customer: PCustomer = PCustomer()
-    var actionUpdateOK: ClosureCustom<PCustomer>?
-    var statusCreateOrUpdate = 1
-    @IBOutlet var tableView: UITableView!
+    var trangThaiSua: Int = 0
+    @IBOutlet weak var lbTieuDe: UILabel!
+    @IBOutlet weak var btnXacNhan: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "CreateCustomerCell")
-        // Do any additional setup after loading the view.
+
+        setupUI()
     }
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()
     }
-    func bindDataEdit(item: PCustomer){
-        customer =  item
-        statusCreateOrUpdate = 0
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    func bindDataSua(e: PCustomer){
+        customer = e
+        trangThaiSua = 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateCustomerCell", for: indexPath) as? CreateCustomerCell else {return UITableViewCell()}
-        if statusCreateOrUpdate == 0 {
-            cell.bindDataUpdate(item: customer)
+    func setupUI(){
+        btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
+        
+        if trangThaiSua == 1 {
+            lbTieuDe.text = "Sửa khách hàng"
+        }else {
+            lbTieuDe.text = "Thêm khách hàng"
+        }
+    }
+    
+    @IBAction func btnThemMoiPressed(_ sender: Any) {
+        print(customer.toJSON())
+        
+        var trangThaiLoi: Int = 1
+        if customer.fullName == nil || customer.fullName?.count == 0 {
+            print("fullName")
+            trangThaiLoi = 0
         }
         
-        cell.actionOK = {
-            [weak self] item in
-            guard let self = self else {return}
-            self.customer = item
-            if self.statusCreateOrUpdate == 1 {
-                self.createCustomer()
-            }else {
-                self.updateCustomer()
-            }
+        if   customer.phone == nil || customer.phone?.count ?? 0 < 9 {
+            print("phone")
+            trangThaiLoi = 0
         }
-        return cell
+        if   customer.birthday == nil || customer.birthday?.count ?? 0 == 0{
+            print("birthday")
+            trangThaiLoi = 0
+        }
+         if  customer.address == nil || customer.address?.count ?? 0 == 0{
+            print("address")
+             trangThaiLoi = 0
+        }
+         if  customer.gender == nil{
+            print("gender")
+             trangThaiLoi = 0
+        }
+    
+        if trangThaiLoi == 0 {
+            hienThiLoiNhan(s: "Hãy điền đủ thông tin")
+            return
+        }
+        customer.store_id =  Common.userMaster.id ?? -1
+        
+        if trangThaiSua == 1 {
+            updateCustomer()
+        }else {
+            createCustomer()
+        }
     }
 
     func createCustomer(){
@@ -58,11 +88,10 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
-                self.actionOk?()
                 self.onBackNav()
-            } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.actionOk?()
+            } else {
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Hãy kiẻm tra thông tin nhập hoặc mạng")
             }
         }
         
@@ -73,12 +102,28 @@ class CreateCustomerVC: BaseVC, UITableViewDataSource, UITableViewDelegate{
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
-                self.actionUpdateOK?(self.customer)
-                self.onBackNav()
-            } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.hienThiThongBao(trangThai: 1, loiNhan: "")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 ) {
+                    self.onBackNav()
+                    self.actionCapNhatOK?(self.customer)
+                }
+            } else {
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Hãy kiẻm tra thông tin nhập hoặc mạng")
             }
         }
     }
+}
+
+extension CreateCustomerVC:UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateCustomerCell", for: indexPath) as? CreateCustomerCell else {return UITableViewCell()}
+        cell.bindData(item: customer)
+        return cell
+    }
+    
+    
 }

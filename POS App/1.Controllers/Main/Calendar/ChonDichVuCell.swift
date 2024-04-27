@@ -9,6 +9,7 @@ import UIKit
 
 class ChonDichVuCell: UITableViewCell {
     
+    @IBOutlet weak var vItem: UIView!
     @IBOutlet var priceLbl: UILabel!
     var Checked: ((_ item: Int,_ item: Int ) -> Void)?
     @IBOutlet var checkImage: UIImageView! //circle.dotted dot.circle.fill
@@ -19,6 +20,8 @@ class ChonDichVuCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        vItem.layer.cornerRadius = myCornerRadius.corner10
+        vItem.addBorder(color: myColor.SPA_FE!, width: 0.5)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,7 +33,7 @@ class ChonDichVuCell: UITableViewCell {
         dichVuLbl.text = item.name ?? ""
         self.index = index
         self.itemState = item
-        priceLbl.text = "Giá: \(price.currencyFormatting())"
+        priceLbl.text = "\(price.currencyFormatting())"
         setChecked(status: (item.status == 1))
     }
     @IBAction func SelectPressed(_ sender: UIButton) {
@@ -45,10 +48,10 @@ class ChonDichVuCell: UITableViewCell {
     }
     func setChecked (status: Bool) {
         if status {
-            checkImage.image = UIImage(systemName: "dot.circle.fill")
+            checkImage.image = UIImage(systemName: "checkmark")
         }
         else  {
-            checkImage.image = UIImage(systemName: "circle.dotted")
+            checkImage.image = UIImage(systemName: "circle")
         }
     }
     

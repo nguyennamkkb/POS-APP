@@ -8,65 +8,90 @@
 import UIKit
 import ObjectMapper
 
-class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+class CreateEmployeeVC: BaseVC {
 
     var actionOK: ClosureAction?
+    var actionCapNhatOK: ClosureCustom<PEmployee>?
     var employee: PEmployee = PEmployee()
-    var actionUpdateOK: ClosureCustom<PEmployee>?
-    var statusCreateOrUpdate = 1
-    let dateFormater = DateFormatter()
-    @IBOutlet var tableView: UITableView!
+    var trangThaiSua: Int = 0
+    @IBOutlet weak var lbTieuDe: UILabel!
+    @IBOutlet weak var bXacNhan: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "CreateEmployeeCell")
+        setupUI()
+        
     }
-    
-    @IBAction func back(_ sender: UIButton) {
+
+    func setupUI(){
+        bXacNhan.layer.cornerRadius = myCornerRadius.corner10
+        if trangThaiSua == 1 {
+            lbTieuDe.text = "Sửa nhân viên"
+        }else {
+            lbTieuDe.text = "Thêm nhân viên"
+        }
+    }
+    @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
-    
-    func bindDataEdit(item: PEmployee){
-        employee =  item
-        statusCreateOrUpdate = 0
+    func bindDataSua(e: PEmployee){
+        employee = e
+        trangThaiSua = 1
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateEmployeeCell", for: indexPath) as? CreateEmployeeCell else {return UITableViewCell()}
+    @IBAction func btnXacNhanPressed(_ sender: Any) {
         
-        if statusCreateOrUpdate == 0 {
-            cell.bindDataUpdate(item: employee)
+        print("employee", employee.toJSON())
+        var trangThaiLoi: Int = 1
+        if employee.fullName == nil || employee.fullName?.count == 0 {
+            print("fullName")
+            trangThaiLoi = 0
         }
         
-        cell.actionOK = {
-            [weak self] item in
-            guard let self = self else {return}
-            self.employee = item
-            if self.statusCreateOrUpdate == 1 {
-                self.createEmployee()
-            }else {
-                self.updateEmployee()
-            }
+        if   employee.phone == nil || employee.phone?.count ?? 0 < 9 {
+            print("phone")
+            trangThaiLoi = 0
         }
-        return cell
-    }
+        if   employee.birthday == nil || employee.birthday?.count ?? 0 == 0{
+            print("birthday")
+            trangThaiLoi = 0
+        }
+         if  employee.address == nil || employee.address?.count ?? 0 == 0{
+            print("address")
+             trangThaiLoi = 0
+        }
+         if  employee.gender == nil{
+            print("gender")
+             trangThaiLoi = 0
+        }
     
+        if trangThaiLoi == 0 {
+            hienThiLoiNhan(s: "Hãy điền đủ thông tin")
+            return
+        }
+        employee.store_id =  Common.userMaster.id ?? -1
+        
+        if trangThaiSua == 1 {
+            updateEmployee()
+        }else {
+            createEmployee()
+        }
+       
+        
+    }
+
     func createEmployee(){
         employee.sign()
         ServiceManager.common.createEmployee(param: employee){
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
-                self.actionOK?()
                 self.onBackNav()
+                self.actionOK?()
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Hãy kiẻm tra thông tin nhập hoặc mạng")
             }
         }
         
@@ -77,12 +102,30 @@ class CreateEmployeeVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
-                self.actionUpdateOK?(self.employee)
-                self.onBackNav()
+                self.hienThiThongBao(trangThai: 1, loiNhan: "")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 ) {
+      
+                    self.actionCapNhatOK?(self.employee)
+                    self.onBackNav()
+                }
+          
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Hãy kiẻm tra thông tin nhập hoặc mạng!")
             }
         }
     }
 }
+extension CreateEmployeeVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CreateEmployeeCell", for: indexPath) as? CreateEmployeeCell else {return UITableViewCell()}
+        cell.bindData(item: employee)
+        return cell
+    }
+    
+    
+}
+

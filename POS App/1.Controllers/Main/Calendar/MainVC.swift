@@ -10,10 +10,11 @@ import SideMenu
 import ObjectMapper
 import FittedSheets
 
-class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
+class MainVC: BaseVC {
     
 
     @IBOutlet var BtnViewAllBook: UIButton!
+    @IBOutlet var BtnInfo: UIButton!
     @IBOutlet var countPending: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var taoLichBtn: UIButton!
@@ -26,112 +27,123 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MainCell")
-        getBooks()
+//        getBooks()
 
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    @IBAction func huongDanPressed(_ sender: Any) {
+//        self.hienThiThongBao(trangThai: 1, loiNhan: "Thanh cong roi")
+        let act = XacNhanVC()
+//        act.bindData(s: "Đồng ý xoá nhân biên \(itemData.fullName ?? "")")
+        act.modalPresentationStyle = .overCurrentContext
+        act.modalTransitionStyle = .crossDissolve
+       
+        present(act, animated: false, completion: nil)
+    }
     
    
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
-        let item = tableData[indexPath.row]
-        cell.bindData(item: item)
-        
-        cell.actionDelete = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = MActDeleteVC()
-            vc.bindData(item: book)
-            let sheet = SheetViewController(controller: vc, sizes: [.fixed(400)])
-            self.present(sheet, animated: true)
-            vc.actionOK = {
-                [weak self] in
-                guard let self = self else {return}
-                self.getBooks()
-            }
-            
-        }
-        cell.actionSuccess = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = MActSuccessVC()
-            vc.bindData(item: book)
-            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
-            self.present(sheet, animated: true)
-            vc.actionOK = {
-                [weak self] in
-                guard let self = self else {return}
-                self.getBooks()
-            }
-        }
-        
-        cell.actionRun = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = MainActionVC()
-            vc.bindData(title: "Thông báo!", content: "Bắt đầu làm dịch vụ")
-            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
-            self.present(sheet, animated: true)
-            vc.actionOK = {
-                [weak self] in
-                guard let self = self else {return}
-                book.status  = 3
-                self.editBook(item: book)
-            }
-        }
-        
-        cell.actionEdit = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = CreateCalenderVC()
-            vc.bindData(item: book)
-            vc.actionOK = {
-                [weak self] in
-                guard let self = self else {return}
-                self.getBooks()
-            }
-            self.pushVC(controller: vc)
-//            self.showMessageDeveloping()
-        }
-        cell.actionPay = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = MainActionVC()
-            vc.bindData(title: "Thông báo!", content: "Tiến hanh thanh toán?")
-            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
-            self.present(sheet, animated: true)
-            vc.actionOK = {
-                [weak self] in
-                guard let self = self else {return}
-                book.status  = 1
-                self.editBook(item: book)
-            }
-        }
-        cell.actionDetail = {
-            [weak self] book in
-            guard let self = self else {return}
-            let vc = DetailCalenderVC()
-            vc.bindData(item: book)
-            self.pushVC(controller: vc)
-        }
-        return cell
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return tableData.count
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
+//        let item = tableData[indexPath.row]
+//        cell.bindData(item: item)
+//        
+//        cell.actionDelete = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = MActDeleteVC()
+//            vc.bindData(item: book)
+//            let sheet = SheetViewController(controller: vc, sizes: [.fixed(400)])
+//            self.present(sheet, animated: true)
+//            vc.actionOK = {
+//                [weak self] in
+//                guard let self = self else {return}
+//                self.getBooks()
+//            }
+//            
+//        }
+//        cell.actionSuccess = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = MActSuccessVC()
+//            vc.bindData(item: book)
+//            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+//            self.present(sheet, animated: true)
+//            vc.actionOK = {
+//                [weak self] in
+//                guard let self = self else {return}
+//                self.getBooks()
+//            }
+//        }
+//        
+//        cell.actionRun = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = MainActionVC()
+//            vc.bindData(title: "Thông báo!", content: "Bắt đầu làm dịch vụ")
+//            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+//            self.present(sheet, animated: true)
+//            vc.actionOK = {
+//                [weak self] in
+//                guard let self = self else {return}
+//                book.status  = 3
+//                self.editBook(item: book)
+//            }
+//        }
+//        
+//        cell.actionEdit = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = CreateCalenderVC()
+//            vc.bindData(item: book)
+//            vc.actionOK = {
+//                [weak self] in
+//                guard let self = self else {return}
+//                self.getBooks()
+//            }
+//            self.pushVC(controller: vc)
+////            self.showMessageDeveloping()
+//        }
+//        cell.actionPay = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = MainActionVC()
+//            vc.bindData(title: "Thông báo!", content: "Tiến hanh thanh toán?")
+//            let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+//            self.present(sheet, animated: true)
+//            vc.actionOK = {
+//                [weak self] in
+//                guard let self = self else {return}
+//                book.status  = 1
+//                self.editBook(item: book)
+//            }
+//        }
+//        cell.actionDetail = {
+//            [weak self] book in
+//            guard let self = self else {return}
+//            let vc = DetailCalenderVC()
+//            vc.bindData(item: book)
+//            self.pushVC(controller: vc)
+//        }
+//        return cell
+//    }
 
 
     
     func setupUI(){
-        menuView.layer.borderWidth = 0.5
-        menuView.layer.borderColor = myColor.greyDrak?.cgColor
-        taoLichBtn.layer.cornerRadius = myCornerRadius.corner5
-        BtnViewAllBook.layer.cornerRadius = myCornerRadius.corner5
+
+        BtnInfo.layer.borderWidth = 1
+        BtnInfo.layer.borderColor = myColor.SPA_FF?.cgColor
+        BtnInfo.layer.cornerRadius = myCornerRadius.corner10
+        
+        taoLichBtn.layer.cornerRadius = myCornerRadius.corner10
     }
     
     @IBAction func btnViewAllBookPressed(_ sender: UIButton) {
@@ -152,11 +164,11 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func BtnCreateCalenderPressed(_ sender: Any) {
         let vc = CreateCalenderVC()
-        vc.actionOK = {
-            [weak self] in
-            guard let self = self else {return}
-            self.getBooks()
-        }
+//        vc.actionOK = {
+//            [weak self] in
+//            guard let self = self else {return}
+//            self.getBooks()
+//        }
         self.pushVC(controller: vc)
 
     }
@@ -199,4 +211,19 @@ class MainVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
 //        self.present(vc, animated: true)
 //    }
 //ádasd
+}
+
+
+extension MainVC:  UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
+        
+        return cell
+    }
+    
+    
 }

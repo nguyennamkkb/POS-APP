@@ -15,6 +15,7 @@ fileprivate class ListCommonService {
     // account
     static let user = ServiceManager.ROOT + "user"
     static let checkuser = ServiceManager.ROOT + "user/checkuser"
+    static let verify = ServiceManager.ROOT + "user/verify"
     static let customer = ServiceManager.ROOT + "customer"
     static let employee = ServiceManager.ROOT + "employee"
     static let auth = ServiceManager.ROOT + "auth/signin"
@@ -32,6 +33,7 @@ fileprivate enum ECommonURLs {
     case book
     case service
     case checkuser
+    case verify
     case report
     case bookinsuccess
     
@@ -57,7 +59,10 @@ fileprivate enum ECommonURLs {
          case .bookinsuccess:
             return ListCommonService.bookinsuccess
             
-        }
+            
+        case .verify:
+            return ListCommonService.verify
+}
         func getMethod() -> HTTPMethod {
             switch self {
                 
@@ -131,6 +136,27 @@ class CommonServices {
             }
         }
     }
+    //xac thuc nguoi dung voi otp
+    func verifyUser(param: PStore?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.verify.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param?.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
     func createUser(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.user.getPath()
         if !ServiceManager.isConnectedToInternet() {

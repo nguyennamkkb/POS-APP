@@ -9,71 +9,115 @@ import UIKit
 
 class EmployeeDetailVC: BaseVC {
 
+    var itemData: PEmployee = PEmployee()
+    var actXoa: ClosureAction?
+    
+    @IBOutlet weak var lbDiaChi: UILabel!
+    @IBOutlet weak var lbSinhNhat: UILabel!
+    @IBOutlet weak var lbHoTen: UILabel!
+    @IBOutlet weak var lbDienThoai: UILabel!
     
     
-    var deleteSuccess: ClosureAction?
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var birthdayLbl: UILabel!
-    @IBOutlet weak var addressLbl: UILabel!
-    @IBOutlet weak var genderLbl: UILabel!
-    @IBOutlet weak var workFrom: UILabel!
-    @IBOutlet weak var workCount: UILabel!
-    @IBOutlet var btnDelete: UIButton!
-    @IBOutlet var btnEdit: UIButton!
-    var employee = PEmployee()
+    @IBOutlet weak var btnSua: UIButton!
+    @IBOutlet weak var btnXoa: UIButton!
+    @IBOutlet weak var imgGioiTinh: UIImageView!
+    @IBOutlet weak var vSinhNhat: UIView!
+    @IBOutlet weak var vDienThoai: UIView!
+    @IBOutlet weak var vDiemSo: UIView!
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        self.tableView.registerCell(nibName: "EmployeeServicesCell")
         setupUI()
-        setData()
+        setupData()
     }
     
     func setupUI(){
-        btnDelete.layer.cornerRadius = myCornerRadius.corner5
-        btnEdit.layer.cornerRadius = myCornerRadius.corner5
+        vDiemSo.layer.cornerRadius = myCornerRadius.corner10
+        vSinhNhat.layer.cornerRadius = myCornerRadius.corner10
+        vDienThoai.layer.cornerRadius = myCornerRadius.corner10
+        btnSua.layer.cornerRadius = myCornerRadius.corner10
+        btnXoa.layer.cornerRadius = myCornerRadius.corner10
         
-        
     }
-    func setData(){
-        nameLbl.text = "Họ tên: \(employee.fullName ?? "")"
-        birthdayLbl.text = "Ngày sinh: \(Common.convertTimestampToDate(timestampString: employee.birthday ?? "", dateFormat: "dd-MM-yyyy"))"
-        addressLbl.text = "Địa chỉ: \(employee.address ?? "")"
-        genderLbl.text = "Giới tính: \(employee.gender == 1 ? "Nam" : "Nữ")"
-        workFrom.text = "Vào làm: \(Common.convertTimestampToDate(timestampString: employee.createAt ?? "", dateFormat: "dd-MM-yyyy"))"
-    }
-    func bindData(item: PEmployee){
-        employee = item
-    }
-    
-    @IBAction func back(_ sender: UIButton) {
+    @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
-    @IBAction func btnEditPressed(_ sender: UIButton) {
+    func bindData(e: PEmployee){
+        itemData = e
+    }
+    func setupData(){
+        if itemData.gender == 0 {
+            imgGioiTinh.image = UIImage(named: "ic_nu")
+          
+        }else {
+            imgGioiTinh.image = UIImage(named: "ic_nam")
+        }
+        
+        lbHoTen.text = "\(itemData.fullName ?? "")"
+        lbDienThoai.text = "\(itemData.phone ?? "")"
+        lbDiaChi.text = "\(itemData.address ?? "")"
+        print(itemData.birthday ?? "0")
+        lbSinhNhat.text = "\(Common.layNgayTheoMilisecond(time: itemData.birthday ?? "0"))"
+        
+    }
+    @IBAction func btnXoaPressed(_ sender: Any) {
+        let act = XacNhanVC()
+        act.bindData(s: "Đồng ý xoá nhân biên \(itemData.fullName ?? "")")
+        act.modalPresentationStyle = .overCurrentContext
+        act.modalTransitionStyle = .crossDissolve
+        act.actDongY = {
+            [weak self] in
+            guard let self = self else {return}
+            self.XoaNhanVien()
+        }
+        present(act, animated: false, completion: nil)
+    }
+    @IBAction func btnSuaPressed(_ sender: Any) {
         let vc = CreateEmployeeVC()
-        vc.bindDataEdit(item: employee)
-        vc.actionUpdateOK = {
+        vc.bindDataSua(e: itemData)
+        vc.actionCapNhatOK = {
             [weak self] item in
             guard let self = self else {return}
-            self.employee = item
-            self.setData()
+       
+            itemData = item
+            self.setupData()
+ 
         }
         self.pushVC(controller: vc)
-    }
     
-    @IBAction func btnDeletePressed(_ sender: UIButton) {
-        employee.status = 0
-        employee.sign()
-        ServiceManager.common.updateEmployee(param: employee){
+    }
+
+
+
+    func XoaNhanVien(){
+        itemData.status = 0
+        itemData.sign()
+        ServiceManager.common.updateEmployee(param: itemData){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Đã xoá!")
-                self.deleteSuccess?()
+
                 self.onBackNav()
+                self.actXoa?()
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể xoá")
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Không thể xoá")
             }
         }
     }
-    
-    
+}
 
+extension EmployeeDetailVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeServicesCell", for: indexPath) as? EmployeeServicesCell else {return UITableViewCell()}
+        
+        return cell
+    }
+    
+    
 }

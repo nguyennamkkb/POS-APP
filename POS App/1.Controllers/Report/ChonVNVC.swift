@@ -34,13 +34,13 @@ class ChonVNVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeItemCell", for: indexPath) as? EmployeeItemCell else {return UITableViewCell()}
         let item = tableData[indexPath.row]
-        cell.binđata(name: item.fullName ?? "")
-        cell.actionViewInfo = {
-            [weak self] in
-            guard let self = self else {return}
-            self.dataNV?(item)
-            self.onBackNav()
-        }
+//        cell.binđata(name: item.fullName ?? "")
+//        cell.actionViewInfo = {
+//            [weak self] in
+//            guard let self = self else {return}
+//            self.dataNV?(item)
+//            self.onBackNav()
+//        }
         
         return cell
     }

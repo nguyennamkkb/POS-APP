@@ -23,6 +23,13 @@ struct myColor {
     static let MGreen = UIColor(hex: "#7bc043")
     static let MBlue = UIColor(hex: "#0392CF")
     
+    static let SPA_BD = UIColor(hex: "#BD2A4D")
+    static let SPA_FB = UIColor(hex: "#F8577D")
+    static let SPA_FF = UIColor(hex: "#FFFFFF")
+    static let SPA_AE = UIColor(hex: "#AEB2B8")
+    static let SPA_FE = UIColor(hex: "#FEC7D6")
+    static let SPA_Black = UIColor(hex: "#000000")
+    
 }
 struct myCornerRadius {
     static let corner5 = 5.0

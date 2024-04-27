@@ -41,13 +41,13 @@ class ServiceDetailVC: BaseVC {
     @IBAction func btnEditPressed(_ sender: UIButton) {
 
         let vc = CreateServiceVC()
-        vc.bindDataEdit(item: services)
-        vc.actionUpdateOK = {
-            [weak self] item in
-            guard let self = self else {return}
-            self.services = item
-            self.setData()
-        }
+//        vc.bindDataEdit(item: services)
+//        vc.actionUpdateOK = {
+//            [weak self] item in
+//            guard let self = self else {return}
+//            self.services = item
+//            self.setData()
+//        }
         self.pushVC(controller: vc)
     }
     

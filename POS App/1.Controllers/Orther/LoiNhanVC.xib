@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoiNhanVC" customModule="LN_POS" customModuleProvider="target">
+            <connections>
+                <outlet property="lbLoiNhan" destination="zzl-ym-XTv" id="3uD-Ps-1L5"/>
+                <outlet property="vLoiNhan" destination="YGZ-J4-wGt" id="kEO-bd-xTC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGZ-J4-wGt">
+                    <rect key="frame" x="30" y="688" width="333" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loi Nhan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzl-ym-XTv">
+                            <rect key="frame" x="40" y="15" width="253" height="70"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" name="SPA_FF"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-8j-ov8">
+                            <rect key="frame" x="293" y="5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Cpm-UE-1TR"/>
+                                <constraint firstAttribute="height" constant="35" id="a0T-zy-F3L"/>
+                            </constraints>
+                            <color key="tintColor" name="SPA_FE"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="xmark" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                            </state>
+                            <connections>
+                                <action selector="dongPressed:" destination="-1" eventType="touchUpInside" id="Nj9-zR-TUU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="SPA_BD"/>
+                    <constraints>
+                        <constraint firstItem="zzl-ym-XTv" firstAttribute="leading" secondItem="YGZ-J4-wGt" secondAttribute="leading" constant="40" id="6S3-aJ-xHu"/>
+                        <constraint firstAttribute="bottom" secondItem="zzl-ym-XTv" secondAttribute="bottom" constant="15" id="90o-fp-BIi"/>
+                        <constraint firstAttribute="trailing" secondItem="zzl-ym-XTv" secondAttribute="trailing" constant="40" id="SkI-LU-DgW"/>
+                        <constraint firstAttribute="height" constant="100" id="XsU-jW-HBu"/>
+                        <constraint firstItem="TMf-8j-ov8" firstAttribute="top" secondItem="YGZ-J4-wGt" secondAttribute="top" constant="5" id="YPM-IX-a4W"/>
+                        <constraint firstAttribute="trailing" secondItem="TMf-8j-ov8" secondAttribute="trailing" constant="5" id="dah-8V-1nv"/>
+                        <constraint firstItem="zzl-ym-XTv" firstAttribute="top" secondItem="YGZ-J4-wGt" secondAttribute="top" constant="15" id="fS7-xq-Sxs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="0.7896205357142857" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YGZ-J4-wGt" secondAttribute="bottom" constant="30" id="aJR-sG-cmU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YGZ-J4-wGt" secondAttribute="trailing" constant="30" id="cZs-4V-ejw"/>
+                <constraint firstItem="YGZ-J4-wGt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="itP-QA-p9S"/>
+            </constraints>
+            <point key="canvasLocation" x="-15" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="SPA_BD">
+            <color red="0.74285709860000004" green="0.16519489879999999" blue="0.29987525939999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_FE">
+            <color red="0.99008661509999996" green="0.78174209589999999" blue="0.8381388783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_FF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

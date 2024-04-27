@@ -13,20 +13,20 @@ class TabBarVC: UITabBarController {
         super.viewDidLoad()
         let mainVC = MainVC()
         let mainNavi = UINavigationController(rootViewController: mainVC)
-        mainNavi.tabBarItem = UITabBarItem(title: "Đặt lịch", image: UIImage(systemName: "calendar"), tag: 1)
+        mainNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "calendar"), tag: 1)
         mainNavi.tabBarItem.badgeColor = UIColor.white
         
         
-        let QRVC = QRVC()
-        let QRNavi = UINavigationController(rootViewController: QRVC)
-        QRNavi.tabBarItem = UITabBarItem(title: "Quét", image: UIImage(systemName: "qrcode"), tag: 2)
-        QRNavi.navigationBar.tintColor = UIColor.white
+        let dangPhucVuVC = DangPhucVuVC()
+        let phucvuNavi = UINavigationController(rootViewController: dangPhucVuVC)
+        phucvuNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "calendar"), tag: 2)
+        phucvuNavi.navigationBar.tintColor = UIColor.white
         
         let store = StoreMainVC()
         let storeNavi = UINavigationController(rootViewController: store)
-        storeNavi.tabBarItem = UITabBarItem(title: "Cửa hàng", image: UIImage(systemName: "house"), tag: 3)
+        storeNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "house"), tag: 3)
         
-        self.viewControllers = [mainNavi, QRNavi, storeNavi]
+        self.viewControllers = [mainNavi, phucvuNavi, storeNavi]
         setLayout()
     }
     func setLayout(){

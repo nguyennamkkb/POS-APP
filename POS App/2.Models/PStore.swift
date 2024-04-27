@@ -22,6 +22,7 @@ class PStore: Mappable {
     var updateAt: String?
     var status: Int?
     var access_token: String?
+    var otp: String?
     var cksRequest: String?
     var timeRequest: Int?
     
@@ -33,9 +34,14 @@ class PStore: Mappable {
         self.phone = phone
     }
     
-    init (phone: String, password: String){
-        self.phone = phone
+    init (email: String, password: String){
+        self.email = email
         self.password = password
+        sign()
+    }
+    init (email: String, otp: String){
+        self.email = email
+        self.otp = otp
         sign()
     }
     
@@ -64,6 +70,7 @@ class PStore: Mappable {
         updateAt <- map["updateAt"]
         status <- map["status"]
         access_token <- map["access_token"]
+        otp <- map["otp"]
         cksRequest <- map["cksRequest"]
         timeRequest <- map["timeRequest"]
     }

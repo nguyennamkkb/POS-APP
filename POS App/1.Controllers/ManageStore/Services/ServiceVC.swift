@@ -8,80 +8,55 @@
 import UIKit
 import ObjectMapper
 
-class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
+class ServiceVC:BaseVC  {
     
     
-    @IBOutlet var keySearch: UITextField!
-    @IBOutlet var btnSearch: UIButton!
-    @IBOutlet var btnAdd: UIButton!
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet var viewSearch: UIView!
-    var tableData = [PServices]()
+    @IBOutlet weak var keySearch: UITextField!
+    @IBOutlet weak var btnThemMoi: UIButton!
+    @IBOutlet weak var vTimKiem: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    var tableData: [PServices] = [PServices]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "ServiceItemCell")
-        // Do any additional setup after loading the view.
+ 
+        getAllServices()
+
+    }
+    
+    func  setupUI(){
+        vTimKiem.layer.cornerRadius = myCornerRadius.corner10
+        btnThemMoi.layer.cornerRadius = myCornerRadius.corner10
+
+        vTimKiem.addBorder(color: myColor.SPA_FE!, width: 1)
+    }
+
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    @IBAction func timkiem(_ sender: Any) {
         getAllServices()
     }
     
-    func setupUI(){
-        viewSearch.layer.borderWidth = 0.5
-        viewSearch.layer.cornerRadius = myCornerRadius.corner10
-        btnAdd.layer.cornerRadius = myCornerRadius.corner10
-        btnSearch.layer.cornerRadius = myCornerRadius.corner10
-    }
-
-    @IBAction func btnGoHomepressed(_ sender: UIButton) {
-        self.wrapRoot(vc: TabBarVC())
-    }
-    
-    @IBAction func back(_ sender: Any) {
-        self.onBackNav()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceItemCell", for: indexPath) as? ServiceItemCell else {return UITableViewCell()}
-        let item = tableData[indexPath.row]
-        cell.bindData(item: item)
-        
-        cell.actionViewInfo = {
+    @IBAction func btnThemDichVuPressed(_ sender: Any) {
+        let vc = CreateServiceVC()
+        vc.actionOk = {
             [weak self] in
-            guard let self = self else {return}
-            let vc = ServiceDetailVC()
-            vc.bindData(item: item)
-            vc.deleteSuccess = {
-                [weak self] in
-                guard let self = self else {return}
-                self.getAllServices()
-            }
-            self.pushVC(controller: vc)
-        }
-        return cell
-    }
-    
-    @IBAction func addNewServicesPressed(_ sender: UIButton) {
-        let vc  = CreateServiceVC()
-        vc.actionOK = {
-            [weak self] in
-            guard let self = self else {return}
-            self.getAllServices()
+           guard let self = self else {return}
+            self.hienThiThongBao(trangThai: 1, loiNhan: "Thành công")
+           self.getAllServices()
         }
         self.pushVC(controller: vc)
-        
     }
     
+    
     func getAllServices(){
-        guard let keySearch = keySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
 
-        let param = ParamSearch(store_id: id, status: 1, name: keySearch)
+        let param = ParamSearch(store_id: id, status: 1, name: keySearch.text ?? "")
         
         ServiceManager.common.getAllServices(param: "?\(Utility.getParamFromDirectory(item: param.toJSON())))"){
             (response) in
@@ -95,9 +70,43 @@ class ServiceVC:BaseVC, UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
-    
-    @IBAction func btnSearchPressed(_ sender: UIButton) {
-        getAllServices()
+    @IBAction func btnGoHomepressed(_ sender: UIButton) {
+        self.wrapRoot(vc: TabBarVC())
     }
+    
+}
+
+extension ServiceVC: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceItemCell", for: indexPath) as? ServiceItemCell else {return UITableViewCell()}
+        let item = tableData.itemAtIndex(index: indexPath.row) ?? PServices()
+        cell.bindData(e: item)
+        cell.actChonDichVu = {
+            [weak self] in
+            guard let self = self else {return}
+
+            let vc = CreateServiceVC()
+            vc.bindDataSua(e: item)
+            vc.actXoa = {
+                [weak self] in
+                guard let self = self else {return}
+                self.hienThiThongBao(trangThai: 1, loiNhan: "")
+                self.getAllServices()
+            }
+            vc.actionCapNhatOK = {
+                [weak self] in
+                guard let self = self else {return}
+                self.hienThiThongBao(trangThai: 1, loiNhan: "")
+                self.getAllServices()
+            }
+            self.pushVC(controller: vc)
+        }
+        return cell
+    }
+    
     
 }

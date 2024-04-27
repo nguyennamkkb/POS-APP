@@ -21,8 +21,11 @@ class CreateInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
 //        tableView.register(nib, forCellReuseIdentifier: "StoreInfoCell")
     }
     
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
     func bindData(item: PStore){
-        storeData.phone = item.phone
+        storeData.email = item.email
         storeData.password = item.password
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,9 +46,15 @@ class CreateInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
                 self.hideLoading()
                 if response?.statusCode == 200 {
                     CacheManager.share.setRegister(true)
-                    let vc = LoginVC()
-                    vc.bindData(item: self.storeData)
-                    self.pushVC(controller: vc)
+            
+                    
+                    self.hienThiThongBao(trangThai: 1, loiNhan: "Đăng ký thành công, đăng nhập để sử dụng")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1  ) {
+                        let vc = LoginVC()
+                        vc.bindData(item: self.storeData)
+                        self.pushVC(controller: vc)
+                    }
                 } else {
                     self.showAlert(message: "Lỗi thêm mới")
                 }

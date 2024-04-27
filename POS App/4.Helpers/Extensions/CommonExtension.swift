@@ -148,6 +148,18 @@ extension UIView {
       self.layer.shadowOffset = CGSize(width: 1, height: 1)
       self.layer.shadowOpacity = 1
     }
+    func addBorder(color: UIColor, width: CGFloat) {
+            layer.borderWidth = width
+            layer.borderColor = color.cgColor
+        }
+    func addNDropShadow(){
+        self.layer.shadowColor = UIColor(hex: "#00000020")?.cgColor
+        self.layer.shadowOpacity = 0.2
+//        self.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 20
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+    }
 }
 
 extension UIImage {

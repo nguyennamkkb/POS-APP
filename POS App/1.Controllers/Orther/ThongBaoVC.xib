@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThongBaoVC" customModule="LN_POS" customModuleProvider="target">
+            <connections>
+                <outlet property="imgTrangThai" destination="3hR-ga-JVM" id="dVQ-Pb-03o"/>
+                <outlet property="lbLoiNhan" destination="YWA-jq-kli" id="Fth-cJ-D8z"/>
+                <outlet property="lbTitle" destination="2hd-lA-NEV" id="dmT-gO-fIo"/>
+                <outlet property="vDong" destination="4VE-tU-Sgc" id="mRw-xQ-OzV"/>
+                <outlet property="vThongBao" destination="i3n-Wr-sfs" id="fsV-Jp-YUj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3n-Wr-sfs">
+                    <rect key="frame" x="50" y="254.66666666666663" width="290" height="348"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành công" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-lA-NEV">
+                            <rect key="frame" x="0.0" y="20.000000000000028" width="290" height="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" name="SPA_F8"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_thanhcong" translatesAutoresizingMaskIntoConstraints="NO" id="3hR-ga-JVM">
+                            <rect key="frame" x="65.333333333333329" y="64.000000000000014" width="159.33333333333337" height="159.33333333333337"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="3hR-ga-JVM" secondAttribute="height" multiplier="1:1" id="pcK-wr-jiq"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VE-tU-Sgc" userLabel="vDong">
+                            <rect key="frame" x="95" y="298" width="100" height="35"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="esl-Tr-aPZ">
+                                    <rect key="frame" x="10" y="8.0000000000000355" width="24" height="19"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="SPA_F8"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="MKC-I4-1Xq"/>
+                                        <constraint firstAttribute="height" constant="24" id="hnb-jX-Zli"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMj-Jt-Ic9" userLabel="btnDong">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="btnDongPressed:" destination="-1" eventType="touchUpInside" id="jMw-qf-vdA"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đóng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3f-q9-NdT">
+                                    <rect key="frame" x="44" y="7.3333333333333712" width="40" height="20"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" name="SPA_F8"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="esl-Tr-aPZ" firstAttribute="leading" secondItem="4VE-tU-Sgc" secondAttribute="leading" constant="10" id="AlP-gX-c3o"/>
+                                <constraint firstItem="WMj-Jt-Ic9" firstAttribute="leading" secondItem="4VE-tU-Sgc" secondAttribute="leading" id="FGg-yT-KIK"/>
+                                <constraint firstItem="x3f-q9-NdT" firstAttribute="centerY" secondItem="4VE-tU-Sgc" secondAttribute="centerY" id="ImS-je-Ydn"/>
+                                <constraint firstAttribute="bottom" secondItem="WMj-Jt-Ic9" secondAttribute="bottom" id="OC1-aQ-arc"/>
+                                <constraint firstAttribute="width" constant="100" id="Rho-hc-HZI"/>
+                                <constraint firstAttribute="height" constant="35" id="Spo-hb-7yY"/>
+                                <constraint firstItem="esl-Tr-aPZ" firstAttribute="centerY" secondItem="4VE-tU-Sgc" secondAttribute="centerY" id="oED-FF-bGC"/>
+                                <constraint firstItem="WMj-Jt-Ic9" firstAttribute="top" secondItem="4VE-tU-Sgc" secondAttribute="top" id="rT3-Nh-2Qe"/>
+                                <constraint firstItem="x3f-q9-NdT" firstAttribute="leading" secondItem="esl-Tr-aPZ" secondAttribute="trailing" constant="10" id="xeU-35-DL3"/>
+                                <constraint firstAttribute="trailing" secondItem="WMj-Jt-Ic9" secondAttribute="trailing" id="yA4-8q-nQT"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lời nhắn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWA-jq-kli">
+                            <rect key="frame" x="15" y="264.33333333333337" width="260" height="18.666666666666686"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" name="SPA_Black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="YWA-jq-kli" secondAttribute="trailing" constant="15" id="Bsz-fB-4o3"/>
+                        <constraint firstItem="4VE-tU-Sgc" firstAttribute="centerX" secondItem="i3n-Wr-sfs" secondAttribute="centerX" id="Hqg-qs-lg6"/>
+                        <constraint firstItem="2hd-lA-NEV" firstAttribute="leading" secondItem="i3n-Wr-sfs" secondAttribute="leading" id="I5d-II-1TL"/>
+                        <constraint firstItem="3hR-ga-JVM" firstAttribute="top" secondItem="2hd-lA-NEV" secondAttribute="bottom" constant="20" id="Ixl-Wp-dyR"/>
+                        <constraint firstAttribute="trailing" secondItem="2hd-lA-NEV" secondAttribute="trailing" id="PPb-TJ-InL"/>
+                        <constraint firstItem="2hd-lA-NEV" firstAttribute="top" secondItem="i3n-Wr-sfs" secondAttribute="top" constant="20" id="Ruv-QL-W95"/>
+                        <constraint firstAttribute="width" secondItem="i3n-Wr-sfs" secondAttribute="height" multiplier="1:1.2" id="Vjg-mf-u4A"/>
+                        <constraint firstItem="4VE-tU-Sgc" firstAttribute="top" secondItem="YWA-jq-kli" secondAttribute="bottom" constant="15" id="c4r-bX-TMK"/>
+                        <constraint firstItem="3hR-ga-JVM" firstAttribute="centerX" secondItem="i3n-Wr-sfs" secondAttribute="centerX" id="pv0-5r-Fgb"/>
+                        <constraint firstItem="YWA-jq-kli" firstAttribute="leading" secondItem="i3n-Wr-sfs" secondAttribute="leading" constant="15" id="uXB-qy-Jmd"/>
+                        <constraint firstAttribute="bottom" secondItem="4VE-tU-Sgc" secondAttribute="bottom" constant="15" id="vDu-eU-QoY"/>
+                        <constraint firstItem="3hR-ga-JVM" firstAttribute="width" secondItem="i3n-Wr-sfs" secondAttribute="width" multiplier="0.55" id="z1f-ix-bxk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="i3n-Wr-sfs" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="7zo-fS-s9m"/>
+                <constraint firstItem="i3n-Wr-sfs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Yqc-ox-tTn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i3n-Wr-sfs" secondAttribute="trailing" constant="50" id="lcx-gI-MJa"/>
+            </constraints>
+            <point key="canvasLocation" x="-15.384615384615383" y="-11.374407582938389"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_thanhcong" width="125" height="125"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="SPA_Black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_F8">
+            <color red="0.97214514019999998" green="0.3401286006" blue="0.4894454479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

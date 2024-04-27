@@ -12,6 +12,8 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     let alertView = UIView()
     var messageLabel = UILabel()
     let activityScreen = LoadingVC()
+    let thongBaoVC = ThongBaoVC()
+    let loiNhanVC = LoiNhanVC()
     var isHiddenNav: Bool = false
     var isLarge: Bool = false
     var isShadow: Bool = true
@@ -76,6 +78,15 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         view.addGestureRecognizer(tap)
         activityScreen.modalPresentationStyle = .overCurrentContext
         activityScreen.modalTransitionStyle = .crossDissolve
+        
+        thongBaoVC.modalPresentationStyle = .overCurrentContext
+        thongBaoVC.modalTransitionStyle = .crossDissolve
+        
+        loiNhanVC.modalPresentationStyle = .overCurrentContext
+        loiNhanVC.modalTransitionStyle = .crossDissolve
+        
+
+        
         setLayoutAlert()
     }
     func showAlert(message: String?){
@@ -135,6 +146,16 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     func hideLoading(){
         activityScreen.closeActivity()
     }
+    
+    func hienThiThongBao(trangThai: Int, loiNhan: String){
+        thongBaoVC.bindData(trangThai: trangThai,loiNhan: loiNhan)
+        present(thongBaoVC, animated: false, completion: nil)
+    }
+    func hienThiLoiNhan( s: String){
+        loiNhanVC.bindData(s: s)
+        self.present(loiNhanVC, animated: false, completion: nil)
+    }
+    
   
     
 }

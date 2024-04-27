@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Rubik-Bold.ttf">
-            <string>Rubik-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,20 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LN POS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXI-kG-Ydz">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="24"/>
-                                <color key="textColor" systemColor="linkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0yg-6J-L8d">
+                                <rect key="frame" x="30" y="355.33333333333331" width="333" height="166.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0yg-6J-L8d" secondAttribute="height" multiplier="2:1" id="2SR-66-5hd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eXI-kG-Ydz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SSS-iD-eGE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eXI-kG-Ydz" secondAttribute="bottom" id="Xfn-Dm-5VC"/>
-                            <constraint firstItem="eXI-kG-Ydz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rgb-to-q6T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXI-kG-Ydz" secondAttribute="trailing" id="shT-OI-wkZ"/>
+                            <constraint firstItem="0yg-6J-L8d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KJe-5j-ICM"/>
+                            <constraint firstItem="0yg-6J-L8d" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Nb1-2i-fPd"/>
+                            <constraint firstItem="0yg-6J-L8d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="c7c-w6-JVv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0yg-6J-L8d" secondAttribute="trailing" constant="30" id="c8n-Ub-QtI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,9 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="img_logo" width="291" height="124.66666412353516"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
