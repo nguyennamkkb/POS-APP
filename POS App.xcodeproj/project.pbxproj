@@ -13,6 +13,10 @@
 		0B049BDE2A7E37D300A2295A /* RPInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */; };
 		0B10790E2A7F7CA400C7652C /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B10790C2A7F7CA400C7652C /* ContactVC.swift */; };
 		0B10790F2A7F7CA400C7652C /* ContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B10790D2A7F7CA400C7652C /* ContactVC.xib */; };
+		0B127D652BDE53E8002790AB /* DropdownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B127D632BDE53E8002790AB /* DropdownVC.swift */; };
+		0B127D662BDE53E8002790AB /* DropdownVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B127D642BDE53E8002790AB /* DropdownVC.xib */; };
+		0B127D692BDE5633002790AB /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B127D672BDE5633002790AB /* DropdownCell.swift */; };
+		0B127D6A2BDE5633002790AB /* DropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B127D682BDE5633002790AB /* DropdownCell.xib */; };
 		0B1C18002A15676B0097B7F1 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */; };
 		0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */; };
 		0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */; };
@@ -207,6 +211,10 @@
 		0B049BDC2A7E37D300A2295A /* RPInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPInfoCell.xib; sourceTree = "<group>"; };
 		0B10790C2A7F7CA400C7652C /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactVC.swift; path = "POS App/1.Controllers/ManageStore/Customer/ContactVC.swift"; sourceTree = SOURCE_ROOT; };
 		0B10790D2A7F7CA400C7652C /* ContactVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContactVC.xib; path = "POS App/1.Controllers/ManageStore/Customer/ContactVC.xib"; sourceTree = SOURCE_ROOT; };
+		0B127D632BDE53E8002790AB /* DropdownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownVC.swift; sourceTree = "<group>"; };
+		0B127D642BDE53E8002790AB /* DropdownVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownVC.xib; sourceTree = "<group>"; };
+		0B127D672BDE5633002790AB /* DropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
+		0B127D682BDE5633002790AB /* DropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownCell.xib; sourceTree = "<group>"; };
 		0B1C17FE2A15676B0097B7F1 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		0B1C17FF2A15676B0097B7F1 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 		0B1D555A2A6D20C00071E8F0 /* ChartDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDayCell.swift; sourceTree = "<group>"; };
@@ -494,6 +502,10 @@
 				9AAFB5D02BDA0A800057BEB4 /* LoiNhanVC.xib */,
 				9A9199642BDB9A2B00597FBB /* XacNhanVC.swift */,
 				9A9199652BDB9A2B00597FBB /* XacNhanVC.xib */,
+				0B127D632BDE53E8002790AB /* DropdownVC.swift */,
+				0B127D642BDE53E8002790AB /* DropdownVC.xib */,
+				0B127D672BDE5633002790AB /* DropdownCell.swift */,
+				0B127D682BDE5633002790AB /* DropdownCell.xib */,
 			);
 			path = Orther;
 			sourceTree = "<group>";
@@ -1031,6 +1043,7 @@
 				0BF417CD2A3B7D6100DD36DA /* BookHeaderCell.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
+				0B127D6A2BDE5633002790AB /* DropdownCell.xib in Resources */,
 				0B10790F2A7F7CA400C7652C /* ContactVC.xib in Resources */,
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
@@ -1051,6 +1064,7 @@
 				0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */,
 				0B8F9E2F2A6C276600D24CB3 /* ChartEmployeeCell.xib in Resources */,
 				0B1C18012A15676B0097B7F1 /* LoadingVC.xib in Resources */,
+				0B127D662BDE53E8002790AB /* DropdownVC.xib in Resources */,
 				9A9199672BDB9A2B00597FBB /* XacNhanVC.xib in Resources */,
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
@@ -1141,6 +1155,7 @@
 				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
+				0B127D692BDE5633002790AB /* DropdownCell.swift in Sources */,
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
 				0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
@@ -1216,6 +1231,7 @@
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
 				0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */,
 				0B3851932A8155DC006153BA /* EditStoreVC.swift in Sources */,
+				0B127D652BDE53E8002790AB /* DropdownVC.swift in Sources */,
 				0BD5BAD029F8A45B009F2A66 /* SignUpVC.swift in Sources */,
 				0B5012332A516899009D3C0B /* MainFilterVC.swift in Sources */,
 				0B049BDD2A7E37D300A2295A /* RPInfoCell.swift in Sources */,

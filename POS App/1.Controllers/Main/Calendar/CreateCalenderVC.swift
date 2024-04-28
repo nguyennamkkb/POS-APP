@@ -11,6 +11,10 @@ import ObjectMapper
 
 class CreateCalenderVC: BaseVC{
 
+    let dropdown = DropdownVC()
+    
+    @IBOutlet weak var lbChonKhachHang: UILabel!
+    @IBOutlet weak var lbChonNhanVIen: UILabel!
     @IBOutlet weak var vNhanVien: UIView!
     
     @IBOutlet weak var btnXacNhan: UIButton!
@@ -20,7 +24,10 @@ class CreateCalenderVC: BaseVC{
     
     @IBOutlet weak var vKhachhang: UIView!
     @IBOutlet weak var vGioThucHien: UIView!
-
+    var employeeSelected: PEmployee = PEmployee()
+    var customerSelected: PCustomer = PCustomer()
+    var dsNhanVien :[PEmployee] = [PEmployee]()
+    var dsKhachHang :[PCustomer] = [PCustomer]()
     
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -28,9 +35,12 @@ class CreateCalenderVC: BaseVC{
             tableView.delegate = self
             self.tableView.registerCell(nibName: "DichVuCell")
             setupUI()
-//            getAllEployees()
-//            getAllCustomers()
-//            setupData()
+        
+        
+//        dropdown.modalPresentationStyle = .overCurrentContext
+//        dropdown.modalTransitionStyle = .crossDissolve
+//        present(act, animated: true, completion: nil)
+
         }
     func setupUI(){
         btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
@@ -66,8 +76,7 @@ class CreateCalenderVC: BaseVC{
 //    @IBOutlet var tableHeader: UIView!
 //    var listEmployee = [PEmployee]()
 //    var listCustomer = [PCustomer]()
-//    var employeeSelected: PEmployee = PEmployee()
-//    var customerSelected: PCustomer = PCustomer()
+
 //    var listServices = [PServices]()
 //    @IBOutlet var dateTimePicker: UIDatePicker!
 //    
@@ -76,7 +85,7 @@ class CreateCalenderVC: BaseVC{
 //    
 //    var statusCreateOrUpdate = 0 //0: create, 1 update
 //    var itemBookUpdate = PBookCalender()
-//    
+//    q
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        tableView.dataSource = self
@@ -193,31 +202,73 @@ class CreateCalenderVC: BaseVC{
 //        self.pushVC(controller: vc)
 //    }
 //    
-//    func getAllEployees(){
-//        guard let id = Common.userMaster.id else {return}
-//        let param = ParamSearch(store_id: id, status: 1)
-//        ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
-//            (response) in
-//            if response?.data != nil, response?.statusCode == 200 {
-//                self.listEmployee = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()
-//            } else if response?.statusCode == 0 {
-//                self.showAlert(message: "Không thể lấy dữ liệu")
-//            }
-//        }
-//    }
-//    func getAllCustomers(){
-//        guard let id = Common.userMaster.id else {return}
-//        let param = ParamSearch(store_id: id, status: 1)
-//        ServiceManager.common.getAllCustomers(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
-//            (response) in
-//            if response?.data != nil, response?.statusCode == 200 {
-//                self.listCustomer = Mapper<PCustomer>().mapArray(JSONObject: response!.data ) ?? [PCustomer]()
-//                
-//            } else if response?.statusCode == 0 {
-//                self.showAlert(message: "Không thể lấy dữ liệu")
-//            }
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        getAllEployees()
+        getAllCustomers()
+    }
+    @IBAction func btnChonNhanVienPressed(_ sender: Any) {
+        
+        dropdown.bindDataNhanVien(e: dsNhanVien)
+        dropdown.modalPresentationStyle = .overCurrentContext
+        dropdown.modalTransitionStyle = .crossDissolve
+        if dsNhanVien.count > 0 {
+            dropdown.daChon = {
+                [weak self] e in
+                guard let self = self else {return}
+                if let object = e as? PEmployee {
+//                    print(object.toJSON())
+                    self.employeeSelected = object
+                    self.lbChonNhanVIen.text = object.fullName
+                }
+            }
+            present(dropdown, animated: true, completion: nil)
+        }
+      
+    }
+
+    @IBAction func btnChonKhachHangPressed(_ sender: Any) {
+        dropdown.bindDataKhachHang(e: dsKhachHang)
+        dropdown.modalPresentationStyle = .overCurrentContext
+        dropdown.modalTransitionStyle = .crossDissolve
+        if dsKhachHang.count > 0 {
+            dropdown.daChon = {
+                [weak self] e in
+                guard let self = self else {return}
+                if let object = e as? PCustomer {
+//                    print(object.toJSON())
+                    self.customerSelected = object
+                    self.lbChonKhachHang.text = object.fullName
+                }
+            }
+            present(dropdown, animated: true, completion: nil)
+        }
+    }
+
+    
+    func getAllEployees(){
+        guard let id = Common.userMaster.id else {return}
+        let param = ParamSearch(store_id: id, status: 1)
+        ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.dsNhanVien = Mapper<PEmployee>().mapArray(JSONObject: response!.data ) ?? [PEmployee]()
+            } else if response?.statusCode == 0 {
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại mạng!")
+            }
+        }
+    }
+    func getAllCustomers(){
+        guard let id = Common.userMaster.id else {return}
+        let param = ParamSearch(store_id: id, status: 1)
+        ServiceManager.common.getAllCustomers(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.dsKhachHang = Mapper<PCustomer>().mapArray(JSONObject: response!.data ) ?? [PCustomer]()
+            } else if response?.statusCode == 0 {
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại mạng!")
+            }
+        }
+    }
 //    func updateAmount(){
 //        totalAmountLbl.text = String(getTotalAmount()).currencyFormatting()
 //    }

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropdownVC" customModule="LN_POS" customModuleProvider="target">
+            <connections>
+                <outlet property="btnXacNhan" destination="wsV-r7-Y0Y" id="ptx-0j-3jY"/>
+                <outlet property="lbTieuDe" destination="jkl-Sb-NhT" id="iFj-9S-DWo"/>
+                <outlet property="tableView" destination="Tcw-Xb-qUy" id="oQZ-J0-HVf"/>
+                <outlet property="vDropdown" destination="xw4-TD-gch" id="zlM-Cq-ufC"/>
+                <outlet property="vTimKiem" destination="Mrs-AV-FWK" id="6mM-Ze-3bA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPc-t3-zau" userLabel="btnThoat">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="btnThoatPressed:" destination="-1" eventType="touchUpInside" id="xWd-sl-mix"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xw4-TD-gch">
+                    <rect key="frame" x="35" y="298.66666666666674" width="323" height="484.33333333333326"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkl-Sb-NhT">
+                            <rect key="frame" x="15" y="10.000000000000002" width="293" height="21.666666666666671"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" name="SPA_Black"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-AV-FWK" userLabel="vTimKiem">
+                            <rect key="frame" x="10" y="44" width="248" height="44"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IvE-gY-tV6">
+                                    <rect key="frame" x="10" y="10.999999999999996" width="24" height="22.333333333333332"/>
+                                    <color key="tintColor" name="SPA_F8"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="OpK-Z7-5ys"/>
+                                        <constraint firstAttribute="height" constant="24" id="euj-bZ-4cV"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên hoặc điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3y-ea-HBa">
+                                    <rect key="frame" x="39" y="0.0" width="204" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                            <color key="value" name="SPA_BD"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="SPA_FF"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="z3y-ea-HBa" secondAttribute="bottom" id="KMW-Hy-0bA"/>
+                                <constraint firstItem="z3y-ea-HBa" firstAttribute="leading" secondItem="IvE-gY-tV6" secondAttribute="trailing" constant="5" id="NX7-TO-ELX"/>
+                                <constraint firstItem="IvE-gY-tV6" firstAttribute="leading" secondItem="Mrs-AV-FWK" secondAttribute="leading" constant="10" id="S3D-Qi-LjE"/>
+                                <constraint firstAttribute="height" constant="44" id="WBU-y7-7Ki"/>
+                                <constraint firstItem="z3y-ea-HBa" firstAttribute="top" secondItem="Mrs-AV-FWK" secondAttribute="top" id="bBa-KX-5pp"/>
+                                <constraint firstItem="IvE-gY-tV6" firstAttribute="centerY" secondItem="Mrs-AV-FWK" secondAttribute="centerY" id="sZr-FI-mdz"/>
+                                <constraint firstAttribute="trailing" secondItem="z3y-ea-HBa" secondAttribute="trailing" constant="5" id="tms-u9-laq"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsV-r7-Y0Y" userLabel="btnXacNhan">
+                            <rect key="frame" x="264" y="44" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="lfB-Jy-Ied"/>
+                                <constraint firstAttribute="width" constant="44" id="tFQ-zs-Czb"/>
+                            </constraints>
+                            <color key="tintColor" name="SPA_F8"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="checkmark" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                            </state>
+                            <connections>
+                                <action selector="btnXacNhanPressed:" destination="-1" eventType="touchUpInside" id="CU6-Rw-iJr"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tcw-Xb-qUy">
+                            <rect key="frame" x="5" y="92.999999999999972" width="313" height="386.33333333333326"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Mrs-AV-FWK" firstAttribute="top" secondItem="xw4-TD-gch" secondAttribute="top" constant="44" id="7jO-NL-1lx"/>
+                        <constraint firstItem="jkl-Sb-NhT" firstAttribute="top" secondItem="xw4-TD-gch" secondAttribute="top" constant="10" id="H9f-SA-RcJ"/>
+                        <constraint firstItem="Tcw-Xb-qUy" firstAttribute="leading" secondItem="xw4-TD-gch" secondAttribute="leading" constant="5" id="MMO-3W-ukM"/>
+                        <constraint firstAttribute="trailing" secondItem="wsV-r7-Y0Y" secondAttribute="trailing" constant="15" id="RHF-0o-q4u"/>
+                        <constraint firstAttribute="width" secondItem="xw4-TD-gch" secondAttribute="height" multiplier="1:1.5" id="U3J-JI-5qu"/>
+                        <constraint firstItem="wsV-r7-Y0Y" firstAttribute="centerY" secondItem="Mrs-AV-FWK" secondAttribute="centerY" id="XUt-DO-tSD"/>
+                        <constraint firstItem="Mrs-AV-FWK" firstAttribute="leading" secondItem="xw4-TD-gch" secondAttribute="leading" constant="10" id="cSS-Sm-Cle"/>
+                        <constraint firstAttribute="trailing" secondItem="jkl-Sb-NhT" secondAttribute="trailing" constant="15" id="caX-0x-tlS"/>
+                        <constraint firstAttribute="trailing" secondItem="Mrs-AV-FWK" secondAttribute="trailing" constant="65" id="g10-1p-y6A"/>
+                        <constraint firstItem="jkl-Sb-NhT" firstAttribute="leading" secondItem="xw4-TD-gch" secondAttribute="leading" constant="15" id="nWg-pm-ZLL"/>
+                        <constraint firstAttribute="bottom" secondItem="Tcw-Xb-qUy" secondAttribute="bottom" constant="5" id="oYG-5f-OQ3"/>
+                        <constraint firstItem="Tcw-Xb-qUy" firstAttribute="top" secondItem="Mrs-AV-FWK" secondAttribute="bottom" constant="5" id="qgY-dh-ixu"/>
+                        <constraint firstAttribute="trailing" secondItem="Tcw-Xb-qUy" secondAttribute="trailing" constant="5" id="rNx-Yw-Baw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qPc-t3-zau" secondAttribute="trailing" id="AoI-Fy-C83"/>
+                <constraint firstItem="xw4-TD-gch" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="FzF-ZB-026"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xw4-TD-gch" secondAttribute="bottom" constant="35" id="Gnd-M1-6CM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xw4-TD-gch" secondAttribute="trailing" constant="35" id="Ngk-D3-Fwz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qPc-t3-zau" secondAttribute="bottom" id="Wxd-he-jYv"/>
+                <constraint firstItem="qPc-t3-zau" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ftX-Zx-aCh"/>
+                <constraint firstItem="qPc-t3-zau" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wEs-fO-5Pn"/>
+            </constraints>
+            <point key="canvasLocation" x="-16.030534351145036" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="SPA_BD">
+            <color red="0.74299997091293335" green="0.16500000655651093" blue="0.30000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_Black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_F8">
+            <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_FF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

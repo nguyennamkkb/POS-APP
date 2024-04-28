@@ -35,13 +35,11 @@ class MainVC: BaseVC {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     @IBAction func huongDanPressed(_ sender: Any) {
-//        self.hienThiThongBao(trangThai: 1, loiNhan: "Thanh cong roi")
-        let act = XacNhanVC()
-//        act.bindData(s: "Đồng ý xoá nhân biên \(itemData.fullName ?? "")")
+
+        let act = DropdownVC()
         act.modalPresentationStyle = .overCurrentContext
         act.modalTransitionStyle = .crossDissolve
-       
-        present(act, animated: false, completion: nil)
+        present(act, animated: true, completion: nil)
     }
     
    
@@ -151,17 +149,7 @@ class MainVC: BaseVC {
         self.pushVC(controller: vc, animation: true)
     }
     
-    @IBAction func sideLeftPressed(_ sender: UIButton) {
-        //        let menu = SideMenuNavigationController(rootViewController: SlideMenuVC())
-        let leftMenuNavigationController = SideMenuNavigationController(rootViewController: SlideMenuVC())
-        
-        SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.default.leftMenuNavigationController = leftMenuNavigationController
-        SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        leftMenuNavigationController.menuWidth = 300
-        present(leftMenuNavigationController, animated: true, completion: nil)
-    }
-    
+
     @IBAction func BtnCreateCalenderPressed(_ sender: Any) {
         let vc = CreateCalenderVC()
 //        vc.actionOK = {
@@ -198,19 +186,7 @@ class MainVC: BaseVC {
             }
         }
     }
-   
-//    @IBAction func btnSearchPressed(_ sender: UIButton) {
-//        let vc = MainFilterVC()
-//        vc.actionFilter = {
-//            [weak self] item in
-//            guard let self = self else {return}
-//            self.paramSearch = item
-//            print(item.toJSON())
-//            self.getBooks()
-//        }
-//        self.present(vc, animated: true)
-//    }
-//ádasd
+
 }
 
 
