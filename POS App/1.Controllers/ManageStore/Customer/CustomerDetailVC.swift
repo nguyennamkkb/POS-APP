@@ -80,7 +80,7 @@ class CustomerDetailVC: BaseVC{
     }
     @IBAction func btnXoaPressed(_ sender: Any) {
         let act = XacNhanVC()
-        act.bindData(s: "Đồng ý xoá nhân biên \(itemData.fullName ?? "")")
+        act.bindData(s: "Đồng ý xoá khách hàng \(itemData.fullName ?? "")")
         act.modalPresentationStyle = .overCurrentContext
         act.modalTransitionStyle = .crossDissolve
         act.actDongY = {
@@ -88,7 +88,7 @@ class CustomerDetailVC: BaseVC{
             guard let self = self else {return}
             self.xoaKhachHang()
         }
-        present(act, animated: false, completion: nil)
+        present(act, animated: true, completion: nil)
     }
     @IBAction func btnSuaPressed(_ sender: Any) {
         let vc = CreateCustomerVC()

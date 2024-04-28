@@ -8,11 +8,12 @@ target 'LN POS' do
   # Pods for POS App
 pod 'ObjectMapper'
 pod 'Alamofire', '~> 4.8'
-pod 'IQKeyboardManagerSwift'
+pod 'IQKeyboardManagerSwift', '~> 6.0'
 pod 'Kingfisher', '~>5.15.7'
 pod 'DropDown'
 pod 'FittedSheets'
 pod 'SideMenu', '~> 6.0'
 pod 'DGCharts'
-pod 'XLPagerTabStrip', '~> 9.0'
+pod 'Printer', :git => 'https://github.com/KevinGong2013/Printer.git', :branch => 'refactor'
+
 end

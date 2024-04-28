@@ -45,12 +45,12 @@ class StoreMainVC: BaseVC {
         self.pushVC(controller: vc)
     }
     @IBAction func CaiDatPressed(_ sender: Any) {
-        let vc = MMMVC()
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-
-//        let vc = SettingVC()
-//        self.pushVC(controller: vc)
-        present(vc, animated: true, completion: nil)
+//        let vc = MMMVC()
+//        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//
+////        let vc = SettingVC()
+////        self.pushVC(controller: vc)
+//        present(vc, animated: true, completion: nil)
 
     }
     

@@ -28,13 +28,13 @@ class XacNhanVC: UIViewController {
         lbLoiNhan.text = loiNhan
         vXacNhan.addShadow()
         
-
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let distanceToMove: CGFloat = 50
-        
+        let distanceToMove: CGFloat = 20
+        vXacNhan.isHidden = false
         // Di chuyển UIView xuống dưới 50 pixel
         let newFrame = CGRect(x: vXacNhan.frame.origin.x, y: vXacNhan.frame.origin.y + distanceToMove, width: vXacNhan.frame.size.width, height: vXacNhan.frame.size.height)
         

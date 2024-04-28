@@ -63,7 +63,7 @@ class ThongBaoVC: UIViewController {
         dismiss(animated: false)
     }
     func bindData(trangThai: Int, loiNhan: String){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.dong()
         }
         trangThaiLoiNhan = trangThai

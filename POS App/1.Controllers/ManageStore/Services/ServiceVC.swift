@@ -10,7 +10,8 @@ import ObjectMapper
 
 class ServiceVC:BaseVC  {
     
-    
+    let refreshControl = UIRefreshControl()
+
     @IBOutlet weak var keySearch: UITextField!
     @IBOutlet weak var btnThemMoi: UIButton!
     @IBOutlet weak var vTimKiem: UIView!
@@ -32,8 +33,13 @@ class ServiceVC:BaseVC  {
         btnThemMoi.layer.cornerRadius = myCornerRadius.corner10
 
         vTimKiem.addBorder(color: myColor.SPA_FE!, width: 1)
+        
+        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
-
+    @objc func loadData() {
+        getAllServices()
+        refreshControl.endRefreshing()
+    }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }

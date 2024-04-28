@@ -73,14 +73,6 @@
 		0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCB2A8E72600062E878 /* Notifications.swift */; };
 		0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCD2A8E79570062E878 /* SettingVC.swift */; };
 		0B7A4FD02A8E79570062E878 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCE2A8E79570062E878 /* SettingVC.xib */; };
-		0B7B7CE52A908B150070D838 /* TestTabsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE32A908B150070D838 /* TestTabsVC.swift */; };
-		0B7B7CE62A908B150070D838 /* TestTabsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE42A908B150070D838 /* TestTabsVC.xib */; };
-		0B7B7CE92A90919E0070D838 /* Tab1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE72A90919E0070D838 /* Tab1VC.swift */; };
-		0B7B7CEA2A90919E0070D838 /* Tab1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CE82A90919E0070D838 /* Tab1VC.xib */; };
-		0B7B7CED2A9091AD0070D838 /* Tab2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CEB2A9091AD0070D838 /* Tab2VC.swift */; };
-		0B7B7CEE2A9091AD0070D838 /* Tab2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CEC2A9091AD0070D838 /* Tab2VC.xib */; };
-		0B7B7CF12A90935C0070D838 /* MMMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B7CEF2A90935C0070D838 /* MMMVC.swift */; };
-		0B7B7CF22A90935C0070D838 /* MMMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B7CF02A90935C0070D838 /* MMMVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */; };
@@ -275,14 +267,6 @@
 		0B7A4FCB2A8E72600062E878 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		0B7A4FCD2A8E79570062E878 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		0B7A4FCE2A8E79570062E878 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
-		0B7B7CE32A908B150070D838 /* TestTabsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabsVC.swift; sourceTree = "<group>"; };
-		0B7B7CE42A908B150070D838 /* TestTabsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTabsVC.xib; sourceTree = "<group>"; };
-		0B7B7CE72A90919E0070D838 /* Tab1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1VC.swift; sourceTree = "<group>"; };
-		0B7B7CE82A90919E0070D838 /* Tab1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tab1VC.xib; sourceTree = "<group>"; };
-		0B7B7CEB2A9091AD0070D838 /* Tab2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2VC.swift; sourceTree = "<group>"; };
-		0B7B7CEC2A9091AD0070D838 /* Tab2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tab2VC.xib; sourceTree = "<group>"; };
-		0B7B7CEF2A90935C0070D838 /* MMMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMMVC.swift; sourceTree = "<group>"; };
-		0B7B7CF02A90935C0070D838 /* MMMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMMVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmployeeCell.swift; sourceTree = "<group>"; };
@@ -869,14 +853,6 @@
 				0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */,
 				0B7A4FCD2A8E79570062E878 /* SettingVC.swift */,
 				0B7A4FCE2A8E79570062E878 /* SettingVC.xib */,
-				0B7B7CE32A908B150070D838 /* TestTabsVC.swift */,
-				0B7B7CE42A908B150070D838 /* TestTabsVC.xib */,
-				0B7B7CE72A90919E0070D838 /* Tab1VC.swift */,
-				0B7B7CE82A90919E0070D838 /* Tab1VC.xib */,
-				0B7B7CEB2A9091AD0070D838 /* Tab2VC.swift */,
-				0B7B7CEC2A9091AD0070D838 /* Tab2VC.xib */,
-				0B7B7CEF2A90935C0070D838 /* MMMVC.swift */,
-				0B7B7CF02A90935C0070D838 /* MMMVC.xib */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1009,12 +985,10 @@
 			files = (
 				0B049BDA2A7E365500A2295A /* RPListInfoVC.xib in Resources */,
 				0BF417C02A3B5CDF00DD36DA /* CreateServiceVC.xib in Resources */,
-				0B7B7CE62A908B150070D838 /* TestTabsVC.xib in Resources */,
 				0BD914342A4DEA96006C223B /* CustomerServicesCell.xib in Resources */,
 				0B3851982A81584D006153BA /* EditStoreCell.xib in Resources */,
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
-				0B7B7CF22A90935C0070D838 /* MMMVC.xib in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */,
@@ -1059,7 +1033,6 @@
 				0BA332AE2A2C8A33007ACB14 /* CustomerItemCell.xib in Resources */,
 				0B10790F2A7F7CA400C7652C /* ContactVC.xib in Resources */,
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
-				0B7B7CEA2A90919E0070D838 /* Tab1VC.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0BD709432A370DA200D467EC /* QRVC.xib in Resources */,
 				0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */,
@@ -1073,7 +1046,6 @@
 				0BB43EEE29FAC59100F1DE85 /* PayVC.xib in Resources */,
 				0BB420692A2A63450008B7D7 /* EmployeeItemCell.xib in Resources */,
 				0B7A4FCA2A8E6BC50062E878 /* NotificationVC.xib in Resources */,
-				0B7B7CEE2A9091AD0070D838 /* Tab2VC.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
 				0B1D555D2A6D20C00071E8F0 /* ChartDayCell.xib in Resources */,
 				0BF417C42A3B5E2700DD36DA /* CreateServiceCell.xib in Resources */,
@@ -1152,8 +1124,6 @@
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B33C63C2A70346900201CA0 /* RPHeaderCell.swift in Sources */,
 				0B74DFB72A33F39F005FDA97 /* MActDeleteVC.swift in Sources */,
-				0B7B7CE52A908B150070D838 /* TestTabsVC.swift in Sources */,
-				0B7B7CF12A90935C0070D838 /* MMMVC.swift in Sources */,
 				0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */,
 				0BD914332A4DEA96006C223B /* CustomerServicesCell.swift in Sources */,
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
@@ -1194,7 +1164,6 @@
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
 				0B7A4FC92A8E6BC50062E878 /* NotificationVC.swift in Sources */,
-				0B7B7CE92A90919E0070D838 /* Tab1VC.swift in Sources */,
 				0BE0393029F82039002CB20F /* BaseVC.swift in Sources */,
 				0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */,
 				9AAFB5C72BD96A2B0057BEB4 /* EmployeeServicesCell.swift in Sources */,
@@ -1227,7 +1196,6 @@
 				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
 				0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
-				0B7B7CED2A9091AD0070D838 /* Tab2VC.swift in Sources */,
 				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
 				0BB1D2202A32421400516F25 /* DichVuCell.swift in Sources */,
 				0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */,

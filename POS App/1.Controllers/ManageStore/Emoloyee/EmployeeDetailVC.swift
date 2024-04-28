@@ -65,7 +65,7 @@ class EmployeeDetailVC: BaseVC {
     }
     @IBAction func btnXoaPressed(_ sender: Any) {
         let act = XacNhanVC()
-        act.bindData(s: "Đồng ý xoá nhân biên \(itemData.fullName ?? "")")
+        act.bindData(s: "Đồng ý xoá khách hàng \(itemData.fullName ?? "")")
         act.modalPresentationStyle = .overCurrentContext
         act.modalTransitionStyle = .crossDissolve
         act.actDongY = {
