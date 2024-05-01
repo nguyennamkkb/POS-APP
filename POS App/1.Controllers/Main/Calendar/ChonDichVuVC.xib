@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChonDichVuVC" customModule="LN_POS" customModuleProvider="target">
             <connections>
                 <outlet property="btnChonDichVu" destination="OAf-aF-hQD" id="dRh-gN-5As"/>
+                <outlet property="keySearch" destination="qEM-fr-4Eu" id="B2I-aL-UIr"/>
+                <outlet property="lbTongTien" destination="lTf-xh-IwL" id="Wq3-AJ-POa"/>
                 <outlet property="tableView" destination="v2K-SD-hQV" id="f6A-N5-lfK"/>
+                <outlet property="vTimKiem" destination="awR-Mf-QcW" id="rfE-Cy-yGp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,7 +54,7 @@
                             <color key="textColor" name="SPA_FF"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAf-aF-hQD">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAf-aF-hQD" userLabel="btnXacNhan">
                             <rect key="frame" x="343" y="4.6666666666666643" width="35" height="35"/>
                             <color key="backgroundColor" name="SPA_FF"/>
                             <constraints>
@@ -61,6 +64,9 @@
                             <color key="tintColor" name="SPA_F8"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="checkmark" catalog="system"/>
+                            <connections>
+                                <action selector="btnXacNhanPressed:" destination="-1" eventType="touchUpInside" id="6yc-FG-Z9X"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,14 +95,51 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="v2K-SD-hQV">
-                    <rect key="frame" x="15" y="113" width="363" height="676"/>
+                    <rect key="frame" x="15" y="163" width="363" height="626"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awR-Mf-QcW" userLabel="vTimKiem">
+                    <rect key="frame" x="15" y="113" width="363" height="35"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-S3-OXI">
+                            <rect key="frame" x="10" y="6.6666666666666679" width="24" height="22.333333333333336"/>
+                            <color key="tintColor" name="SPA_F8"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="cLl-8i-hhz"/>
+                                <constraint firstAttribute="height" constant="24" id="mTA-Ag-GRK"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhệp tên dịch vụ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEM-fr-4Eu">
+                            <rect key="frame" x="44" y="0.0" width="309" height="35"/>
+                            <color key="textColor" name="SPA_F8"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                    <color key="value" name="SPA_BD"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="timKien:" destination="-1" eventType="editingChanged" id="J2j-Pg-4iL"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" name="SPA_FF"/>
+                    <constraints>
+                        <constraint firstItem="Hht-S3-OXI" firstAttribute="leading" secondItem="awR-Mf-QcW" secondAttribute="leading" constant="10" id="45s-QK-hFO"/>
+                        <constraint firstAttribute="bottom" secondItem="qEM-fr-4Eu" secondAttribute="bottom" id="GTB-dm-rn8"/>
+                        <constraint firstItem="qEM-fr-4Eu" firstAttribute="leading" secondItem="Hht-S3-OXI" secondAttribute="trailing" constant="10" id="HAO-Uh-Usb"/>
+                        <constraint firstItem="Hht-S3-OXI" firstAttribute="centerY" secondItem="awR-Mf-QcW" secondAttribute="centerY" id="JzR-q7-ngA"/>
+                        <constraint firstAttribute="height" constant="35" id="T9P-K6-2DG"/>
+                        <constraint firstAttribute="trailing" secondItem="qEM-fr-4Eu" secondAttribute="trailing" constant="10" id="VZS-2X-oGd"/>
+                        <constraint firstItem="qEM-fr-4Eu" firstAttribute="top" secondItem="awR-Mf-QcW" secondAttribute="top" id="qia-Zc-ADe"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="v2K-SD-hQV" firstAttribute="top" secondItem="Nkz-Qf-YWk" secondAttribute="bottom" constant="10" id="0GO-bf-N8n"/>
+                <constraint firstItem="v2K-SD-hQV" firstAttribute="top" secondItem="Nkz-Qf-YWk" secondAttribute="bottom" constant="60" id="0GO-bf-N8n"/>
                 <constraint firstItem="PJQ-s7-jD7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3W9-DY-I8v"/>
                 <constraint firstItem="xnt-s9-z8Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="5uD-et-FPg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nkz-Qf-YWk" secondAttribute="trailing" id="8Y5-Hs-LF1"/>
@@ -105,12 +148,15 @@
                 <constraint firstItem="YJj-wB-SCG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="N3t-sA-XJc"/>
                 <constraint firstItem="lTf-xh-IwL" firstAttribute="centerY" secondItem="xnt-s9-z8Q" secondAttribute="centerY" id="Rcn-jC-1Jr"/>
                 <constraint firstItem="YJj-wB-SCG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TXj-wD-g1z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="awR-Mf-QcW" secondAttribute="trailing" constant="15" id="UZ2-2S-kv0"/>
                 <constraint firstItem="Nkz-Qf-YWk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uv4-Xv-DMr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v2K-SD-hQV" secondAttribute="trailing" constant="15" id="WJB-98-jEK"/>
                 <constraint firstAttribute="bottom" secondItem="PJQ-s7-jD7" secondAttribute="bottom" id="ZH5-Mb-dIb"/>
+                <constraint firstItem="awR-Mf-QcW" firstAttribute="top" secondItem="Nkz-Qf-YWk" secondAttribute="bottom" constant="10" id="a47-rK-Nfe"/>
                 <constraint firstItem="Nkz-Qf-YWk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="auV-eo-YUQ"/>
                 <constraint firstAttribute="trailing" secondItem="PJQ-s7-jD7" secondAttribute="trailing" id="gzc-I9-IZe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xnt-s9-z8Q" secondAttribute="bottom" id="iHS-CX-LJe"/>
+                <constraint firstItem="awR-Mf-QcW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="owK-mK-ign"/>
                 <constraint firstItem="PJQ-s7-jD7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qDv-5q-uGm"/>
                 <constraint firstItem="v2K-SD-hQV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="r9v-oB-DP0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YJj-wB-SCG" secondAttribute="trailing" id="sde-tl-wcK"/>
@@ -123,11 +169,12 @@
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="img_bg" width="360" height="640"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="SPA_BD">
-            <color red="0.74285709860000004" green="0.16519489879999999" blue="0.29987525939999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.74299997091293335" green="0.16500000655651093" blue="0.30000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SPA_F8">
-            <color red="0.97214514019999998" green="0.3401286006" blue="0.4894454479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SPA_FF">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

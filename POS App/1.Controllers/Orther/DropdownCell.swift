@@ -74,28 +74,5 @@ class DropdownCell: UITableViewCell {
         }
         datAnh()
     }
-//    func changeStatus(loai: Int){
-//        if tableData.count <= 1 {
-//            return
-//        }
-//        for i in 0...tableData.count-1 {
-//            tableData[i].status = 0
-//            if listSelected.count > 0 {
-//                for j in 0...listSelected.count-1 {
-//                    if tableData[i].id == listSelected[j].id {
-//                        tableData[i].status = 1
-//                    }
-//                }
-//            }
-//        }
-//        
-//        if loaiDuLieu == 0 {
-//            employee.status = 2
-//            actChonNhanVIen?(employee)
-//        }else {
-//            customer.status = 2
-//            actChonKhachHang?(customer)
-//        }
-//
-//    }
+
 }

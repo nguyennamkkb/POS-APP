@@ -35,6 +35,7 @@ class ServiceVC:BaseVC  {
         vTimKiem.addBorder(color: myColor.SPA_FE!, width: 1)
         
         refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     @objc func loadData() {
         getAllServices()

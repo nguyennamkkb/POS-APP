@@ -16,8 +16,10 @@
                 <outlet property="btnChonDichVu" destination="0Bu-0x-Wp8" id="Q7Q-ZI-g5Q"/>
                 <outlet property="btnThemKhachHang" destination="KSA-OB-XeY" id="s3N-lW-a1n"/>
                 <outlet property="btnXacNhan" destination="wGB-jn-VCl" id="VD7-AY-Lhw"/>
+                <outlet property="dpGioLam" destination="0gY-31-DBX" id="FvF-lJ-sTL"/>
                 <outlet property="lbChonKhachHang" destination="HJb-eu-kbv" id="mOb-8x-46e"/>
                 <outlet property="lbChonNhanVIen" destination="ULK-sd-p8A" id="bgg-2D-B1z"/>
+                <outlet property="lbTongTien" destination="BhW-7t-ztc" id="LYA-hu-FOZ"/>
                 <outlet property="tableView" destination="acF-kx-Biq" id="K4H-yg-AtS"/>
                 <outlet property="vGioThucHien" destination="vjd-Yn-qHr" id="FY5-FA-1ZM"/>
                 <outlet property="vKhachhang" destination="pBW-3l-1VW" id="W4P-zm-3Lz"/>
@@ -182,7 +184,7 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                     </state>
                     <connections>
-                        <action selector="btnAcceptPresses:" destination="-1" eventType="touchUpInside" id="b72-S5-jTE"/>
+                        <action selector="btnThemKhachHangPressed:" destination="-1" eventType="touchUpInside" id="q6p-eF-v6y"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giờ thực hiện" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-K1-pQO" userLabel="gioThucHien">
@@ -237,9 +239,10 @@
                         <action selector="chonDichVuPressed:" destination="-1" eventType="touchUpInside" id="cpe-0v-h9h"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="acF-kx-Biq">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="acF-kx-Biq">
                     <rect key="frame" x="15" y="381" width="384" height="461"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="SPA_FF"/>
+                    <color key="separatorColor" name="SPA_FE"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-u1-mlR" userLabel="tongtien">
                     <rect key="frame" x="15" y="838" width="84" height="24"/>
@@ -247,7 +250,7 @@
                     <color key="textColor" name="SPA_BD"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.000đ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhW-7t-ztc" userLabel="tongtien">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.000đ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhW-7t-ztc" userLabel="100000">
                     <rect key="frame" x="315" y="838" width="84" height="24"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                     <color key="textColor" name="SPA_BD"/>
@@ -314,6 +317,9 @@
         </namedColor>
         <namedColor name="SPA_F8">
             <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_FE">
+            <color red="0.99000000953674316" green="0.78200000524520874" blue="0.83799999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SPA_FF">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

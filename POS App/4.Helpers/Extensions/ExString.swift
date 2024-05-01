@@ -8,6 +8,11 @@
 import Foundation
 
 extension String {
+    var folded: String {
+            return self.folding(options: .diacriticInsensitive, locale: nil)
+                    .replacingOccurrences(of: "đ", with: "d")
+                    .replacingOccurrences(of: "Đ", with: "D")
+        }
     func base64Encoded() -> String? {
         return data(using: .utf8)?.base64EncodedString()
     }

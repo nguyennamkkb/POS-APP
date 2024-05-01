@@ -23,8 +23,8 @@ class DichVuCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    func bindData(item: PServices){
-        self.nameLbl.text = item.name ?? ""
-        self.amountLbl.text = "\(item.price?.formatNumberInt(maxFraction: 0) ?? "0")đ"
+    func bindData(e: PServices){
+        self.nameLbl.text = e.name ?? ""
+        self.amountLbl.text = "\(e.price?.formatNumberInt(maxFraction: 0) ?? "0")đ"
     }
 }

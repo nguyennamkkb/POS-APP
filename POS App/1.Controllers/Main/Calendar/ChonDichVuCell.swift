@@ -12,11 +12,13 @@ class ChonDichVuCell: UITableViewCell {
     @IBOutlet weak var vItem: UIView!
     @IBOutlet var priceLbl: UILabel!
     var Checked: ((_ item: Int,_ item: Int ) -> Void)?
+    var daChon: ClosureCustom<PServices>?
+    var boChon: ClosureCustom<PServices>?
     @IBOutlet var checkImage: UIImageView! //circle.dotted dot.circle.fill
     @IBOutlet var dichVuLbl: UILabel!
     var index: Int = 0
     var select: Bool = false
-    var itemState = PServices()
+    var item = PServices()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,25 +34,32 @@ class ChonDichVuCell: UITableViewCell {
         let price: String = String(item.price ?? 0)
         dichVuLbl.text = item.name ?? ""
         self.index = index
-        self.itemState = item
+        self.item = item
         priceLbl.text = "\(price.currencyFormatting())"
-        setChecked(status: (item.status == 1))
+        setChecked(status: (item.status == 2))
     }
     @IBAction func SelectPressed(_ sender: UIButton) {
-        select = !(itemState.status == 1)
+        
+        select = !(item.status == 2)
+//        print("chon \(select)")
         if select {
-            Checked?(1,index)
+//            Checked?(2,index)
+            daChon?(item)
         }
         else  {
-            Checked?(0,index)
+//            Checked?(1,index)
+            boChon?(item)
         }
-//        setChecked(status: select)
+        setChecked(status: select)
     }
     func setChecked (status: Bool) {
-        if status {
-            checkImage.image = UIImage(systemName: "checkmark")
+//        print(status)
+        if status  {
+//            checkImage.tintColor =  UIColor.green
+            checkImage.image = UIImage(named: "ic_thanhcong")
         }
         else  {
+            checkImage.tintColor =  myColor.SPA_AE
             checkImage.image = UIImage(systemName: "circle")
         }
     }

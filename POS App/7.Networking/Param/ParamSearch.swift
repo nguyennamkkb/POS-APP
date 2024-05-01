@@ -16,13 +16,14 @@ class ParamSearch: Mappable {
     var name: String?
     var cksRequest: String?
     var timeRequest: Int?
+    var page: Int?
     var from: Int64?
     var to: Int64?
     
     init(){}
     
     
-    init(store_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil, from: Int64? = nil, to: Int64? = nil){
+    init(store_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil, from: Int64? = nil, to: Int64? = nil, page: Int? = 1){
         let mili = Common.getMilisecondNow()
         self.store_id  = store_id
         self.status = status
@@ -44,6 +45,7 @@ class ParamSearch: Mappable {
         name <- map["name"]
         cksRequest <- map["cksRequest"]
         timeRequest <- map["timeRequest"]
+        page <- map["page"]
         from <- map["from"]
         to <- map["to"]
     }

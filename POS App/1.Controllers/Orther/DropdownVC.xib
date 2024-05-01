@@ -15,6 +15,7 @@
                 <outlet property="btnXacNhan" destination="wsV-r7-Y0Y" id="ptx-0j-3jY"/>
                 <outlet property="lbTieuDe" destination="jkl-Sb-NhT" id="iFj-9S-DWo"/>
                 <outlet property="tableView" destination="Tcw-Xb-qUy" id="oQZ-J0-HVf"/>
+                <outlet property="tfTuKhoaTimKiem" destination="z3y-ea-HBa" id="6KR-m1-L1n"/>
                 <outlet property="vDropdown" destination="xw4-TD-gch" id="zlM-Cq-ufC"/>
                 <outlet property="vTimKiem" destination="Mrs-AV-FWK" id="6mM-Ze-3bA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -61,6 +62,9 @@
                                             <color key="value" name="SPA_BD"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="timKiem:" destination="-1" eventType="editingDidEnd" id="UPy-5O-upU"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" name="SPA_FF"/>

@@ -9,6 +9,9 @@ import UIKit
 
 class DropdownVC: BaseVC {
     
+    let refreshControl = UIRefreshControl()
+    
+    @IBOutlet weak var tfTuKhoaTimKiem: UITextField!
     @IBOutlet weak var lbTieuDe: UILabel!
     @IBOutlet weak var vTimKiem: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -19,38 +22,54 @@ class DropdownVC: BaseVC {
     var dsKhachHang: [PCustomer] = [PCustomer]()
     var khachHang: PCustomer = PCustomer()
     var nhanVien: PEmployee = PEmployee()
-
+    
     var loaiDuLieu: Int = 0 //0: nhanvien, 1: khach hang
     var daChon: ClosureCustom<AnyObject>?
+    var timKiemNoiDung: ClosureCustom<String>?
+    var xemThem: ClosureCustom<String>?
+    var actTaiLai: ClosureAction?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         self.showLoading()
+        refreshControl.addTarget(self, action: #selector(taiLai), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+
     }
     func setupUI(){
         DispatchQueue.main.async { [self] in
-        vDropdown.layer.cornerRadius = myCornerRadius.corner10
-        vTimKiem.layer.cornerRadius = myCornerRadius.corner10
-        btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
-        vTimKiem.addBorder(color: myColor.SPA_FE!, width: 1)
-        btnXacNhan.addBorder(color: myColor.SPA_FE!, width: 1)
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        self.tableView.registerCell(nibName: "DropdownCell")
-        
-        if loaiDuLieu == 0 {
-            lbTieuDe.text = "Chọn nhân viên"
-        }else {
-            lbTieuDe.text = "Chọn Khách hàng"
-
-        }
-        
-        
+            vDropdown.layer.cornerRadius = myCornerRadius.corner10
+            vTimKiem.layer.cornerRadius = myCornerRadius.corner10
+            btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
+            vTimKiem.addBorder(color: myColor.SPA_FE!, width: 1)
+            btnXacNhan.addBorder(color: myColor.SPA_FE!, width: 1)
+            
+            tableView.dataSource = self
+            tableView.delegate = self
+            self.tableView.registerCell(nibName: "DropdownCell")
+            
+            if loaiDuLieu == 0 {
+                lbTieuDe.text = "Chọn nhân viên"
+            }else {
+                lbTieuDe.text = "Chọn Khách hàng"
+                
+            }
+            
+            
             self.tableView.reloadData()
         }
+        
         self.hideLoading()
+        
+        
+        
+        
+    }
+    @objc func taiLai() {
+        actTaiLai?()
+        print("tailai")
+        refreshControl.endRefreshing()
     }
     override func viewDidAppear(_ animated: Bool) {
         setupUI()
@@ -71,7 +90,7 @@ class DropdownVC: BaseVC {
     }
     func changeStatus(loai: Int){
         
-
+        
         if loaiDuLieu == 0 {
             if dsNhanVien.count <= 1 {
                 return
@@ -88,19 +107,38 @@ class DropdownVC: BaseVC {
                 
             }
         }
-
+        
     }
     @IBAction func btnXacNhanPressed(_ sender: Any) {
         if loaiDuLieu == 0 {
             daChon?(nhanVien)
-        
+            
         }else {
             daChon?(khachHang)
         }
         dismiss(animated: true)
     }
+    @IBAction func timKiem(_ sender: Any) {
+        timKiemNoiDung?(tfTuKhoaTimKiem.text ?? "")
+    }
+    
+    
 }
 extension DropdownVC: UITableViewDataSource, UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let boundsHeight = scrollView.bounds.size.height
+
+        if offsetY > contentHeight - boundsHeight {
+              // Kiểm tra xem có đang tải dữ liệu không và không được trùng lặp tải nếu đang tải
+              if dsNhanVien.count > 6 || dsKhachHang.count > 6 {
+                  xemThem?(tfTuKhoaTimKiem.text ?? "")
+              }
+          }
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch loaiDuLieu {
         case 0:
@@ -139,7 +177,7 @@ extension DropdownVC: UITableViewDataSource, UITableViewDelegate {
             cell.bindData(e: item, loai: 1)
             cell.actChonKhachHang = {
                 [weak self] e in
-             
+                
                 guard let self = self else {return}
                 self.changeStatus(loai: 1)
                 self.dsKhachHang[index].status = 2
@@ -150,8 +188,6 @@ extension DropdownVC: UITableViewDataSource, UITableViewDelegate {
                 }
             }
         }
-        
-        
         
         return cell
     }
