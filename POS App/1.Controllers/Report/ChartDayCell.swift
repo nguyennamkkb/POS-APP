@@ -11,6 +11,7 @@ import DGCharts
 class ChartDayCell: UITableViewCell,ChartViewDelegate {
     
     
+    @IBOutlet weak var btnXemChiTiet: UIButton!
     var dataSelect: String?
     var actionViewList: ClosureCustom<Int64>?
     @IBOutlet var boundsView: UIView!
@@ -27,8 +28,16 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
         setupUI()
     }
     func setupUI() {
-        boundsView.layer.cornerRadius = myCornerRadius.corner5
-        boundsView.layer.borderWidth = 0.1
+        boundsView.layer.cornerRadius = myCornerRadius.corner10
+        boundsView.addNDropShadow()
+        boundsView.addBorder(color: myColor.SPA_FE!, width: 0.5)
+        
+        btnXemChiTiet.layer.cornerRadius = myCornerRadius.corner10
+        btnXemChiTiet.addBorder(color: myColor.SPA_FE!, width: 0.5)
+        
+        barChartView.tintColor = myColor.SPA_BD!
+
+
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -41,7 +50,7 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
         setupHorizontalBarChart()
         let e = data.itemAtIndex(index: 0)
         dateLbl.text = "Ngày: \(e?.date ?? "")"
-        moneyLbl.text = "Doanh thu: \(e?.money ?? 0)đ - Lượt khach: \(e?.recordsCount ?? 0) "
+        moneyLbl.text = "Doanh thu: " + "\(e?.money ?? 0)".currencyFormatting() + " - Lượt khach: \(e?.recordsCount ?? 0) "
         dataSelect = e?.date ?? ""
         
     }
@@ -59,14 +68,19 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
             dataEntries.append(BarChartDataEntry(x: Double(x), y: Double(data[x].money ?? 0)))
         }
         let dataSet = BarChartDataSet(entries: dataEntries, label: "Chạm vào cột để xem thông tin")
-        
+        dataSet.colors = ChartColorTemplates.joyful()
         // Add data labels to the chart
         dataSet.valueFormatter = DefaultValueFormatter(decimals: 0)
         dataSet.valueTextColor = .black
         
         dataSet.drawValuesEnabled = false // Enable displaying data values on the bars
+
+        let colors = [UIColor.red, UIColor.blue, UIColor.green, UIColor.orange, UIColor.purple]
+        
+  
         
         let data = BarChartData(dataSet: dataSet)
+        
         barChartView.data = data
         
         barChartView.doubleTapToZoomEnabled = false
@@ -89,7 +103,7 @@ class ChartDayCell: UITableViewCell,ChartViewDelegate {
         let item = data.itemAtIndex(index: Int(entry.x))
         dateLbl.text = "Ngày: \(item?.date ?? "")"
         dataSelect = item?.date ?? ""
-        moneyLbl.text = "Doanh thu: \(String(describing: item?.money ?? 0).currencyFormatting())đ - Lượt khach: \(item?.recordsCount ?? 0) "
+        moneyLbl.text = "Doanh thu: \(String(describing: item?.money ?? 0).currencyFormatting()) - Lượt khach: \(item?.recordsCount ?? 0) "
     }
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
         // Hide or do something when no column is selected

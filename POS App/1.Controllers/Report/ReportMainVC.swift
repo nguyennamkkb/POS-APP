@@ -12,6 +12,7 @@ class ReportMainVC: BaseVC{
     
     
     
+    @IBOutlet weak var btnHome: UIButton!
     @IBOutlet var tableView: UITableView!
     var timeFrom: Int64?
     var timeTo: Int64?
@@ -21,6 +22,9 @@ class ReportMainVC: BaseVC{
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        btnHome.layer.cornerRadius = myCornerRadius.corner10
+        
         self.tableView.registerCells(cells: ["RPHeaderCell","ChartDayCell","ChartEmployeeCell"])
         setUpTime()
         getReport()
@@ -44,6 +48,9 @@ class ReportMainVC: BaseVC{
         }
         
     }
+    @IBAction func backPresed(_ sender: Any) {
+        onBackNav()
+    }
     func getReport(){
 //        guard let keySearch = k   eySearch.text else {return}
         guard let id = Common.userMaster.id else {return}
@@ -59,6 +66,9 @@ class ReportMainVC: BaseVC{
                 }
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không có dữ liệu")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -77,20 +87,20 @@ extension ReportMainVC: UITableViewDataSource, UITableViewDelegate {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RPHeaderCell", for: indexPath) as? RPHeaderCell else {return UITableViewCell()}
             cell.bindData(money: tableData.totalBook?.money ?? 0, count: tableData.totalBook?.book ?? 0,timeFrom: timeFrom ?? 0, timeTo: timeTo ?? 0)
-            cell.fromSelect = {
-                [weak self] from in
-                guard let self = self else {return}
-                print("from\(from)")
-                self.timeFrom = from
-                self.getReport()
-            }
-            cell.toSelect = {
-                [weak self] to in
-                guard let self = self else {return}
-                print("to\(to)")
-                self.timeTo = to
-                self.getReport()
-            }
+//            cell.fromSelect = {
+//                [weak self] from in
+//                guard let self = self else {return}
+//                print("from\(from)")
+//                self.timeFrom = from
+//                self.getReport()
+//            }
+//            cell.toSelect = {
+//                [weak self] to in
+//                guard let self = self else {return}
+////                print("to\(to)")
+//                self.timeTo = to
+//                self.getReport()
+//            }
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChartDayCell", for: indexPath) as? ChartDayCell else {return UITableViewCell()}

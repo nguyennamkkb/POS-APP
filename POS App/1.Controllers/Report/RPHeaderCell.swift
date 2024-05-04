@@ -13,7 +13,10 @@ import AVFoundation
 class RPHeaderCell: UITableViewCell {
 
     
+    @IBOutlet weak var vTongKet: UIView!
     
+    @IBOutlet weak var vDenNgay: UIView!
+    @IBOutlet weak var vTuNgay: UIView!
     
     @IBOutlet var fromdate: UITextField!
     let datepicker = UIDatePicker()
@@ -68,12 +71,19 @@ class RPHeaderCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setupUI(){
-        filterView.layer.cornerRadius = myCornerRadius.corner5
-        filterView.layer.borderWidth = 0.1
-        doanhThuView.layer.cornerRadius = myCornerRadius.corner5
-        doanhThuView.layer.borderWidth = 0.1
-        luotKhachView.layer.cornerRadius = myCornerRadius.corner5
-        luotKhachView.layer.borderWidth = 0.1
+//        filterView.layer.cornerRadius = myCornerRadius.corner5
+//        filterView.layer.borderWidth = 0.1
+//        doanhThuView.layer.cornerRadius = myCornerRadius.corner5
+//        doanhThuView.layer.borderWidth = 0.1
+//        luotKhachView.layer.cornerRadius = myCornerRadius.corner5
+//        luotKhachView.layer.borderWidth = 0.1
+        vTongKet.layer.cornerRadius = myCornerRadius.corner10
+        vTuNgay.layer.cornerRadius = myCornerRadius.corner10
+        vDenNgay.layer.cornerRadius = myCornerRadius.corner10
+        
+        vTongKet.addNDropShadow()
+        vTuNgay.addNDropShadow()
+        vDenNgay.addNDropShadow()
         
     }
     func bindData(money: Int, count: Int, timeFrom: Int64, timeTo: Int64){

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditStoreVC" customModule="LN_POS" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="8xK-N8-eX1" id="o5u-bs-Nmq"/>
+                <outlet property="tableView" destination="eq7-0q-bHb" id="skH-3f-C0i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,35 +21,38 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg" translatesAutoresizingMaskIntoConstraints="NO" id="jmB-9E-Brn">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAO-yo-4bc" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="103"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="SPA_F8"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXc-YD-IT0" userLabel="nav">
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEQ-eP-buU" userLabel="back">
                             <rect key="frame" x="10" y="4.6666666666666643" width="35" height="35"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="J23-lT-m1d"/>
                                 <constraint firstAttribute="width" constant="35" id="jsR-UT-l41"/>
                             </constraints>
-                            <color key="tintColor" systemColor="systemBlueColor"/>
+                            <color key="tintColor" name="SPA_FF"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_back"/>
+                            <state key="normal" image="chevron.left" catalog="system"/>
                             <connections>
                                 <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="ir1-kv-Pwn"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lịch làm việc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOL-i2-XDj">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin cửa hàng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOL-i2-XDj">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                            <color key="textColor" name="AccentColor"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" name="SPA_FF"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="XOL-i2-XDj" secondAttribute="bottom" id="9H7-3e-iBn"/>
                         <constraint firstItem="XOL-i2-XDj" firstAttribute="top" secondItem="pXc-YD-IT0" secondAttribute="top" id="WdD-Ov-5o1"/>
@@ -60,10 +63,6 @@
                         <constraint firstItem="XOL-i2-XDj" firstAttribute="leading" secondItem="pXc-YD-IT0" secondAttribute="leading" id="wbq-hE-EUf"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-N8-eX1">
-                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-zz-1QY" userLabel="line">
                     <rect key="frame" x="0.0" y="102" width="393" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,38 +70,47 @@
                         <constraint firstAttribute="height" constant="1" id="2SP-jV-YEp"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eq7-0q-bHb">
+                    <rect key="frame" x="15" y="113" width="363" height="700"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pXc-YD-IT0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6O1-7B-Jh3"/>
-                <constraint firstItem="8xK-N8-eX1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GUd-PJ-kbN"/>
+                <constraint firstItem="eq7-0q-bHb" firstAttribute="top" secondItem="zAO-yo-4bc" secondAttribute="bottom" constant="10" id="6mq-tz-7wG"/>
+                <constraint firstAttribute="bottom" secondItem="jmB-9E-Brn" secondAttribute="bottom" id="DxO-Wt-77u"/>
                 <constraint firstItem="zAO-yo-4bc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JaV-Sg-aTs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2L6-zz-1QY" secondAttribute="trailing" id="JhI-EU-gsc"/>
                 <constraint firstItem="pXc-YD-IT0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LJT-bC-j6J"/>
                 <constraint firstItem="zAO-yo-4bc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NqY-WZ-opg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8xK-N8-eX1" secondAttribute="bottom" id="QSw-fI-Xqm"/>
                 <constraint firstItem="pXc-YD-IT0" firstAttribute="bottom" secondItem="zAO-yo-4bc" secondAttribute="bottom" id="R0C-Yd-71B"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zAO-yo-4bc" secondAttribute="trailing" id="UHO-nT-ocX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eq7-0q-bHb" secondAttribute="trailing" constant="15" id="Uve-NB-khd"/>
+                <constraint firstItem="eq7-0q-bHb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ZBI-P3-X7X"/>
                 <constraint firstItem="2L6-zz-1QY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aFi-gB-hkY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8xK-N8-eX1" secondAttribute="trailing" id="c3K-am-pPX"/>
-                <constraint firstItem="8xK-N8-eX1" firstAttribute="top" secondItem="zAO-yo-4bc" secondAttribute="bottom" id="wHd-Kx-zGc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eq7-0q-bHb" secondAttribute="bottom" constant="5" id="cxc-xz-eo8"/>
+                <constraint firstAttribute="trailing" secondItem="jmB-9E-Brn" secondAttribute="trailing" id="k80-M5-HeS"/>
+                <constraint firstItem="jmB-9E-Brn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q6Q-Vg-eue"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pXc-YD-IT0" secondAttribute="trailing" id="wkg-Ut-RQC"/>
                 <constraint firstItem="2L6-zz-1QY" firstAttribute="bottom" secondItem="pXc-YD-IT0" secondAttribute="bottom" id="xLH-8f-F3k"/>
+                <constraint firstItem="jmB-9E-Brn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xsL-sE-m06"/>
             </constraints>
             <point key="canvasLocation" x="74" y="21"/>
         </view>
     </objects>
     <resources>
-        <image name="ic_back" width="34" height="34"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="img_bg" width="360" height="640"/>
+        <namedColor name="SPA_F8">
+            <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_FF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

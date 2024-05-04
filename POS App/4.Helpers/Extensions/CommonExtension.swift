@@ -82,6 +82,12 @@ extension Array {
 }
 
 extension String {
+    func removeAccents() -> String {
+        return self.folding(options: .diacriticInsensitive, locale: nil)
+                       .replacingOccurrences(of: "đ", with: "d")
+                       .replacingOccurrences(of: "Đ", with: "D")
+        }
+    
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
@@ -120,7 +126,7 @@ extension String {
             formatter.maximumFractionDigits = 0
             formatter.minimumFractionDigits = 0
             if let str = formatter.string(for: value) {
-                return str
+                return "\(str)đ"
             }
         }
         return ""

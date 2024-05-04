@@ -15,6 +15,9 @@ fileprivate class ListCommonService {
     // account
     static let user = ServiceManager.ROOT + "user"
     static let checkuser = ServiceManager.ROOT + "user/checkuser"
+    static let sendOtpFogotPassword = ServiceManager.ROOT + "user/sendOtpFogotPassword"
+    static let verifyChangePassword = ServiceManager.ROOT + "user/verifyChangePassword"
+    
     static let verify = ServiceManager.ROOT + "user/verify"
     static let customer = ServiceManager.ROOT + "customer"
     static let employee = ServiceManager.ROOT + "employee"
@@ -36,6 +39,8 @@ fileprivate enum ECommonURLs {
     case verify
     case report
     case bookinsuccess
+    case sendOtpFogotPassword
+    case verifyChangePassword
     
     
     func getPath() -> String {
@@ -56,13 +61,18 @@ fileprivate enum ECommonURLs {
             return ListCommonService.checkuser
         case .report:
             return ListCommonService.report
-         case .bookinsuccess:
+        case .bookinsuccess:
             return ListCommonService.bookinsuccess
             
             
         case .verify:
             return ListCommonService.verify
-}
+        case .sendOtpFogotPassword:
+            return ListCommonService.sendOtpFogotPassword
+            
+        case .verifyChangePassword:
+            return ListCommonService.verifyChangePassword
+        }
         func getMethod() -> HTTPMethod {
             switch self {
                 
@@ -176,7 +186,7 @@ class CommonServices {
             }
         }
     }
-    func updateUSer(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    func updateUser(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.user.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
@@ -215,7 +225,44 @@ class CommonServices {
             }
         }
     }
-    
+    func sendOtp(param: PStore?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.sendOtpFogotPassword.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param?.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func verifyChangePassword(param: PStore?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.verifyChangePassword.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param?.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     // customer
     func createCustomer(param: PCustomer, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.customers.getPath()

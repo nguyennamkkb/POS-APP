@@ -15,6 +15,8 @@
                 <outlet property="dpDenNgay" destination="xeI-Tz-k85" id="gNF-wh-287"/>
                 <outlet property="dpTuNgay" destination="zzL-a1-Ar8" id="u5L-qk-BDo"/>
                 <outlet property="tableView" destination="TAg-QR-AzE" id="RcM-OL-ptX"/>
+                <outlet property="vDenNgay" destination="270-zo-oPr" id="SOd-2C-FzD"/>
+                <outlet property="vTuNgay" destination="fVz-H9-2zk" id="98X-wy-rQD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,6 +47,9 @@
                             <state key="normal" image="chevron.left" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </state>
+                            <connections>
+                                <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="8GD-LV-NIU"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lịch sử hoá đơn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4O-gB-A7t">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -89,9 +94,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-a1-Ar8">
+                                        <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-a1-Ar8">
                                             <rect key="frame" x="0.0" y="30.5" width="162.5" height="34.5"/>
-                                            <locale key="locale" localeIdentifier="vi_VN"/>
+                                            <locale key="locale" localeIdentifier="vi"/>
                                             <connections>
                                                 <action selector="chonTuNgay:" destination="-1" eventType="valueChanged" id="dfW-2K-eoV"/>
                                             </connections>
@@ -116,9 +121,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-Tz-k85">
-                                            <rect key="frame" x="5" y="30.5" width="157.5" height="34.5"/>
-                                            <locale key="locale" localeIdentifier="vi_VN"/>
+                                        <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-Tz-k85">
+                                            <rect key="frame" x="0.0" y="30.5" width="162.5" height="34.5"/>
+                                            <locale key="locale" localeIdentifier="vi"/>
                                             <connections>
                                                 <action selector="chonDenNgay:" destination="-1" eventType="valueChanged" id="m8V-rF-RQW"/>
                                             </connections>
@@ -126,7 +131,7 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="xeI-Tz-k85" firstAttribute="leading" secondItem="270-zo-oPr" secondAttribute="leading" constant="5" id="GVe-NC-qav"/>
+                                        <constraint firstItem="xeI-Tz-k85" firstAttribute="leading" secondItem="270-zo-oPr" secondAttribute="leading" id="GVe-NC-qav"/>
                                         <constraint firstAttribute="trailing" secondItem="xeI-Tz-k85" secondAttribute="trailing" constant="5" id="YWJ-zl-ByV"/>
                                         <constraint firstItem="I71-fL-JoZ" firstAttribute="top" secondItem="270-zo-oPr" secondAttribute="top" constant="5" id="bAP-vq-ecf"/>
                                         <constraint firstItem="I71-fL-JoZ" firstAttribute="leading" secondItem="270-zo-oPr" secondAttribute="leading" constant="5" id="bK9-GN-FeZ"/>

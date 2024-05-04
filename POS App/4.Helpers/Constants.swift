@@ -7,10 +7,11 @@
 
 import Foundation
 import UIKit
+import Printer
 
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
-
+let bluetoothPrinterManager = BluetoothPrinterManager()
 struct myColor {
     static let blue = UIColor(hex: "#1A72DD")
     static let navy = UIColor(hex: "#2A3256")

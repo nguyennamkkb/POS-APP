@@ -60,13 +60,23 @@
                                 <color key="textColor" name="SPA_Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-XK-vhS">
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="95"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="btnXemChiTietPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Yrx-wy-msL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.60036670920000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1Vd-D3-fe5" firstAttribute="centerY" secondItem="X88-UQ-Ks0" secondAttribute="centerY" id="1t1-jI-4YU"/>
+                            <constraint firstAttribute="trailing" secondItem="HPl-XK-vhS" secondAttribute="trailing" id="7Xf-yK-lvw"/>
                             <constraint firstItem="Iu4-6W-Oed" firstAttribute="leading" secondItem="GBh-nK-nn5" secondAttribute="leading" constant="15" id="BDF-wq-Wfi"/>
                             <constraint firstItem="8Xy-vD-SRE" firstAttribute="leading" secondItem="GBh-nK-nn5" secondAttribute="leading" constant="15" id="DJ3-09-vx5"/>
                             <constraint firstItem="F9h-Dk-lkJ" firstAttribute="centerY" secondItem="8Xy-vD-SRE" secondAttribute="centerY" id="Feu-rP-yK6"/>
+                            <constraint firstItem="HPl-XK-vhS" firstAttribute="top" secondItem="GBh-nK-nn5" secondAttribute="top" id="I6z-3X-uu9"/>
+                            <constraint firstItem="HPl-XK-vhS" firstAttribute="leading" secondItem="GBh-nK-nn5" secondAttribute="leading" id="MUL-hW-ToO"/>
                             <constraint firstItem="Iu4-6W-Oed" firstAttribute="centerY" secondItem="GBh-nK-nn5" secondAttribute="centerY" id="N1P-vI-SkQ"/>
                             <constraint firstAttribute="height" constant="95" id="OA9-sr-fgQ"/>
                             <constraint firstItem="wZL-JD-6b8" firstAttribute="leading" secondItem="Iu4-6W-Oed" secondAttribute="trailing" constant="5" id="RsH-74-eZN"/>
@@ -76,6 +86,7 @@
                             <constraint firstItem="wZL-JD-6b8" firstAttribute="centerY" secondItem="Iu4-6W-Oed" secondAttribute="centerY" id="VcX-qI-qUS"/>
                             <constraint firstItem="X88-UQ-Ks0" firstAttribute="leading" secondItem="GBh-nK-nn5" secondAttribute="leading" constant="15" id="aLI-af-OID"/>
                             <constraint firstItem="8Xy-vD-SRE" firstAttribute="top" secondItem="GBh-nK-nn5" secondAttribute="top" constant="10" id="oTS-RK-2tS"/>
+                            <constraint firstAttribute="bottom" secondItem="HPl-XK-vhS" secondAttribute="bottom" id="zDG-vt-yFn"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -109,10 +120,10 @@
             <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

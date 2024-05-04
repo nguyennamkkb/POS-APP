@@ -21,8 +21,9 @@ class RPEmployeeCell: UITableViewCell {
     }
 
     func setupUI() {
-        RPEmployeeView.layer.cornerRadius = myCornerRadius.corner5
-        RPEmployeeView.layer.borderWidth = 0.1
+        RPEmployeeView.layer.cornerRadius = myCornerRadius.corner10
+        RPEmployeeView.addNDropShadow()
+//        RPEmployeeView.addBorder(color: myColor.SPA_FE!, width: 0.3)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -32,7 +33,7 @@ class RPEmployeeCell: UITableViewCell {
     func bindData(item: ListEmplEach){
         data = item
         employeeLbl.text = data.name ?? ""
-        moneyLbl.text = "Doanh thu: \(String(data.totalMoney ?? 0).currencyFormatting()) đ - Lượt khách: \(data.tolalBook ?? 0)"
+        moneyLbl.text = "Doanh thu: \(String(data.totalMoney ?? 0).currencyFormatting()) - Lượt khách: \(data.tolalBook ?? 0)"
     }
     @IBAction func btnListInfoPressed(_ sender: UIButton) {
         actionViewList?(data.idEmployee ?? 0)

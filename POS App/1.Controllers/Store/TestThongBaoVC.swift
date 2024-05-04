@@ -9,7 +9,7 @@ import UIKit
 import UserNotifications
 import WebKit
 
-class SettingVC: UIViewController, WKNavigationDelegate {
+class TestThongBaoVC: UIViewController, WKNavigationDelegate {
     
     
     @IBOutlet var webView: WKWebView!

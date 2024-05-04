@@ -9,6 +9,7 @@ import UIKit
 
 class ChartEmployeeCell: UITableViewCell {
 
+    @IBOutlet weak var vNhanVien: UIView!
     var returnIdEmployee: ClosureCustom<Int>?
     @IBOutlet var employeeTF: UITextField!
     @IBOutlet var tableView: UITableView!
@@ -22,11 +23,15 @@ class ChartEmployeeCell: UITableViewCell {
         tableView.dataSource = self
         
         self.tableView.registerCells(cells: ["RPEmployeeCell"])
+        
+        vNhanVien.layer.cornerRadius = myCornerRadius.corner10
+        vNhanVien.addNDropShadow()
+//        vNhanVien.addBorder(color: myColor.SPA_FE!, width: 0.1)
     }
     func binData(item: [ListEmplEach]){
         tableData = item
         print("ChartEmployeeCell \(tableData.toJSON())")
-        let height = 70 * tableData.count
+        let height = 80 * tableData.count
         tableViewHeightConstraint.constant = CGFloat(height)
         DispatchQueue.main.async {
             self.tableView.reloadData()

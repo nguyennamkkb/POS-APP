@@ -20,7 +20,7 @@ class RPListInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.registerCell(nibName: "MainCell")
+        self.tableView.registerCell(nibName: "LichSuCell")
         getBooks()
     }
     @IBAction func backPressed(_ sender: Any) {
@@ -40,9 +40,9 @@ class RPListInfoVC: BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as? MainCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LichSuCell", for: indexPath) as? LichSuCell else {return UITableViewCell()}
         let item = tableData[indexPath.row]
-//        cell.bindData(item: item)
+        cell.bindData(e: item)
 //        cell.actionDetail = {
 //            [weak self] book in
 //            guard let self = self else {return}

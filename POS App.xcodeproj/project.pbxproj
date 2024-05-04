@@ -75,8 +75,8 @@
 		0B7A4FC92A8E6BC50062E878 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FC72A8E6BC50062E878 /* NotificationVC.swift */; };
 		0B7A4FCA2A8E6BC50062E878 /* NotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FC82A8E6BC50062E878 /* NotificationVC.xib */; };
 		0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCB2A8E72600062E878 /* Notifications.swift */; };
-		0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCD2A8E79570062E878 /* SettingVC.swift */; };
-		0B7A4FD02A8E79570062E878 /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCE2A8E79570062E878 /* SettingVC.xib */; };
+		0B7A4FCF2A8E79570062E878 /* TestThongBaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCD2A8E79570062E878 /* TestThongBaoVC.swift */; };
+		0B7A4FD02A8E79570062E878 /* TestThongBaoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCE2A8E79570062E878 /* TestThongBaoVC.xib */; };
 		0B7B90E42A07A3E600D99642 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B90E22A07A3E600D99642 /* LoginVC.swift */; };
 		0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B90E32A07A3E600D99642 /* LoginVC.xib */; };
 		0B8F9E2E2A6C276600D24CB3 /* ChartEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */; };
@@ -165,8 +165,8 @@
 		0BE0392F29F82039002CB20F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391729F82039002CB20F /* DateHelper.swift */; };
 		0BE0393029F82039002CB20F /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391929F82039002CB20F /* BaseVC.swift */; };
 		0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0391A29F82039002CB20F /* BasePopupVC.swift */; };
-		0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */; };
-		0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */; };
+		0BE55CE72A7D62EB00D49182 /* CaiDatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE52A7D62EB00D49182 /* CaiDatVC.swift */; };
+		0BE55CE82A7D62EB00D49182 /* CaiDatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CE62A7D62EB00D49182 /* CaiDatVC.xib */; };
 		0BE55CEB2A7D6DE600D49182 /* BookHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */; };
 		0BE55CEC2A7D6DE600D49182 /* BookHistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */; };
 		0BF417BF2A3B5CDF00DD36DA /* CreateServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */; };
@@ -203,6 +203,9 @@
 		9AAFB5D22BDA0A800057BEB4 /* LoiNhanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AAFB5D02BDA0A800057BEB4 /* LoiNhanVC.xib */; };
 		9AAFB5D52BDA46280057BEB4 /* XacThucTaiKhoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFB5D32BDA46270057BEB4 /* XacThucTaiKhoanVC.swift */; };
 		9AAFB5D62BDA46280057BEB4 /* XacThucTaiKhoanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AAFB5D42BDA46270057BEB4 /* XacThucTaiKhoanVC.xib */; };
+		9ADC56912BE6512100ADDAB9 /* CommonPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC56902BE6512100ADDAB9 /* CommonPrint.swift */; };
+		9ADC56942BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC56922BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift */; };
+		9ADC56952BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC56932BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib */; };
 		C034F48E2108B057E3342CD7 /* Pods_LN_POS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */; };
 /* End PBXBuildFile section */
 
@@ -275,8 +278,8 @@
 		0B7A4FC72A8E6BC50062E878 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationVC.swift; path = "POS App/1.Controllers/Report/NotificationVC.swift"; sourceTree = SOURCE_ROOT; };
 		0B7A4FC82A8E6BC50062E878 /* NotificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NotificationVC.xib; path = "POS App/1.Controllers/Report/NotificationVC.xib"; sourceTree = SOURCE_ROOT; };
 		0B7A4FCB2A8E72600062E878 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		0B7A4FCD2A8E79570062E878 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
-		0B7A4FCE2A8E79570062E878 /* SettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
+		0B7A4FCD2A8E79570062E878 /* TestThongBaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestThongBaoVC.swift; sourceTree = "<group>"; };
+		0B7A4FCE2A8E79570062E878 /* TestThongBaoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestThongBaoVC.xib; sourceTree = "<group>"; };
 		0B7B90E22A07A3E600D99642 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0B7B90E32A07A3E600D99642 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		0B8F9E2C2A6C276600D24CB3 /* ChartEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmployeeCell.swift; sourceTree = "<group>"; };
@@ -367,8 +370,8 @@
 		0BE0391729F82039002CB20F /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		0BE0391929F82039002CB20F /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		0BE0391A29F82039002CB20F /* BasePopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupVC.swift; sourceTree = "<group>"; };
-		0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMainVC.swift; sourceTree = "<group>"; };
-		0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMainVC.xib; sourceTree = "<group>"; };
+		0BE55CE52A7D62EB00D49182 /* CaiDatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaiDatVC.swift; sourceTree = "<group>"; };
+		0BE55CE62A7D62EB00D49182 /* CaiDatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaiDatVC.xib; sourceTree = "<group>"; };
 		0BE55CE92A7D6DE600D49182 /* BookHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookHistoryVC.swift; sourceTree = "<group>"; };
 		0BE55CEA2A7D6DE600D49182 /* BookHistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookHistoryVC.xib; sourceTree = "<group>"; };
 		0BF417BD2A3B5CDF00DD36DA /* CreateServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServiceVC.swift; sourceTree = "<group>"; };
@@ -408,6 +411,9 @@
 		9AAFB5D02BDA0A800057BEB4 /* LoiNhanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoiNhanVC.xib; sourceTree = "<group>"; };
 		9AAFB5D32BDA46270057BEB4 /* XacThucTaiKhoanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XacThucTaiKhoanVC.swift; sourceTree = "<group>"; };
 		9AAFB5D42BDA46270057BEB4 /* XacThucTaiKhoanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XacThucTaiKhoanVC.xib; sourceTree = "<group>"; };
+		9ADC56902BE6512100ADDAB9 /* CommonPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPrint.swift; sourceTree = "<group>"; };
+		9ADC56922BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
+		9ADC56932BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothPrinterSelectTableViewController.xib; sourceTree = "<group>"; };
 		A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.debug.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.debug.xcconfig"; sourceTree = "<group>"; };
 		B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LN_POS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97165A029FA240C00D08327 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -514,6 +520,8 @@
 				9A4893772BE3D19400C534BA /* ThaoTacVoiDatChoVC.xib */,
 				9A48937A2BE4888800C534BA /* DemNguocHanhDongVC.swift */,
 				9A48937B2BE4888800C534BA /* DemNguocHanhDongVC.xib */,
+				9ADC56922BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift */,
+				9ADC56932BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib */,
 			);
 			path = Orther;
 			sourceTree = "<group>";
@@ -819,6 +827,7 @@
 				0B5D18522A0A97D0004E47FD /* KeyCommon.swift */,
 				0B7A4FCB2A8E72600062E878 /* Notifications.swift */,
 				9AAFB5CD2BDA09BD0057BEB4 /* inputCommon.swift */,
+				9ADC56902BE6512100ADDAB9 /* CommonPrint.swift */,
 			);
 			path = 4.Helpers;
 			sourceTree = "<group>";
@@ -848,10 +857,10 @@
 		0BE55CE42A7D62C900D49182 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				0BE55CE52A7D62EB00D49182 /* StoreMainVC.swift */,
-				0BE55CE62A7D62EB00D49182 /* StoreMainVC.xib */,
-				0B7A4FCD2A8E79570062E878 /* SettingVC.swift */,
-				0B7A4FCE2A8E79570062E878 /* SettingVC.xib */,
+				0BE55CE52A7D62EB00D49182 /* CaiDatVC.swift */,
+				0BE55CE62A7D62EB00D49182 /* CaiDatVC.xib */,
+				0B7A4FCD2A8E79570062E878 /* TestThongBaoVC.swift */,
+				0B7A4FCE2A8E79570062E878 /* TestThongBaoVC.xib */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1007,7 +1016,7 @@
 				0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */,
 				0B8F9E332A6C3DBD00D24CB3 /* ChonVNVC.xib in Resources */,
 				0B049BDE2A7E37D300A2295A /* RPInfoCell.xib in Resources */,
-				0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */,
+				0BE55CE82A7D62EB00D49182 /* CaiDatVC.xib in Resources */,
 				9AAFB5D22BDA0A800057BEB4 /* LoiNhanVC.xib in Resources */,
 				9AAFB5C02BD819120057BEB4 /* ForgetPasswordVC.xib in Resources */,
 				9A48937D2BE4888800C534BA /* DemNguocHanhDongVC.xib in Resources */,
@@ -1038,7 +1047,7 @@
 				0BD0CF772A347B7200A0BBE5 /* EmployeeDetailVC.xib in Resources */,
 				0B9BAFAE2A1A22F2008679DE /* TakePhotoVC.xib in Resources */,
 				0B21416F2A13E8CE00CCAAB4 /* CreateCalenderVC.xib in Resources */,
-				0B7A4FD02A8E79570062E878 /* SettingVC.xib in Resources */,
+				0B7A4FD02A8E79570062E878 /* TestThongBaoVC.xib in Resources */,
 				0B7B90E52A07A3E600D99642 /* LoginVC.xib in Resources */,
 				0BF417CD2A3B7D6100DD36DA /* BookHeaderCell.xib in Resources */,
 				0BD5BAC029F8A3DC009F2A66 /* HelloVC.xib in Resources */,
@@ -1048,6 +1057,7 @@
 				0BB7FDE02A19D6A8005EF9B9 /* CreateCustomerCell.xib in Resources */,
 				0BE038ED29F81F6F002CB20F /* Assets.xcassets in Resources */,
 				0BD709432A370DA200D467EC /* QRVC.xib in Resources */,
+				9ADC56952BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib in Resources */,
 				0B21416A2A13DAB900CCAAB4 /* MainCell.xib in Resources */,
 				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
@@ -1150,7 +1160,7 @@
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
 				0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
-				0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */,
+				0B7A4FCF2A8E79570062E878 /* TestThongBaoVC.swift in Sources */,
 				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
@@ -1158,7 +1168,7 @@
 				0B127D692BDE5633002790AB /* DropdownCell.swift in Sources */,
 				9A88E1D72BE4EE8C005925E5 /* LichSuDichVuVC.swift in Sources */,
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
-				0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */,
+				0BE55CE72A7D62EB00D49182 /* CaiDatVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
 				0B76B93F2A7441F900B91761 /* PReport.swift in Sources */,
@@ -1224,6 +1234,8 @@
 				0BB43EE529FAC56900F1DE85 /* MainVC.swift in Sources */,
 				0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */,
 				0BB43EED29FAC59100F1DE85 /* PayVC.swift in Sources */,
+				9ADC56912BE6512100ADDAB9 /* CommonPrint.swift in Sources */,
+				9ADC56942BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift in Sources */,
 				0BE0392029F82039002CB20F /* ServiceManager.swift in Sources */,
 				9AAFB5CB2BD9F2F90057BEB4 /* ThongBaoVC.swift in Sources */,
 				0BE0392629F82039002CB20F /* Common.swift in Sources */,
@@ -1393,6 +1405,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Truy cập Bluetooth để in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
@@ -1432,6 +1445,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Truy cập Bluetooth để in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
 				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";

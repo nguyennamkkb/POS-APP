@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,89 +12,107 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="KGk-i7-Jjw" customClass="ChartDayCell" customModule="LN_POS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="422" height="234"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="347" id="KGk-i7-Jjw" customClass="ChartDayCell" customModule="LN_POS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="347"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="422" height="234"/>
+                <rect key="frame" x="0.0" y="0.0" width="406" height="347"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icz-oP-x3d">
-                        <rect key="frame" x="10" y="0.0" width="402" height="210"/>
+                        <rect key="frame" x="0.0" y="0.0" width="406" height="260"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-ge-0oc">
-                                <rect key="frame" x="5" y="10" width="392" height="150"/>
+                                <rect key="frame" x="5" y="50" width="396" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="o2M-yt-Tga"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày: 27/7/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JQ-QT-aph">
-                                <rect key="frame" x="5" y="165" width="392" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="205" width="386" height="18.666666666666657"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="SPA_F8"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doanh thu: 1.300.000đ, lượt khách: 12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIZ-Bl-Gl1">
-                                <rect key="frame" x="5" y="187" width="392" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="10" y="233.66666666666666" width="386" height="18.666666666666657"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="SPA_F8"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qr-M9-pQo">
-                                <rect key="frame" x="372" y="165" width="30" height="30"/>
+                                <rect key="frame" x="366" y="205" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="ScG-f2-gxI"/>
                                     <constraint firstAttribute="height" constant="30" id="gnx-hr-hb4"/>
                                 </constraints>
-                                <color key="tintColor" name="AccentColor"/>
+                                <color key="tintColor" name="SPA_F8"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="info" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
                                     <action selector="btnListInfoPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NCo-Rf-DaF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doanh thu theo ngày" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-d6-Ory">
+                                <rect key="frame" x="0.0" y="10" width="406" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" name="SPA_BD"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.040355752529999997" green="0.54119459619999999" blue="1" alpha="0.059999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="SPA_FF"/>
                         <constraints>
-                            <constraint firstItem="4JQ-QT-aph" firstAttribute="leading" secondItem="icz-oP-x3d" secondAttribute="leading" constant="5" id="3oX-bX-v1k"/>
+                            <constraint firstItem="4JQ-QT-aph" firstAttribute="leading" secondItem="icz-oP-x3d" secondAttribute="leading" constant="10" id="3oX-bX-v1k"/>
                             <constraint firstItem="wRZ-ge-0oc" firstAttribute="leading" secondItem="icz-oP-x3d" secondAttribute="leading" constant="5" id="6Eo-Ic-EVX"/>
-                            <constraint firstAttribute="trailing" secondItem="7qr-M9-pQo" secondAttribute="trailing" id="C2W-gC-bsg"/>
+                            <constraint firstAttribute="trailing" secondItem="7qr-M9-pQo" secondAttribute="trailing" constant="10" id="C2W-gC-bsg"/>
+                            <constraint firstAttribute="trailing" secondItem="8Jm-d6-Ory" secondAttribute="trailing" id="HWV-kg-eX5"/>
+                            <constraint firstItem="8Jm-d6-Ory" firstAttribute="top" secondItem="icz-oP-x3d" secondAttribute="top" constant="10" id="Iw1-J4-K4N"/>
                             <constraint firstItem="7qr-M9-pQo" firstAttribute="top" secondItem="wRZ-ge-0oc" secondAttribute="bottom" constant="5" id="Jmo-X6-2gu"/>
-                            <constraint firstItem="wRZ-ge-0oc" firstAttribute="top" secondItem="icz-oP-x3d" secondAttribute="top" constant="10" id="LHN-Gk-mq6"/>
-                            <constraint firstItem="zIZ-Bl-Gl1" firstAttribute="top" secondItem="4JQ-QT-aph" secondAttribute="bottom" constant="5" id="NDG-wt-d8B"/>
-                            <constraint firstAttribute="trailing" secondItem="zIZ-Bl-Gl1" secondAttribute="trailing" constant="5" id="OZG-3B-gwI"/>
+                            <constraint firstItem="wRZ-ge-0oc" firstAttribute="top" secondItem="icz-oP-x3d" secondAttribute="top" constant="50" id="LHN-Gk-mq6"/>
+                            <constraint firstItem="zIZ-Bl-Gl1" firstAttribute="top" secondItem="4JQ-QT-aph" secondAttribute="bottom" constant="10" id="NDG-wt-d8B"/>
+                            <constraint firstAttribute="trailing" secondItem="zIZ-Bl-Gl1" secondAttribute="trailing" constant="10" id="OZG-3B-gwI"/>
                             <constraint firstItem="4JQ-QT-aph" firstAttribute="top" secondItem="wRZ-ge-0oc" secondAttribute="bottom" constant="5" id="Qkv-aF-je5"/>
-                            <constraint firstAttribute="height" constant="210" id="fDw-Ib-kFt"/>
-                            <constraint firstAttribute="trailing" secondItem="4JQ-QT-aph" secondAttribute="trailing" constant="5" id="lnS-ji-l3p"/>
+                            <constraint firstAttribute="height" constant="260" id="fDw-Ib-kFt"/>
+                            <constraint firstItem="8Jm-d6-Ory" firstAttribute="leading" secondItem="icz-oP-x3d" secondAttribute="leading" id="hq7-Lq-gSS"/>
+                            <constraint firstAttribute="trailing" secondItem="4JQ-QT-aph" secondAttribute="trailing" constant="10" id="lnS-ji-l3p"/>
                             <constraint firstAttribute="trailing" secondItem="wRZ-ge-0oc" secondAttribute="trailing" constant="5" id="pNY-dl-KwX"/>
-                            <constraint firstItem="zIZ-Bl-Gl1" firstAttribute="leading" secondItem="icz-oP-x3d" secondAttribute="leading" constant="5" id="qc9-Kb-GSc"/>
+                            <constraint firstItem="zIZ-Bl-Gl1" firstAttribute="leading" secondItem="icz-oP-x3d" secondAttribute="leading" constant="10" id="qc9-Kb-GSc"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="icz-oP-x3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ICe-iV-n7a"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="icz-oP-x3d" secondAttribute="bottom" constant="10" id="XID-2M-TQe"/>
-                    <constraint firstAttribute="trailing" secondItem="icz-oP-x3d" secondAttribute="trailing" constant="10" id="g7L-b1-YiK"/>
-                    <constraint firstItem="icz-oP-x3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="twh-Uq-mzK"/>
+                    <constraint firstAttribute="trailing" secondItem="icz-oP-x3d" secondAttribute="trailing" id="g7L-b1-YiK"/>
+                    <constraint firstItem="icz-oP-x3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="twh-Uq-mzK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="boundsView" destination="icz-oP-x3d" id="fFd-xh-5Ue"/>
+                <outlet property="btnXemChiTiet" destination="7qr-M9-pQo" id="QXv-vv-9wz"/>
                 <outlet property="chartView" destination="wRZ-ge-0oc" id="V2o-sO-8cZ"/>
                 <outlet property="dateLbl" destination="4JQ-QT-aph" id="dLe-kS-oRn"/>
                 <outlet property="moneyLbl" destination="zIZ-Bl-Gl1" id="Z4j-bh-rUx"/>
             </connections>
-            <point key="canvasLocation" x="158.77862595419847" y="85.91549295774648"/>
+            <point key="canvasLocation" x="146.56488549618319" y="125.70422535211269"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <namedColor name="SPA_BD">
+            <color red="0.74299997091293335" green="0.16500000655651093" blue="0.30000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_F8">
+            <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SPA_FF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

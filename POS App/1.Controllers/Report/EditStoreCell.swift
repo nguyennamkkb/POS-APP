@@ -9,19 +9,23 @@ import UIKit
 
 class EditStoreCell: UITableViewCell {
     
+    
     @IBOutlet var btnXacNhan: UIButton!
     @IBOutlet var storeNameTF: UITextField!
     @IBOutlet var storeAddressTF: UITextField!
-    @IBOutlet var storeEmailTF: UITextField!
+    @IBOutlet var tfDienThoai: UITextField!
     @IBOutlet var storePassworkTF: UITextField!
     var store = PStore()
-    var localUser = Common.userMaster
+    
+    
+    var actXacNhan: ClosureCustom<PStore>?
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupData()
         setupUI()
-//        print(localUser.toJSON())
+        
+
     }
     
     
@@ -31,14 +35,26 @@ class EditStoreCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setupData(){
-        storeNameTF.text =  localUser.storeName
-        storeAddressTF.text = localUser.address
-        storeEmailTF.text = localUser.email
-        storePassworkTF.text = localUser.password
-        storePassworkTF.isSecureTextEntry = true
+        store = Common.userMaster
+        print("storeName \(store.storeName ?? "")")
+        storeNameTF.text =  store.storeName ?? ""
+        storeAddressTF.text = store.address ?? ""
+        tfDienThoai.text = store.phone ?? ""
+
     }
     func setupUI(){
-        btnXacNhan.layer.cornerRadius = myCornerRadius.corner5
+        btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
+    }
+    @IBAction func btnXacNhanPressed(_ sender: Any) {
+        let store = PStore()
+        guard let tenCuaHang = storeNameTF.text else {return}
+        guard let diaChi = storeAddressTF.text else {return}
+        guard let dienThoai = tfDienThoai.text else {return}
+        store.storeName = tenCuaHang
+        store.address = diaChi
+        store.phone = dienThoai
+      
+        actXacNhan?(store)
     }
     
 }

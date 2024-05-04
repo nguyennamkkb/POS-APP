@@ -24,7 +24,24 @@ class ForgetPasswordVC: BaseVC {
         setupUI()
 
     }
-
+    @IBAction func btnGuiEmailPressed(_ sender: Any) {
+        guard let email = tfEmail.text, email.count > 5 else {
+            self.hienThiLoiNhan(s: "Hãy điền email trước")
+            return
+        }
+        let param = PStore()
+        param.email = email
+        ServiceManager.common.sendOtp(param: param){
+            (response) in
+            self.hideLoading()
+            if response?.statusCode == 199 {
+                self.hienThiThongBao(trangThai: 1, loiNhan: "Đã gửi OTP vào email")
+            } else {
+                self.showAlert(message: response?.message ?? "")
+            }
+        }
+    }
+    
     func setupUI(){
         btnGuiEmail.layer.cornerRadius = myCornerRadius.corner10
         btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
@@ -38,6 +55,39 @@ class ForgetPasswordVC: BaseVC {
     }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
+    }
+    @IBAction func btnXacNhanPressed(_ sender: Any) {
+        guard let email = tfEmail.text, email.count > 5 else {
+            self.hienThiLoiNhan(s: "Hãy nhập đủ thông tin")
+            return
+        }
+        guard let otp = tfOTP.text, otp.count == 6 else {
+            self.hienThiLoiNhan(s: "Hãy nhập đủ thông tin")
+
+            return
+        }
+        guard let matKhau = tfPassword.text, matKhau.count > 0 else {
+            self.hienThiLoiNhan(s: "Hãy nhập đủ thông tin")
+
+            return
+        }
+        let param = PStore()
+        param.email = email
+        param.otp = otp
+        param.password = matKhau
+        ServiceManager.common.verifyChangePassword(param: param){
+            (response) in
+            self.hideLoading()
+            if response?.statusCode == 200 {
+                self.hienThiThongBao(trangThai: 1, loiNhan: "Tạo mật khẩu thành công")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.wrapRoot(vc: LoginVC())
+                }
+               
+            } else {
+                self.showAlert(message: response?.message ?? "")
+            }
+        }
     }
     
 }

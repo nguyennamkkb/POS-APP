@@ -38,10 +38,6 @@ class MainVC: BaseVC {
     }
     @IBAction func huongDanPressed(_ sender: Any) {
 
-        let act = DropdownVC()
-        act.modalPresentationStyle = .overCurrentContext
-        act.modalTransitionStyle = .crossDissolve
-        present(act, animated: true, completion: nil)
     }
     
    

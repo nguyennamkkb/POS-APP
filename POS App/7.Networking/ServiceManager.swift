@@ -12,8 +12,8 @@ import SystemConfiguration
 
 class ServiceManager {
     static let shared: ServiceManager = ServiceManager()
-    static let ROOT = "http://14.225.254.98:4458/ln-pos-api/"
-//    static let ROOT = "http://192.168.1.104:4458/ln-pos-api/"
+//    static let ROOT = "http://14.225.254.98:4458/ln-pos-api/"
+    static let ROOT = "http://192.168.1.104:4458/ln-pos-api/"
     public static let common = CommonServices()
     
     public static func isConnectedToInternet() ->Bool {

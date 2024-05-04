@@ -139,4 +139,18 @@ class Common {
 #endif
         }
     }
+    
+    public static func layDauNgayMiliseconds(ngay: Int64) -> Int64 {
+
+        let millisecondsInDay: Int64 = 24 * 60 * 60 * 1000
+
+        let dauNgay: Int64 = (ngay / millisecondsInDay) * millisecondsInDay - (60 * 60 * 7 * 1000)
+        return dauNgay
+    }
+  
+    
+    public static func layCuoiNgayMiliseconds(ngay: Int64) -> Int64{
+ 
+        return layDauNgayMiliseconds(ngay: ngay) + 86400000 - 1
+    }
 }

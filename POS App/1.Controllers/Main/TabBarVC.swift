@@ -19,10 +19,10 @@ class TabBarVC: UITabBarController {
         
         let dangPhucVuVC = DangPhucVuVC()
         let phucvuNavi = UINavigationController(rootViewController: dangPhucVuVC)
-        phucvuNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "calendar"), tag: 2)
+        phucvuNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "calendar.badge.clock"), tag: 2)
         phucvuNavi.navigationBar.tintColor = UIColor.white
         
-        let store = StoreMainVC()
+        let store = CaiDatVC()
         let storeNavi = UINavigationController(rootViewController: store)
         storeNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "house"), tag: 3)
         
@@ -30,7 +30,7 @@ class TabBarVC: UITabBarController {
         setLayout()
     }
     func setLayout(){
-        tabBar.tintColor = myColor.MBlue
+        tabBar.tintColor = myColor.SPA_BD
         tabBar.backgroundColor = UIColor.white
     }
     override func viewWillAppear(_ animated: Bool) {
