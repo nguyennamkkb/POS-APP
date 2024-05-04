@@ -12,9 +12,12 @@ import ObjectMapper
 class CreateCalenderVC: BaseVC{
     
     let dropdown = DropdownVC()
+    var actThemThanhCong: ClosureAction?
+    var actCapNhatThanhCong: ClosureAction?
     
     var trangThaiThemMoiorCapNhat: Int = 0 //0 themmoi, 1 capnhat
     var book: PBookCalender = PBookCalender()
+    var trangThaiThemMoioCapNhat: Int = 0 //0 thmmoi, 1 cap nhat
     
     @IBOutlet weak var lbTongTien: UILabel!
     @IBOutlet weak var dpGioLam: UIDatePicker!
@@ -38,6 +41,7 @@ class CreateCalenderVC: BaseVC{
     
     let thamSoTimKiemNhanVien = ParamSearch(store_id: Common.userMaster.id ?? -1, status: 1,keySearch: "")
     let thamSoTimKiemKhachHang = ParamSearch(store_id: Common.userMaster.id ?? -1, status: 1,keySearch: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -48,6 +52,7 @@ class CreateCalenderVC: BaseVC{
         getAllServices()
         getAllEployees(){}
         getAllCustomers(){}
+        setupData()
     }
     func setupUI(){
         btnXacNhan.layer.cornerRadius = myCornerRadius.corner10
@@ -65,7 +70,13 @@ class CreateCalenderVC: BaseVC{
         vNhanVien.addBorder(color: myColor.SPA_FB!, width: 0.2)
 
     }
-   
+    func bindDataSua(e: PBookCalender){
+        trangThaiThemMoioCapNhat = 1
+        book = e
+        employeeSelected = e.employee ?? PEmployee()
+        customerSelected = e.customer ?? PCustomer()
+        dsDichVuChon = Mapper<PServices>().mapArray(JSONString: book.listService ?? "" ) ?? [PServices]()
+    }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
@@ -88,26 +99,19 @@ class CreateCalenderVC: BaseVC{
         self.pushVC(controller: vc)
     }
 
-    //    func setupData(){
-    //        khachHangLb.text = itemBookUpdate.customer?.fullName ?? "Chọn khách hàng"
-    //        nhanVienLb.text = itemBookUpdate.employee?.fullName ?? "Chọn nhân viên"
-    //        employeeSelected = itemBookUpdate.employee ?? PEmployee()
-    //        customerSelected = itemBookUpdate.customer  ?? PCustomer()
-    //        listServices = Mapper<PServices>().mapArray(JSONString: itemBookUpdate.listService ?? "" ) ?? [PServices]()
-    ////        print("timeInterval update\(itemBookUpdate.start ?? "0")")
-    //
-    //        updateAmount()
-    //        if statusCreateOrUpdate == 1 {
-    //            tableHeader.isHidden = false
-    //            dateTimePicker.date = Common.dateFromUnixTimestamp(milliseconds: Double( itemBookUpdate.start ?? "0") ?? 0    )
-    //        }else{
-    //            tableHeader.isHidden = true
-    //        }
-    //    }
- 
-    override func viewDidAppear(_ animated: Bool) {
+    func setupData(){
+        lbChonKhachHang.text = book.customer?.fullName ?? "Chọn khách hàng"
+        lbChonNhanVIen.text = book.employee?.fullName ?? "Chọn nhân viên"
+//        employeeSelected = book.employee ?? PEmployee()
+//        customerSelected = itemBookUpdate.customer  ?? PCustomer()
+        dsDichVuChon = Mapper<PServices>().mapArray(JSONString: book.listService ?? "" ) ?? [PServices]()
+//        print("timeInterval update\(itemBookUpdate.start ?? "0")")
+
+        self.lbTongTien.text = "\(self.capNhatSoTien())".currencyFormatting()
+        dpGioLam.date = Common.dateFromUnixTimestamp(milliseconds: Double( book.start ?? "\(Common.getMilisecondNow())") ?? Double(Common.getMilisecondNow())    )
 
     }
+
     @IBAction func btnChonNhanVienPressed(_ sender: Any) {
         
         dropdown.bindDataNhanVien(e: dsNhanVien)
@@ -253,7 +257,16 @@ class CreateCalenderVC: BaseVC{
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 self.dsDichVu = Mapper<PServices>().mapArray(JSONObject: response!.data ) ?? [PServices]()
-     
+                
+                if !self.dsDichVuChon.isEmpty {
+                    for (index, dichVu) in self.dsDichVu.enumerated() {
+                        if self.dsDichVuChon.firstIndex(where: { $0.id == dichVu.id }) != nil {
+                            self.dsDichVu[index].status = 2
+                            
+                        }
+                    }
+                }
+                
             } else if response?.statusCode == 0 {
                 self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại mạng!")
             }
@@ -276,23 +289,46 @@ class CreateCalenderVC: BaseVC{
             return amount
         }
     //
-    //    @IBAction func btnAcceptPresses(_ sender: UIButton) {
-    //        let book = PBookCalender()
-    //        book.start = String(dateTimePicker.date.millisecondsSince1970)
-    //        book.store_id = Common.userMaster.id
-    //        book.listService = listServices.toJSONString()
-    //        book.amount = getTotalAmount()
-    //        book.status = 0
-    //        book.idEmployee = employeeSelected.id
-    //        book.idCustomer = customerSelected.id
-    //        book.sign()
-    //        if statusCreateOrUpdate == 0 {
-    //            createBook(item: book)
-    //        }else{
-    //            updateBook(item: book)
-    //        }
-    //
-    //    }
+        @IBAction func btnAcceptPresses(_ sender: UIButton) {
+            
+            let thoiGian: String = String(dpGioLam.date.millisecondsSince1970)
+            
+            if dsDichVuChon.count == 0 {
+                print("dsDichVuChon.count == 0")
+            }
+            book.amount = capNhatSoTien()
+            if book.amount == 0 || book.amount == nil {
+                print("book.amount == 0")
+            }
+            if employeeSelected.id == nil {
+                print("employeeSelected nill")
+            }
+            if customerSelected.id == nil {
+                print("customerSelected nill")
+            }
+            book.listService = dsDichVuChon.toJSONString()
+            book.amount = capNhatSoTien()
+            
+            book.idEmployee = employeeSelected.id
+            book.idCustomer = customerSelected.id
+            book.store_id = Common.userMaster.id
+            book.start = thoiGian
+            book.employee = nil
+            book.customer = nil
+            book.sign()
+            
+            print(book.toJSON())
+//            print(customerSelected.id)
+            
+            if trangThaiThemMoioCapNhat == 0 {
+                book.status = 0
+                createBook()
+            }else{
+                updateBook()
+            }
+
+    
+        }
         func createBook(){ // dat lich
     //        print("PBookCalender \(item.toJSON())")
             book.sign()
@@ -301,32 +337,40 @@ class CreateCalenderVC: BaseVC{
                 (response) in
                 self.hideLoading()
                 if response?.data != nil, response?.statusCode == 200 {
-                    self.showAlert(message: "Thành công!")
-//                    self.actionOK?()
-//                    self.onBackNav()
+                    self.hienThiThongBao(trangThai: 1, loiNhan: "Thêm mới thành công")
+       
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.actThemThanhCong?()
+                        self.onBackNav()
+                    }
                 } else if response?.statusCode == 0 {
                     self.showAlert(message: "Không thể thêm mới")
                 }
             }
     
         }
-    //    func updateBook(item: PBookCalender){
-    ////        print("PBookCalender \(item.toJSON())")
-    //        item.id = itemBookUpdate.id ?? 0
-    //        self.showLoading()
-    //        ServiceManager.common.editBook(param: item){
-    //            (response) in
-    //            self.hideLoading()
-    //            if response?.data != nil, response?.statusCode == 200 {
-    //                self.showAlert(message: "Thành công!")
-    //                self.actionOK?()
-    //                self.onBackNav()
-    //            } else if response?.statusCode == 0 {
-    //                self.showAlert(message: "Không thể thêm mới")
-    //            }
-    //        }
-    //
-    //    }
+        func updateBook(){
+    //        print("PBookCalender \(item.toJSON())")
+            book.sign()
+            self.showLoading()
+            ServiceManager.common.editBook(param: book){
+                (response) in
+                self.hideLoading()
+                if response?.data != nil, response?.statusCode == 200 {
+      
+                    
+                    self.hienThiThongBao(trangThai: 1, loiNhan: "Cập nhật thành công")
+       
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.actCapNhatThanhCong?()
+                        self.onBackNav()
+                    }
+                } else if response?.statusCode == 0 {
+                    self.showAlert(message: "Không thể thêm mới")
+                }
+            }
+    
+        }
 }
 
 extension CreateCalenderVC: UITableViewDataSource, UITableViewDelegate {

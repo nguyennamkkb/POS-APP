@@ -9,7 +9,7 @@ PODS:
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
-  - ObjectMapper (4.4.2)
+  - ObjectMapper (4.2.0)
   - Printer (4.1.0)
   - SideMenu (6.5.0)
 
@@ -52,10 +52,10 @@ SPEC CHECKSUMS:
   FittedSheets: 37e35f105c531f3845075f1788dd8517a35315c4
   IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
-  ObjectMapper: e6e4d91ff7f2861df7aecc536c92d8363f4c9677
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Printer: c762f8704aaa80c2a793a5ebd6757db2c7428e5d
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
 PODFILE CHECKSUM: 65116e4175d9b85bbc56dfdcd46c2c1034c33c2c
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.14.3

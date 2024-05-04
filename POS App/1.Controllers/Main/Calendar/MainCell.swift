@@ -9,27 +9,94 @@ import UIKit
 
 class MainCell: UITableViewCell {
     
+    @IBOutlet weak var lbTrangThai: UILabel!
+    @IBOutlet weak var lbKhachHang: UILabel!
+    @IBOutlet weak var lbNhanVien: UILabel!
+    @IBOutlet weak var lbThoiGian: UILabel!
     @IBOutlet weak var vItem: UIView!
     @IBOutlet weak var vStatusBar: UIView!
     @IBOutlet weak var bntActionMore: UIButton!
+    var item: PBookCalender = PBookCalender()
     
-    
+    var actThaoTac: ClosureAction?
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
     func setupUI(){
-        bntActionMore.layer.borderWidth = 1
-        bntActionMore.layer.borderColor = myColor.SPA_FB?.cgColor
         bntActionMore.layer.cornerRadius = myCornerRadius.corner10
-        
+        bntActionMore.addBorder(color: myColor.SPA_FE!, width: 0.5)
         vItem.layer.cornerRadius = myCornerRadius.corner10
         vItem.addNDropShadow()
         vStatusBar.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        vItem.addBorder(color: myColor.SPA_FE!, width: 0.5)
+    }
+    func bindData(e: PBookCalender){
+        item = e
+        lbThoiGian.text = Common.getDateFormatFromMiliseonds(time: item.start ?? "\(Common.getMilisecondNow())")
+        lbNhanVien.text = "\(item.employee?.fullName ?? "")"
+        lbKhachHang.text = "\(item.customer?.fullName ?? "")"
+        vStatusBar.backgroundColor = getColorByStatus(status: item.status ?? 0)
+        datTrangThai(status: item.status ?? 0)
+    }
+    @IBAction func btnThaoTac(_ sender: Any) {
+        actThaoTac?()
     }
     
+//    func datMauTrangThai(){
+//        switch item.status {
+//        case 0:
+//            vStatusBar.backgroundColor = UIColor(hex: "#FFC362")
+//            break
+//        case 0:
+//            vStatusBar.backgroundColor = UIColor(hex: "#FFC362")
+//            break
+//        default:ellipsis
+//            <#code#>
+//        }ellipsis
+    func getColorByStatus(status: Int) -> UIColor {
+        switch status {
+        case 0:
+            return UIColor(hex: "#FFC362") ?? UIColor.orange
+        case 1:
+            return UIColor(hex: "#ABD99A") ?? UIColor.green
+        case 2:
+            return UIColor(hex: "#9C89FF") ?? UIColor.red
+        case 3:
+            return UIColor(hex: "#6FD1FF") ?? UIColor.blue
+            
+        default:
+            return UIColor.orange
+        }
+    }
     
+    func datTrangThai(status: Int) {
+        switch status {
+        case 0:
+            lbTrangThai.text = "Đang chờ"
+            lbTrangThai.textColor = getColorByStatus(status: item.status ?? 0)
+            
+        case 1:
+
+            lbTrangThai.text = "Hoàn thành"
+            lbTrangThai.textColor = getColorByStatus(status: item.status ?? 0)
+            break
+        case 2:
     
+            lbTrangThai.text = "Tính tiền"
+            lbTrangThai.textColor = getColorByStatus(status: item.status ?? 0)
+            break
+        case 3:
+        
+            lbTrangThai.text = "Đang thực hiện"
+            lbTrangThai.textColor = getColorByStatus(status: item.status ?? 0)
+            break
+            
+        default:
+            lbTrangThai.text = "Đang chờ"
+            lbTrangThai.textColor = getColorByStatus(status: item.status ?? 0)
+        }
+    }
     
     
 //    var actionDelete: ClosureCustom<PBookCalender>?
@@ -120,21 +187,7 @@ class MainCell: UITableViewCell {
 //    @IBAction func btnDetailPressed(_ sender: UIButton) {
 //        actionDetail?(book)
 //    }
-//    func getColorByStatus(status: Int) -> UIColor {
-//        switch status {
-//        case 0:
-//            return UIColor.orange
-//        case 1:
-//            return UIColor.green
-//        case 2:
-//            return UIColor.red
-//        case 3:
-//            return UIColor.blue
-//            
-//        default:
-//            return UIColor.black
-//        }
-//    }
+
 //    func setupButton(){
 //        deleteBtn.isHidden = true
 //        editBtn.isHidden = true

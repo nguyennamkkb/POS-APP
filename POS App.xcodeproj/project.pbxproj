@@ -131,12 +131,6 @@
 		0BD5BAD129F8A45B009F2A66 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */; };
 		0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAD329F8A611009F2A66 /* SlideMenuVC.swift */; };
 		0BD5BAD629F8A611009F2A66 /* SlideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAD429F8A611009F2A66 /* SlideMenuVC.xib */; };
-		0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAD929F8A659009F2A66 /* OrderDetailVC.swift */; };
-		0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BADA29F8A659009F2A66 /* OrderDetailVC.xib */; };
-		0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BADE29F8A6B6009F2A66 /* HistoryTransactionVC.swift */; };
-		0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */; };
-		0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */; };
-		0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */; };
 		0BD5BAF229F8A78D009F2A66 /* ManageStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */; };
 		0BD5BAF329F8A78D009F2A66 /* ManageStoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */; };
 		0BD709422A370DA200D467EC /* QRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD709402A370DA200D467EC /* QRVC.swift */; };
@@ -186,6 +180,14 @@
 		0BF417D02A3B838B00DD36DA /* MidBookDetaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF417CE2A3B838B00DD36DA /* MidBookDetaiCell.swift */; };
 		0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF417CF2A3B838B00DD36DA /* MidBookDetaiCell.xib */; };
 		0BFD87312A518535005DE099 /* ParamSearchBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD87302A518535005DE099 /* ParamSearchBook.swift */; };
+		9A4893782BE3D19400C534BA /* ThaoTacVoiDatChoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4893762BE3D19400C534BA /* ThaoTacVoiDatChoVC.swift */; };
+		9A4893792BE3D19400C534BA /* ThaoTacVoiDatChoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4893772BE3D19400C534BA /* ThaoTacVoiDatChoVC.xib */; };
+		9A48937C2BE4888800C534BA /* DemNguocHanhDongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A48937A2BE4888800C534BA /* DemNguocHanhDongVC.swift */; };
+		9A48937D2BE4888800C534BA /* DemNguocHanhDongVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A48937B2BE4888800C534BA /* DemNguocHanhDongVC.xib */; };
+		9A88E1D72BE4EE8C005925E5 /* LichSuDichVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88E1D52BE4EE8C005925E5 /* LichSuDichVuVC.swift */; };
+		9A88E1D82BE4EE8C005925E5 /* LichSuDichVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A88E1D62BE4EE8C005925E5 /* LichSuDichVuVC.xib */; };
+		9A88E1DB2BE5D7BC005925E5 /* LichSuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88E1D92BE5D7BC005925E5 /* LichSuCell.swift */; };
+		9A88E1DC2BE5D7BC005925E5 /* LichSuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A88E1DA2BE5D7BC005925E5 /* LichSuCell.xib */; };
 		9A9199662BDB9A2B00597FBB /* XacNhanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9199642BDB9A2B00597FBB /* XacNhanVC.swift */; };
 		9A9199672BDB9A2B00597FBB /* XacNhanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9199652BDB9A2B00597FBB /* XacNhanVC.xib */; };
 		9AAFB5BF2BD819120057BEB4 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFB5BD2BD819120057BEB4 /* ForgetPasswordVC.swift */; };
@@ -329,12 +331,6 @@
 		0BD5BACF29F8A45B009F2A66 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		0BD5BAD329F8A611009F2A66 /* SlideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
 		0BD5BAD429F8A611009F2A66 /* SlideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideMenuVC.xib; sourceTree = "<group>"; };
-		0BD5BAD929F8A659009F2A66 /* OrderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailVC.swift; sourceTree = "<group>"; };
-		0BD5BADA29F8A659009F2A66 /* OrderDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDetailVC.xib; sourceTree = "<group>"; };
-		0BD5BADE29F8A6B6009F2A66 /* HistoryTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransactionVC.swift; sourceTree = "<group>"; };
-		0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTransactionVC.xib; sourceTree = "<group>"; };
-		0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterVC.swift; sourceTree = "<group>"; };
-		0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionFilterVC.xib; sourceTree = "<group>"; };
 		0BD5BAF029F8A78D009F2A66 /* ManageStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStoreVC.swift; sourceTree = "<group>"; };
 		0BD5BAF129F8A78D009F2A66 /* ManageStoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageStoreVC.xib; sourceTree = "<group>"; };
 		0BD709402A370DA200D467EC /* QRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRVC.swift; sourceTree = "<group>"; };
@@ -389,6 +385,14 @@
 		284A6890BF03F09ADA14102B /* Pods-POS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.release.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.release.xcconfig"; sourceTree = "<group>"; };
 		3198EAE189DC674652D74074 /* Pods-LN POS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN POS.debug.xcconfig"; path = "Target Support Files/Pods-LN POS/Pods-LN POS.debug.xcconfig"; sourceTree = "<group>"; };
 		83F740E68D111F233932ED53 /* Pods-LN POS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN POS.release.xcconfig"; path = "Target Support Files/Pods-LN POS/Pods-LN POS.release.xcconfig"; sourceTree = "<group>"; };
+		9A4893762BE3D19400C534BA /* ThaoTacVoiDatChoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaoTacVoiDatChoVC.swift; sourceTree = "<group>"; };
+		9A4893772BE3D19400C534BA /* ThaoTacVoiDatChoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThaoTacVoiDatChoVC.xib; sourceTree = "<group>"; };
+		9A48937A2BE4888800C534BA /* DemNguocHanhDongVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemNguocHanhDongVC.swift; sourceTree = "<group>"; };
+		9A48937B2BE4888800C534BA /* DemNguocHanhDongVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemNguocHanhDongVC.xib; sourceTree = "<group>"; };
+		9A88E1D52BE4EE8C005925E5 /* LichSuDichVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LichSuDichVuVC.swift; sourceTree = "<group>"; };
+		9A88E1D62BE4EE8C005925E5 /* LichSuDichVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LichSuDichVuVC.xib; sourceTree = "<group>"; };
+		9A88E1D92BE5D7BC005925E5 /* LichSuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LichSuCell.swift; sourceTree = "<group>"; };
+		9A88E1DA2BE5D7BC005925E5 /* LichSuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LichSuCell.xib; sourceTree = "<group>"; };
 		9A9199642BDB9A2B00597FBB /* XacNhanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XacNhanVC.swift; sourceTree = "<group>"; };
 		9A9199652BDB9A2B00597FBB /* XacNhanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XacNhanVC.xib; sourceTree = "<group>"; };
 		9AAFB5BD2BD819120057BEB4 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
@@ -506,6 +510,10 @@
 				0B127D642BDE53E8002790AB /* DropdownVC.xib */,
 				0B127D672BDE5633002790AB /* DropdownCell.swift */,
 				0B127D682BDE5633002790AB /* DropdownCell.xib */,
+				9A4893762BE3D19400C534BA /* ThaoTacVoiDatChoVC.swift */,
+				9A4893772BE3D19400C534BA /* ThaoTacVoiDatChoVC.xib */,
+				9A48937A2BE4888800C534BA /* DemNguocHanhDongVC.swift */,
+				9A48937B2BE4888800C534BA /* DemNguocHanhDongVC.xib */,
 			);
 			path = Orther;
 			sourceTree = "<group>";
@@ -611,26 +619,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		0BD5BAD729F8A63B009F2A66 /* Order */ = {
-			isa = PBXGroup;
-			children = (
-				0BD5BAD929F8A659009F2A66 /* OrderDetailVC.swift */,
-				0BD5BADA29F8A659009F2A66 /* OrderDetailVC.xib */,
-			);
-			path = Order;
-			sourceTree = "<group>";
-		};
-		0BD5BADD29F8A68F009F2A66 /* Transaction */ = {
-			isa = PBXGroup;
-			children = (
-				0BD5BADE29F8A6B6009F2A66 /* HistoryTransactionVC.swift */,
-				0BD5BADF29F8A6B6009F2A66 /* HistoryTransactionVC.xib */,
-				0BD5BAE229F8A6D3009F2A66 /* TransactionFilterVC.swift */,
-				0BD5BAE329F8A6D3009F2A66 /* TransactionFilterVC.xib */,
-			);
-			path = Transaction;
-			sourceTree = "<group>";
-		};
 		0BD5BAE629F8A6ED009F2A66 /* Report */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +645,7 @@
 		0BD5BAEF29F8A777009F2A66 /* ManageStore */ = {
 			isa = PBXGroup;
 			children = (
+				9A88E1D42BE4EE73005925E5 /* Bill */,
 				0BF5BD722A76C39C00ECBE10 /* EditStore */,
 				0B2054952A3A23B400BA333D /* Services */,
 				0BB7FDD42A19CA8F005EF9B9 /* Customer */,
@@ -760,8 +749,6 @@
 				0BB43EE029FAC4CD00F1DE85 /* Main */,
 				0BD5BAEF29F8A777009F2A66 /* ManageStore */,
 				0BD5BAE629F8A6ED009F2A66 /* Report */,
-				0BD5BADD29F8A68F009F2A66 /* Transaction */,
-				0BD5BAD729F8A63B009F2A66 /* Order */,
 				0BD5BAD229F8A465009F2A66 /* Home */,
 				0BD5BAC129F8A3E9009F2A66 /* Auth */,
 				0BD5BABD29F8A3DC009F2A66 /* HelloVC.swift */,
@@ -906,6 +893,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9A88E1D42BE4EE73005925E5 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				9A88E1D52BE4EE8C005925E5 /* LichSuDichVuVC.swift */,
+				9A88E1D62BE4EE8C005925E5 /* LichSuDichVuVC.xib */,
+				9A88E1D92BE5D7BC005925E5 /* LichSuCell.swift */,
+				9A88E1DA2BE5D7BC005925E5 /* LichSuCell.xib */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
 		D971658D29FA23CA00D08327 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1002,6 +1000,7 @@
 				0B5B0EB92A2B9EA300E4B48A /* CreateEmployeeCell.xib in Resources */,
 				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
 				0B1FAE622A344E6F00A81565 /* MainActionVC.xib in Resources */,
+				9A4893792BE3D19400C534BA /* ThaoTacVoiDatChoVC.xib in Resources */,
 				0BB43EE629FAC56900F1DE85 /* MainVC.xib in Resources */,
 				0B5012342A516899009D3C0B /* MainFilterVC.xib in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
@@ -1011,7 +1010,9 @@
 				0BE55CE82A7D62EB00D49182 /* StoreMainVC.xib in Resources */,
 				9AAFB5D22BDA0A800057BEB4 /* LoiNhanVC.xib in Resources */,
 				9AAFB5C02BD819120057BEB4 /* ForgetPasswordVC.xib in Resources */,
+				9A48937D2BE4888800C534BA /* DemNguocHanhDongVC.xib in Resources */,
 				0B1D55692A6D937E0071E8F0 /* ReportMainVC.xib in Resources */,
+				9A88E1D82BE4EE8C005925E5 /* LichSuDichVuVC.xib in Resources */,
 				0BF417D12A3B838B00DD36DA /* MidBookDetaiCell.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0B74DFB82A33F39F005FDA97 /* MActDeleteVC.xib in Resources */,
@@ -1023,12 +1024,11 @@
 				0B2141622A13BCC100CCAAB4 /* CreateInfoVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BB420652A2A5ED10008B7D7 /* EmployeeVC.xib in Resources */,
-				0BD5BAE529F8A6D3009F2A66 /* TransactionFilterVC.xib in Resources */,
 				0BE55CEC2A7D6DE600D49182 /* BookHistoryVC.xib in Resources */,
 				0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */,
-				0BD5BAE129F8A6B6009F2A66 /* HistoryTransactionVC.xib in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
 				0B20549D2A3A260900BA333D /* ServiceItemCell.xib in Resources */,
+				9A88E1DC2BE5D7BC005925E5 /* LichSuCell.xib in Resources */,
 				0BB37E1C2A5EDE070003AAA3 /* ItemServicesCell.xib in Resources */,
 				0B73E5BD2A72CB1800C4575A /* RPEmployeeCell.xib in Resources */,
 				0B92442A2A4888D8001AF674 /* CustomerDetailVC.xib in Resources */,
@@ -1069,7 +1069,6 @@
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
 				0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */,
-				0BD5BADC29F8A659009F2A66 /* OrderDetailVC.xib in Resources */,
 				0B33C63D2A70346900201CA0 /* RPHeaderCell.xib in Resources */,
 				9AAFB5C42BD8C0AB0057BEB4 /* DangPhucVuVC.xib in Resources */,
 				0B5B0EB52A2B564600E4B48A /* CreateEmployeeVC.xib in Resources */,
@@ -1143,19 +1142,21 @@
 				0BA332A92A2C87F2007ACB14 /* CustomerVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				9AAFB5C32BD8C0AB0057BEB4 /* DangPhucVuVC.swift in Sources */,
+				9A4893782BE3D19400C534BA /* ThaoTacVoiDatChoVC.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0B1D55682A6D937E0071E8F0 /* ReportMainVC.swift in Sources */,
 				0B9BAFAD2A1A22F2008679DE /* TakePhotoVC.swift in Sources */,
 				0BB420682A2A63450008B7D7 /* EmployeeItemCell.swift in Sources */,
 				0B2141692A13DAB900CCAAB4 /* MainCell.swift in Sources */,
-				0BD5BAE029F8A6B6009F2A66 /* HistoryTransactionVC.swift in Sources */,
 				0BF417C32A3B5E2700DD36DA /* CreateServiceCell.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
 				0B7A4FCF2A8E79570062E878 /* SettingVC.swift in Sources */,
 				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
+				9A88E1DB2BE5D7BC005925E5 /* LichSuCell.swift in Sources */,
 				0B127D692BDE5633002790AB /* DropdownCell.swift in Sources */,
+				9A88E1D72BE4EE8C005925E5 /* LichSuDichVuVC.swift in Sources */,
 				0BD5BAD529F8A611009F2A66 /* SlideMenuVC.swift in Sources */,
 				0BE55CE72A7D62EB00D49182 /* StoreMainVC.swift in Sources */,
 				0B2141612A13BCC100CCAAB4 /* CreateInfoVC.swift in Sources */,
@@ -1171,6 +1172,7 @@
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
 				0B10790E2A7F7CA400C7652C /* ContactVC.swift in Sources */,
+				9A48937C2BE4888800C534BA /* DemNguocHanhDongVC.swift in Sources */,
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
 				9AAFB5CE2BDA09BD0057BEB4 /* inputCommon.swift in Sources */,
 				0B2054982A3A23DB00BA333D /* ServiceVC.swift in Sources */,
@@ -1194,7 +1196,6 @@
 				0BD5BABF29F8A3DC009F2A66 /* HelloVC.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0BF417D02A3B838B00DD36DA /* MidBookDetaiCell.swift in Sources */,
-				0BD5BAE429F8A6D3009F2A66 /* TransactionFilterVC.swift in Sources */,
 				0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */,
 				0BD0CF762A347B7200A0BBE5 /* EmployeeDetailVC.swift in Sources */,
 				9A9199662BDB9A2B00597FBB /* XacNhanVC.swift in Sources */,
@@ -1211,7 +1212,6 @@
 				0B3D44F32A2F70F200A6186C /* ChonDichVuVC.swift in Sources */,
 				0B1D555C2A6D20C00071E8F0 /* ChartDayCell.swift in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
-				0BD5BADB29F8A659009F2A66 /* OrderDetailVC.swift in Sources */,
 				0BB1D2202A32421400516F25 /* DichVuCell.swift in Sources */,
 				0BB420642A2A5ED10008B7D7 /* EmployeeVC.swift in Sources */,
 				0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */,

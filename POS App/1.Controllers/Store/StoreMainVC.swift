@@ -23,6 +23,10 @@ class StoreMainVC: BaseVC {
            }
     }
     
+    @IBAction func btnHoaDonPressed(_ sender: Any) {
+        let vc =  LichSuDichVuVC()
+        self.pushVC(controller: vc)
+    }
     @IBAction func btnDichVuPressed(_ sender: Any) {
         let vc =  ServiceVC()
         self.pushVC(controller: vc)
