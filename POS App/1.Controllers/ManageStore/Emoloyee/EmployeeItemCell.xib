@@ -42,7 +42,7 @@
                                         <color key="textColor" name="SPA_F8"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng lượt khách" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-c8-AxE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượt khách" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-c8-AxE">
                                         <rect key="frame" x="0.0" y="51.333333333333336" width="140" height="19.000000000000007"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="H77-ln-jTP"/>

@@ -118,6 +118,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="itemView" destination="5Is-om-sfa" id="cxk-EF-Tyg"/>
+                <outlet property="lbDiemSo" destination="hTA-bL-dKA" id="ke7-il-1yX"/>
                 <outlet property="lbDienThoai" destination="TU0-Ab-TVf" id="cT1-Nu-AaP"/>
                 <outlet property="lbHoTen" destination="afC-Kp-Wvm" id="TwG-Wj-GfW"/>
             </connections>

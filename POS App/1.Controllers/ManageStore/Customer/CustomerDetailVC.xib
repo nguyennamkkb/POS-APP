@@ -16,8 +16,10 @@
                 <outlet property="btnXoa" destination="O4a-4G-ZbN" id="TfT-Z6-6ST"/>
                 <outlet property="imgGioiTinh" destination="NsS-u6-BhP" id="JTf-nK-iWN"/>
                 <outlet property="lbDiaChi" destination="Nl4-ES-ONw" id="FSd-yD-FlE"/>
+                <outlet property="lbDiemSo" destination="GxT-QE-Ebz" id="A9t-E0-IgO"/>
                 <outlet property="lbDienThoai" destination="OAv-EZ-fba" id="pvv-BG-800"/>
                 <outlet property="lbHoTen" destination="M1b-Pt-B7c" id="Izt-CW-AkC"/>
+                <outlet property="lbLuotLam" destination="yf3-h6-rAA" id="wPK-SM-KdZ"/>
                 <outlet property="lbSinhNhat" destination="AaR-pW-93a" id="6y0-fZ-x5f"/>
                 <outlet property="tableView" destination="sgR-vX-oNY" id="4ix-eY-pid"/>
                 <outlet property="vDiemSo" destination="xAY-KR-eoc" id="625-uH-bvg"/>
@@ -175,7 +177,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9k-i8-xvZ" userLabel="vLuotLam">
                                     <rect key="frame" x="0.0" y="0.0" width="192" height="78"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf3-h6-rAA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf3-h6-rAA">
                                             <rect key="frame" x="0.0" y="15" width="192" height="19.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" name="SPA_F8"/>
@@ -201,7 +203,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-uc-TSA" userLabel="vDoanhThu">
                                     <rect key="frame" x="192" y="0.0" width="192" height="78"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.333.000đ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxT-QE-Ebz">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxT-QE-Ebz">
                                             <rect key="frame" x="0.0" y="15" width="192" height="19.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" name="SPA_F8"/>

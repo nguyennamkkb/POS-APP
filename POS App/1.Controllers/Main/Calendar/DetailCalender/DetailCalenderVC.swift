@@ -97,7 +97,8 @@ class DetailCalenderVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         <<< CommonPrint.removeVietnameseDiacritics(from: "THONG TIN DICH VU")
 
         <<~ .layout(.justification(.left))
-        <<< CommonPrint.removeVietnameseDiacritics(from: book.id == nil ? "": "Số HD: #\(book.id ?? 0)")
+//        <<< CommonPrint.removeVietnameseDiacritics(from: book.id == nil ? "": "Số HD: #\(book.id ?? 0)")
+        <<< CommonPrint.NamKVItem(left: book.id == nil ? "": "So HD: #\(book.id ?? 0)", right: "Diem: \(layDienDichVu(l: book.listService ?? ""))")
         <<< CommonPrint.removeVietnameseDiacritics(from: "Ngay: \(Common.getDateFormatFromMiliseonds(time:book.start ?? "0"))")
         <<< CommonPrint.removeVietnameseDiacritics(from: "Khách hàng: \(book.customer?.fullName ?? "")")
         <<< CommonPrint.removeVietnameseDiacritics(from: "Nhân viên: \(book.employee?.fullName ?? "")")
@@ -160,6 +161,15 @@ class DetailCalenderVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
+    }
+    
+    func layDienDichVu(l: String) -> Int{
+        let listItem = Mapper<PServices>().mapArray(JSONString: l ) ?? [PServices]()
+        var tongDiem: Int = 0
+        for e in listItem {
+            tongDiem += e.point ?? 0
+        }
+        return tongDiem
     }
     
 }

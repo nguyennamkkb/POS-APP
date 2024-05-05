@@ -18,7 +18,9 @@
                 <outlet property="imgGioiTinh" destination="E7Q-Up-7jl" id="CID-ZM-ss0"/>
                 <outlet property="lbDiaChi" destination="AXt-8f-kLx" id="YGJ-R4-nnc"/>
                 <outlet property="lbDienThoai" destination="nKL-DK-8Yh" id="gJt-fU-udP"/>
+                <outlet property="lbDoanhThu" destination="LVK-Oj-qRJ" id="gvp-Il-My0"/>
                 <outlet property="lbHoTen" destination="2Vd-21-2Yt" id="VJp-uK-4WV"/>
+                <outlet property="lbLuotKhach" destination="Ulr-zy-DWx" id="Y0d-Gv-Eej"/>
                 <outlet property="lbSinhNhat" destination="ZdD-32-dcg" id="nP5-3w-s7y"/>
                 <outlet property="tableView" destination="agS-WL-SbC" id="yaQ-CF-LzC"/>
                 <outlet property="vDiemSo" destination="mPS-gc-TJG" id="IoC-bn-D1m"/>
@@ -124,7 +126,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="SPA_FF"/>
                     <constraints>
                         <constraint firstItem="a5P-b6-H5e" firstAttribute="leading" secondItem="dZe-9U-Svj" secondAttribute="leading" constant="10" id="3WY-8Y-794"/>
                         <constraint firstAttribute="width" constant="150" id="8zv-cQ-bHT"/>
@@ -155,7 +157,7 @@
                                             <color key="textColor" name="SPA_F8"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng lượt làm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-fA-pwm">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượt khách" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-fA-pwm">
                                             <rect key="frame" x="0.0" y="49.666666666666657" width="181.66666666666666" height="16.333333333333329"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" name="SPA_Black"/>
@@ -209,7 +211,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="SPA_FF"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="uFh-fz-OqG" secondAttribute="trailing" id="3FU-Eh-cMM"/>
                         <constraint firstItem="uFh-fz-OqG" firstAttribute="leading" secondItem="mPS-gc-TJG" secondAttribute="leading" id="5nS-Jf-vmI"/>
@@ -249,7 +251,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="SPA_FF"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="BMG-IW-uRj"/>
                         <constraint firstItem="nKL-DK-8Yh" firstAttribute="leading" secondItem="Rlp-l0-mqq" secondAttribute="trailing" constant="5" id="ELx-Oi-bWj"/>

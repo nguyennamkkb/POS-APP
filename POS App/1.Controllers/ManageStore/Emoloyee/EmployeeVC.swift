@@ -22,6 +22,7 @@ class EmployeeVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
         tableView.dataSource = self
         tableView.delegate = self
@@ -29,11 +30,11 @@ class EmployeeVC: BaseVC {
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
 
-//        getAllEployees()
+        getAllEployees()
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        getAllEployees()
+       
     }
     @IBAction func nhapTimKiem(_ sender: Any) {
         getAllEployees()
@@ -73,7 +74,7 @@ class EmployeeVC: BaseVC {
         guard let id = Common.userMaster.id else {return}
         
         let param = ParamSearch(store_id: id, status: 1, keySearch: keySearch.text ?? "")
-
+        self.showLoading()
         ServiceManager.common.getAllEmployees(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
 
@@ -85,7 +86,7 @@ class EmployeeVC: BaseVC {
             } else if response?.statusCode == 0 {
                 self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại mạng hoặc mở lại ứng dụng")
             }
-           
+            self.hideLoading()
         }
     }
 

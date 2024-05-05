@@ -6,39 +6,47 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class CustomerServicesCell: UITableViewCell {
 
     
+    var actChon: ClosureAction?
+    @IBOutlet weak var lbDiem: UILabel!
+    @IBOutlet weak var lbId: UILabel!
+    @IBOutlet weak var lbGio: UILabel!
+    @IBOutlet weak var lbTenNhanVien: UILabel!
+    @IBOutlet weak var lbHoaDon: UILabel!
     @IBOutlet weak var vItem: UIView!
-    //    @IBOutlet var itemView: UIView!
-//    @IBOutlet var amoutLbl: UILabel!
-//    @IBOutlet var employeeLbl: UILabel!
-//    @IBOutlet var dateLbl: UILabel!
-//    var books =  PBookCalender()
+    var item: PBookCalender = PBookCalender()
+
     override func awakeFromNib() {
         
         super.awakeFromNib()
         vItem.layer.cornerRadius = myCornerRadius.corner10
+        vItem.addNDropShadow()
+        vItem.addBorder(color: myColor.SPA_FE!, width: 0.2)
 
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-//    func bindData(item: PBookCalender){
-//        books = item
-//        amoutLbl.text = "\(books.amount ?? 0)".currencyFormatting()
-//        employeeLbl.text = "\(books.employee?.fullName ?? "")"
-//        dateLbl.text = Common.getDateFormatFromMiliseonds(time: books.updateAt ?? "")
-//    }
-//    func setupUI(){
-//        itemView.layer.cornerRadius = myCornerRadius.corner5
-//        itemView.layer.borderWidth = 0.1
-//        itemView.layer.shadowOffset = CGSize(width: 1, height:1)
-//
-//
-//    }
+    func bindData(e: PBookCalender){
+        item = e
+        lbGio.text = Common.getDateFormatFromMiliseonds(time: item.start ?? "\(Common.getMilisecondNow())")
+        lbTenNhanVien.text = "\(item.employee?.fullName ?? "")"
+        lbHoaDon.text =  "\(item.amount ?? 0)".currencyFormatting()
+        lbId.text = "(#\(item.id ?? -1))"
+        
+        lbDiem.text = "\(layDienDichVu(l:item.listService ?? ""))"
+        
+    }
+    func layDienDichVu(l: String) -> Int{
+        let listItem = Mapper<PServices>().mapArray(JSONString: l ) ?? [PServices]()
+        var tongDiem: Int = 0
+        for e in listItem {
+            tongDiem += e.point ?? 0
+        }
+        return tongDiem
+    }
+    @IBAction func btnChonPressed(_ sender: Any) {
+        actChon?()
+    }
 }

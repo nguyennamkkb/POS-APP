@@ -8,7 +8,7 @@
 import Foundation
 
 class CommonPrint {
-    static var totalCharacterInline: Int = 32
+    static var totalCharacterInline: Int = 31
     public static func removeVietnameseDiacritics(from input: String) -> String {
 //        let mutableString = NSMutableString(string: input)
 //ssssssssssss

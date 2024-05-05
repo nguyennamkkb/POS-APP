@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,44 +20,56 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lj7-lh-kjP" userLabel="vItem">
-                        <rect key="frame" x="0.0" y="0.0" width="433" height="85"/>
+                        <rect key="frame" x="0.0" y="0.0" width="433" height="90"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:40 30-04-2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSI-Lt-DhA">
-                                <rect key="frame" x="9.9999999999999929" y="9.9999999999999982" width="112.33333333333331" height="16.333333333333329"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="40.333333333333329" y="8" width="144.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" name="SPA_F8"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhân viên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-td-eja">
-                                <rect key="frame" x="10" y="34" width="66.666666666666671" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ten nhân viên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDh-x8-0Q8">
+                                <rect key="frame" x="36.999999999999993" y="34.666666666666664" width="98.333333333333314" height="18.666666666666664"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="SPA_F8"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGe-OC-dHB">
+                                <rect key="frame" x="9.9999999999999982" y="8" width="20.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NV:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-td-eja">
+                                <rect key="frame" x="10" y="36.666666666666664" width="22" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" name="SPA_BD"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmp-qj-GhS">
-                                <rect key="frame" x="10" y="58" width="63" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoá đơn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmp-qj-GhS">
+                                <rect key="frame" x="10.000000000000004" y="63" width="59.333333333333343" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" name="SPA_BD"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="442-Q0-LIs" userLabel="vDiem">
-                                <rect key="frame" x="281.33333333333331" y="0.0" width="151.66666666666669" height="85"/>
+                                <rect key="frame" x="281.33333333333331" y="0.0" width="151.66666666666669" height="90"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTt-W4-3f0">
-                                        <rect key="frame" x="0.0" y="5" width="1" height="75"/>
+                                        <rect key="frame" x="0.0" y="5" width="1" height="80"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="IZM-kz-MjT"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-21-7uz">
-                                        <rect key="frame" x="1" y="14.999999999999998" width="150.66666666666666" height="19.333333333333329"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <rect key="frame" x="1" y="20" width="150.66666666666666" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" name="SPA_F8"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Điểm dịch vụ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frc-HM-C6p">
-                                        <rect key="frame" x="1" y="52.666666666666664" width="150.66666666666666" height="16.333333333333336"/>
+                                        <rect key="frame" x="1" y="53.666666666666664" width="150.66666666666666" height="16.333333333333336"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -65,29 +78,52 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="frc-HM-C6p" secondAttribute="trailing" id="8cM-2G-qk2"/>
-                                    <constraint firstItem="aO7-21-7uz" firstAttribute="top" secondItem="442-Q0-LIs" secondAttribute="top" constant="15" id="NWi-vM-Vdw"/>
+                                    <constraint firstItem="aO7-21-7uz" firstAttribute="top" secondItem="442-Q0-LIs" secondAttribute="top" constant="20" id="NWi-vM-Vdw"/>
                                     <constraint firstItem="dTt-W4-3f0" firstAttribute="top" secondItem="442-Q0-LIs" secondAttribute="top" constant="5" id="YPG-Ai-7mZ"/>
                                     <constraint firstAttribute="bottom" secondItem="dTt-W4-3f0" secondAttribute="bottom" constant="5" id="jRL-ib-OJh"/>
                                     <constraint firstItem="dTt-W4-3f0" firstAttribute="leading" secondItem="442-Q0-LIs" secondAttribute="leading" id="jaw-ih-gda"/>
                                     <constraint firstAttribute="trailing" secondItem="aO7-21-7uz" secondAttribute="trailing" id="xSv-9X-BB7"/>
                                     <constraint firstItem="aO7-21-7uz" firstAttribute="leading" secondItem="dTt-W4-3f0" secondAttribute="trailing" id="xl5-AC-Gcd"/>
                                     <constraint firstItem="frc-HM-C6p" firstAttribute="leading" secondItem="dTt-W4-3f0" secondAttribute="trailing" id="yCf-dN-ULE"/>
-                                    <constraint firstAttribute="bottom" secondItem="frc-HM-C6p" secondAttribute="bottom" constant="16" id="yZ2-iI-WV6"/>
+                                    <constraint firstAttribute="bottom" secondItem="frc-HM-C6p" secondAttribute="bottom" constant="20" id="yZ2-iI-WV6"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qG4-3w-lnu">
+                                <rect key="frame" x="74.333333333333329" y="62.333333333333336" width="9" height="18.666666666666664"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" name="SPA_F8"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdj-oN-v6J">
+                                <rect key="frame" x="0.0" y="0.0" width="433" height="90"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="btnChonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cws-zJ-2il"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="SPA_FF"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zdj-oN-v6J" secondAttribute="trailing" id="03E-uI-Eji"/>
                             <constraint firstItem="442-Q0-LIs" firstAttribute="top" secondItem="lj7-lh-kjP" secondAttribute="top" id="577-Ab-k87"/>
+                            <constraint firstItem="zdj-oN-v6J" firstAttribute="leading" secondItem="lj7-lh-kjP" secondAttribute="leading" id="6xQ-wX-hlm"/>
                             <constraint firstAttribute="trailing" secondItem="442-Q0-LIs" secondAttribute="trailing" id="C7g-aZ-PzP"/>
+                            <constraint firstItem="wDh-x8-0Q8" firstAttribute="firstBaseline" secondItem="dKa-td-eja" secondAttribute="firstBaseline" id="DYE-FX-mwC"/>
+                            <constraint firstItem="wDh-x8-0Q8" firstAttribute="leading" secondItem="dKa-td-eja" secondAttribute="trailing" constant="5" id="EFj-QZ-x9x"/>
+                            <constraint firstItem="VGe-OC-dHB" firstAttribute="leading" secondItem="lj7-lh-kjP" secondAttribute="leading" constant="10" id="FPE-4E-5Z9"/>
                             <constraint firstAttribute="bottom" secondItem="442-Q0-LIs" secondAttribute="bottom" id="Mvs-CS-yFW"/>
                             <constraint firstItem="Pmp-qj-GhS" firstAttribute="leading" secondItem="lj7-lh-kjP" secondAttribute="leading" constant="10" id="NCy-h7-Shd"/>
                             <constraint firstAttribute="bottom" secondItem="Pmp-qj-GhS" secondAttribute="bottom" constant="10" id="OwI-jE-V6f"/>
-                            <constraint firstAttribute="height" constant="85" id="ZcI-HX-2Yp"/>
+                            <constraint firstItem="oSI-Lt-DhA" firstAttribute="leading" secondItem="VGe-OC-dHB" secondAttribute="trailing" constant="10" id="Wxw-UT-Lwu"/>
+                            <constraint firstAttribute="height" constant="90" id="ZcI-HX-2Yp"/>
+                            <constraint firstItem="qG4-3w-lnu" firstAttribute="centerY" secondItem="Pmp-qj-GhS" secondAttribute="centerY" id="gGb-9G-Z2E"/>
                             <constraint firstItem="dKa-td-eja" firstAttribute="centerY" secondItem="lj7-lh-kjP" secondAttribute="centerY" id="gHF-Ar-dav"/>
-                            <constraint firstItem="oSI-Lt-DhA" firstAttribute="leading" secondItem="lj7-lh-kjP" secondAttribute="leading" constant="10" id="hJo-0P-HFu"/>
+                            <constraint firstItem="zdj-oN-v6J" firstAttribute="top" secondItem="lj7-lh-kjP" secondAttribute="top" id="hz0-T3-S64"/>
+                            <constraint firstItem="qG4-3w-lnu" firstAttribute="leading" secondItem="Pmp-qj-GhS" secondAttribute="trailing" constant="5" id="jnY-DF-6b3"/>
+                            <constraint firstItem="VGe-OC-dHB" firstAttribute="top" secondItem="lj7-lh-kjP" secondAttribute="top" constant="8" id="keP-fE-dHj"/>
                             <constraint firstItem="442-Q0-LIs" firstAttribute="width" secondItem="lj7-lh-kjP" secondAttribute="width" multiplier="0.35" id="mR0-4n-aSb"/>
-                            <constraint firstItem="oSI-Lt-DhA" firstAttribute="top" secondItem="lj7-lh-kjP" secondAttribute="top" constant="10" id="nBo-Pz-Bid"/>
+                            <constraint firstItem="oSI-Lt-DhA" firstAttribute="top" secondItem="lj7-lh-kjP" secondAttribute="top" constant="8" id="nBo-Pz-Bid"/>
+                            <constraint firstAttribute="bottom" secondItem="zdj-oN-v6J" secondAttribute="bottom" id="uQW-ea-G5P"/>
                             <constraint firstItem="dKa-td-eja" firstAttribute="leading" secondItem="lj7-lh-kjP" secondAttribute="leading" constant="10" id="xhg-zF-B0H"/>
                         </constraints>
                     </view>
@@ -102,6 +138,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="lbDiem" destination="aO7-21-7uz" id="HGO-Op-XlL"/>
+                <outlet property="lbGio" destination="oSI-Lt-DhA" id="wA3-Ol-jRv"/>
+                <outlet property="lbHoaDon" destination="qG4-3w-lnu" id="A3g-hb-lIl"/>
+                <outlet property="lbId" destination="VGe-OC-dHB" id="3fK-x6-GB2"/>
+                <outlet property="lbTenNhanVien" destination="wDh-x8-0Q8" id="IVw-vY-j3e"/>
                 <outlet property="vItem" destination="lj7-lh-kjP" id="qaH-nD-P81"/>
             </connections>
             <point key="canvasLocation" x="151.90839694656489" y="68.661971830985919"/>
@@ -109,10 +150,16 @@
     </objects>
     <resources>
         <namedColor name="SPA_BD">
-            <color red="0.74285709860000004" green="0.16519489879999999" blue="0.29987525939999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.74299997091293335" green="0.16500000655651093" blue="0.30000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SPA_F8">
-            <color red="0.97214514019999998" green="0.3401286006" blue="0.4894454479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97200000286102295" green="0.34000000357627869" blue="0.48899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="SPA_FF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

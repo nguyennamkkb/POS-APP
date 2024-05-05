@@ -18,12 +18,13 @@ class CustomerVC: BaseVC {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "CustomerItemCell")
         // Do any additional setup after loading the view.
         setupUI()
+        getAllCustomers()
 
     }
     func setupUI(){
@@ -66,9 +67,7 @@ class CustomerVC: BaseVC {
             }
         }
     }
-    override func viewDidAppear(_ animated: Bool) {
-        getAllCustomers()
-    }
+
     @IBAction func nhapTimKiem(_ sender: Any) {
         getAllCustomers()
     }

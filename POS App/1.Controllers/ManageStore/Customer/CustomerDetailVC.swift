@@ -10,7 +10,9 @@ import ObjectMapper
 
 class CustomerDetailVC: BaseVC{
     
-    
+    var tableData: [PBookCalender] =  [PBookCalender]()
+    @IBOutlet weak var lbLuotLam: UILabel!
+    @IBOutlet weak var lbDiemSo: UILabel!
     var itemData: PCustomer = PCustomer()
     var actXoa: ClosureAction?
     
@@ -38,6 +40,8 @@ class CustomerDetailVC: BaseVC{
         tableView.delegate = self
         self.tableView.registerCell(nibName: "CustomerServicesCell")
         setupData()
+        laytongDoanhThu()
+        getBookKhachHang()
     }
     
 
@@ -76,6 +80,7 @@ class CustomerDetailVC: BaseVC{
         lbDiaChi.text = "\(itemData.address ?? "")"
         print(itemData.birthday ?? "0")
         lbSinhNhat.text = "\(Common.layNgayTheoMilisecond(time: itemData.birthday ?? "0"))"
+        lbDiemSo.text = "\(itemData.loyalty ?? 0)"
         
     }
     @IBAction func btnXoaPressed(_ sender: Any) {
@@ -117,15 +122,64 @@ class CustomerDetailVC: BaseVC{
             }
         }
     }
+    func laytongDoanhThu(){
+        let param = PBookCalender()
+        param.status = 1
+        param.idCustomer = itemData.id
+        param.store_id = itemData.store_id
+        param.sign()
+        ServiceManager.common.tongLuotKhachHang(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if let res = response, response?.statusCode == 200 {
+                if let tongluot = res.data {
+         
+                    self.lbLuotLam.text = (tongluot as? String)
+                }
+
+            } else if response?.statusCode == 0 {
+                self.showMessagError()
+            }
+        }
+    }
+    func getBookKhachHang(){
+        let param = PBookCalender()
+        param.status = 1
+        param.idCustomer = itemData.id
+        param.store_id = itemData.store_id
+        param.sign()
+        ServiceManager.common.getAllBookTheoNvHoacKH(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.tableData = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
+
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else if response?.statusCode == 0 {
+                self.showMessagError()
+            }
+        }
+    }
 }
 
 extension CustomerDetailVC:  UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerServicesCell", for: indexPath) as? CustomerServicesCell else {return UITableViewCell()}
+        
+        let item = tableData.itemAtIndex(index: indexPath.row) ?? PBookCalender()
+        cell.bindData(e: item)
+        cell.actChon = {
+            [weak self] in
+            guard let self = self else {return}
+            let vc = DetailCalenderVC()
+            vc.bindData(item: item)
+            self.pushVC(controller: vc)
+        }
         return cell
     }
     

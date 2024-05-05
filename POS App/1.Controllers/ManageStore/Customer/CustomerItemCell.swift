@@ -9,6 +9,7 @@ import UIKit
 
 class CustomerItemCell: UITableViewCell {
 
+    @IBOutlet weak var lbDiemSo: UILabel!
     var customer: PCustomer = PCustomer()
     @IBOutlet weak var lbDienThoai: UILabel!
     @IBOutlet weak var lbHoTen: UILabel!
@@ -32,6 +33,7 @@ class CustomerItemCell: UITableViewCell {
     func setupData(){
         lbDienThoai.text = customer.phone ?? ""
         lbHoTen.text = customer.fullName ?? ""
+        lbDiemSo.text = "\(customer.loyalty ?? 0)"
     }
 //    @IBOutlet var itemView: UIView!
 //    var actionViewInfo: ClosureAction?

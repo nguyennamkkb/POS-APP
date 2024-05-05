@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class EmployeeDetailVC: BaseVC {
 
     var itemData: PEmployee = PEmployee()
+    var tableData: [PBookCalender] =  [PBookCalender]()
     var actXoa: ClosureAction?
     
     @IBOutlet weak var lbDiaChi: UILabel!
@@ -18,6 +20,8 @@ class EmployeeDetailVC: BaseVC {
     @IBOutlet weak var lbDienThoai: UILabel!
     
     
+    @IBOutlet weak var lbDoanhThu: UILabel!
+    @IBOutlet weak var lbLuotKhach: UILabel!
     @IBOutlet weak var btnSua: UIButton!
     @IBOutlet weak var btnXoa: UIButton!
     @IBOutlet weak var imgGioiTinh: UIImageView!
@@ -32,6 +36,9 @@ class EmployeeDetailVC: BaseVC {
         self.tableView.registerCell(nibName: "EmployeeServicesCell")
         setupUI()
         setupData()
+        getBookNhanVien()
+        laytongDoanhThu()
+
     }
     
     func setupUI(){
@@ -40,6 +47,13 @@ class EmployeeDetailVC: BaseVC {
         vDienThoai.layer.cornerRadius = myCornerRadius.corner10
         btnSua.layer.cornerRadius = myCornerRadius.corner10
         btnXoa.layer.cornerRadius = myCornerRadius.corner10
+        
+        vDiemSo.addNDropShadow()
+        vSinhNhat.addNDropShadow()
+        vDienThoai.addNDropShadow()
+        vDienThoai.addBorder(color: myColor.SPA_FE!, width: 0.2)
+        vSinhNhat.addBorder(color: myColor.SPA_FE!, width: 0.2)
+        vDiemSo.addBorder(color: myColor.SPA_FE!, width: 0.2)
         
     }
     @IBAction func backPressed(_ sender: Any) {
@@ -59,7 +73,8 @@ class EmployeeDetailVC: BaseVC {
         lbHoTen.text = "\(itemData.fullName ?? "")"
         lbDienThoai.text = "\(itemData.phone ?? "")"
         lbDiaChi.text = "\(itemData.address ?? "")"
-        print(itemData.birthday ?? "0")
+        lbLuotKhach.text = "\(itemData.luotKhach ?? 0)"
+//        print(itemData.birthday ?? "0")
         lbSinhNhat.text = "\(Common.layNgayTheoMilisecond(time: itemData.birthday ?? "0"))"
         
     }
@@ -90,8 +105,48 @@ class EmployeeDetailVC: BaseVC {
     
     }
 
+    //laytongDoanhThu
+    
+    func laytongDoanhThu(){
+        let param = PBookCalender()
+        param.status = 1
+        param.idEmployee = itemData.id
+        param.store_id = itemData.store_id
+        param.sign()
+        ServiceManager.common.layDoanhThuNhanVien(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if let res = response, response?.statusCode == 200 {
+                if let doanhthu = res.data {
+         
+                    self.lbDoanhThu.text = (doanhthu as? String)?.currencyFormatting()
+                }
 
+            } else if response?.statusCode == 0 {
+                self.showMessagError()
+            }
+        }
+    }
+    //lay danh sach dich vu voi id nhan vien
+    func getBookNhanVien(){
+        let param = PBookCalender()
+        param.status = 1
+        param.idEmployee = itemData.id
+        param.store_id = itemData.store_id
+        param.sign()
+        ServiceManager.common.getAllBookTheoNvHoacKH(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.tableData = Mapper<PBookCalender>().mapArray(JSONObject: response!.data ) ?? [PBookCalender]()
 
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else if response?.statusCode == 0 {
+                self.showMessagError()
+            }
+        }
+    }
     func XoaNhanVien(){
         itemData.status = 0
         itemData.sign()
@@ -110,12 +165,21 @@ class EmployeeDetailVC: BaseVC {
 
 extension EmployeeDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeServicesCell", for: indexPath) as? EmployeeServicesCell else {return UITableViewCell()}
         
+        let item = tableData.itemAtIndex(index: indexPath.row) ?? PBookCalender()
+        cell.bindData(e: item)
+        cell.actChon = {
+            [weak self] in
+            guard let self = self else {return}
+            let vc = DetailCalenderVC()
+            vc.bindData(item: item)
+            self.pushVC(controller: vc)
+        }
         return cell
     }
     

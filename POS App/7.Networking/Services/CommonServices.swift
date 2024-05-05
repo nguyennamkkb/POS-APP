@@ -21,10 +21,14 @@ fileprivate class ListCommonService {
     static let verify = ServiceManager.ROOT + "user/verify"
     static let customer = ServiceManager.ROOT + "customer"
     static let employee = ServiceManager.ROOT + "employee"
+    static let doanhThuNhanVien = ServiceManager.ROOT + "books/doanhthunhanvien"
+    static let tongLuotKhachHang = ServiceManager.ROOT + "books/tongluotkhachhang"
     static let auth = ServiceManager.ROOT + "auth/signin"
     static let book = ServiceManager.ROOT + "books"
+    static let bookTheoNVHoacKH = ServiceManager.ROOT + "books/theonhanvienhoackhachhang"
     static let report = ServiceManager.ROOT + "books/report"
     static let bookinsuccess = ServiceManager.ROOT + "books/bookinsuccess"
+    static let bookDangPhucVu = ServiceManager.ROOT + "books/dangphucvu"
     static let service = ServiceManager.ROOT + "products"
 }
 
@@ -41,6 +45,10 @@ fileprivate enum ECommonURLs {
     case bookinsuccess
     case sendOtpFogotPassword
     case verifyChangePassword
+    case bookDangPhucVu
+    case doanhThuNhanVien
+    case bookTheoNVHoacKH
+    case tongLuotKhachHang
     
     
     func getPath() -> String {
@@ -72,7 +80,15 @@ fileprivate enum ECommonURLs {
             
         case .verifyChangePassword:
             return ListCommonService.verifyChangePassword
-        }
+        case .bookDangPhucVu:
+            return ListCommonService.bookDangPhucVu
+        case .doanhThuNhanVien:
+            return ListCommonService.doanhThuNhanVien
+        case .bookTheoNVHoacKH:
+            return ListCommonService.bookTheoNVHoacKH
+        case .tongLuotKhachHang:
+            return ListCommonService.tongLuotKhachHang
+}
         func getMethod() -> HTTPMethod {
             switch self {
                 
@@ -461,6 +477,49 @@ class CommonServices {
             }
         }
     }
+    
+    func layDoanhThuNhanVien(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.doanhThuNhanVien.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func tongLuotKhachHang(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.tongLuotKhachHang.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        print(router)
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
     //book
     func createBook(param: PBookCalender, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.book.getPath()
@@ -485,6 +544,28 @@ class CommonServices {
         
         
         let router = ECommonURLs.book.getPath() + (param ?? "")
+        print("router \(router)")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getAllBookTheoNvHoacKH(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    
+        let router = ECommonURLs.bookTheoNVHoacKH.getPath() + (param ?? "")
+        print("router \(router)")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
@@ -506,6 +587,28 @@ class CommonServices {
         
         
         let router = ECommonURLs.bookinsuccess.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func getAllBookDangPhucVu(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        
+        
+        let router = ECommonURLs.bookDangPhucVu.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
@@ -603,25 +706,25 @@ class CommonServices {
             }
         }
     }
-    func getoOneServices(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
-        let router = ECommonURLs.employee.getPath() + "/\(param)"
-        if !ServiceManager.isConnectedToInternet() {
-            completion(nil)
-        }
-        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
-            if success {
-                if result != nil{
-                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
-                        completion(baseResponse)
-                    }
-                }else{
-                    completion(nil)
-                }
-            } else {
-                completion(nil)
-            }
-        }
-    }
+//    func getoOneServices(param: Int, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+//        let router = ECommonURLs.employee.getPath() + "/\(param)"
+//        if !ServiceManager.isConnectedToInternet() {
+//            completion(nil)
+//        }
+//        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+//            if success {
+//                if result != nil{
+//                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+//                        completion(baseResponse)
+//                    }
+//                }else{
+//                    completion(nil)
+//                }
+//            } else {
+//                completion(nil)
+//            }
+//        }
+//    }
     func getAllServices(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.service.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
