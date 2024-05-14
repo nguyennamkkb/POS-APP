@@ -308,7 +308,7 @@ class CreateCalenderVC: BaseVC{
             }
             book.listService = dsDichVuChon.toJSONString()
             book.amount = capNhatSoTien()
-            
+         
             book.idEmployee = employeeSelected.id
             book.idCustomer = customerSelected.id
             book.store_id = Common.userMaster.id
@@ -317,7 +317,7 @@ class CreateCalenderVC: BaseVC{
             book.customer = nil
             book.sign()
             
-            print(book.toJSON())
+//            print(book.toJSON())
 //            print(customerSelected.id)
             
             if trangThaiThemMoioCapNhat == 0 {
@@ -344,7 +344,7 @@ class CreateCalenderVC: BaseVC{
                         self.onBackNav()
                     }
                 } else if response?.statusCode == 0 {
-                    self.showAlert(message: "Không thể thêm mới")
+                    self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại thông tin nhập")
                 }
             }
     
@@ -366,7 +366,7 @@ class CreateCalenderVC: BaseVC{
                         self.onBackNav()
                     }
                 } else if response?.statusCode == 0 {
-                    self.showAlert(message: "Không thể thêm mới")
+                    self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại thông tin nhập")
                 }
             }
     

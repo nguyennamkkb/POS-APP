@@ -19,7 +19,7 @@ class ItemServicesCell: UITableViewCell {
     }
     func bindData(name: String, price: Int){
         self.name.text = name
-        self.price.text = "\(String(price).currencyFormatting())đ"
+        self.price.text = "\(String(price).currencyFormatting())"
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

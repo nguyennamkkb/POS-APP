@@ -138,7 +138,7 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
     func wrapRoot(vc: UIViewController){
         guard let window = self.view.window else {return}
-        window.switchRootViewController(vc)
+        window.switchRootViewController(vc,animated: true)
     }
     func showLoading(){
         present(activityScreen, animated: false, completion: nil)

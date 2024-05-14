@@ -206,6 +206,7 @@
 		9ADC56912BE6512100ADDAB9 /* CommonPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC56902BE6512100ADDAB9 /* CommonPrint.swift */; };
 		9ADC56942BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC56922BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift */; };
 		9ADC56952BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ADC56932BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib */; };
+		9AFDC1182BEE1BA4005C13EC /* CommonKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFDC1172BEE1BA4005C13EC /* CommonKeychain.swift */; };
 		C034F48E2108B057E3342CD7 /* Pods_LN_POS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */; };
 /* End PBXBuildFile section */
 
@@ -414,6 +415,7 @@
 		9ADC56902BE6512100ADDAB9 /* CommonPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPrint.swift; sourceTree = "<group>"; };
 		9ADC56922BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
 		9ADC56932BE662CC00ADDAB9 /* BluetoothPrinterSelectTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothPrinterSelectTableViewController.xib; sourceTree = "<group>"; };
+		9AFDC1172BEE1BA4005C13EC /* CommonKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonKeychain.swift; sourceTree = "<group>"; };
 		A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.debug.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.debug.xcconfig"; sourceTree = "<group>"; };
 		B6FD5D42C673C1A1E9B146A5 /* Pods_LN_POS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LN_POS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97165A029FA240C00D08327 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -828,6 +830,7 @@
 				0B7A4FCB2A8E72600062E878 /* Notifications.swift */,
 				9AAFB5CD2BDA09BD0057BEB4 /* inputCommon.swift */,
 				9ADC56902BE6512100ADDAB9 /* CommonPrint.swift */,
+				9AFDC1172BEE1BA4005C13EC /* CommonKeychain.swift */,
 			);
 			path = 4.Helpers;
 			sourceTree = "<group>";
@@ -1162,6 +1165,7 @@
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
 				0B7A4FCF2A8E79570062E878 /* TestThongBaoVC.swift in Sources */,
 				0BB43EE229FAC54700F1DE85 /* TabBarVC.swift in Sources */,
+				9AFDC1182BEE1BA4005C13EC /* CommonKeychain.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				9A88E1DB2BE5D7BC005925E5 /* LichSuCell.swift in Sources */,
@@ -1404,7 +1408,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Q Spa";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Truy cập Bluetooth để in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
@@ -1444,7 +1448,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS App/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "LN POS";
+				INFOPLIST_KEY_CFBundleDisplayName = "Q Spa";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Truy cập Bluetooth để in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";

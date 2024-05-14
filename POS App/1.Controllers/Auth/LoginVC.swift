@@ -36,7 +36,6 @@ class LoginVC: BaseVC {
     }
     func setupData(){
         tfEmail.text = "nguyennam.kkb@gmail.com"
-        tfPassword.text = "123456"
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "img_bg")!)
     }
 
@@ -119,10 +118,23 @@ class LoginVC: BaseVC {
                 DispatchQueue.main.async {
                     if success {
                         guard let pStore = Mapper<PStore>().map(JSONString: CacheManager.share.getUserMaster()) else {return}
-                        self.tfEmail.text = pStore.email
-                        self.tfPassword.text = pStore.password
+                        
+                        guard let emailData = NKeyChain.share.loadDataFromKeychain(forKey: NKeyChain.share.kLogin),let emailString = String(data: emailData, encoding: .utf8) else {
+                            print("Loi email")
+                            return}
+                        print("NKeyChain. luuMatKhau \(emailString)")
+                        guard let password = NKeyChain.share.loadDataFromKeychain(forKey: "\(emailString)"),let passString = String(data: password, encoding: .utf8) else {
+                            print("Loi pass")
+                            return}
+                        
+                        print("lay keychain")
+                        print(emailString)
+                        print(passString)
+                        self.tfEmail.text = "\(emailString)"
+                        self.tfPassword.text = "\(passString)"
+                        self.showLoading()
                         self.login(email: pStore.email ?? "", password: pStore.password ?? "")
-//                        print("thanh cong")
+                       
                     } else {
 //                        print("That bai")
                     }
@@ -141,17 +153,28 @@ class LoginVC: BaseVC {
             if response?.data != nil, response?.statusCode == 200 {
                 print("200")
                 CacheManager.share.setRegister(true)
+                
                 let data = Mapper<PStore>().map(JSONObject: response?.data)
                 data?.password = paramRequest.password
                 CacheManager.share.setUserMaster(value: data?.toJSONString())
+                
                 Common.userMaster = data ?? PStore()
+
+                let luuMatKhau = NKeyChain.share.saveDataToKeychain(data: password.data(using: .utf8)!,forKey: email)
+                let luuEmail = NKeyChain.share.saveDataToKeychain(data: email.data(using: .utf8)!,forKey: NKeyChain.share.kLogin)
+                if luuMatKhau, luuEmail {
+                    print("Password saved successfully!")
+                } else {
+                    print("Failed to save password.")
+                }
+                
+                
                 self.wrapRoot(vc: TabBarVC())
 //                print("200",response ?? "")
                 
             }
             
             else if response?.statusCode == 199 || response?.statusCode == 2 {
-                print("response?.statusCode",response?.statusCode)
                 self.hienThiThongBao(trangThai: 1, loiNhan: "Đã gửi OTP kích hoạt vào email: \(email)")
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1  ) {

@@ -32,7 +32,7 @@ class DetailCalenderVC: BaseVC, UITableViewDelegate, UITableViewDataSource {
         self.onBackNav()
     }
     @IBAction func btnPrintPressed(_ sender: UIButton) {
-        self.showAlert(message: "Đang in")
+        self.hienThiLoiNhan(s: "Đang in")
 //        //anh qr
 //        let imageViewQR = UIImageView()
 //        var resizedImageQR = UIImage(named: "img_qn")!

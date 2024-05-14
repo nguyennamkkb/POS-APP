@@ -221,7 +221,17 @@ extension MainVC:  UITableViewDataSource, UITableViewDelegate {
                     self.getBooks()
                 }
             }
-            
+            vc.actIn = {
+                [weak self] in
+                guard let self = self else {return}
+                
+                
+                let xemVC = DetailCalenderVC()
+                xemVC.bindData(item: item)
+                self.pushVC(controller: xemVC)
+                 
+           
+            }
         }
         return cell
         

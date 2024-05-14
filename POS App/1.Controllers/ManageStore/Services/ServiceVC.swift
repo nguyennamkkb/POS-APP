@@ -73,7 +73,7 @@ class ServiceVC:BaseVC  {
                     self.tableView.reloadData()
                 }
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.hienThiThongBao(trangThai: 0, loiNhan: "Kiểm tra lại thông tin nhập")
             }
         }
     }

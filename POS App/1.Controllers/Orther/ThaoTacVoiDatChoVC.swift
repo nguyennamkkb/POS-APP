@@ -114,8 +114,8 @@ class ThaoTacVoiDatChoVC: BaseVC {
         case 3:
             vSua.isHidden = false
             vHuy.isHidden = false
-            vIn.isHidden = false
             vDaLamXong.isHidden = false
+            vThanhToan.isHidden = false
 
 //            lbTrangThai.text = "Đang thực hiện"
 //            lbTrangThai.textColor = getColorByStatus(status: item.status ?? 0)
