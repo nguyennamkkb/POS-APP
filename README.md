@@ -1,5 +1,5 @@
 # QSpa - Hỗ trợ quản lý Spa, Salon nhỏ miễn phí
-[[Hình ảnh của ứng dụng](https://drive.google.com/drive/folders/1GRPt95EYjBBLC6esUxUpEQTv1ExMs0Rm?usp=sharing)](https://drive.google.com/drive/folders/1-B6Grujemh3SQk8aHv67V_avWw1qrJ2S)
+[[Hình ảnh của ứng dụng](https://drive.google.com/drive/folders/1-B6Grujemh3SQk8aHv67V_avWw1qrJ2S?usp=sharing)
 
 # Chức năng
 1. Quản lý nhân viên
